@@ -1,0 +1,36 @@
+name: Actualizar datos de LaLiga
+
+on:
+  schedule:
+    - cron: "0 6 * * *"   # 06:00 UTC todos los días (~07:00-08:00 hora de Madrid)
+  workflow_dispatch: {}    # permite lanzarlo a mano desde Actions o con `gh workflow run`
+
+permissions:
+  contents: write
+
+jobs:
+  update-liga:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Descargar datos de LaLiga
+        env:
+          FOOTBALL_DATA_API_KEY: ${{ secrets.FOOTBALL_DATA_API_KEY }}
+        run: node scripts/update-liga.mjs
+
+      - name: Publicar cambios si los hay
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet -- data/liga.json; then
+            echo "Sin cambios en data/liga.json"
+          else
+            git add data/liga.json
+            git commit -m "Actualizar datos de LaLiga"
+            git push
+          fi

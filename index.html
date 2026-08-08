@@ -1,0 +1,1417 @@
+<title>Calamar 26/27</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>
+:root{
+  --bg0:#08140f; --bg1:#0c2019; --bg2:#06120d;
+  --card:#102019; --card-2:#15281f; --cream:#0e1c15;
+  --line:rgba(255,255,255,.09); --line-2:rgba(255,255,255,.16);
+  --ink:#eaf6ef; --ink-soft:#8aa399; --ink-dim:#5d756b;
+  --pink:#ff1f7a; --pink-deep:#d31361; --pink-soft:rgba(255,31,122,.14);
+  --teal:#19c7a6; --teal-deep:#0e9079; --teal-soft:rgba(25,199,166,.14);
+  --amber:#ffb020; --amber-soft:rgba(255,176,32,.14);
+  --chip-off:#16271f;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 18px 40px rgba(0,0,0,.35);
+  --display: "Arial Narrow","Helvetica Neue Condensed","Roboto Condensed",Impact,Haettenschweiler,sans-serif;
+  --body: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{
+  font-family:var(--body);
+  color:var(--ink);
+  background:
+    radial-gradient(900px 520px at 50% -8%, rgba(25,199,166,.16) 0%, rgba(25,199,166,0) 60%),
+    radial-gradient(700px 420px at 100% 8%, rgba(255,31,122,.12) 0%, rgba(255,31,122,0) 55%),
+    linear-gradient(180deg,var(--bg1) 0%, var(--bg0) 45%, var(--bg2) 100%);
+  background-attachment:fixed;
+  min-height:100vh; min-height:100dvh;
+  -webkit-text-size-adjust:100%;
+}
+.wrap{max-width:920px;margin:0 auto;padding:24px 16px 72px;padding-top:max(24px,env(safe-area-inset-top));}
+::selection{background:var(--pink);color:#fff}
+a{color:var(--teal)}
+button,input,select,textarea{font-family:inherit}
+input,select,textarea{color:var(--ink)}
+
+/* ---------- HEADER ---------- */
+.shapes{display:flex;gap:14px;align-items:center;font-size:20px;line-height:1;color:var(--pink);
+  text-shadow:0 0 16px rgba(255,31,122,.5);margin-bottom:14px}
+.shapes b{font-weight:400}
+.shapes .sq{color:var(--teal);text-shadow:0 0 16px rgba(25,199,166,.5)}
+h1{font-family:var(--display);font-weight:800;
+  color:#fff;letter-spacing:-0.01em;line-height:.9;
+  font-size:clamp(38px,10.5vw,68px);margin:0 0 12px;text-transform:uppercase;text-wrap:balance}
+h1 .l2{display:block;color:var(--pink);text-shadow:0 0 24px rgba(255,31,122,.35)}
+.jtags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+.jtag{display:inline-flex;align-items:center;gap:8px;
+  font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--teal);background:rgba(25,199,166,.10);
+  border:1px solid rgba(25,199,166,.32);border-radius:999px;padding:6px 13px;white-space:nowrap}
+.jtag.pink{color:var(--pink);background:rgba(255,31,122,.10);border-color:rgba(255,31,122,.32)}
+.jtag .dot{width:8px;height:8px;border-radius:50%;background:currentColor;box-shadow:0 0 10px currentColor}
+.lede{color:#bcd3c9;font-size:15px;max-width:60ch;margin:16px 0 22px}
+.lede b{color:#fff;font-weight:700;font-variant-numeric:tabular-nums}
+
+/* ---------- TABS ---------- */
+.tabs{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px;margin-bottom:20px;-ms-overflow-style:none;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tabbtn{flex:0 0 auto;border:1px solid var(--line);background:var(--card);color:var(--ink-soft);
+  font-weight:700;font-size:13px;letter-spacing:.03em;border-radius:11px;padding:10px 16px;cursor:pointer}
+.tabbtn:hover{border-color:var(--line-2);color:var(--ink)}
+.tabbtn.active{background:linear-gradient(160deg,var(--card-2),var(--card));color:#fff;border-color:var(--pink)}
+.tabbtn:focus-visible{outline:3px solid var(--pink);outline-offset:2px}
+.panel{display:none;animation:rise .22s ease both}
+.panel.active{display:block}
+@keyframes rise{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+/* ---------- generic card / grid ---------- */
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;box-shadow:var(--shadow)}
+.section-h{display:flex;align-items:center;gap:10px;margin:26px 2px 10px}
+.section-h:first-child{margin-top:0}
+.section-h .mk{color:var(--pink);font-size:15px;line-height:1;text-shadow:0 0 10px rgba(255,31,122,.4)}
+.section-h .tag{font-family:var(--display);font-weight:800;color:#fff;font-size:15px;letter-spacing:.05em;text-transform:uppercase}
+.section-h .line{flex:1;height:1px;background:var(--line)}
+.section-h .side{font-size:12px;color:var(--ink-soft)}
+
+.stats4{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+@media(min-width:560px){.stats4{grid-template-columns:repeat(4,1fr)}}
+.stat{background:var(--cream);border:1px solid var(--line);border-radius:14px;padding:14px 12px;text-align:center}
+.stat .n{font-family:var(--display);font-weight:800;font-size:26px;line-height:1;color:var(--teal);font-variant-numeric:tabular-nums}
+.stat .n.pink{color:var(--pink)}
+.stat .n.amber{color:var(--amber)}
+.stat .l{font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);margin-top:6px}
+
+.btn{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line-2);
+  background:rgba(255,255,255,.05);color:var(--ink);border-radius:11px;
+  padding:10px 16px;font-family:inherit;font-weight:700;font-size:13.5px;cursor:pointer;white-space:nowrap}
+.btn:hover{background:rgba(255,255,255,.10)}
+.btn:focus-visible{outline:3px solid var(--pink);outline-offset:2px}
+.btn.primary{background:linear-gradient(145deg,var(--teal),var(--teal-deep));color:#06120d;border-color:transparent}
+.btn.primary:hover{filter:brightness(1.08)}
+.btn.danger{background:rgba(255,31,122,.12);border-color:rgba(255,31,122,.4);color:#ffd7e6}
+.btn.danger:hover{background:rgba(255,31,122,.2)}
+.btn.sm{padding:7px 12px;font-size:12.5px;border-radius:9px}
+.btn[disabled]{opacity:.4;cursor:not-allowed}
+.btnrow{display:flex;flex-wrap:wrap;gap:8px}
+
+.pill{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:800;letter-spacing:.04em;
+  text-transform:uppercase;border-radius:999px;padding:4px 10px;white-space:nowrap}
+.pill-ok{color:var(--teal);background:var(--teal-soft);border:1px solid rgba(25,199,166,.35)}
+.pill-danger{color:#ffd7e6;background:var(--pink-soft);border:1px solid rgba(255,31,122,.4)}
+.pill-warn{color:var(--amber);background:var(--amber-soft);border:1px solid rgba(255,176,32,.4)}
+.pill-off{color:var(--ink-soft);background:var(--chip-off);border:1px solid var(--line)}
+
+/* ---------- search / inputs ---------- */
+.search{position:relative;margin:0 0 16px}
+.search input{width:100%;border:1px solid var(--line);border-radius:14px;padding:14px 15px 14px 42px;
+  font-size:15px;color:var(--ink);background:var(--card);box-shadow:var(--shadow);outline:none}
+.search input::placeholder{color:var(--ink-dim)}
+.search input:focus{border-color:var(--pink);box-shadow:0 0 0 3px var(--pink-soft),var(--shadow)}
+.search svg{position:absolute;left:14px;top:50%;transform:translateY(-50%);color:var(--ink-dim)}
+
+.field{display:flex;flex-direction:column;gap:6px}
+.field label{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft)}
+.field input,.field select,.field textarea{border:1px solid var(--line);border-radius:10px;padding:10px 12px;
+  background:var(--cream);font-size:14px;outline:none}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--pink)}
+.field textarea{resize:vertical;min-height:90px;font-family:var(--body);line-height:1.5}
+.formgrid{display:grid;grid-template-columns:1fr;gap:12px}
+@media(min-width:640px){.formgrid.cols2{grid-template-columns:1fr 1fr}.formgrid.cols3{grid-template-columns:1fr 1fr 1fr}}
+
+/* ---------- jugadores grid ---------- */
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+@media(min-width:560px){.grid{grid-template-columns:repeat(3,1fr)}}
+.pcard{display:flex;align-items:center;gap:11px;text-align:left;
+  background:var(--card);border:1px solid var(--line);border-radius:14px;
+  padding:12px 13px;cursor:pointer;font-family:inherit;color:var(--ink);width:100%;
+  box-shadow:var(--shadow);transition:transform .12s ease, border-color .12s ease}
+.pcard:hover{transform:translateY(-2px);border-color:var(--pink)}
+.pcard:focus-visible{outline:3px solid var(--pink);outline-offset:2px}
+.num{flex:0 0 auto;width:42px;height:42px;border-radius:11px;display:grid;place-items:center;
+  font-family:var(--display);font-weight:800;font-size:15px;letter-spacing:.02em;color:#06120d;
+  background:linear-gradient(145deg,var(--teal),var(--teal-deep));box-shadow:inset 0 0 0 2px rgba(255,255,255,.18)}
+.pcard.st-eliminado .num,.pcard.st-expulsado .num{background:linear-gradient(145deg,#4a5b53,#33413b);color:#cfe0d8}
+.pname{font-weight:700;font-size:14.5px;line-height:1.15;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pmeta{margin-top:4px;display:flex;align-items:center;gap:5px;flex-wrap:wrap}
+.empty{color:#bcd3c9;text-align:center;padding:30px 0}
+
+/* ---------- detalle jugador ---------- */
+.back{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line-2);
+  background:rgba(255,255,255,.05);color:var(--ink);border-radius:999px;
+  padding:9px 15px 9px 12px;font-family:inherit;font-weight:700;font-size:13.5px;cursor:pointer;margin-bottom:16px}
+.back:hover{background:rgba(255,255,255,.10)}
+.hero{background:linear-gradient(160deg,var(--card-2),var(--card));border-radius:20px;padding:22px;
+  box-shadow:var(--shadow);border:1px solid var(--line);position:relative;overflow:hidden;margin-bottom:16px}
+.hero::after{content:"○ △ □";position:absolute;right:-6px;top:-10px;font-size:60px;line-height:1;
+  color:rgba(255,31,122,.10);letter-spacing:10px;pointer-events:none}
+.hero-top{display:flex;align-items:center;gap:15px;position:relative;z-index:1;flex-wrap:wrap}
+.num-lg{width:60px;height:60px;border-radius:16px;font-size:21px}
+.hero h2{font-family:var(--display);font-weight:800;text-transform:uppercase;color:#fff;
+  font-size:clamp(22px,6vw,32px);line-height:1;margin:0 0 6px;letter-spacing:-.01em}
+.exrow{display:flex;flex-wrap:wrap;gap:7px}
+.extag{display:inline-flex;align-items:center;gap:7px;background:rgba(25,199,166,.12);
+  border:1px solid rgba(25,199,166,.32);color:#fff;border-radius:10px;padding:6px 11px;font-size:12.5px;font-weight:600}
+.trow{display:flex;align-items:center;gap:10px;background:var(--cream);border:1px solid var(--line);border-radius:11px;padding:9px 12px;font-size:13px}
+.trow .tlabel{flex:1;min-width:0;color:var(--ink-soft)}
+.trow .tteam{font-weight:700;color:#fff}
+
+/* ---------- jornada / match cards ---------- */
+.jcard{background:var(--card);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);margin-bottom:12px;overflow:hidden}
+.jcard-head{display:flex;align-items:center;gap:10px;padding:14px 16px;cursor:pointer;user-select:none}
+.jcard-head .t{font-family:var(--display);font-weight:800;font-size:16px;color:#fff;letter-spacing:.02em;text-transform:uppercase}
+.jcard-head .sub{font-size:12px;color:var(--ink-soft);flex:1}
+.jcard-head svg{transition:transform .16s ease;color:var(--ink-dim);flex:0 0 auto}
+.jcard.open .jcard-head svg{transform:rotate(180deg)}
+.jcard-body{display:none;padding:0 16px 16px}
+.jcard.open .jcard-body{display:block}
+
+.picktable{width:100%;border-collapse:collapse;font-size:13px}
+.picktable th{text-align:left;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft);
+  padding:8px 8px;border-bottom:1px solid var(--line)}
+.picktable td{padding:8px 8px;border-bottom:1px solid var(--line);vertical-align:middle}
+.picktable tr:last-child td{border-bottom:none}
+.picktable select,.picktable input{background:var(--cream);border:1px solid var(--line);border-radius:8px;padding:6px 8px;font-size:12.5px;color:var(--ink)}
+.tblwrap{overflow-x:auto;margin:10px 0}
+.warnchip{display:inline-flex;align-items:center;gap:4px;font-size:10.5px;font-weight:700;color:var(--amber);background:var(--amber-soft);
+  border:1px solid rgba(255,176,32,.4);border-radius:8px;padding:2px 7px;margin-left:4px}
+
+.pastebox{margin:10px 0}
+.previewrow{display:grid;grid-template-columns:1.3fr 1fr 1fr auto;gap:8px;align-items:center;margin-bottom:6px}
+.previewrow.roster{grid-template-columns:1.6fr auto auto}
+.previewrow input[type="text"]{border:1px solid var(--line-2);border-radius:9px;padding:9px 11px;background:#fff;color:#111;font-size:13.5px}
+.previewrow input[type="text"]:focus{outline:2px solid var(--pink);outline-offset:1px}
+@media(max-width:640px){.previewrow{grid-template-columns:1fr;background:var(--cream);border:1px solid var(--line);border-radius:10px;padding:8px;margin-bottom:8px}
+  .previewrow.roster{grid-template-columns:1fr}}
+
+.matchrow{display:flex;align-items:center;gap:10px;background:var(--cream);border:1px solid var(--line);border-radius:11px;padding:10px 12px;margin-bottom:8px;font-size:13.5px}
+.matchrow .mteam{flex:1;min-width:0;font-weight:700;color:#fff;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.matchrow .mteam.right{text-align:right}
+.matchrow .mextra{flex:0 0 auto;font-family:var(--display);font-weight:800;font-size:12.5px;color:var(--teal);
+  background:rgba(25,199,166,.12);border:1px solid rgba(25,199,166,.3);border-radius:8px;padding:5px 10px;min-width:52px;text-align:center}
+.picktable tr.zone-top td:first-child{border-left:3px solid var(--teal)}
+.picktable tr.zone-bottom td:first-child{border-left:3px solid var(--pink)}
+
+footer{color:var(--ink-dim);font-size:12px;text-align:center;margin-top:36px;line-height:1.7}
+footer b{color:#bcd3c9}
+.hidden{display:none !important}
+.muted{color:var(--ink-soft)}
+.rules{font-size:14.5px;line-height:1.75;color:#dcebe3}
+.rules h3{font-family:var(--display);font-weight:800;color:#fff;text-transform:uppercase;letter-spacing:.02em;font-size:16px;margin:22px 0 8px}
+.rules h3:first-child{margin-top:0}
+.rules p{margin:0 0 10px}
+.rules b{color:#fff}
+@media (prefers-reduced-motion: reduce){*{animation:none !important;transition:none !important}}
+</style>
+
+<div class="wrap">
+  <div class="shapes"><b>○</b><b>△</b><b class="sq">□</b></div>
+  <h1>Calamar<span class="l2">26/27</span></h1>
+  <div class="jtags" id="headTags"></div>
+  <p class="lede" id="headLede"></p>
+
+  <div class="tabs" id="tabs">
+    <button class="tabbtn" data-tab="resumen">Resumen</button>
+    <button class="tabbtn" data-tab="jugadores">Jugadores</button>
+    <button class="tabbtn" data-tab="jornadas">Jornadas</button>
+    <button class="tabbtn" data-tab="ediciones">Ediciones y bote</button>
+    <button class="tabbtn" data-tab="liga">Jornada Liga</button>
+    <button class="tabbtn" data-tab="clasificacion">Clasificación</button>
+    <button class="tabbtn" data-tab="reglas">Reglas</button>
+  </div>
+
+  <section class="panel" id="panel-resumen"></section>
+  <section class="panel" id="panel-jugadores"></section>
+  <section class="panel" id="panel-jornadas"></section>
+  <section class="panel" id="panel-ediciones"></section>
+  <section class="panel" id="panel-liga"></section>
+  <section class="panel" id="panel-clasificacion"></section>
+  <section class="panel" id="panel-reglas"></section>
+
+  <footer>
+    Calamar 26/27 · datos guardados solo en este navegador ·
+    <a href="#" id="exportBtn">exportar copia</a> ·
+    <a href="#" id="importBtn">importar copia</a> ·
+    <a href="#" id="resetBtn">reiniciar</a>
+    <input type="file" id="importFile" accept="application/json" class="hidden">
+  </footer>
+</div>
+
+<script>
+"use strict";
+
+/* ============================== ESTADO ============================== */
+const STORE_KEY = "calamar2627_v1";
+const RESULT_LABEL = {gano:"Ganó", no_gano:"No ganó", anulado:"Anulado/aplazado"};
+
+function uid(){ return Math.random().toString(36).slice(2,9) + Date.now().toString(36).slice(-4); }
+
+function defaultState(){
+  return {
+    participants: [],   // {id, name}
+    editions: [],        // Edition[]
+    liga: {
+      resultados: null,   // {label, updatedAt, matches:[{team1,team2,extra,raw}]}
+      proximas: [],        // [{id, label, updatedAt, matches:[...]}]
+      proximasUpdatedAt: 0,
+      clasificacion: null, // {updatedAt, rows:[{pos,name,pj,g,e,p,gf,gc,dg,pts}]}
+      autoUpdatedAt: 0     // timestamp del último data/liga.json aplicado automáticamente
+    }
+  };
+}
+function newEdition(number, season, potCarriedOver){
+  return {
+    id: uid(), number, season, potCarriedOver: potCarriedOver||0,
+    status: "abierta",        // abierta | cerrada_ganador | cerrada_sin_ganador
+    winnerId: null,
+    participants: [],          // {participantId, pagado, cuota, note}
+    jornadas: []                // Jornada[]
+  };
+}
+function newJornada(label, season){
+  return { id: uid(), label, season, deadline:"", picks: [], expelled: [] };
+  // picks: {participantId, team1, team2, result1, result2}
+  // expelled: [participantId] marcados como "no pronosticó"
+}
+
+let state = loadState();
+
+function loadState(){
+  try{
+    const raw = localStorage.getItem(STORE_KEY);
+    if(raw){
+      const data = JSON.parse(raw);
+      if(!data.liga) data.liga = {resultados:null, proximas:[], clasificacion:null};
+      if(data.liga.proximasUpdatedAt==null) data.liga.proximasUpdatedAt = 0;
+      if(data.liga.autoUpdatedAt==null) data.liga.autoUpdatedAt = 0;
+      return data;
+    }
+  }catch(e){}
+  return defaultState();
+}
+function saveState(){
+  localStorage.setItem(STORE_KEY, JSON.stringify(state));
+}
+
+/* ============================== FEED AUTOMÁTICO DE LIGA (data/liga.json) ============================== */
+function mergeLigaSeed(seed){
+  if(!seed) return;
+  if(seed.resultados && (!state.liga.resultados || (seed.resultados.updatedAt||0) > (state.liga.resultados.updatedAt||0))){
+    state.liga.resultados = seed.resultados;
+  }
+  if(Array.isArray(seed.proximas) && (seed.generatedAt||0) > (state.liga.proximasUpdatedAt||0)){
+    state.liga.proximas = seed.proximas;
+    state.liga.proximasUpdatedAt = seed.generatedAt||Date.now();
+  }
+  if(seed.clasificacion && (!state.liga.clasificacion || (seed.clasificacion.updatedAt||0) > (state.liga.clasificacion.updatedAt||0))){
+    state.liga.clasificacion = seed.clasificacion;
+  }
+  state.liga.autoUpdatedAt = seed.generatedAt||Date.now();
+  saveState();
+}
+function loadLigaFeed(){
+  fetch("./data/liga.json", {cache:"no-store"})
+    .then(r=> r.ok ? r.json() : null)
+    .then(seed=>{ if(seed){ mergeLigaSeed(seed); render(); } })
+    .catch(()=>{ /* sin red o primer despliegue: se queda con los datos que ya hubiera */ });
+}
+
+/* ============================== HELPERS ============================== */
+function esc(s){
+  return String(s==null?"":s).replace(/[&<>"']/g, c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+}
+function normName(s){ return String(s||"").trim().toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,""); }
+function findParticipantByName(name){
+  const n = normName(name);
+  return state.participants.find(p=>normName(p.name)===n) || null;
+}
+function getParticipant(id){ return state.participants.find(p=>p.id===id) || null; }
+function ensureParticipant(name){
+  let p = findParticipantByName(name);
+  if(!p){ p = {id: uid(), name: name.trim()}; state.participants.push(p); }
+  return p;
+}
+function currentEdition(){
+  if(!state.editions.length) return null;
+  return state.editions.find(e=>e.status==="abierta") || state.editions[state.editions.length-1];
+}
+function editionIndex(ed){ return state.editions.findIndex(e=>e.id===ed.id); }
+
+/* devuelve si el participante ya jugó alguna edición anterior a la indicada */
+function isNewToChain(participantId, edIdx){
+  for(let i=0;i<edIdx;i++){
+    if(state.editions[i].participants.some(ep=>ep.participantId===participantId)) return false;
+  }
+  return true;
+}
+function suggestedCuota(participantId, ed){
+  const idx = editionIndex(ed);
+  return isNewToChain(participantId, idx) ? 10*ed.number : 10;
+}
+
+/* calcula outcome de un pick: 'sobrevive' | 'eliminado' | 'anulada' | 'pendiente' */
+function pickOutcome(pick){
+  if(pick.result1==="gano") return {effective:pick.team1, outcome:"sobrevive"};
+  if(pick.result1==="no_gano") return {effective:pick.team1, outcome:"eliminado"};
+  if(pick.result1==="anulado"){
+    if(pick.result2==="gano") return {effective:pick.team2, outcome:"sobrevive"};
+    if(pick.result2==="no_gano") return {effective:pick.team2, outcome:"eliminado"};
+    if(pick.result2==="anulado") return {effective:null, outcome:"anulada"};
+    return {effective:null, outcome:"pendiente"};
+  }
+  return {effective:null, outcome:"pendiente"};
+}
+
+/* deriva estado de cada participante de una edición, jornada a jornada, en orden */
+function deriveEdition(ed){
+  const map = {}; // participantId -> {status, eliminatedIn, cuota, pagado}
+  ed.participants.forEach(ep=>{
+    if(!ep.pagado){
+      map[ep.participantId] = {status:"expulsado_impago", eliminatedIn:null};
+    } else {
+      map[ep.participantId] = {status:"activo", eliminatedIn:null};
+    }
+  });
+  ed.jornadas.forEach(j=>{
+    (j.expelled||[]).forEach(pid=>{
+      if(map[pid] && map[pid].status==="activo"){
+        map[pid] = {status:"expulsado_no_pronostico", eliminatedIn:j.label};
+      }
+    });
+    j.picks.forEach(pick=>{
+      const m = map[pick.participantId];
+      if(!m || m.status!=="activo") return;
+      const r = pickOutcome(pick);
+      if(r.outcome==="eliminado"){
+        map[pick.participantId] = {status:"eliminado", eliminatedIn:j.label};
+      }
+    });
+  });
+  return map;
+}
+
+/* equipos usados por un jugador, a través de TODAS las ediciones (orden cronológico) */
+function usedTeamsFor(participantId, excludeJornadaId){
+  const out = [];
+  state.editions.forEach(ed=>{
+    ed.jornadas.forEach(j=>{
+      if(j.id===excludeJornadaId) return;
+      j.picks.filter(p=>p.participantId===participantId).forEach(pick=>{
+        const r = pickOutcome(pick);
+        if((r.outcome==="sobrevive"||r.outcome==="eliminado") && r.effective){
+          out.push({team:r.effective, edLabel:`Ed. ${ed.number}`, jLabel:j.label, outcome:r.outcome});
+        }
+      });
+    });
+  });
+  return out;
+}
+function teamAlreadyUsed(participantId, teamName, excludeJornadaId){
+  if(!teamName) return false;
+  const n = normName(teamName);
+  return usedTeamsFor(participantId, excludeJornadaId).some(t=>normName(t.team)===n);
+}
+
+function computeMoney(ed){
+  const recaudacion = ed.participants.filter(ep=>ep.pagado).reduce((s,ep)=>s+(Number(ep.cuota)||0),0);
+  const aporte = recaudacion*0.9, comision = recaudacion*0.1;
+  const boteTotal = (Number(ed.potCarriedOver)||0) + aporte;
+  return {recaudacion, aporte, comision, boteTotal};
+}
+function fmtEUR(n){
+  return (Math.round((n||0)*100)/100).toLocaleString("es-ES",{minimumFractionDigits:2,maximumFractionDigits:2})+" €";
+}
+
+const STATUS_LABEL = {
+  activo:"Activo", eliminado:"Eliminado",
+  expulsado_impago:"Expulsado · no pagó", expulsado_no_pronostico:"Expulsado · no pronosticó"
+};
+const STATUS_PILL = {
+  activo:"pill-ok", eliminado:"pill-off", expulsado_impago:"pill-danger", expulsado_no_pronostico:"pill-danger"
+};
+
+/* ============================== TABS ============================== */
+let activeTab = "resumen";
+let activePlayerId = null;
+let openJornadaId = null;
+
+document.getElementById("tabs").addEventListener("click", e=>{
+  const b = e.target.closest(".tabbtn"); if(!b) return;
+  activeTab = b.dataset.tab; activePlayerId=null;
+  render();
+});
+
+function switchTab(t){ activeTab=t; render(); }
+
+/* ============================== RENDER: HEADER ============================== */
+function renderHeader(){
+  const ed = currentEdition();
+  const tagsEl = document.getElementById("headTags");
+  const lede = document.getElementById("headLede");
+  if(!ed){
+    tagsEl.innerHTML = `<span class="jtag pink"><span class="dot"></span> Sin edición abierta</span>`;
+    lede.innerHTML = `Crea tu primera edición en la pestaña <b>Ediciones y bote</b> para empezar.`;
+    return;
+  }
+  const derived = deriveEdition(ed);
+  const activos = Object.values(derived).filter(d=>d.status==="activo").length;
+  const eliminados = Object.values(derived).filter(d=>d.status==="eliminado").length;
+  const money = computeMoney(ed);
+  const lastJornada = ed.jornadas[ed.jornadas.length-1];
+  tagsEl.innerHTML = `
+    <span class="jtag"><span class="dot"></span> Edición ${ed.number} · ${esc(ed.season||"")}</span>
+    <span class="jtag pink"><span class="dot"></span> ${lastJornada? esc(lastJornada.label) : "Sin jornadas aún"}</span>`;
+  lede.innerHTML = `<b>${activos}</b> jugadores activos · <b>${eliminados}</b> eliminados · Bote actual: <b>${fmtEUR(money.boteTotal)}</b>`;
+}
+
+/* ============================== RENDER: RESUMEN ============================== */
+function renderResumen(){
+  const el = document.getElementById("panel-resumen");
+  const ed = currentEdition();
+  if(!ed){
+    el.innerHTML = `<div class="card"><p class="muted" style="margin:0">Todavía no hay ninguna edición creada. Ve a <b>Ediciones y bote</b> para crear la Edición 1.</p></div>`;
+    return;
+  }
+  const derived = deriveEdition(ed);
+  const money = computeMoney(ed);
+  const activos = ed.participants.filter(ep=>derived[ep.participantId].status==="activo");
+  const eliminados = ed.participants.filter(ep=>derived[ep.participantId].status.startsWith("elim")||derived[ep.participantId].status.startsWith("expuls"));
+  const lastJornada = ed.jornadas[ed.jornadas.length-1];
+
+  let html = `
+    <div class="stats4">
+      <div class="stat"><div class="n">${activos.length}</div><div class="l">Activos</div></div>
+      <div class="stat"><div class="n pink">${eliminados.length}</div><div class="l">Fuera</div></div>
+      <div class="stat"><div class="n amber">${fmtEUR(money.boteTotal)}</div><div class="l">Bote actual</div></div>
+      <div class="stat"><div class="n">${ed.jornadas.length}</div><div class="l">Jornadas jugadas</div></div>
+    </div>
+
+    <div class="section-h"><span class="mk">○</span><span class="tag">Reparto del bote</span><span class="line"></span></div>
+    <div class="card">
+      <div class="formgrid cols3" style="text-align:center">
+        <div><div class="muted" style="font-size:12px">Recaudado esta edición</div><div style="font-family:var(--display);font-weight:800;font-size:20px;margin-top:4px">${fmtEUR(money.recaudacion)}</div></div>
+        <div><div class="muted" style="font-size:12px">90% al bote</div><div style="font-family:var(--display);font-weight:800;font-size:20px;margin-top:4px;color:var(--teal)">${fmtEUR(money.aporte)}</div></div>
+        <div><div class="muted" style="font-size:12px">10% organización</div><div style="font-family:var(--display);font-weight:800;font-size:20px;margin-top:4px;color:var(--pink)">${fmtEUR(money.comision)}</div></div>
+      </div>
+      ${ed.potCarriedOver>0? `<p class="muted" style="margin:12px 0 0;font-size:12.5px">Incluye ${fmtEUR(ed.potCarriedOver)} de bote heredado de ediciones anteriores (ya con la comisión aplicada en su momento).</p>`:""}
+    </div>`;
+
+  if(lastJornada){
+    html += `<div class="section-h"><span class="mk">△</span><span class="tag">Última jornada: ${esc(lastJornada.label)}</span><span class="line"></span></div>
+    <div class="card">${renderPicksMini(lastJornada, derived)}</div>`;
+  }
+
+  html += `<div class="section-h"><span class="mk">□</span><span class="tag">Jugadores activos</span><span class="line"></span></div>`;
+  if(!activos.length){
+    html += `<div class="card"><p class="muted" style="margin:0">Nadie activo todavía.</p></div>`;
+  } else {
+    html += `<div class="grid">` + activos.map(ep=>playerCardHTML(ep, derived)).join("") + `</div>`;
+  }
+  el.innerHTML = html;
+  el.querySelectorAll(".pcard").forEach(c=>c.addEventListener("click",()=>{activePlayerId=c.dataset.id; activeTab="jugadores"; render();}));
+}
+
+function renderPicksMini(j, derived){
+  if(!j.picks.length) return `<p class="muted" style="margin:0">Sin pronósticos registrados.</p>`;
+  return `<div class="tblwrap"><table class="picktable"><thead><tr><th>Jugador</th><th>Equipo 1</th><th>Equipo 2</th><th>Resultado</th></tr></thead><tbody>`+
+    j.picks.map(p=>{
+      const pl = getParticipant(p.participantId); const r = pickOutcome(p);
+      const pillClass = r.outcome==="sobrevive"?"pill-ok":r.outcome==="eliminado"?"pill-danger":r.outcome==="anulada"?"pill-warn":"pill-off";
+      const label = r.outcome==="sobrevive"?"Sobrevive":r.outcome==="eliminado"?"Eliminado":r.outcome==="anulada"?"Jornada anulada":"Pendiente";
+      return `<tr><td>${esc(pl?pl.name:"?")}</td><td>${esc(p.team1)}</td><td>${esc(p.team2)}</td><td><span class="pill ${pillClass}">${label}</span></td></tr>`;
+    }).join("") + `</tbody></table></div>`;
+}
+
+/* ============================== RENDER: JUGADORES ============================== */
+function playerCardHTML(ep, derived){
+  const p = getParticipant(ep.participantId); if(!p) return "";
+  const d = derived[ep.participantId] || {status:"activo"};
+  const initials = p.name.trim().split(/\s+/).map(w=>w[0]).slice(0,2).join("").toUpperCase();
+  return `<button class="pcard st-${d.status.startsWith('elim')?'eliminado':d.status.startsWith('expuls')?'expulsado':'activo'}" data-id="${p.id}">
+    <span class="num">${initials}</span>
+    <span style="min-width:0">
+      <span class="pname">${esc(p.name)}</span>
+      <span class="pmeta"><span class="pill ${STATUS_PILL[d.status]}">${STATUS_LABEL[d.status]}</span>${!ep.pagado?`<span class="pill pill-warn">Sin pagar</span>`:""}</span>
+    </span>
+  </button>`;
+}
+
+function renderJugadores(){
+  const el = document.getElementById("panel-jugadores");
+  const ed = currentEdition();
+  if(!ed){ el.innerHTML=`<div class="card"><p class="muted" style="margin:0">Crea una edición primero en <b>Ediciones y bote</b>.</p></div>`; return; }
+
+  if(activePlayerId){ renderPlayerDetail(el, ed, activePlayerId); return; }
+
+  const derived = deriveEdition(ed);
+  el.innerHTML = `
+    <div class="search">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+      <input id="playerSearch" type="search" placeholder="Busca un jugador…">
+    </div>
+    <div class="btnrow" style="margin-bottom:16px">
+      <button class="btn primary" id="addPlayerBtn">+ Añadir jugador</button>
+      <button class="btn" id="pasteRosterBtn">+ Pegar lista de jugadores</button>
+    </div>
+    <div id="addPlayerForm" class="card hidden" style="margin-bottom:16px"></div>
+    <div id="rosterForm" class="card hidden" style="margin-bottom:16px"></div>
+    <div class="grid" id="playersGrid"></div>
+    <p class="empty hidden" id="playersEmpty">Ningún jugador con ese nombre.</p>
+  `;
+
+  function paint(filter){
+    const q = normName(filter||"");
+    const grid = document.getElementById("playersGrid");
+    const list = ed.participants.filter(ep=>{
+      const p = getParticipant(ep.participantId);
+      return p && normName(p.name).includes(q);
+    });
+    grid.innerHTML = list.map(ep=>playerCardHTML(ep, derived)).join("");
+    grid.querySelectorAll(".pcard").forEach(c=>c.addEventListener("click",()=>{activePlayerId=c.dataset.id; render();}));
+    document.getElementById("playersEmpty").classList.toggle("hidden", list.length>0);
+  }
+  paint("");
+  document.getElementById("playerSearch").addEventListener("input", e=>paint(e.target.value));
+
+  document.getElementById("addPlayerBtn").addEventListener("click", ()=>{
+    const box = document.getElementById("addPlayerForm");
+    box.classList.toggle("hidden");
+    box.innerHTML = `
+      <div class="formgrid cols2">
+        <div class="field"><label>Nombre</label><input type="text" id="newPlayerName" placeholder="Nombre del jugador"></div>
+        <div class="field"><label>Cuota sugerida</label><input type="text" id="newPlayerCuota" value="10 €" disabled></div>
+      </div>
+      <div class="btnrow" style="margin-top:12px">
+        <button class="btn primary" id="confirmAddPlayer">Añadir a la edición actual</button>
+      </div>`;
+    const nameInput = document.getElementById("newPlayerName");
+    const cuotaPreview = document.getElementById("newPlayerCuota");
+    nameInput.focus();
+    nameInput.addEventListener("input", ()=>{
+      const existing = findParticipantByName(nameInput.value);
+      const idx = editionIndex(ed);
+      const isNew = existing ? isNewToChain(existing.id, idx) : true;
+      cuotaPreview.value = fmtEUR(isNew ? 10*ed.number : 10) + (isNew && ed.number>1 ? " (nuevo, se une con el bote ya acumulado)" : "");
+    });
+    document.getElementById("confirmAddPlayer").addEventListener("click", ()=>{
+      const name = nameInput.value.trim();
+      if(!name) return;
+      const p = ensureParticipant(name);
+      if(ed.participants.some(ep=>ep.participantId===p.id)){ alert("Ese jugador ya está en esta edición."); return; }
+      const cuota = suggestedCuota(p.id, ed);
+      ed.participants.push({participantId:p.id, pagado:false, cuota, note:""});
+      saveState(); render();
+    });
+  });
+
+  document.getElementById("pasteRosterBtn").addEventListener("click", ()=>{
+    const box = document.getElementById("rosterForm");
+    box.classList.toggle("hidden");
+    if(box.classList.contains("hidden")) return;
+    box.innerHTML = `
+      <div class="field"><label>Pegar lista (uno por línea, marca los pagados con ✅)</label>
+        <textarea id="rosterPaste" placeholder="1. Sergio Acevedo ✅&#10;2. Diego Serrano&#10;..."></textarea>
+      </div>
+      <div class="btnrow" style="margin-top:8px"><button class="btn sm" id="parseRosterBtn">Analizar lista</button></div>
+      <div id="rosterPreview"></div>`;
+    document.getElementById("rosterPaste").focus();
+    document.getElementById("parseRosterBtn").addEventListener("click", ()=>{
+      const rows = parseRoster(document.getElementById("rosterPaste").value);
+      document.getElementById("rosterPreview").innerHTML = rosterPreviewHTML(rows, ed);
+      wireRosterPreview(ed);
+    });
+  });
+}
+
+function parseRoster(text){
+  return text.split(/\n+/).map(l=>l.trim()).filter(Boolean).map(line=>{
+    const paid = /[✅✓☑]/.test(line);
+    const name = line
+      .replace(/[✅✓☑]/g,"")
+      .replace(/[⁠​‌‍]/g,"")
+      .replace(/^[\s]*\d+[\.\):]?\s*/,"")
+      .replace(/^[-•*]\s*/,"")
+      .trim();
+    return {name, paid};
+  }).filter(r=>r.name);
+}
+
+function rosterPreviewHTML(rows, ed){
+  if(!rows.length) return `<p class="muted" style="margin:8px 0 0">No se ha detectado ningún nombre en el texto.</p>`;
+  return `
+    <div class="section-h" style="margin:14px 2px 8px"><span class="mk">△</span><span class="tag">Revisa antes de confirmar</span><span class="line"></span></div>
+    <div id="rosterRows">
+      ${rows.map((r,i)=>`
+        <div class="previewrow roster" data-i="${i}">
+          <input type="text" value="${esc(r.name)}" data-f="name" placeholder="Nombre jugador">
+          <label style="display:flex;align-items:center;gap:6px;font-size:13px;color:var(--ink-soft)"><input type="checkbox" data-f="paid" ${r.paid?"checked":""}> Pagado</label>
+          <button class="btn sm danger" data-act="dropRosterRow">Quitar</button>
+        </div>`).join("")}
+    </div>
+    <div class="btnrow" style="margin-top:8px"><button class="btn primary sm" id="confirmRoster">Añadir ${rows.length} jugadores a la edición ${ed.number}</button></div>
+  `;
+}
+
+function wireRosterPreview(ed){
+  const container = document.getElementById("rosterPreview");
+  if(!container) return;
+  container.addEventListener("click", e=>{
+    if(e.target.dataset.act==="dropRosterRow"){
+      e.target.closest(".previewrow").remove();
+    }
+    if(e.target.id==="confirmRoster"){
+      const rows = Array.from(container.querySelectorAll(".previewrow")).map(row=>({
+        name: row.querySelector('[data-f="name"]').value.trim(),
+        paid: row.querySelector('[data-f="paid"]').checked,
+      })).filter(r=>r.name);
+      rows.forEach(r=>{
+        const p = ensureParticipant(r.name);
+        const existing = ed.participants.find(ep=>ep.participantId===p.id);
+        if(existing){ existing.pagado = r.paid; }
+        else { ed.participants.push({participantId:p.id, pagado:r.paid, cuota: suggestedCuota(p.id, ed), note:""}); }
+      });
+      saveState(); render();
+    }
+  });
+}
+
+function renderPlayerDetail(el, ed, playerId){
+  const p = getParticipant(playerId);
+  if(!p){ activePlayerId=null; render(); return; }
+  const derived = deriveEdition(ed);
+  const ep = ed.participants.find(x=>x.participantId===playerId);
+  const d = derived[playerId] || {status:"n/a"};
+  const teams = usedTeamsFor(playerId);
+  const initials = p.name.trim().split(/\s+/).map(w=>w[0]).slice(0,2).join("").toUpperCase();
+
+  const editionsHistory = state.editions.map(e=>{
+    const ep2 = e.participants.find(x=>x.participantId===playerId);
+    if(!ep2) return null;
+    const der2 = deriveEdition(e);
+    const s = der2[playerId];
+    return `<div class="trow"><span class="tlabel">Edición ${e.number} (${esc(e.season||"")})</span><span class="tteam">${STATUS_LABEL[s.status]}${s.eliminatedIn?` · ${esc(s.eliminatedIn)}`:""}</span></div>`;
+  }).filter(Boolean).join("");
+
+  el.innerHTML = `
+    <button class="back" id="backBtn">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+      Jugadores
+    </button>
+    <div class="hero">
+      <div class="hero-top">
+        <span class="num num-lg">${initials}</span>
+        <div>
+          <h2>${esc(p.name)}</h2>
+          <span class="pill ${STATUS_PILL[d.status]}">${STATUS_LABEL[d.status]}</span>
+          ${ep? `<span class="pill ${ep.pagado?'pill-ok':'pill-warn'}" style="margin-left:6px">${ep.pagado?`Pagó ${fmtEUR(ep.cuota)}`:'Sin pagar'}</span>`:""}
+        </div>
+      </div>
+    </div>
+
+    ${ep? `
+    <div class="section-h"><span class="mk">○</span><span class="tag">Pago edición ${ed.number}</span><span class="line"></span></div>
+    <div class="card">
+      <div class="formgrid cols3">
+        <div class="field"><label>Cuota (€)</label><input type="number" min="0" step="1" id="cuotaInput" value="${ep.cuota}"></div>
+        <div class="field"><label>¿Pagó?</label><select id="pagadoInput"><option value="0" ${!ep.pagado?"selected":""}>No</option><option value="1" ${ep.pagado?"selected":""}>Sí</option></select></div>
+        <div class="field"><label>Nota</label><input type="text" id="noteInput" value="${esc(ep.note||"")}" placeholder="opcional"></div>
+      </div>
+      <div class="btnrow" style="margin-top:12px">
+        <button class="btn primary" id="savePayBtn">Guardar</button>
+        <button class="btn danger" id="removePlayerBtn">Quitar de esta edición</button>
+      </div>
+    </div>` : ""}
+
+    <div class="section-h"><span class="mk">△</span><span class="tag">Equipos ya usados</span><span class="line"></span></div>
+    <div class="card">
+      ${teams.length? `<div class="exrow">${teams.map(t=>`<span class="extag">${esc(t.team)} <span class="muted" style="font-weight:400">· ${esc(t.edLabel)} ${esc(t.jLabel)}</span></span>`).join("")}</div>` : `<p class="muted" style="margin:0">Todavía no ha usado ningún equipo.</p>`}
+    </div>
+
+    <div class="section-h"><span class="mk">□</span><span class="tag">Historial por edición</span><span class="line"></span></div>
+    <div class="card">${editionsHistory || `<p class="muted" style="margin:0">Sin historial.</p>`}</div>
+  `;
+  document.getElementById("backBtn").addEventListener("click", ()=>{activePlayerId=null; render();});
+  if(ep){
+    document.getElementById("savePayBtn").addEventListener("click", ()=>{
+      ep.cuota = Number(document.getElementById("cuotaInput").value)||0;
+      ep.pagado = document.getElementById("pagadoInput").value==="1";
+      ep.note = document.getElementById("noteInput").value;
+      saveState(); render();
+    });
+    document.getElementById("removePlayerBtn").addEventListener("click", ()=>{
+      if(!confirm(`¿Quitar a ${p.name} de la Edición ${ed.number}? Sus pronósticos ya registrados en esta edición se mantendrán.`)) return;
+      ed.participants = ed.participants.filter(x=>x.participantId!==playerId);
+      saveState(); activePlayerId=null; render();
+    });
+  }
+}
+
+/* ============================== RENDER: JORNADAS ============================== */
+function renderJornadas(){
+  const el = document.getElementById("panel-jornadas");
+  const ed = currentEdition();
+  if(!ed){ el.innerHTML=`<div class="card"><p class="muted" style="margin:0">Crea una edición primero en <b>Ediciones y bote</b>.</p></div>`; return; }
+
+  let html = `<div class="btnrow" style="margin-bottom:16px"><button class="btn primary" id="newJornadaBtn">+ Nueva jornada</button></div>`;
+  html += `<div id="newJornadaForm" class="card hidden" style="margin-bottom:16px"></div>`;
+
+  if(!ed.jornadas.length){
+    html += `<div class="card"><p class="muted" style="margin:0">Todavía no hay jornadas en esta edición.</p></div>`;
+  } else {
+    [...ed.jornadas].reverse().forEach(j=>{
+      html += jornadaCardHTML(ed, j);
+    });
+  }
+  el.innerHTML = html;
+
+  document.getElementById("newJornadaBtn").addEventListener("click", ()=>{
+    const box = document.getElementById("newJornadaForm");
+    box.classList.toggle("hidden");
+    box.innerHTML = `
+      <div class="formgrid cols2">
+        <div class="field"><label>Nombre de la jornada</label><input type="text" id="jLabel" placeholder="Jornada ${ed.jornadas.length+1}" value="Jornada ${ed.jornadas.length+1}"></div>
+        <div class="field"><label>Temporada</label><input type="text" id="jSeason" value="${esc(ed.season||"")}"></div>
+      </div>
+      <div class="btnrow" style="margin-top:12px"><button class="btn primary" id="confirmNewJornada">Crear jornada</button></div>`;
+    document.getElementById("confirmNewJornada").addEventListener("click", ()=>{
+      const label = document.getElementById("jLabel").value.trim() || `Jornada ${ed.jornadas.length+1}`;
+      const season = document.getElementById("jSeason").value.trim();
+      const j = newJornada(label, season);
+      ed.jornadas.push(j);
+      openJornadaId = j.id;
+      saveState(); render();
+    });
+  });
+
+  el.querySelectorAll(".jcard-head").forEach(h=>{
+    h.addEventListener("click", ()=>{
+      const id = h.closest(".jcard").dataset.id;
+      openJornadaId = openJornadaId===id? null : id;
+      render();
+    });
+  });
+
+  ed.jornadas.forEach(j=> wireJornada(ed, j));
+}
+
+function jornadaCardHTML(ed, j){
+  const derived = deriveEdition(ed);
+  const open = openJornadaId===j.id;
+  const resueltos = j.picks.filter(p=>pickOutcome(p).outcome!=="pendiente").length;
+  return `<div class="jcard ${open?'open':''}" data-id="${j.id}">
+    <div class="jcard-head">
+      <span class="t">${esc(j.label)}</span>
+      <span class="sub">${esc(j.season||"")} · ${j.picks.length} pronósticos · ${resueltos}/${j.picks.length} resueltos</span>
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+    </div>
+    <div class="jcard-body">${open? jornadaBodyHTML(ed, j, derived) : ""}</div>
+  </div>`;
+}
+
+function jornadaBodyHTML(ed, j, derived){
+  const expelledHere = j.expelled||[];
+  const activeParticipants = ed.participants.filter(ep=>
+    derived[ep.participantId].status==="activo" ||
+    j.picks.some(p=>p.participantId===ep.participantId) ||
+    expelledHere.includes(ep.participantId)
+  );
+  return `
+    <div class="pastebox">
+      <div class="field"><label>Pegar pronósticos de WhatsApp</label>
+        <textarea id="paste-${j.id}" placeholder="Sergio: Barcelona / Real Madrid&#10;Diego: Sevilla - Betis&#10;..."></textarea>
+      </div>
+      <div class="btnrow" style="margin-top:8px"><button class="btn sm" data-act="parse" data-j="${j.id}">Analizar texto</button></div>
+      <div id="preview-${j.id}"></div>
+    </div>
+
+    <div class="tblwrap">
+      <table class="picktable">
+        <thead><tr><th>Jugador</th><th>Equipo 1</th><th>Equipo 2</th><th>Resultado eq.1</th><th>Resultado eq.2</th><th>Estado</th><th></th></tr></thead>
+        <tbody id="picksbody-${j.id}">
+          ${j.picks.map(p=>pickRowHTML(j,p)).join("")}
+        </tbody>
+      </table>
+    </div>
+
+    <div class="section-h" style="margin-top:18px"><span class="mk">△</span><span class="tag">No pronosticaron</span><span class="line"></span></div>
+    <p class="muted" style="font-size:12.5px;margin:4px 0 10px">Marca a quien no envió pronóstico antes de la hora límite: queda expulsado del juego.</p>
+    <div class="btnrow" id="expelrow-${j.id}">
+      ${activeParticipants.filter(ep=>!j.picks.some(p=>p.participantId===ep.participantId)).map(ep=>{
+        const pl = getParticipant(ep.participantId);
+        const already = (j.expelled||[]).includes(ep.participantId);
+        return `<button class="btn sm ${already?'danger':''}" data-act="toggleExpel" data-j="${j.id}" data-p="${ep.participantId}">${already?'✕ ':''}${esc(pl.name)}</button>`;
+      }).join("") || `<span class="muted" style="font-size:13px">Todos los activos ya tienen pronóstico.</span>`}
+    </div>
+  `;
+}
+
+function pickRowHTML(j, p){
+  const pl = getParticipant(p.participantId);
+  const r = pickOutcome(p);
+  const label = r.outcome==="sobrevive"?"Sobrevive":r.outcome==="eliminado"?"Eliminado":r.outcome==="anulada"?"Jornada anulada":"Pendiente";
+  const pillClass = r.outcome==="sobrevive"?"pill-ok":r.outcome==="eliminado"?"pill-danger":r.outcome==="anulada"?"pill-warn":"pill-off";
+  const warn1 = pl && teamAlreadyUsed(p.participantId, p.team1, j.id) ? `<span class="warnchip">ya usado</span>` : "";
+  const warn2 = pl && teamAlreadyUsed(p.participantId, p.team2, j.id) ? `<span class="warnchip">ya usado</span>` : "";
+  return `<tr data-p="${p.participantId}">
+    <td>${esc(pl?pl.name:"?")}</td>
+    <td><input type="text" value="${esc(p.team1)}" data-f="team1" style="width:120px">${warn1}</td>
+    <td><input type="text" value="${esc(p.team2)}" data-f="team2" style="width:120px">${warn2}</td>
+    <td><select data-f="result1"><option value="">—</option>${["gano","no_gano","anulado"].map(v=>`<option value="${v}" ${p.result1===v?"selected":""}>${RESULT_LABEL[v]}</option>`).join("")}</select></td>
+    <td><select data-f="result2" ${p.result1!=="anulado"?"disabled":""}><option value="">—</option>${["gano","no_gano","anulado"].map(v=>`<option value="${v}" ${p.result2===v?"selected":""}>${RESULT_LABEL[v]}</option>`).join("")}</select></td>
+    <td><span class="pill ${pillClass}">${label}</span></td>
+    <td><button class="btn sm danger" data-act="removePick">Quitar</button></td>
+  </tr>`;
+}
+
+function wireJornada(ed, j){
+  const parseBtn = document.querySelector(`[data-act="parse"][data-j="${j.id}"]`);
+  if(parseBtn){
+    parseBtn.addEventListener("click", ()=>{
+      const text = document.getElementById(`paste-${j.id}`).value;
+      const rows = parseWhatsapp(text);
+      document.getElementById(`preview-${j.id}`).innerHTML = previewHTML(j.id, rows);
+      wirePreview(ed, j);
+    });
+  }
+  const body = document.getElementById(`picksbody-${j.id}`);
+  if(body){
+    body.addEventListener("change", e=>{
+      const tr = e.target.closest("tr"); if(!tr) return;
+      const pid = tr.dataset.p;
+      const pick = j.picks.find(p=>p.participantId===pid);
+      const f = e.target.dataset.f;
+      if(!f) return;
+      pick[f] = e.target.value;
+      if(f==="result1" && pick.result1!=="anulado") pick.result2 = "";
+      saveState(); render();
+    });
+    body.addEventListener("click", e=>{
+      if(e.target.dataset.act==="removePick"){
+        const tr = e.target.closest("tr"); const pid = tr.dataset.p;
+        j.picks = j.picks.filter(p=>p.participantId!==pid);
+        saveState(); render();
+      }
+    });
+  }
+  const expelrow = document.getElementById(`expelrow-${j.id}`);
+  if(expelrow){
+    expelrow.addEventListener("click", e=>{
+      const btn = e.target.closest("[data-act='toggleExpel']"); if(!btn) return;
+      const pid = btn.dataset.p;
+      j.expelled = j.expelled||[];
+      const idx = j.expelled.indexOf(pid);
+      if(idx>-1) j.expelled.splice(idx,1); else j.expelled.push(pid);
+      saveState(); render();
+    });
+  }
+}
+
+/* --- parser de texto pegado de WhatsApp --- */
+function parseWhatsapp(text){
+  const lines = text.split(/\n+/).map(l=>l.trim()).filter(Boolean);
+  const byName = new Map();
+  lines.forEach(raw=>{
+    let line = raw.replace(/^[-•*\d.)\s]+(?=\S)/,"").trim();
+    let name="", rest="";
+    if(line.includes(":")){
+      const i = line.indexOf(":");
+      name = line.slice(0,i).trim();
+      rest = line.slice(i+1).trim();
+    } else {
+      const m = line.match(/^(.+?)\s+-\s+(.+)$/);
+      if(m){ name=m[1].trim(); rest=m[2].trim(); } else { rest = line; }
+    }
+    const teams = rest.split(/\s*(?:\/|\||,| y | vs\.?| contra )\s*/i).filter(Boolean);
+    byName.set(name || `(sin nombre) ${byName.size+1}`, {name, team1: teams[0]||"", team2: teams[1]||"", raw});
+  });
+  return Array.from(byName.values());
+}
+
+function previewHTML(jId, rows){
+  if(!rows.length) return `<p class="muted" style="margin:8px 0 0">No se ha detectado ningún pronóstico en el texto.</p>`;
+  return `
+    <div class="section-h" style="margin:14px 2px 8px"><span class="mk">△</span><span class="tag">Revisa antes de confirmar</span><span class="line"></span></div>
+    <div id="previewRows-${jId}">
+      ${rows.map((r,i)=>`
+        <div class="previewrow" data-i="${i}">
+          <input type="text" value="${esc(r.name)}" data-f="name" placeholder="Nombre jugador">
+          <input type="text" value="${esc(r.team1)}" data-f="team1" placeholder="Equipo 1">
+          <input type="text" value="${esc(r.team2)}" data-f="team2" placeholder="Equipo 2 (reserva)">
+          <button class="btn sm danger" data-act="dropRow">Quitar</button>
+        </div>`).join("")}
+    </div>
+    <div class="btnrow" style="margin-top:8px"><button class="btn primary sm" data-act="confirmParse" data-j="${jId}">Confirmar y añadir pronósticos</button></div>
+  `;
+}
+
+function wirePreview(ed, j){
+  const container = document.getElementById(`preview-${j.id}`);
+  if(!container) return;
+  container.addEventListener("click", e=>{
+    if(e.target.dataset.act==="dropRow"){
+      e.target.closest(".previewrow").remove();
+    }
+    if(e.target.dataset.act==="confirmParse"){
+      const rows = Array.from(container.querySelectorAll(".previewrow")).map(row=>({
+        name: row.querySelector('[data-f="name"]').value.trim(),
+        team1: row.querySelector('[data-f="team1"]').value.trim(),
+        team2: row.querySelector('[data-f="team2"]').value.trim(),
+      })).filter(r=>r.name);
+      rows.forEach(r=>{
+        const p = ensureParticipant(r.name);
+        if(!ed.participants.some(ep=>ep.participantId===p.id)){
+          ed.participants.push({participantId:p.id, pagado:false, cuota:suggestedCuota(p.id, ed), note:""});
+        }
+        j.expelled = (j.expelled||[]).filter(pid=>pid!==p.id);
+        const existing = j.picks.find(pk=>pk.participantId===p.id);
+        if(existing){ existing.team1=r.team1; existing.team2=r.team2; }
+        else { j.picks.push({participantId:p.id, team1:r.team1, team2:r.team2, result1:"", result2:""}); }
+      });
+      saveState(); render();
+    }
+  });
+}
+
+/* ============================== RENDER: EDICIONES ============================== */
+function renderEdiciones(){
+  const el = document.getElementById("panel-ediciones");
+  let html = "";
+
+  if(!state.editions.length){
+    html += `<div class="card">
+      <p class="muted">Todavía no hay ninguna edición. Empieza creando la Edición 1.</p>
+      <div class="formgrid cols2" style="margin-top:10px">
+        <div class="field"><label>Temporada</label><input type="text" id="firstSeason" placeholder="2026/27" value="2026/27"></div>
+      </div>
+      <div class="btnrow" style="margin-top:12px"><button class="btn primary" id="createFirstEdition">Crear Edición 1</button></div>
+    </div>`;
+  } else {
+    [...state.editions].reverse().forEach(ed=>{
+      html += editionCardHTML(ed);
+    });
+  }
+  el.innerHTML = html;
+
+  const cfe = document.getElementById("createFirstEdition");
+  if(cfe) cfe.addEventListener("click", ()=>{
+    const season = document.getElementById("firstSeason").value.trim() || "2026/27";
+    state.editions.push(newEdition(1, season, 0));
+    saveState(); render();
+  });
+
+  state.editions.forEach(ed=> wireEdition(ed));
+}
+
+function editionCardHTML(ed){
+  const derived = deriveEdition(ed);
+  const money = computeMoney(ed);
+  const activos = Object.values(derived).filter(d=>d.status==="activo");
+  const isOpen = ed.status==="abierta";
+  const winner = ed.winnerId? getParticipant(ed.winnerId) : null;
+  return `<div class="card" style="margin-bottom:14px" data-ed="${ed.id}">
+    <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+      <span style="font-family:var(--display);font-weight:800;color:#fff;font-size:18px">Edición ${ed.number}</span>
+      <span class="pill ${isOpen?'pill-ok':winner?'pill-ok':'pill-warn'}">${isOpen?"Abierta":winner?"Cerrada · con ganador":"Cerrada · sin ganador"}</span>
+      <span class="muted" style="font-size:12.5px">${esc(ed.season||"")}</span>
+    </div>
+    <div class="formgrid cols3" style="margin-top:12px;text-align:center">
+      <div><div class="muted" style="font-size:11.5px">Jugadores</div><div style="font-weight:800;font-size:17px">${ed.participants.length}</div></div>
+      <div><div class="muted" style="font-size:11.5px">Activos ahora</div><div style="font-weight:800;font-size:17px">${activos.length}</div></div>
+      <div><div class="muted" style="font-size:11.5px">Bote</div><div style="font-weight:800;font-size:17px;color:var(--amber)">${fmtEUR(money.boteTotal)}</div></div>
+    </div>
+    ${winner? `<p style="margin:12px 0 0;font-size:13.5px">🏆 Ganador: <b style="color:#fff">${esc(winner.name)}</b> — se lleva ${fmtEUR(money.boteTotal)}</p>` : ""}
+    ${isOpen? `
+      <div class="btnrow" style="margin-top:14px">
+        <select id="winnerSelect-${ed.id}" style="border:1px solid var(--line);border-radius:10px;padding:9px 10px;background:var(--cream);color:var(--ink)">
+          <option value="">Elegir ganador…</option>
+          ${ed.participants.filter(ep=>derived[ep.participantId].status==="activo").map(ep=>{
+            const p = getParticipant(ep.participantId);
+            return `<option value="${ep.participantId}">${esc(p.name)}</option>`;
+          }).join("")}
+        </select>
+        <button class="btn primary sm" data-act="closeWithWinner" data-ed="${ed.id}">Cerrar edición con ganador</button>
+        <button class="btn danger sm" data-act="closeNoWinner" data-ed="${ed.id}">Cerrar sin ganador (bote acumula)</button>
+      </div>
+    ` : ""}
+  </div>`;
+}
+
+function wireEdition(ed){
+  const card = document.querySelector(`[data-ed="${ed.id}"]`);
+  if(!card) return;
+  card.addEventListener("click", e=>{
+    const act = e.target.dataset.act;
+    if(act==="closeWithWinner"){
+      const sel = document.getElementById(`winnerSelect-${ed.id}`);
+      const pid = sel.value;
+      if(!pid){ alert("Elige un ganador primero."); return; }
+      ed.status="cerrada_ganador"; ed.winnerId=pid;
+      saveState(); render();
+    }
+    if(act==="closeNoWinner"){
+      if(!confirm("¿Cerrar esta edición sin ganador? El bote pasará íntegro a una nueva edición y todos deberán volver a pagar para seguir participando.")) return;
+      const money = computeMoney(ed);
+      ed.status="cerrada_sin_ganador";
+      const next = newEdition(ed.number+1, ed.season, money.boteTotal);
+      state.editions.push(next);
+      next.participants = ed.participants.map(ep=>({
+        participantId: ep.participantId, pagado:false, cuota: suggestedCuota(ep.participantId, next), note:""
+      }));
+      saveState(); render();
+    }
+  });
+}
+
+/* ============================== RENDER: LIGA (resultados / próximos partidos) ============================== */
+function fmtDate(ts){
+  if(!ts) return "";
+  return new Date(ts).toLocaleString("es-ES",{day:"2-digit",month:"short",hour:"2-digit",minute:"2-digit"});
+}
+
+function parseMatchLine(line){
+  let m = line.match(/^(.*\S)\s+(\d{1,2})\s*[-–]\s*(\d{1,2})\s+(\S.*)$/);
+  if(m) return {team1:m[1].trim(), team2:m[4].trim(), extra:`${m[2]}-${m[3]}`, raw:line};
+  m = line.match(/^(.*?)\s+(?:-|–|vs\.?|contra)\s+(.+)$/i);
+  if(m) return {team1:m[1].trim(), team2:m[2].trim(), extra:"", raw:line};
+  return {team1:line.trim(), team2:"", extra:"", raw:line};
+}
+function parseMatchBlock(text){
+  return text.split(/\n+/).map(l=>l.trim()).filter(Boolean).map(parseMatchLine);
+}
+function matchRowHTML(m){
+  return `<div class="matchrow">
+    <span class="mteam">${esc(m.team1)}</span>
+    ${m.extra? `<span class="mextra">${esc(m.extra)}</span>` : `<span class="mextra" style="color:var(--ink-soft);background:var(--chip-off);border-color:var(--line)">vs</span>`}
+    <span class="mteam right">${esc(m.team2)}</span>
+  </div>`;
+}
+function pasteFormHTML(cfg){
+  return `
+    ${cfg.showLabel!==false? `<div class="formgrid cols2"><div class="field"><label>Nombre de la jornada</label><input type="text" id="${cfg.labelId}" value="${esc(cfg.defaultLabel||"")}"></div></div>` : ""}
+    <div class="field" style="margin-top:${cfg.showLabel!==false?10:0}px"><label>${esc(cfg.textLabel||"Pegar texto")}</label>
+      <textarea id="${cfg.textId}" placeholder="${esc(cfg.placeholder||"")}">${esc(cfg.defaultText||"")}</textarea>
+    </div>
+    <div class="btnrow" style="margin-top:8px"><button class="btn sm" id="${cfg.analizarId}">Analizar texto</button></div>
+    <div id="${cfg.previewId}"></div>
+  `;
+}
+function matchPreviewHTML(rows, confirmId, confirmLabel){
+  if(!rows.length) return `<p class="muted" style="margin:8px 0 0">No se ha detectado ningún partido en el texto.</p>`;
+  return `
+    <div class="section-h" style="margin:14px 2px 8px"><span class="mk">△</span><span class="tag">Revisa antes de confirmar</span><span class="line"></span></div>
+    <div>
+      ${rows.map((r,i)=>`
+        <div class="previewrow" data-i="${i}">
+          <input type="text" value="${esc(r.team1)}" data-f="team1" placeholder="Equipo local">
+          <input type="text" value="${esc(r.team2)}" data-f="team2" placeholder="Equipo visitante">
+          <input type="text" value="${esc(r.extra)}" data-f="extra" placeholder="Resultado / hora">
+          <button class="btn sm danger" data-act="dropRow">Quitar</button>
+        </div>`).join("")}
+    </div>
+    <div class="btnrow" style="margin-top:8px"><button class="btn primary sm" id="${confirmId}">${esc(confirmLabel)}</button></div>
+  `;
+}
+function wireMatchPreview(previewElId, confirmId, onConfirm){
+  const container = document.getElementById(previewElId);
+  if(!container) return;
+  container.addEventListener("click", e=>{
+    if(e.target.dataset.act==="dropRow") e.target.closest(".previewrow").remove();
+    if(e.target.id===confirmId){
+      const rows = Array.from(container.querySelectorAll(".previewrow")).map(row=>{
+        const team1 = row.querySelector('[data-f="team1"]').value.trim();
+        const team2 = row.querySelector('[data-f="team2"]').value.trim();
+        const extra = row.querySelector('[data-f="extra"]').value.trim();
+        return {team1, team2, extra, raw:`${team1} ${extra} ${team2}`.trim()};
+      }).filter(r=>r.team1);
+      onConfirm(rows);
+    }
+  });
+}
+
+function renderLiga(){
+  const el = document.getElementById("panel-liga");
+  const liga = state.liga;
+
+  let html = "";
+  if(liga.autoUpdatedAt){
+    html += `<div class="jtag" style="margin-bottom:16px"><span class="dot"></span> LaLiga actualizada automáticamente · ${esc(fmtDate(liga.autoUpdatedAt))}</div>`;
+  } else {
+    html += `<div class="jtag pink" style="margin-bottom:16px"><span class="dot"></span> Aún no se ha recibido la actualización automática diaria de LaLiga</div>`;
+  }
+  html += `<div class="section-h"><span class="mk">○</span><span class="tag">Resultados</span><span class="line"></span></div>`;
+  html += `<div class="card" style="margin-bottom:18px">`;
+  if(liga.resultados && liga.resultados.matches.length){
+    html += `<div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:12px">
+      <span style="font-family:var(--display);font-weight:800;color:#fff;font-size:16px">${esc(liga.resultados.label)}</span>
+      <span class="muted" style="font-size:11.5px">Actualizado ${fmtDate(liga.resultados.updatedAt)}</span>
+    </div>`;
+    html += liga.resultados.matches.map(matchRowHTML).join("");
+  } else {
+    html += `<p class="muted" style="margin:0 0 10px">Todavía no has añadido los resultados de la última jornada.</p>`;
+  }
+  html += `<div class="btnrow" style="margin-top:12px"><button class="btn sm" id="editResultadosBtn">${liga.resultados?'Actualizar resultados':'+ Añadir resultados'}</button></div>`;
+  html += `<div id="resultadosForm" class="hidden" style="margin-top:12px"></div>`;
+  html += `</div>`;
+
+  html += `<div class="section-h"><span class="mk">△</span><span class="tag">Próximos partidos</span><span class="line"></span></div>`;
+  if(!liga.proximas.length){
+    html += `<div class="card" style="margin-bottom:12px"><p class="muted" style="margin:0">Todavía no hay próximas jornadas añadidas.</p></div>`;
+  } else {
+    liga.proximas.forEach(block=>{
+      html += `<div class="card" style="margin-bottom:12px" data-block="${block.id}">
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:12px">
+          <span style="font-family:var(--display);font-weight:800;color:#fff;font-size:16px">${esc(block.label)}</span>
+          <div style="display:flex;align-items:center;gap:8px">
+            <span class="muted" style="font-size:11.5px">Actualizado ${fmtDate(block.updatedAt)}</span>
+            <button class="btn sm danger" data-act="removeFixtureBlock" data-block="${block.id}">Eliminar</button>
+          </div>
+        </div>
+        ${block.matches.map(matchRowHTML).join("")}
+      </div>`;
+    });
+  }
+  html += `<div class="btnrow"><button class="btn sm" id="addFixturesBtn">+ Añadir jornada</button></div>`;
+  html += `<div id="fixturesForm" class="hidden" style="margin-top:12px"></div>`;
+
+  el.innerHTML = html;
+
+  document.getElementById("editResultadosBtn").addEventListener("click", ()=>{
+    const box = document.getElementById("resultadosForm");
+    box.classList.toggle("hidden");
+    if(box.classList.contains("hidden")) return;
+    box.innerHTML = pasteFormHTML({
+      labelId:"resLabel", textId:"resText", analizarId:"resAnalizar", previewId:"resPreview",
+      defaultLabel: liga.resultados? liga.resultados.label : "Jornada 1",
+      defaultText: liga.resultados? liga.resultados.matches.map(m=>m.raw).join("\n") : "",
+      placeholder:"Barcelona 2-1 Real Madrid"
+    });
+    document.getElementById("resAnalizar").addEventListener("click", ()=>{
+      const rows = parseMatchBlock(document.getElementById("resText").value);
+      document.getElementById("resPreview").innerHTML = matchPreviewHTML(rows,"resConfirm","Guardar resultados");
+      wireMatchPreview("resPreview","resConfirm", rows2=>{
+        liga.resultados = {label: document.getElementById("resLabel").value.trim()||"Jornada", updatedAt:Date.now(), matches:rows2};
+        saveState(); render();
+      });
+    });
+  });
+
+  document.getElementById("addFixturesBtn").addEventListener("click", ()=>{
+    const box = document.getElementById("fixturesForm");
+    box.classList.toggle("hidden");
+    if(box.classList.contains("hidden")) return;
+    box.innerHTML = pasteFormHTML({
+      labelId:"fxLabel", textId:"fxText", analizarId:"fxAnalizar", previewId:"fxPreview",
+      defaultLabel:`Jornada ${liga.proximas.length+2}`, defaultText:"",
+      placeholder:"Sáb 21:00 Athletic - Girona"
+    });
+    document.getElementById("fxAnalizar").addEventListener("click", ()=>{
+      const rows = parseMatchBlock(document.getElementById("fxText").value);
+      document.getElementById("fxPreview").innerHTML = matchPreviewHTML(rows,"fxConfirm","Añadir jornada");
+      wireMatchPreview("fxPreview","fxConfirm", rows2=>{
+        liga.proximas.push({id:uid(), label: document.getElementById("fxLabel").value.trim()||"Próxima jornada", updatedAt:Date.now(), matches:rows2});
+        saveState(); render();
+      });
+    });
+  });
+
+  el.querySelectorAll('[data-act="removeFixtureBlock"]').forEach(btn=>{
+    btn.addEventListener("click", ()=>{
+      liga.proximas = liga.proximas.filter(b=>b.id!==btn.dataset.block);
+      saveState(); render();
+    });
+  });
+}
+
+/* ============================== RENDER: CLASIFICACIÓN ============================== */
+function parseStandingsLine(line, fallbackPos){
+  const tokens = line.trim().split(/\s+/).filter(Boolean);
+  if(tokens.length>=9){
+    const stats = tokens.slice(-8);
+    const statsNum = stats.map(s=>parseInt(s.replace(/^\+/,""),10));
+    if(!statsNum.some(n=>Number.isNaN(n))){
+      let rest = tokens.slice(0, tokens.length-8);
+      let pos = fallbackPos;
+      if(rest.length>1 && /^\d+$/.test(rest[0])){ pos = parseInt(rest[0],10); rest = rest.slice(1); }
+      const name = rest.join(" ");
+      if(name){
+        const [pj,g,e,p,gf,gc,dg,pts] = statsNum;
+        return {pos, name, pj,g,e,p,gf,gc,dg,pts};
+      }
+    }
+  }
+  return {pos:fallbackPos, name:line.trim(), pj:0,g:0,e:0,p:0,gf:0,gc:0,dg:0,pts:0};
+}
+function parseStandings(text){
+  return text.split(/\n+/).map(l=>l.trim()).filter(Boolean).map((line,i)=>parseStandingsLine(line, i+1));
+}
+function standingsPreviewHTML(rows){
+  if(!rows.length) return `<p class="muted" style="margin:8px 0 0">No se ha detectado ninguna fila.</p>`;
+  const cols = ["pos","pj","g","e","p","gf","gc","dg","pts"];
+  return `
+    <div class="section-h" style="margin:14px 2px 8px"><span class="mk">△</span><span class="tag">Revisa antes de confirmar</span><span class="line"></span></div>
+    <div class="tblwrap">
+      <table class="picktable">
+        <thead><tr><th>#</th><th>Equipo</th><th>PJ</th><th>G</th><th>E</th><th>P</th><th>GF</th><th>GC</th><th>DG</th><th>Pts</th><th></th></tr></thead>
+        <tbody id="clasifRows">
+          ${rows.map(r=>`
+            <tr>
+              <td><input type="number" value="${r.pos}" data-f="pos" style="width:44px"></td>
+              <td><input type="text" value="${esc(r.name)}" data-f="name" style="width:150px"></td>
+              ${cols.slice(1).map(c=>`<td><input type="number" value="${r[c]}" data-f="${c}" style="width:48px"></td>`).join("")}
+              <td><button class="btn sm danger" data-act="dropClasifRow">✕</button></td>
+            </tr>`).join("")}
+        </tbody>
+      </table>
+    </div>
+    <div class="btnrow" style="margin-top:8px"><button class="btn primary sm" id="clasifConfirm">Guardar clasificación</button></div>
+  `;
+}
+function wireStandingsPreview(onConfirm){
+  const body = document.getElementById("clasifRows");
+  if(!body) return;
+  body.addEventListener("click", e=>{
+    if(e.target.dataset.act==="dropClasifRow") e.target.closest("tr").remove();
+  });
+  document.getElementById("clasifConfirm").addEventListener("click", ()=>{
+    const rows = Array.from(body.querySelectorAll("tr")).map(tr=>({
+      pos: Number(tr.querySelector('[data-f="pos"]').value)||0,
+      name: tr.querySelector('[data-f="name"]').value.trim(),
+      pj: Number(tr.querySelector('[data-f="pj"]').value)||0,
+      g: Number(tr.querySelector('[data-f="g"]').value)||0,
+      e: Number(tr.querySelector('[data-f="e"]').value)||0,
+      p: Number(tr.querySelector('[data-f="p"]').value)||0,
+      gf: Number(tr.querySelector('[data-f="gf"]').value)||0,
+      gc: Number(tr.querySelector('[data-f="gc"]').value)||0,
+      dg: Number(tr.querySelector('[data-f="dg"]').value)||0,
+      pts: Number(tr.querySelector('[data-f="pts"]').value)||0,
+    })).filter(r=>r.name).sort((a,b)=>a.pos-b.pos);
+    onConfirm(rows);
+  });
+}
+function standingsTableHTML(rows){
+  return `<div class="tblwrap"><table class="picktable">
+    <thead><tr><th>#</th><th>Equipo</th><th>PJ</th><th>G</th><th>E</th><th>P</th><th>GF</th><th>GC</th><th>DG</th><th>Pts</th></tr></thead>
+    <tbody>
+      ${rows.map((r,i)=>{
+        const zone = i<4? "zone-top": i>=rows.length-3? "zone-bottom": "";
+        return `<tr class="${zone}"><td>${r.pos}</td><td style="font-weight:700;color:#fff">${esc(r.name)}</td><td>${r.pj}</td><td>${r.g}</td><td>${r.e}</td><td>${r.p}</td><td>${r.gf}</td><td>${r.gc}</td><td>${r.dg>0?'+':''}${r.dg}</td><td style="font-weight:800;color:var(--teal)">${r.pts}</td></tr>`;
+      }).join("")}
+    </tbody>
+  </table></div>`;
+}
+function renderClasificacion(){
+  const el = document.getElementById("panel-clasificacion");
+  const clas = state.liga.clasificacion;
+  let html = `<div class="section-h"><span class="mk">○</span><span class="tag">Clasificación LaLiga</span><span class="line"></span></div>`;
+  html += `<div class="card">`;
+  if(clas && clas.rows.length){
+    html += `<div style="margin-bottom:12px"><span class="muted" style="font-size:11.5px">Actualizado ${fmtDate(clas.updatedAt)}</span></div>`;
+    html += standingsTableHTML(clas.rows);
+  } else {
+    html += `<p class="muted" style="margin:0 0 10px">Todavía no has añadido la clasificación.</p>`;
+  }
+  html += `<div class="btnrow" style="margin-top:14px"><button class="btn sm" id="editClasifBtn">${clas?'Actualizar clasificación':'+ Añadir clasificación'}</button></div>`;
+  html += `<div id="clasifForm" class="hidden" style="margin-top:12px"></div>`;
+  html += `</div>`;
+  el.innerHTML = html;
+
+  document.getElementById("editClasifBtn").addEventListener("click", ()=>{
+    const box = document.getElementById("clasifForm");
+    box.classList.toggle("hidden");
+    if(box.classList.contains("hidden")) return;
+    box.innerHTML = pasteFormHTML({
+      showLabel:false, textId:"clasifText", analizarId:"clasifAnalizar", previewId:"clasifPreview",
+      textLabel:"Pegar la tabla de clasificación (una fila por equipo)",
+      defaultText: clas? clas.rows.map(r=>`${r.pos} ${r.name} ${r.pj} ${r.g} ${r.e} ${r.p} ${r.gf} ${r.gc} ${r.dg>=0?'+':''}${r.dg} ${r.pts}`).join("\n") : "",
+      placeholder:"1 Real Madrid 38 28 7 3 88 40 +48 91"
+    });
+    document.getElementById("clasifAnalizar").addEventListener("click", ()=>{
+      const rows = parseStandings(document.getElementById("clasifText").value);
+      document.getElementById("clasifPreview").innerHTML = standingsPreviewHTML(rows);
+      wireStandingsPreview(rows2=>{
+        state.liga.clasificacion = {updatedAt:Date.now(), rows:rows2};
+        saveState(); render();
+      });
+    });
+  });
+}
+
+/* ============================== RENDER: REGLAS ============================== */
+function renderReglas(){
+  document.getElementById("panel-reglas").innerHTML = `
+    <div class="card rules">
+      <h3>Cuota e inscripción</h3>
+      <p>Se pagan <b>10 €</b> para participar.</p>
+      <p>Es imprescindible haber pagado antes del comienzo de la jornada inicial. A pesar de estar inscrito en la lista, si no se han abonado los 10 €, se queda expulsado de esa edición.</p>
+
+      <h3>Reparto del bote</h3>
+      <p>El <b>90%</b> del dinero acumulado va destinado al ganador del juego o a un posible bote acumulado. El <b>10%</b> restante es para la organización, en concepto de gestión.</p>
+
+      <h3>Un único ganador</h3>
+      <p>Solo puede haber un único ganador. Si no lo hay, el bote se acumula para la siguiente edición, y todos deben volver a aportar 10 € para seguir participando. Quien no abone los 10 € pierde el derecho a optar al bote.</p>
+      <p>Los nuevos participantes que se sumen tendrán que pagar tantas jornadas (ediciones) como lleve acumulándose el bote para poder participar. En estos casos, el bote anterior va íntegro para el ganador.</p>
+
+      <h3>Cómo se juega</h3>
+      <p>Cada jornada, el participante elige dos equipos: <b>Equipo 1</b>, con el que juega, y <b>Equipo 2</b>, de reserva por si el partido del Equipo 1 se anula o se pospone. Ambos equipos deben pertenecer a partidos distintos.</p>
+      <p>Ejemplo: si eliges Barcelona / Real Madrid, tu equipo es el Barcelona esa jornada — pero si el partido se suspende antes de empezar o incluso en el minuto 89 (sin importar el resultado en ese momento), tu equipo pasa a ser el Real Madrid para esa misma jornada.</p>
+      <p>Si un jugador elige dos equipos y ambos partidos quedan anulados, se anula la jornada completa <b>para ese jugador</b>.</p>
+
+      <h3>Plazos y cambios</h3>
+      <p>Si el jugador no envía su pronóstico antes de la hora marcada por el administrador, queda expulsado y pierde el derecho a seguir participando.</p>
+      <p>Una vez enviado el pronóstico, se puede cambiar mientras siga dentro de plazo, publicando el nuevo equipo <b>sin editar</b> el mensaje anterior. Cualquier mensaje con los equipos editados queda invalidado.</p>
+
+      <h3>Continuidad entre temporadas</h3>
+      <p>Si una edición no termina en la temporada actual, continúa desde la jornada 1 de la siguiente temporada, respetando la norma de no repetir equipos — independientemente de los equipos descendidos.</p>
+    </div>`;
+}
+
+/* ============================== RENDER MASTER ============================== */
+function render(){
+  document.querySelectorAll(".tabbtn").forEach(b=>b.classList.toggle("active", b.dataset.tab===activeTab));
+  document.querySelectorAll(".panel").forEach(p=>p.classList.toggle("active", p.id===`panel-${activeTab}`));
+  renderHeader();
+  if(activeTab==="resumen") renderResumen();
+  if(activeTab==="jugadores") renderJugadores();
+  if(activeTab==="jornadas") renderJornadas();
+  if(activeTab==="ediciones") renderEdiciones();
+  if(activeTab==="liga") renderLiga();
+  if(activeTab==="clasificacion") renderClasificacion();
+  if(activeTab==="reglas") renderReglas();
+}
+
+/* ============================== EXPORT / IMPORT / RESET ============================== */
+document.getElementById("exportBtn").addEventListener("click", e=>{
+  e.preventDefault();
+  const blob = new Blob([JSON.stringify(state,null,2)], {type:"application/json"});
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = `calamar-26-27-${new Date().toISOString().slice(0,10)}.json`;
+  a.click();
+});
+document.getElementById("importBtn").addEventListener("click", e=>{
+  e.preventDefault();
+  document.getElementById("importFile").click();
+});
+document.getElementById("importFile").addEventListener("change", e=>{
+  const file = e.target.files[0]; if(!file) return;
+  const reader = new FileReader();
+  reader.onload = ()=>{
+    try{
+      const data = JSON.parse(reader.result);
+      if(!data.participants || !data.editions) throw new Error("formato inválido");
+      if(!data.liga) data.liga = {resultados:null, proximas:[], clasificacion:null};
+      state = data; saveState(); activePlayerId=null; render();
+      alert("Copia importada correctamente.");
+    }catch(err){ alert("No se pudo importar el archivo: "+err.message); }
+  };
+  reader.readAsText(file);
+  e.target.value = "";
+});
+document.getElementById("resetBtn").addEventListener("click", e=>{
+  e.preventDefault();
+  if(!confirm("Esto borrará todos los datos guardados en este navegador (jugadores, ediciones, jornadas). ¿Seguro? Exporta antes una copia si quieres conservarlos.")) return;
+  state = defaultState(); saveState(); activeTab="resumen"; activePlayerId=null; render();
+});
+
+render();
+loadLigaFeed();
+</script>
