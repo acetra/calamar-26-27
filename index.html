@@ -1028,7 +1028,7 @@ function wireJornada(ed, j){
   if(parseBtn){
     parseBtn.addEventListener("click", ()=>{
       const text = document.getElementById(`paste-${j.id}`).value;
-      const rows = parseWhatsapp(text);
+      const rows = parseWhatsapp(text, ed);
       document.getElementById(`preview-${j.id}`).innerHTML = previewHTML(j.id, rows, ed);
       wirePreview(ed, j);
     });
@@ -1067,20 +1067,39 @@ function wireJornada(ed, j){
 }
 
 /* --- parser de texto pegado de WhatsApp --- */
-function parseWhatsapp(text){
+/* Busca, al principio de la línea, el nombre MÁS LARGO de un jugador ya existente en la
+   edición. Así no hace falta ningún separador (":", "-"...): "Sergio Acevedo Barça / Madrid"
+   se reconoce igual que "Sergio Acevedo: Barça / Madrid". Si ningún jugador conocido encaja
+   al principio, se cae a los separadores clásicos como respaldo. */
+function splitNameAndRest(line, candidates){
+  const norm = normName(line);
+  let best = null, bestLen = 0;
+  candidates.forEach(p=>{
+    const pn = normName(p.name);
+    if(pn && norm.startsWith(pn) && pn.length>bestLen){
+      best = p; bestLen = pn.length;
+    }
+  });
+  if(best){
+    const wordCount = best.name.trim().split(/\s+/).length;
+    const words = line.split(/\s+/);
+    return { name: words.slice(0, wordCount).join(" "), rest: words.slice(wordCount).join(" ").trim() };
+  }
+  if(line.includes(":")){
+    const i = line.indexOf(":");
+    return { name: line.slice(0,i).trim(), rest: line.slice(i+1).trim() };
+  }
+  const m = line.match(/^(.+?)\s+-\s+(.+)$/);
+  if(m) return { name: m[1].trim(), rest: m[2].trim() };
+  return { name: "", rest: line };
+}
+function parseWhatsapp(text, ed){
+  const candidates = ed ? ed.participants.map(ep=>getParticipant(ep.participantId)).filter(Boolean) : [];
   const lines = text.split(/\n+/).map(l=>l.trim()).filter(Boolean);
   const byName = new Map();
   lines.forEach(raw=>{
     let line = raw.replace(/^[-•*\d.)\s]+(?=\S)/,"").trim();
-    let name="", rest="";
-    if(line.includes(":")){
-      const i = line.indexOf(":");
-      name = line.slice(0,i).trim();
-      rest = line.slice(i+1).trim();
-    } else {
-      const m = line.match(/^(.+?)\s+-\s+(.+)$/);
-      if(m){ name=m[1].trim(); rest=m[2].trim(); } else { rest = line; }
-    }
+    const { name, rest } = splitNameAndRest(line, candidates);
     const teams = rest.split(/\s*(?:\/|\||,| y | vs\.?| contra )\s*/i).filter(Boolean);
     byName.set(name || `(sin nombre) ${byName.size+1}`, {name, team1: teams[0]||"", team2: teams[1]||"", raw});
   });
