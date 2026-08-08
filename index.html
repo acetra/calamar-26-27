@@ -180,6 +180,9 @@ h1 .l2{display:block;color:var(--pink);text-shadow:0 0 24px rgba(255,31,122,.35)
 .previewrow.roster{grid-template-columns:1.6fr auto auto}
 .previewrow input[type="text"]{border:1px solid var(--line-2);border-radius:9px;padding:9px 11px;background:#fff;color:#111;font-size:13.5px}
 .previewrow input[type="text"]:focus{outline:2px solid var(--pink);outline-offset:1px}
+.previewrow select{border:1px solid var(--line-2);border-radius:9px;padding:9px 11px;background:#fff;color:#111;font-size:13.5px}
+.previewrow select:focus{outline:2px solid var(--pink);outline-offset:1px}
+.previewrow select.unresolved{border-color:var(--amber);background:#fff7e8;color:#7a4a00;font-weight:700}
 @media(max-width:640px){.previewrow{grid-template-columns:1fr;background:var(--cream);border:1px solid var(--line);border-radius:10px;padding:8px;margin-bottom:8px}
   .previewrow.roster{grid-template-columns:1fr}}
 
@@ -1026,7 +1029,7 @@ function wireJornada(ed, j){
     parseBtn.addEventListener("click", ()=>{
       const text = document.getElementById(`paste-${j.id}`).value;
       const rows = parseWhatsapp(text);
-      document.getElementById(`preview-${j.id}`).innerHTML = previewHTML(j.id, rows);
+      document.getElementById(`preview-${j.id}`).innerHTML = previewHTML(j.id, rows, ed);
       wirePreview(ed, j);
     });
   }
@@ -1084,18 +1087,57 @@ function parseWhatsapp(text){
   return Array.from(byName.values());
 }
 
-function previewHTML(jId, rows){
+/* Empareja el nombre pegado con un jugador YA existente en la edición (nunca crea jugadores nuevos).
+   Prueba, en orden: coincidencia exacta, prefijo sin ambigüedad, y solapamiento de palabras. */
+function bestMatchParticipant(ed, rawName){
+  const n = normName(rawName);
+  if(!n) return null;
+  const candidates = ed.participants.map(ep=>getParticipant(ep.participantId)).filter(Boolean);
+  const exact = candidates.find(p=>normName(p.name)===n);
+  if(exact) return exact.id;
+  const prefix = candidates.filter(p=>{
+    const pn = normName(p.name);
+    return pn.startsWith(n) || n.startsWith(pn);
+  });
+  if(prefix.length===1) return prefix[0].id;
+  const inputTokens = n.split(/\s+/).filter(Boolean);
+  let best=null, bestScore=0, secondScore=0;
+  candidates.forEach(p=>{
+    const pTokens = normName(p.name).split(/\s+/).filter(Boolean);
+    let score=0;
+    inputTokens.forEach(it=>{
+      if(pTokens.some(pt=>pt===it || pt.startsWith(it) || it.startsWith(pt))) score++;
+    });
+    if(score>bestScore){ secondScore=bestScore; best=p; bestScore=score; }
+    else if(score>secondScore){ secondScore=score; }
+  });
+  return (best && bestScore>0 && bestScore>secondScore) ? best.id : null;
+}
+
+function previewHTML(jId, rows, ed){
   if(!rows.length) return `<p class="muted" style="margin:8px 0 0">No se ha detectado ningún pronóstico en el texto.</p>`;
+  if(!ed.participants.length) return `<p class="muted" style="margin:8px 0 0">No hay jugadores en esta edición todavía. Añádelos primero en la pestaña <b>Jugadores</b>.</p>`;
+  const options = ed.participants
+    .map(ep=>getParticipant(ep.participantId))
+    .filter(Boolean)
+    .sort((a,b)=>a.name.localeCompare(b.name,"es"));
   return `
     <div class="section-h" style="margin:14px 2px 8px"><span class="mk">△</span><span class="tag">Revisa antes de confirmar</span><span class="line"></span></div>
+    <p class="muted" style="font-size:12.5px;margin:0 0 10px">Solo puedes emparejar con jugadores que ya están en esta edición — el pegado no crea jugadores nuevos. Si el nombre no coincide exactamente, elige a quién corresponde.</p>
     <div id="previewRows-${jId}">
-      ${rows.map((r,i)=>`
+      ${rows.map((r,i)=>{
+        const matchId = bestMatchParticipant(ed, r.name);
+        return `
         <div class="previewrow" data-i="${i}">
-          <input type="text" value="${esc(r.name)}" data-f="name" placeholder="Nombre jugador">
+          <select data-f="participant" class="${matchId? '':'unresolved'}">
+            <option value="">${esc(r.name)||'(sin nombre)'} — sin coincidencia, elige jugador</option>
+            ${options.map(p=>`<option value="${p.id}" ${p.id===matchId?"selected":""}>${esc(p.name)}</option>`).join("")}
+          </select>
           <input type="text" value="${esc(r.team1)}" data-f="team1" placeholder="Equipo 1">
           <input type="text" value="${esc(r.team2)}" data-f="team2" placeholder="Equipo 2 (reserva)">
           <button class="btn sm danger" data-act="dropRow">Quitar</button>
-        </div>`).join("")}
+        </div>`;
+      }).join("")}
     </div>
     <div class="btnrow" style="margin-top:8px"><button class="btn primary sm" data-act="confirmParse" data-j="${jId}">Confirmar y añadir pronósticos</button></div>
   `;
@@ -1109,22 +1151,22 @@ function wirePreview(ed, j){
       e.target.closest(".previewrow").remove();
     }
     if(e.target.dataset.act==="confirmParse"){
-      const rows = Array.from(container.querySelectorAll(".previewrow")).map(row=>({
-        name: row.querySelector('[data-f="name"]').value.trim(),
+      const allRows = Array.from(container.querySelectorAll(".previewrow"));
+      const rows = allRows.map(row=>({
+        participantId: row.querySelector('[data-f="participant"]').value,
         team1: row.querySelector('[data-f="team1"]').value.trim(),
         team2: row.querySelector('[data-f="team2"]').value.trim(),
-      })).filter(r=>r.name);
-      rows.forEach(r=>{
-        const p = ensureParticipant(r.name);
-        if(!ed.participants.some(ep=>ep.participantId===p.id)){
-          ed.participants.push({participantId:p.id, pagado:false, cuota:suggestedCuota(p.id, ed), note:""});
-        }
-        j.expelled = (j.expelled||[]).filter(pid=>pid!==p.id);
-        const existing = j.picks.find(pk=>pk.participantId===p.id);
+      }));
+      const skipped = rows.filter(r=>!r.participantId).length;
+      const valid = rows.filter(r=>r.participantId);
+      valid.forEach(r=>{
+        j.expelled = (j.expelled||[]).filter(pid=>pid!==r.participantId);
+        const existing = j.picks.find(pk=>pk.participantId===r.participantId);
         if(existing){ existing.team1=r.team1; existing.team2=r.team2; }
-        else { j.picks.push({participantId:p.id, team1:r.team1, team2:r.team2, result1:"", result2:""}); }
+        else { j.picks.push({participantId:r.participantId, team1:r.team1, team2:r.team2, result1:"", result2:""}); }
       });
       saveState(); render();
+      if(skipped) alert(`${skipped} fila(s) sin jugador seleccionado no se han añadido.`);
     }
   });
 }
