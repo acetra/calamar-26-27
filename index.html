@@ -206,6 +206,19 @@ footer{color:var(--ink-dim);font-size:12px;text-align:center;margin-top:36px;lin
 footer b{color:#bcd3c9}
 .hidden{display:none !important}
 .muted{color:var(--ink-soft)}
+
+#syncBanner:empty{display:none}
+.syncpill{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:700;border-radius:999px;
+  padding:7px 14px;margin-bottom:16px}
+.syncpill.ok{color:var(--teal);background:var(--teal-soft);border:1px solid rgba(25,199,166,.35)}
+.syncpill.read{color:var(--amber);background:var(--amber-soft);border:1px solid rgba(255,176,32,.4)}
+.syncpill.err{color:#ffd7e6;background:var(--pink-soft);border:1px solid rgba(255,31,122,.4)}
+.syncpill a{color:inherit;text-decoration:underline;font-weight:800}
+
+#adminPanel{max-width:460px;margin:14px auto 0;text-align:left;background:var(--card);border:1px solid var(--line);
+  border-radius:14px;padding:16px;box-shadow:var(--shadow)}
+#adminPanel p{margin:0 0 10px;line-height:1.6}
+#adminPanel .field{margin-bottom:10px}
 .rules{font-size:14.5px;line-height:1.75;color:#dcebe3}
 .rules h3{font-family:var(--display);font-weight:800;color:#fff;text-transform:uppercase;letter-spacing:.02em;font-size:16px;margin:22px 0 8px}
 .rules h3:first-child{margin-top:0}
@@ -219,6 +232,7 @@ footer b{color:#bcd3c9}
   <h1>Calamar<span class="l2">26/27</span></h1>
   <div class="jtags" id="headTags"></div>
   <p class="lede" id="headLede"></p>
+  <div id="syncBanner"></div>
 
   <div class="tabs" id="tabs">
     <button class="tabbtn" data-tab="resumen">Resumen</button>
@@ -239,11 +253,13 @@ footer b{color:#bcd3c9}
   <section class="panel" id="panel-reglas"></section>
 
   <footer>
-    Calamar 26/27 · datos guardados solo en este navegador ·
+    Calamar 26/27 · datos compartidos vía GitHub ·
     <a href="#" id="exportBtn">exportar copia</a> ·
     <a href="#" id="importBtn">importar copia</a> ·
-    <a href="#" id="resetBtn">reiniciar</a>
+    <a href="#" id="resetBtn">reiniciar local</a> ·
+    <a href="#" id="adminModeBtn">modo administrador</a>
     <input type="file" id="importFile" accept="application/json" class="hidden">
+    <div id="adminPanel" class="hidden"></div>
   </footer>
 </div>
 
@@ -301,6 +317,7 @@ function loadState(){
 }
 function saveState(){
   localStorage.setItem(STORE_KEY, JSON.stringify(state));
+  schedulePublish();
 }
 
 /* ============================== FEED AUTOMÁTICO DE LIGA (data/liga.json) ============================== */
@@ -324,6 +341,105 @@ function loadLigaFeed(){
     .then(r=> r.ok ? r.json() : null)
     .then(seed=>{ if(seed){ mergeLigaSeed(seed); render(); } })
     .catch(()=>{ /* sin red o primer despliegue: se queda con los datos que ya hubiera */ });
+}
+
+/* ============================== ESTADO COMPARTIDO (data/game.json) ============================== */
+const GH_OWNER = "acetra";
+const GH_REPO = "calamar-26-27";
+const GH_TOKEN_KEY = "calamar_admin_token";
+const GAME_PATH = "data/game.json";
+
+let githubToken = localStorage.getItem(GH_TOKEN_KEY) || "";
+let syncStatus = { state: "loading", message: "" }; // loading | synced | read | publishing | error
+let publishTimer = null;
+
+function b64EncodeUtf8(str){
+  return btoa(encodeURIComponent(str).replace(/%([0-9A-F]{2})/g, (_, p1) => String.fromCharCode(parseInt(p1, 16))));
+}
+
+function loadGameFeed(){
+  fetch("./data/game.json", {cache:"no-store"})
+    .then(r=> r.ok ? r.json() : null)
+    .then(remote=>{
+      if(remote && Array.isArray(remote.participants) && Array.isArray(remote.editions)){
+        state.participants = remote.participants;
+        state.editions = remote.editions;
+        saveLocalOnly();
+        syncStatus = { state: githubToken? "synced" : "read", message: fmtDate(remote.updatedAt) };
+      } else {
+        syncStatus = { state: githubToken? "synced" : "read", message: "" };
+      }
+      activePlayerId = null;
+      render();
+    })
+    .catch(()=>{
+      syncStatus = { state: "error", message: "Sin conexión con GitHub: viendo la última copia guardada en este navegador." };
+      render();
+    });
+}
+
+/* guarda en localStorage sin disparar una publicación (usado al recibir datos remotos) */
+function saveLocalOnly(){
+  localStorage.setItem(STORE_KEY, JSON.stringify(state));
+}
+
+function schedulePublish(){
+  if(!githubToken) return;
+  clearTimeout(publishTimer);
+  publishTimer = setTimeout(publishGame, 1200);
+}
+
+async function publishGame(){
+  if(!githubToken) return;
+  syncStatus = { state: "publishing", message: "" };
+  renderSyncBanner();
+  try{
+    const apiUrl = `https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/${GAME_PATH}`;
+    const headers = { "Authorization": `Bearer ${githubToken}`, "Accept": "application/vnd.github+json" };
+    let sha = undefined;
+    const getRes = await fetch(apiUrl, { headers });
+    if(getRes.status === 200){
+      sha = (await getRes.json()).sha;
+    } else if(getRes.status !== 404){
+      throw new Error(`No se pudo leer el archivo actual (HTTP ${getRes.status})`);
+    }
+    const payload = { participants: state.participants, editions: state.editions, updatedAt: Date.now() };
+    const putRes = await fetch(apiUrl, {
+      method: "PUT",
+      headers: { ...headers, "Content-Type": "application/json" },
+      body: JSON.stringify({
+        message: "Actualizar datos del juego",
+        content: b64EncodeUtf8(JSON.stringify(payload, null, 2)),
+        sha,
+        branch: "main",
+      }),
+    });
+    if(!putRes.ok){
+      const body = await putRes.json().catch(()=>({}));
+      throw new Error(body.message || `HTTP ${putRes.status}`);
+    }
+    syncStatus = { state: "synced", message: fmtDate(payload.updatedAt) };
+  } catch(e){
+    syncStatus = { state: "error", message: `No se pudo publicar: ${e.message}` };
+  }
+  renderSyncBanner();
+}
+
+function renderSyncBanner(){
+  const el = document.getElementById("syncBanner");
+  if(!el) return;
+  const s = syncStatus;
+  if(s.state==="publishing"){
+    el.innerHTML = `<span class="syncpill ok">⏳ Publicando cambios en GitHub…</span>`;
+  } else if(s.state==="synced"){
+    el.innerHTML = `<span class="syncpill ok">✓ Modo administrador · publicado${s.message?` · ${esc(s.message)}`:""}</span>`;
+  } else if(s.state==="error"){
+    el.innerHTML = `<span class="syncpill err">⚠ ${esc(s.message||"Error de sincronización")}</span>`;
+  } else if(s.state==="read"){
+    el.innerHTML = `<span class="syncpill read">👁 Modo lectura — viendo los datos compartidos${s.message?` (actualizados ${esc(s.message)})`:""}. Solo un administrador puede publicar cambios.</span>`;
+  } else {
+    el.innerHTML = "";
+  }
 }
 
 /* ============================== HELPERS ============================== */
@@ -1411,6 +1527,7 @@ function render(){
   document.querySelectorAll(".tabbtn").forEach(b=>b.classList.toggle("active", b.dataset.tab===activeTab));
   document.querySelectorAll(".panel").forEach(p=>p.classList.toggle("active", p.id===`panel-${activeTab}`));
   renderHeader();
+  renderSyncBanner();
   if(activeTab==="resumen") renderResumen();
   if(activeTab==="jugadores") renderJugadores();
   if(activeTab==="jornadas") renderJornadas();
@@ -1454,6 +1571,61 @@ document.getElementById("resetBtn").addEventListener("click", e=>{
   state = defaultState(); saveState(); activeTab="resumen"; activePlayerId=null; render();
 });
 
+/* ============================== PANEL DE ADMINISTRADOR ============================== */
+function renderAdminPanel(){
+  const panel = document.getElementById("adminPanel");
+  if(githubToken){
+    panel.innerHTML = `
+      <p><b>Modo administrador activo.</b> Cada cambio que hagas (jugadores, pagos, jornadas, ediciones) se publica solo en GitHub para que todo el mundo lo vea.</p>
+      <div class="btnrow">
+        <button class="btn sm primary" id="publishNowBtn">Publicar ahora</button>
+        <button class="btn sm danger" id="adminLogoutBtn">Cerrar sesión de administrador</button>
+      </div>`;
+    document.getElementById("publishNowBtn").addEventListener("click", ()=> publishGame());
+    document.getElementById("adminLogoutBtn").addEventListener("click", ()=>{
+      githubToken = "";
+      localStorage.removeItem(GH_TOKEN_KEY);
+      syncStatus = { state:"read", message:"" };
+      document.getElementById("adminPanel").classList.add("hidden");
+      renderSyncBanner();
+    });
+  } else {
+    panel.innerHTML = `
+      <p>Pega aquí un <b>token de acceso personal de GitHub</b> (fine-grained), con acceso limitado solo al repositorio <b>${GH_OWNER}/${GH_REPO}</b> y permiso <b>Contents: Read and write</b>. Se guarda únicamente en este navegador, nunca se comparte.</p>
+      <p><a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">Crear token en GitHub →</a></p>
+      <div class="field"><label>Token</label><input type="password" id="tokenInput" placeholder="github_pat_…" autocomplete="off"></div>
+      <div class="btnrow"><button class="btn sm primary" id="activateAdminBtn">Activar</button></div>
+      <p id="tokenError" class="muted" style="color:var(--pink);margin:10px 0 0"></p>`;
+    document.getElementById("activateAdminBtn").addEventListener("click", async ()=>{
+      const val = document.getElementById("tokenInput").value.trim();
+      if(!val) return;
+      const errEl = document.getElementById("tokenError");
+      errEl.textContent = "Comprobando…";
+      try{
+        const res = await fetch(`https://api.github.com/repos/${GH_OWNER}/${GH_REPO}`, {
+          headers: { "Authorization": `Bearer ${val}`, "Accept": "application/vnd.github+json" }
+        });
+        if(!res.ok) throw new Error("Token inválido o sin acceso a este repositorio.");
+        githubToken = val;
+        localStorage.setItem(GH_TOKEN_KEY, val);
+        syncStatus = { state:"synced", message:"" };
+        renderAdminPanel();
+        renderSyncBanner();
+        publishGame();
+      }catch(e){
+        errEl.textContent = e.message;
+      }
+    });
+  }
+}
+document.getElementById("adminModeBtn").addEventListener("click", e=>{
+  e.preventDefault();
+  const panel = document.getElementById("adminPanel");
+  panel.classList.toggle("hidden");
+  if(!panel.classList.contains("hidden")) renderAdminPanel();
+});
+
 render();
+loadGameFeed();
 loadLigaFeed();
 </script>
