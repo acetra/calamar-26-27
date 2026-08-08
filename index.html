@@ -191,6 +191,17 @@ h1 .l2{display:block;color:var(--pink);text-shadow:0 0 24px rgba(255,31,122,.35)
 .picktable tr.zone-top td:first-child{border-left:3px solid var(--teal)}
 .picktable tr.zone-bottom td:first-child{border-left:3px solid var(--pink)}
 
+.gridtable{border-collapse:separate;border-spacing:0}
+.gridtable th{white-space:nowrap;position:sticky;top:0;background:var(--card);z-index:2}
+.gridtable .gname{position:sticky;left:0;z-index:3;background:var(--card);text-align:left;font-weight:700;color:#fff;white-space:nowrap;padding-right:14px}
+.gridtable thead th.gname{z-index:4}
+.gridtable .gcell{text-align:center;white-space:nowrap;font-size:12px;font-weight:600;padding:8px 10px}
+.gridtable .gcell.off{color:var(--ink-dim);font-weight:400}
+.gridtable .gcell.g-ok{background:rgba(25,199,166,.14);color:#fff}
+.gridtable .gcell.g-elim{background:rgba(255,31,122,.16);color:#ffd7e6}
+.gridtable .gcell.g-warn{background:rgba(255,176,32,.14);color:var(--amber)}
+.gridtable .gcell.g-pending{background:var(--cream);color:var(--ink-soft);font-weight:400}
+
 footer{color:var(--ink-dim);font-size:12px;text-align:center;margin-top:36px;line-height:1.7}
 footer b{color:#bcd3c9}
 .hidden{display:none !important}
@@ -390,25 +401,24 @@ function deriveEdition(ed){
 }
 
 /* equipos usados por un jugador, a través de TODAS las ediciones (orden cronológico) */
-function usedTeamsFor(participantId, excludeJornadaId){
+/* Los equipos "gastados" solo cuentan dentro de la MISMA edición (se reinician al abrir una edición nueva) */
+function usedTeamsFor(ed, participantId, excludeJornadaId){
   const out = [];
-  state.editions.forEach(ed=>{
-    ed.jornadas.forEach(j=>{
-      if(j.id===excludeJornadaId) return;
-      j.picks.filter(p=>p.participantId===participantId).forEach(pick=>{
-        const r = pickOutcome(pick);
-        if((r.outcome==="sobrevive"||r.outcome==="eliminado") && r.effective){
-          out.push({team:r.effective, edLabel:`Ed. ${ed.number}`, jLabel:j.label, outcome:r.outcome});
-        }
-      });
+  ed.jornadas.forEach(j=>{
+    if(j.id===excludeJornadaId) return;
+    j.picks.filter(p=>p.participantId===participantId).forEach(pick=>{
+      const r = pickOutcome(pick);
+      if((r.outcome==="sobrevive"||r.outcome==="eliminado") && r.effective){
+        out.push({team:r.effective, jLabel:j.label, outcome:r.outcome});
+      }
     });
   });
   return out;
 }
-function teamAlreadyUsed(participantId, teamName, excludeJornadaId){
+function teamAlreadyUsed(ed, participantId, teamName, excludeJornadaId){
   if(!teamName) return false;
   const n = normName(teamName);
-  return usedTeamsFor(participantId, excludeJornadaId).some(t=>normName(t.team)===n);
+  return usedTeamsFor(ed, participantId, excludeJornadaId).some(t=>normName(t.team)===n);
 }
 
 function computeMoney(ed){
@@ -680,7 +690,7 @@ function renderPlayerDetail(el, ed, playerId){
   const derived = deriveEdition(ed);
   const ep = ed.participants.find(x=>x.participantId===playerId);
   const d = derived[playerId] || {status:"n/a"};
-  const teams = usedTeamsFor(playerId);
+  const teams = usedTeamsFor(ed, playerId);
   const initials = p.name.trim().split(/\s+/).map(w=>w[0]).slice(0,2).join("").toUpperCase();
 
   const editionsHistory = state.editions.map(e=>{
@@ -723,7 +733,7 @@ function renderPlayerDetail(el, ed, playerId){
 
     <div class="section-h"><span class="mk">△</span><span class="tag">Equipos ya usados</span><span class="line"></span></div>
     <div class="card">
-      ${teams.length? `<div class="exrow">${teams.map(t=>`<span class="extag">${esc(t.team)} <span class="muted" style="font-weight:400">· ${esc(t.edLabel)} ${esc(t.jLabel)}</span></span>`).join("")}</div>` : `<p class="muted" style="margin:0">Todavía no ha usado ningún equipo.</p>`}
+      ${teams.length? `<div class="exrow">${teams.map(t=>`<span class="extag">${esc(t.team)} <span class="muted" style="font-weight:400">· ${esc(t.jLabel)}</span></span>`).join("")}</div>` : `<p class="muted" style="margin:0">Todavía no ha usado ningún equipo en esta edición.</p>`}
     </div>
 
     <div class="section-h"><span class="mk">□</span><span class="tag">Historial por edición</span><span class="line"></span></div>
@@ -746,12 +756,44 @@ function renderPlayerDetail(el, ed, playerId){
 }
 
 /* ============================== RENDER: JORNADAS ============================== */
+/* Tabla única con todos los pronósticos de la edición: jugadores en filas, jornadas en columnas */
+function ligaGridHTML(ed){
+  if(!ed.jornadas.length) return `<div class="card"><p class="muted" style="margin:0">Todavía no hay jornadas en esta edición.</p></div>`;
+  if(!ed.participants.length) return `<div class="card"><p class="muted" style="margin:0">Todavía no hay jugadores en esta edición.</p></div>`;
+  const rowsHTML = ed.participants.map(ep=>{
+    const p = getParticipant(ep.participantId);
+    if(!p) return "";
+    let eliminatedAt = -1;
+    const cells = ed.jornadas.map((j, idx)=>{
+      if(eliminatedAt>=0 && idx>eliminatedAt) return `<td class="gcell off">—</td>`;
+      const wasExpelledHere = (j.expelled||[]).includes(ep.participantId);
+      if(wasExpelledHere){ eliminatedAt=idx; return `<td class="gcell g-elim">No pronosticó</td>`; }
+      const pick = j.picks.find(pk=>pk.participantId===ep.participantId);
+      if(!pick) return `<td class="gcell off">—</td>`;
+      const r = pickOutcome(pick);
+      if(r.outcome==="eliminado") eliminatedAt=idx;
+      const cls = r.outcome==="sobrevive"?"g-ok":r.outcome==="eliminado"?"g-elim":r.outcome==="anulada"?"g-warn":"g-pending";
+      const text = pick.team2? `${esc(pick.team1)} / ${esc(pick.team2)}` : (pick.team1? esc(pick.team1) : "—");
+      return `<td class="gcell ${cls}">${text}</td>`;
+    }).join("");
+    return `<tr><td class="gname">${esc(p.name)}</td>${cells}</tr>`;
+  }).join("");
+  return `<div class="tblwrap"><table class="picktable gridtable">
+    <thead><tr><th class="gname">Jugador</th>${ed.jornadas.map(j=>`<th>${esc(j.label)}</th>`).join("")}</tr></thead>
+    <tbody>${rowsHTML}</tbody>
+  </table></div>`;
+}
+
 function renderJornadas(){
   const el = document.getElementById("panel-jornadas");
   const ed = currentEdition();
   if(!ed){ el.innerHTML=`<div class="card"><p class="muted" style="margin:0">Crea una edición primero en <b>Ediciones y bote</b>.</p></div>`; return; }
 
-  let html = `<div class="btnrow" style="margin-bottom:16px"><button class="btn primary" id="newJornadaBtn">+ Nueva jornada</button></div>`;
+  let html = `<div class="section-h"><span class="mk">○</span><span class="tag">Todos los pronósticos · Edición ${ed.number}</span><span class="line"></span></div>`;
+  html += ligaGridHTML(ed);
+
+  html += `<div class="section-h"><span class="mk">△</span><span class="tag">Gestionar jornadas</span><span class="line"></span></div>`;
+  html += `<div class="btnrow" style="margin-bottom:16px"><button class="btn primary" id="newJornadaBtn">+ Nueva jornada</button></div>`;
   html += `<div id="newJornadaForm" class="card hidden" style="margin-bottom:16px"></div>`;
 
   if(!ed.jornadas.length){
@@ -827,7 +869,7 @@ function jornadaBodyHTML(ed, j, derived){
       <table class="picktable">
         <thead><tr><th>Jugador</th><th>Equipo 1</th><th>Equipo 2</th><th>Resultado eq.1</th><th>Resultado eq.2</th><th>Estado</th><th></th></tr></thead>
         <tbody id="picksbody-${j.id}">
-          ${j.picks.map(p=>pickRowHTML(j,p)).join("")}
+          ${j.picks.map(p=>pickRowHTML(ed,j,p)).join("")}
         </tbody>
       </table>
     </div>
@@ -844,13 +886,13 @@ function jornadaBodyHTML(ed, j, derived){
   `;
 }
 
-function pickRowHTML(j, p){
+function pickRowHTML(ed, j, p){
   const pl = getParticipant(p.participantId);
   const r = pickOutcome(p);
   const label = r.outcome==="sobrevive"?"Sobrevive":r.outcome==="eliminado"?"Eliminado":r.outcome==="anulada"?"Jornada anulada":"Pendiente";
   const pillClass = r.outcome==="sobrevive"?"pill-ok":r.outcome==="eliminado"?"pill-danger":r.outcome==="anulada"?"pill-warn":"pill-off";
-  const warn1 = pl && teamAlreadyUsed(p.participantId, p.team1, j.id) ? `<span class="warnchip">ya usado</span>` : "";
-  const warn2 = pl && teamAlreadyUsed(p.participantId, p.team2, j.id) ? `<span class="warnchip">ya usado</span>` : "";
+  const warn1 = pl && teamAlreadyUsed(ed, p.participantId, p.team1, j.id) ? `<span class="warnchip">ya usado</span>` : "";
+  const warn2 = pl && teamAlreadyUsed(ed, p.participantId, p.team2, j.id) ? `<span class="warnchip">ya usado</span>` : "";
   return `<tr data-p="${p.participantId}">
     <td>${esc(pl?pl.name:"?")}</td>
     <td><input type="text" value="${esc(p.team1)}" data-f="team1" style="width:120px">${warn1}</td>
