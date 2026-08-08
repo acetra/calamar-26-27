@@ -97,29 +97,40 @@ async function main() {
     pts: seasonNotStartedYet ? 0 : row.points,
   }));
 
-  let matchesCurrent = await getMatchday(currentMatchday);
-  let finishedCurrent = matchesCurrent.filter((m) => m.status === "FINISHED");
+  const FIXTURE_WINDOW = 5; // cuántas próximas jornadas mostrar por delante (ventana deslizante)
 
-  let resultsMatchday = currentMatchday;
-  let resultsMatches = finishedCurrent;
-  let nextStart = currentMatchday + 1;
+  const finishedCurrent = (await getMatchday(currentMatchday)).filter((m) => m.status === "FINISHED");
 
-  if (finishedCurrent.length === 0 && currentMatchday > 1) {
-    // La jornada actual aún no se ha jugado: mostramos la anterior como "resultados".
+  let resultsMatchday, resultsMatches, nextStart;
+  if (finishedCurrent.length > 0) {
+    // La jornada actual ya tiene partidos jugados: es la que se muestra como "resultados".
+    resultsMatchday = currentMatchday;
+    resultsMatches = finishedCurrent;
+    nextStart = currentMatchday + 1;
+  } else if (currentMatchday > 1) {
+    // La jornada actual todavía no se ha jugado: mostramos la anterior como "resultados".
     resultsMatchday = currentMatchday - 1;
     resultsMatches = (await getMatchday(resultsMatchday)).filter((m) => m.status === "FINISHED");
     nextStart = currentMatchday;
+  } else {
+    // Pretemporada: todavía no hay ninguna jornada jugada.
+    resultsMatchday = null;
+    resultsMatches = [];
+    nextStart = currentMatchday; // empieza la ventana de próximos partidos en la Jornada 1
   }
 
   const now = Date.now();
   const resultados = {
-    label: `Jornada ${resultsMatchday}`,
+    label: resultsMatchday ? `Jornada ${resultsMatchday}` : "Sin resultados todavía",
     updatedAt: now,
     matches: resultsMatches.map(toResultMatch),
   };
 
+  // Ventana deslizante de FIXTURE_WINDOW jornadas por delante de la última jugada.
+  // Al terminar una jornada, esta ventana avanza sola (nextStart sube) y añade la siguiente;
+  // cerca del final de temporada, las jornadas que no existen devuelven 0 partidos y se omiten.
   const proximas = [];
-  for (let md = nextStart; md < nextStart + 2; md++) {
+  for (let md = nextStart; md < nextStart + FIXTURE_WINDOW; md++) {
     const matches = (await getMatchday(md)).filter(
       (m) => m.status === "SCHEDULED" || m.status === "TIMED" || m.status === "POSTPONED"
     );
