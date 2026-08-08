@@ -1,15 +1,15 @@
 {
-  "generatedAt": 1786213079426,
+  "generatedAt": 1786213138565,
   "resultados": {
     "label": "Jornada 1",
-    "updatedAt": 1786213079426,
+    "updatedAt": 1786213138565,
     "matches": []
   },
   "proximas": [
     {
       "id": "md-2",
       "label": "Jornada 2",
-      "updatedAt": 1786213079426,
+      "updatedAt": 1786213138565,
       "matches": [
         {
           "team1": "Rayo Vallecano",
@@ -76,7 +76,7 @@
     {
       "id": "md-3",
       "label": "Jornada 3",
-      "updatedAt": 1786213079426,
+      "updatedAt": 1786213138565,
       "matches": [
         {
           "team1": "Santander",
@@ -142,7 +142,7 @@
     }
   ],
   "clasificacion": {
-    "updatedAt": 1786213079426,
+    "updatedAt": 1786213138565,
     "rows": [
       {
         "pos": 1,
