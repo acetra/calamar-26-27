@@ -1,6 +1,389 @@
 {
-  "generatedAt": 0,
-  "resultados": { "label": "Jornada 1", "updatedAt": 0, "matches": [] },
-  "proximas": [],
-  "clasificacion": { "updatedAt": 0, "rows": [] }
+  "generatedAt": 1786213079426,
+  "resultados": {
+    "label": "Jornada 1",
+    "updatedAt": 1786213079426,
+    "matches": []
+  },
+  "proximas": [
+    {
+      "id": "md-2",
+      "label": "Jornada 2",
+      "updatedAt": 1786213079426,
+      "matches": [
+        {
+          "team1": "Rayo Vallecano",
+          "team2": "Alavés",
+          "extra": "jue, 20 ago, 21:00",
+          "raw": "jue, 20 ago, 21:00 Rayo Vallecano - Alavés"
+        },
+        {
+          "team1": "Real Betis",
+          "team2": "Real Sociedad",
+          "extra": "vie, 21 ago, 21:00",
+          "raw": "vie, 21 ago, 21:00 Real Betis - Real Sociedad"
+        },
+        {
+          "team1": "Athletic",
+          "team2": "Sevilla FC",
+          "extra": "sáb, 22 ago, 17:00",
+          "raw": "sáb, 22 ago, 17:00 Athletic - Sevilla FC"
+        },
+        {
+          "team1": "Valencia",
+          "team2": "Celta",
+          "extra": "sáb, 22 ago, 19:30",
+          "raw": "sáb, 22 ago, 19:30 Valencia - Celta"
+        },
+        {
+          "team1": "Espanyol",
+          "team2": "Real Madrid",
+          "extra": "sáb, 22 ago, 21:30",
+          "raw": "sáb, 22 ago, 21:30 Espanyol - Real Madrid"
+        },
+        {
+          "team1": "Atleti",
+          "team2": "Villarreal",
+          "extra": "dom, 23 ago, 17:00",
+          "raw": "dom, 23 ago, 17:00 Atleti - Villarreal"
+        },
+        {
+          "team1": "Getafe",
+          "team2": "Santander",
+          "extra": "dom, 23 ago, 19:30",
+          "raw": "dom, 23 ago, 19:30 Getafe - Santander"
+        },
+        {
+          "team1": "Elche",
+          "team2": "Barça",
+          "extra": "dom, 23 ago, 21:30",
+          "raw": "dom, 23 ago, 21:30 Elche - Barça"
+        },
+        {
+          "team1": "Osasuna",
+          "team2": "Levante",
+          "extra": "lun, 24 ago, 19:30",
+          "raw": "lun, 24 ago, 19:30 Osasuna - Levante"
+        },
+        {
+          "team1": "Málaga",
+          "team2": "Deportivo",
+          "extra": "lun, 24 ago, 21:30",
+          "raw": "lun, 24 ago, 21:30 Málaga - Deportivo"
+        }
+      ]
+    },
+    {
+      "id": "md-3",
+      "label": "Jornada 3",
+      "updatedAt": 1786213079426,
+      "matches": [
+        {
+          "team1": "Santander",
+          "team2": "Elche",
+          "extra": "vie, 28 ago, 19:00",
+          "raw": "vie, 28 ago, 19:00 Santander - Elche"
+        },
+        {
+          "team1": "Alavés",
+          "team2": "Villarreal",
+          "extra": "vie, 28 ago, 21:30",
+          "raw": "vie, 28 ago, 21:30 Alavés - Villarreal"
+        },
+        {
+          "team1": "Levante",
+          "team2": "Real Betis",
+          "extra": "sáb, 29 ago, 17:00",
+          "raw": "sáb, 29 ago, 17:00 Levante - Real Betis"
+        },
+        {
+          "team1": "Real Sociedad",
+          "team2": "Espanyol",
+          "extra": "sáb, 29 ago, 19:00",
+          "raw": "sáb, 29 ago, 19:00 Real Sociedad - Espanyol"
+        },
+        {
+          "team1": "Sevilla FC",
+          "team2": "Atleti",
+          "extra": "sáb, 29 ago, 21:30",
+          "raw": "sáb, 29 ago, 21:30 Sevilla FC - Atleti"
+        },
+        {
+          "team1": "Real Madrid",
+          "team2": "Málaga",
+          "extra": "dom, 30 ago, 17:00",
+          "raw": "dom, 30 ago, 17:00 Real Madrid - Málaga"
+        },
+        {
+          "team1": "Deportivo",
+          "team2": "Valencia",
+          "extra": "dom, 30 ago, 19:30",
+          "raw": "dom, 30 ago, 19:30 Deportivo - Valencia"
+        },
+        {
+          "team1": "Celta",
+          "team2": "Athletic",
+          "extra": "dom, 30 ago, 21:30",
+          "raw": "dom, 30 ago, 21:30 Celta - Athletic"
+        },
+        {
+          "team1": "Osasuna",
+          "team2": "Getafe",
+          "extra": "lun, 31 ago, 19:30",
+          "raw": "lun, 31 ago, 19:30 Osasuna - Getafe"
+        },
+        {
+          "team1": "Barça",
+          "team2": "Rayo Vallecano",
+          "extra": "lun, 31 ago, 21:30",
+          "raw": "lun, 31 ago, 21:30 Barça - Rayo Vallecano"
+        }
+      ]
+    }
+  ],
+  "clasificacion": {
+    "updatedAt": 1786213079426,
+    "rows": [
+      {
+        "pos": 1,
+        "name": "Barça",
+        "pj": 0,
+        "g": 0,
+        "e": 0,
+        "p": 0,
+        "gf": 0,
+        "gc": 0,
+        "dg": 0,
+        "pts": 0
+      },
+      {
+        "pos": 2,
+        "name": "Real Madrid",
+        "pj": 0,
+        "g": 0,
+        "e": 0,
+        "p": 0,
+        "gf": 0,
+        "gc": 0,
+        "dg": 0,
+        "pts": 0
+      },
+      {
+        "pos": 3,
+        "name": "Villarreal",
+        "pj": 0,
+        "g": 0,
+        "e": 0,
+        "p": 0,
+        "gf": 0,
+        "gc": 0,
+        "dg": 0,
+        "pts": 0
+      },
+      {
+        "pos": 4,
+        "name": "Atleti",
+        "pj": 0,
+        "g": 0,
+        "e": 0,
+        "p": 0,
+        "gf": 0,
+        "gc": 0,
+        "dg": 0,
+        "pts": 0
+      },
+      {
+        "pos": 5,
+        "name": "Real Betis",
+        "pj": 0,
+        "g": 0,
+        "e": 0,
+        "p": 0,
+        "gf": 0,
+        "gc": 0,
+        "dg": 0,
+        "pts": 0
+      },
+      {
+        "pos": 6,
+        "name": "Celta",
+        "pj": 0,
+        "g": 0,
+        "e": 0,
+        "p": 0,
+        "gf": 0,
+        "gc": 0,
+        "dg": 0,
+        "pts": 0
+      },
+      {
+        "pos": 7,
+        "name": "Getafe",
+        "pj": 0,
+        "g": 0,
+        "e": 0,
+        "p": 0,
+        "gf": 0,
+        "gc": 0,
+        "dg": 0,
+        "pts": 0
+      },
+      {
+        "pos": 8,
+        "name": "Rayo Vallecano",
+        "pj": 0,
+        "g": 0,
+        "e": 0,
+        "p": 0,
+        "gf": 0,
+        "gc": 0,
+        "dg": 0,
+        "pts": 0
+      },
+      {
+        "pos": 9,
+        "name": "Valencia",
+        "pj": 0,
+        "g": 0,
+        "e": 0,
+        "p": 0,
+        "gf": 0,
+        "gc": 0,
+        "dg": 0,
+        "pts": 0
+      },
+      {
+        "pos": 10,
+        "name": "Real Sociedad",
+        "pj": 0,
+        "g": 0,
+        "e": 0,
+        "p": 0,
+        "gf": 0,
+        "gc": 0,
+        "dg": 0,
+        "pts": 0
+      },
+      {
+        "pos": 11,
+        "name": "Espanyol",
+        "pj": 0,
+        "g": 0,
+        "e": 0,
+        "p": 0,
+        "gf": 0,
+        "gc": 0,
+        "dg": 0,
+        "pts": 0
+      },
+      {
+        "pos": 12,
+        "name": "Athletic",
+        "pj": 0,
+        "g": 0,
+        "e": 0,
+        "p": 0,
+        "gf": 0,
+        "gc": 0,
+        "dg": 0,
+        "pts": 0
+      },
+      {
+        "pos": 13,
+        "name": "Elche",
+        "pj": 0,
+        "g": 0,
+        "e": 0,
+        "p": 0,
+        "gf": 0,
+        "gc": 0,
+        "dg": 0,
+        "pts": 0
+      },
+      {
+        "pos": 14,
+        "name": "Alavés",
+        "pj": 0,
+        "g": 0,
+        "e": 0,
+        "p": 0,
+        "gf": 0,
+        "gc": 0,
+        "dg": 0,
+        "pts": 0
+      },
+      {
+        "pos": 15,
+        "name": "Sevilla FC",
+        "pj": 0,
+        "g": 0,
+        "e": 0,
+        "p": 0,
+        "gf": 0,
+        "gc": 0,
+        "dg": 0,
+        "pts": 0
+      },
+      {
+        "pos": 16,
+        "name": "Osasuna",
+        "pj": 0,
+        "g": 0,
+        "e": 0,
+        "p": 0,
+        "gf": 0,
+        "gc": 0,
+        "dg": 0,
+        "pts": 0
+      },
+      {
+        "pos": 17,
+        "name": "Mallorca",
+        "pj": 0,
+        "g": 0,
+        "e": 0,
+        "p": 0,
+        "gf": 0,
+        "gc": 0,
+        "dg": 0,
+        "pts": 0
+      },
+      {
+        "pos": 18,
+        "name": "Levante",
+        "pj": 0,
+        "g": 0,
+        "e": 0,
+        "p": 0,
+        "gf": 0,
+        "gc": 0,
+        "dg": 0,
+        "pts": 0
+      },
+      {
+        "pos": 19,
+        "name": "Girona",
+        "pj": 0,
+        "g": 0,
+        "e": 0,
+        "p": 0,
+        "gf": 0,
+        "gc": 0,
+        "dg": 0,
+        "pts": 0
+      },
+      {
+        "pos": 20,
+        "name": "Real Oviedo",
+        "pj": 0,
+        "g": 0,
+        "e": 0,
+        "p": 0,
+        "gf": 0,
+        "gc": 0,
+        "dg": 0,
+        "pts": 0
+      }
+    ]
+  }
 }

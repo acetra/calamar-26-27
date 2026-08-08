@@ -76,18 +76,25 @@ async function main() {
   const standingsData = await apiGet(`/competitions/${COMPETITION}/standings`);
   const currentMatchday = standingsData?.season?.currentMatchday || 1;
 
+  // La API a veces devuelve la tabla completa de la temporada anterior como
+  // placeholder hasta que se juega el primer partido de la nueva. Si la fecha
+  // de inicio de temporada todavía no ha llegado, no confiamos en esos
+  // números y publicamos la tabla a cero para no mostrar datos engañosos.
+  const seasonStartDate = standingsData?.season?.startDate ? new Date(standingsData.season.startDate) : null;
+  const seasonNotStartedYet = seasonStartDate ? Date.now() < seasonStartDate.getTime() : false;
+
   const table = (standingsData.standings || []).find((s) => s.type === "TOTAL")?.table || [];
   const rows = table.map((row) => ({
     pos: row.position,
     name: teamName(row.team),
-    pj: row.playedGames,
-    g: row.won,
-    e: row.draw,
-    p: row.lost,
-    gf: row.goalsFor,
-    gc: row.goalsAgainst,
-    dg: row.goalDifference,
-    pts: row.points,
+    pj: seasonNotStartedYet ? 0 : row.playedGames,
+    g: seasonNotStartedYet ? 0 : row.won,
+    e: seasonNotStartedYet ? 0 : row.draw,
+    p: seasonNotStartedYet ? 0 : row.lost,
+    gf: seasonNotStartedYet ? 0 : row.goalsFor,
+    gc: seasonNotStartedYet ? 0 : row.goalsAgainst,
+    dg: seasonNotStartedYet ? 0 : row.goalDifference,
+    pts: seasonNotStartedYet ? 0 : row.points,
   }));
 
   let matchesCurrent = await getMatchday(currentMatchday);
