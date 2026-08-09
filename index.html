@@ -810,6 +810,7 @@ function wireRosterPreview(ed){
 function renderPlayerDetail(el, ed, playerId){
   const p = getParticipant(playerId);
   if(!p){ activePlayerId=null; render(); return; }
+  const admin = isAdmin();
   const derived = deriveEdition(ed);
   const ep = ed.participants.find(x=>x.participantId===playerId);
   const d = derived[playerId] || {status:"n/a"};
@@ -843,6 +844,7 @@ function renderPlayerDetail(el, ed, playerId){
     ${ep? `
     <div class="section-h"><span class="mk">○</span><span class="tag">Pago edición ${ed.number}</span><span class="line"></span></div>
     <div class="card">
+      ${admin? `
       <div class="formgrid cols3">
         <div class="field"><label>Cuota (€)</label><input type="number" min="0" step="1" id="cuotaInput" value="${ep.cuota}"></div>
         <div class="field"><label>¿Pagó?</label><select id="pagadoInput"><option value="0" ${!ep.pagado?"selected":""}>No</option><option value="1" ${ep.pagado?"selected":""}>Sí</option></select></div>
@@ -851,7 +853,13 @@ function renderPlayerDetail(el, ed, playerId){
       <div class="btnrow" style="margin-top:12px">
         <button class="btn primary" id="savePayBtn">Guardar</button>
         <button class="btn danger" id="removePlayerBtn">Quitar de esta edición</button>
+      </div>` : `
+      <div class="formgrid cols3">
+        <div class="field"><label>Cuota (€)</label><div>${fmtEUR(ep.cuota)}</div></div>
+        <div class="field"><label>¿Pagó?</label><div>${ep.pagado?"Sí":"No"}</div></div>
+        <div class="field"><label>Nota</label><div>${esc(ep.note||"-")}</div></div>
       </div>
+      <p class="muted" style="margin-top:12px">Solo un administrador puede editar pagos o quitar jugadores de esta edición.</p>`}
     </div>` : ""}
 
     <div class="section-h"><span class="mk">△</span><span class="tag">Equipos ya usados</span><span class="line"></span></div>
@@ -863,7 +871,7 @@ function renderPlayerDetail(el, ed, playerId){
     <div class="card">${editionsHistory || `<p class="muted" style="margin:0">Sin historial.</p>`}</div>
   `;
   document.getElementById("backBtn").addEventListener("click", ()=>{activePlayerId=null; render();});
-  if(ep){
+  if(admin && ep){
     document.getElementById("savePayBtn").addEventListener("click", ()=>{
       ep.cuota = Number(document.getElementById("cuotaInput").value)||0;
       ep.pagado = document.getElementById("pagadoInput").value==="1";
