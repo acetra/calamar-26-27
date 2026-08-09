@@ -450,6 +450,7 @@ function esc(s){
   return String(s==null?"":s).replace(/[&<>"']/g, c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 }
 function normName(s){ return String(s||"").trim().toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,""); }
+function isAdmin(){ return Boolean(githubToken); }
 function findParticipantByName(name){
   const n = normName(name);
   return state.participants.find(p=>normName(p.name)===n) || null;
@@ -672,17 +673,18 @@ function renderJugadores(){
   if(activePlayerId){ renderPlayerDetail(el, ed, activePlayerId); return; }
 
   const derived = deriveEdition(ed);
+  const admin = isAdmin();
   el.innerHTML = `
     <div class="search">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
       <input id="playerSearch" type="search" placeholder="Busca un jugador…">
     </div>
-    <div class="btnrow" style="margin-bottom:16px">
+    ${admin? `<div class="btnrow" style="margin-bottom:16px">
       <button class="btn primary" id="addPlayerBtn">+ Añadir jugador</button>
       <button class="btn" id="pasteRosterBtn">+ Pegar lista de jugadores</button>
     </div>
     <div id="addPlayerForm" class="card hidden" style="margin-bottom:16px"></div>
-    <div id="rosterForm" class="card hidden" style="margin-bottom:16px"></div>
+    <div id="rosterForm" class="card hidden" style="margin-bottom:16px"></div>` : ""}
     <div class="grid" id="playersGrid"></div>
     <p class="empty hidden" id="playersEmpty">Ningún jugador con ese nombre.</p>
   `;
@@ -701,54 +703,56 @@ function renderJugadores(){
   paint("");
   document.getElementById("playerSearch").addEventListener("input", e=>paint(e.target.value));
 
-  document.getElementById("addPlayerBtn").addEventListener("click", ()=>{
-    const box = document.getElementById("addPlayerForm");
-    box.classList.toggle("hidden");
-    box.innerHTML = `
-      <div class="formgrid cols2">
-        <div class="field"><label>Nombre</label><input type="text" id="newPlayerName" placeholder="Nombre del jugador"></div>
-        <div class="field"><label>Cuota sugerida</label><input type="text" id="newPlayerCuota" value="10 €" disabled></div>
-      </div>
-      <div class="btnrow" style="margin-top:12px">
-        <button class="btn primary" id="confirmAddPlayer">Añadir a la edición actual</button>
-      </div>`;
-    const nameInput = document.getElementById("newPlayerName");
-    const cuotaPreview = document.getElementById("newPlayerCuota");
-    nameInput.focus();
-    nameInput.addEventListener("input", ()=>{
-      const existing = findParticipantByName(nameInput.value);
-      const idx = editionIndex(ed);
-      const isNew = existing ? isNewToChain(existing.id, idx) : true;
-      cuotaPreview.value = fmtEUR(isNew ? 10*ed.number : 10) + (isNew && ed.number>1 ? " (nuevo, se une con el bote ya acumulado)" : "");
+  if(admin){
+    document.getElementById("addPlayerBtn").addEventListener("click", ()=>{
+      const box = document.getElementById("addPlayerForm");
+      box.classList.toggle("hidden");
+      box.innerHTML = `
+        <div class="formgrid cols2">
+          <div class="field"><label>Nombre</label><input type="text" id="newPlayerName" placeholder="Nombre del jugador"></div>
+          <div class="field"><label>Cuota sugerida</label><input type="text" id="newPlayerCuota" value="10 €" disabled></div>
+        </div>
+        <div class="btnrow" style="margin-top:12px">
+          <button class="btn primary" id="confirmAddPlayer">Añadir a la edición actual</button>
+        </div>`;
+      const nameInput = document.getElementById("newPlayerName");
+      const cuotaPreview = document.getElementById("newPlayerCuota");
+      nameInput.focus();
+      nameInput.addEventListener("input", ()=>{
+        const existing = findParticipantByName(nameInput.value);
+        const idx = editionIndex(ed);
+        const isNew = existing ? isNewToChain(existing.id, idx) : true;
+        cuotaPreview.value = fmtEUR(isNew ? 10*ed.number : 10) + (isNew && ed.number>1 ? " (nuevo, se une con el bote ya acumulado)" : "");
+      });
+      document.getElementById("confirmAddPlayer").addEventListener("click", ()=>{
+        const name = nameInput.value.trim();
+        if(!name) return;
+        const p = ensureParticipant(name);
+        if(ed.participants.some(ep=>ep.participantId===p.id)){ alert("Ese jugador ya está en esta edición."); return; }
+        const cuota = suggestedCuota(p.id, ed);
+        ed.participants.push({participantId:p.id, pagado:false, cuota, note:""});
+        saveState(); render();
+      });
     });
-    document.getElementById("confirmAddPlayer").addEventListener("click", ()=>{
-      const name = nameInput.value.trim();
-      if(!name) return;
-      const p = ensureParticipant(name);
-      if(ed.participants.some(ep=>ep.participantId===p.id)){ alert("Ese jugador ya está en esta edición."); return; }
-      const cuota = suggestedCuota(p.id, ed);
-      ed.participants.push({participantId:p.id, pagado:false, cuota, note:""});
-      saveState(); render();
-    });
-  });
 
-  document.getElementById("pasteRosterBtn").addEventListener("click", ()=>{
-    const box = document.getElementById("rosterForm");
-    box.classList.toggle("hidden");
-    if(box.classList.contains("hidden")) return;
-    box.innerHTML = `
-      <div class="field"><label>Pegar lista (uno por línea, marca los pagados con ✅)</label>
-        <textarea id="rosterPaste" placeholder="1. Sergio Acevedo ✅&#10;2. Diego Serrano&#10;..."></textarea>
-      </div>
-      <div class="btnrow" style="margin-top:8px"><button class="btn sm" id="parseRosterBtn">Analizar lista</button></div>
-      <div id="rosterPreview"></div>`;
-    document.getElementById("rosterPaste").focus();
-    document.getElementById("parseRosterBtn").addEventListener("click", ()=>{
-      const rows = parseRoster(document.getElementById("rosterPaste").value);
-      document.getElementById("rosterPreview").innerHTML = rosterPreviewHTML(rows, ed);
-      wireRosterPreview(ed);
+    document.getElementById("pasteRosterBtn").addEventListener("click", ()=>{
+      const box = document.getElementById("rosterForm");
+      box.classList.toggle("hidden");
+      if(box.classList.contains("hidden")) return;
+      box.innerHTML = `
+        <div class="field"><label>Pegar lista (uno por línea, marca los pagados con ✅)</label>
+          <textarea id="rosterPaste" placeholder="1. Sergio Acevedo ✅&#10;2. Diego Serrano&#10;..."></textarea>
+        </div>
+        <div class="btnrow" style="margin-top:8px"><button class="btn sm" id="parseRosterBtn">Analizar lista</button></div>
+        <div id="rosterPreview"></div>`;
+      document.getElementById("rosterPaste").focus();
+      document.getElementById("parseRosterBtn").addEventListener("click", ()=>{
+        const rows = parseRoster(document.getElementById("rosterPaste").value);
+        document.getElementById("rosterPreview").innerHTML = rosterPreviewHTML(rows, ed);
+        wireRosterPreview(ed);
+      });
     });
-  });
+  }
 }
 
 function parseRoster(text){
@@ -906,42 +910,50 @@ function ligaGridHTML(ed){
 function renderJornadas(){
   const el = document.getElementById("panel-jornadas");
   const ed = currentEdition();
+  const admin = isAdmin();
   if(!ed){ el.innerHTML=`<div class="card"><p class="muted" style="margin:0">Crea una edición primero en <b>Ediciones y bote</b>.</p></div>`; return; }
 
   let html = `<div class="section-h"><span class="mk">○</span><span class="tag">Todos los pronósticos · Edición ${ed.number}</span><span class="line"></span></div>`;
   html += ligaGridHTML(ed);
 
   html += `<div class="section-h"><span class="mk">△</span><span class="tag">Gestionar jornadas</span><span class="line"></span></div>`;
-  html += `<div class="btnrow" style="margin-bottom:16px"><button class="btn primary" id="newJornadaBtn">+ Nueva jornada</button></div>`;
+  if(admin){
+    html += `<div class="btnrow" style="margin-bottom:16px"><button class="btn primary" id="newJornadaBtn">+ Nueva jornada</button></div>`;
+  }
   html += `<div id="newJornadaForm" class="card hidden" style="margin-bottom:16px"></div>`;
 
   if(!ed.jornadas.length){
     html += `<div class="card"><p class="muted" style="margin:0">Todavía no hay jornadas en esta edición.</p></div>`;
   } else {
     [...ed.jornadas].reverse().forEach(j=>{
-      html += jornadaCardHTML(ed, j);
+      html += jornadaCardHTML(ed, j, admin);
     });
   }
   el.innerHTML = html;
 
-  document.getElementById("newJornadaBtn").addEventListener("click", ()=>{
-    const box = document.getElementById("newJornadaForm");
-    box.classList.toggle("hidden");
-    box.innerHTML = `
-      <div class="formgrid cols2">
-        <div class="field"><label>Nombre de la jornada</label><input type="text" id="jLabel" placeholder="Jornada ${ed.jornadas.length+1}" value="Jornada ${ed.jornadas.length+1}"></div>
-        <div class="field"><label>Temporada</label><input type="text" id="jSeason" value="${esc(ed.season||"")}"></div>
-      </div>
-      <div class="btnrow" style="margin-top:12px"><button class="btn primary" id="confirmNewJornada">Crear jornada</button></div>`;
-    document.getElementById("confirmNewJornada").addEventListener("click", ()=>{
-      const label = document.getElementById("jLabel").value.trim() || `Jornada ${ed.jornadas.length+1}`;
-      const season = document.getElementById("jSeason").value.trim();
-      const j = newJornada(label, season);
-      ed.jornadas.push(j);
-      openJornadaId = j.id;
-      saveState(); render();
-    });
-  });
+  if(admin){
+    const newJornadaBtn = document.getElementById("newJornadaBtn");
+    if(newJornadaBtn){
+      newJornadaBtn.addEventListener("click", ()=>{
+        const box = document.getElementById("newJornadaForm");
+        box.classList.toggle("hidden");
+        box.innerHTML = `
+          <div class="formgrid cols2">
+            <div class="field"><label>Nombre de la jornada</label><input type="text" id="jLabel" placeholder="Jornada ${ed.jornadas.length+1}" value="Jornada ${ed.jornadas.length+1}"></div>
+            <div class="field"><label>Temporada</label><input type="text" id="jSeason" value="${esc(ed.season||"")}"></div>
+          </div>
+          <div class="btnrow" style="margin-top:12px"><button class="btn primary" id="confirmNewJornada">Crear jornada</button></div>`;
+        document.getElementById("confirmNewJornada").addEventListener("click", ()=>{
+          const label = document.getElementById("jLabel").value.trim() || `Jornada ${ed.jornadas.length+1}`;
+          const season = document.getElementById("jSeason").value.trim();
+          const j = newJornada(label, season);
+          ed.jornadas.push(j);
+          openJornadaId = j.id;
+          saveState(); render();
+        });
+      });
+    }
+  }
 
   el.querySelectorAll(".jcard-head").forEach(h=>{
     h.addEventListener("click", ()=>{
@@ -951,10 +963,10 @@ function renderJornadas(){
     });
   });
 
-  ed.jornadas.forEach(j=> wireJornada(ed, j));
+  ed.jornadas.forEach(j=> wireJornada(ed, j, admin));
 }
 
-function jornadaCardHTML(ed, j){
+function jornadaCardHTML(ed, j, admin){
   const derived = deriveEdition(ed);
   const open = openJornadaId===j.id;
   const resueltos = j.picks.filter(p=>pickOutcome(p).outcome!=="pendiente").length;
@@ -968,13 +980,33 @@ function jornadaCardHTML(ed, j){
   </div>`;
 }
 
-function jornadaBodyHTML(ed, j, derived){
+function jornadaBodyHTML(ed, j, derived, admin){
   const expelledHere = j.expelled||[];
   const activeParticipants = ed.participants.filter(ep=>
     derived[ep.participantId].status==="activo" ||
     j.picks.some(p=>p.participantId===ep.participantId) ||
     expelledHere.includes(ep.participantId)
   );
+
+  if(!admin){
+    const rows = j.picks.map(p=>{
+      const pl = getParticipant(p.participantId);
+      const r = pickOutcome(p);
+      const label = r.outcome==="sobrevive"?"Sobrevive":r.outcome==="eliminado"?"Eliminado":r.outcome==="anulada"?"Jornada anulada":"Pendiente";
+      const text = p.team2? `${esc(p.team1)} / ${esc(p.team2)}` : (p.team1? esc(p.team1) : "—");
+      return `<tr><td>${esc(pl?pl.name:"?")}</td><td>${text}</td><td>${label}</td></tr>`;
+    }).join("");
+    return `
+      <div class="tblwrap">
+        <table class="picktable">
+          <thead><tr><th>Jugador</th><th>Equipos</th><th>Estado</th></tr></thead>
+          <tbody>${rows || `<tr><td colspan="3" class="muted">No hay pronósticos registrados.</td></tr>`}</tbody>
+        </table>
+      </div>
+      <p class="muted" style="margin-top:12px">Solo el administrador puede editar jornadas, añadir pronósticos o expulsar jugadores.</p>
+    `;
+  }
+
   return `
     <div class="pastebox">
       <div class="field"><label>Pegar pronósticos de WhatsApp</label>
@@ -1023,7 +1055,8 @@ function pickRowHTML(ed, j, p){
   </tr>`;
 }
 
-function wireJornada(ed, j){
+function wireJornada(ed, j, admin){
+  if(!admin) return;
   const parseBtn = document.querySelector(`[data-act="parse"][data-j="${j.id}"]`);
   if(parseBtn){
     parseBtn.addEventListener("click", ()=>{
@@ -1193,34 +1226,41 @@ function wirePreview(ed, j){
 /* ============================== RENDER: EDICIONES ============================== */
 function renderEdiciones(){
   const el = document.getElementById("panel-ediciones");
+  const admin = isAdmin();
   let html = "";
 
   if(!state.editions.length){
-    html += `<div class="card">
-      <p class="muted">Todavía no hay ninguna edición. Empieza creando la Edición 1.</p>
-      <div class="formgrid cols2" style="margin-top:10px">
-        <div class="field"><label>Temporada</label><input type="text" id="firstSeason" placeholder="2026/27" value="2026/27"></div>
-      </div>
-      <div class="btnrow" style="margin-top:12px"><button class="btn primary" id="createFirstEdition">Crear Edición 1</button></div>
-    </div>`;
+    if(admin){
+      html += `<div class="card">
+        <p class="muted">Todavía no hay ninguna edición. Empieza creando la Edición 1.</p>
+        <div class="formgrid cols2" style="margin-top:10px">
+          <div class="field"><label>Temporada</label><input type="text" id="firstSeason" placeholder="2026/27" value="2026/27"></div>
+        </div>
+        <div class="btnrow" style="margin-top:12px"><button class="btn primary" id="createFirstEdition">Crear Edición 1</button></div>
+      </div>`;
+    } else {
+      html += `<div class="card"><p class="muted" style="margin:0">No hay ninguna edición abierta. Solo un administrador puede crear la primera edición.</p></div>`;
+    }
   } else {
     [...state.editions].reverse().forEach(ed=>{
-      html += editionCardHTML(ed);
+      html += editionCardHTML(ed, admin);
     });
   }
   el.innerHTML = html;
 
-  const cfe = document.getElementById("createFirstEdition");
-  if(cfe) cfe.addEventListener("click", ()=>{
-    const season = document.getElementById("firstSeason").value.trim() || "2026/27";
-    state.editions.push(newEdition(1, season, 0));
-    saveState(); render();
-  });
+  if(admin){
+    const cfe = document.getElementById("createFirstEdition");
+    if(cfe) cfe.addEventListener("click", ()=>{
+      const season = document.getElementById("firstSeason").value.trim() || "2026/27";
+      state.editions.push(newEdition(1, season, 0));
+      saveState(); render();
+    });
+  }
 
-  state.editions.forEach(ed=> wireEdition(ed));
+  if(admin) state.editions.forEach(ed=> wireEdition(ed));
 }
 
-function editionCardHTML(ed){
+function editionCardHTML(ed, admin){
   const derived = deriveEdition(ed);
   const money = computeMoney(ed);
   const activos = Object.values(derived).filter(d=>d.status==="activo");
@@ -1238,7 +1278,7 @@ function editionCardHTML(ed){
       <div><div class="muted" style="font-size:11.5px">Bote</div><div style="font-weight:800;font-size:17px;color:var(--amber)">${fmtEUR(money.boteTotal)}</div></div>
     </div>
     ${winner? `<p style="margin:12px 0 0;font-size:13.5px">🏆 Ganador: <b style="color:#fff">${esc(winner.name)}</b> — se lleva ${fmtEUR(money.boteTotal)}</p>` : ""}
-    ${isOpen? `
+    ${isOpen && admin? `
       <div class="btnrow" style="margin-top:14px">
         <select id="winnerSelect-${ed.id}" style="border:1px solid var(--line);border-radius:10px;padding:9px 10px;background:var(--cream);color:var(--ink)">
           <option value="">Elegir ganador…</option>
@@ -1250,7 +1290,7 @@ function editionCardHTML(ed){
         <button class="btn primary sm" data-act="closeWithWinner" data-ed="${ed.id}">Cerrar edición con ganador</button>
         <button class="btn danger sm" data-act="closeNoWinner" data-ed="${ed.id}">Cerrar sin ganador (bote acumula)</button>
       </div>
-    ` : ""}
+    ` : isOpen? `<p class="muted" style="margin-top:12px">Solo el administrador puede cerrar esta edición y definir el ganador.</p>` : ""}
   </div>`;
 }
 
@@ -1349,6 +1389,7 @@ function wireMatchPreview(previewElId, confirmId, onConfirm){
 function renderLiga(){
   const el = document.getElementById("panel-liga");
   const liga = state.liga;
+  const admin = isAdmin();
 
   let html = "";
   if(liga.autoUpdatedAt){
@@ -1367,8 +1408,12 @@ function renderLiga(){
   } else {
     html += `<p class="muted" style="margin:0 0 10px">Todavía no has añadido los resultados de la última jornada.</p>`;
   }
-  html += `<div class="btnrow" style="margin-top:12px"><button class="btn sm" id="editResultadosBtn">${liga.resultados?'Actualizar resultados':'+ Añadir resultados'}</button></div>`;
-  html += `<div id="resultadosForm" class="hidden" style="margin-top:12px"></div>`;
+  if(admin){
+    html += `<div class="btnrow" style="margin-top:12px"><button class="btn sm" id="editResultadosBtn">${liga.resultados?'Actualizar resultados':'+ Añadir resultados'}</button></div>`;
+    html += `<div id="resultadosForm" class="hidden" style="margin-top:12px"></div>`;
+  } else {
+    html += `<p class="muted" style="margin-top:12px">Solo el administrador puede añadir o actualizar los resultados de LaLiga.</p>`;
+  }
   html += `</div>`;
 
   html += `<div class="section-h"><span class="mk">△</span><span class="tag">Próximos partidos</span><span class="line"></span></div>`;
@@ -1381,63 +1426,72 @@ function renderLiga(){
           <span style="font-family:var(--display);font-weight:800;color:#fff;font-size:16px">${esc(block.label)}</span>
           <div style="display:flex;align-items:center;gap:8px">
             <span class="muted" style="font-size:11.5px">Actualizado ${fmtDate(block.updatedAt)}</span>
-            <button class="btn sm danger" data-act="removeFixtureBlock" data-block="${block.id}">Eliminar</button>
+            ${admin? `<button class="btn sm danger" data-act="removeFixtureBlock" data-block="${block.id}">Eliminar</button>` : ""}
           </div>
         </div>
         ${block.matches.map(matchRowHTML).join("")}
       </div>`;
     });
   }
-  html += `<div class="btnrow"><button class="btn sm" id="addFixturesBtn">+ Añadir jornada</button></div>`;
-  html += `<div id="fixturesForm" class="hidden" style="margin-top:12px"></div>`;
+  if(admin){
+    html += `<div class="btnrow"><button class="btn sm" id="addFixturesBtn">+ Añadir jornada</button></div>`;
+    html += `<div id="fixturesForm" class="hidden" style="margin-top:12px"></div>`;
+  } else {
+    html += `<p class="muted" style="margin-top:12px">Solo el administrador puede añadir o eliminar jornadas de LaLiga.</p>`;
+    html += `<div id="fixturesForm" class="hidden" style="margin-top:12px"></div>`;
+  }
 
   el.innerHTML = html;
 
-  document.getElementById("editResultadosBtn").addEventListener("click", ()=>{
-    const box = document.getElementById("resultadosForm");
-    box.classList.toggle("hidden");
-    if(box.classList.contains("hidden")) return;
-    box.innerHTML = pasteFormHTML({
-      labelId:"resLabel", textId:"resText", analizarId:"resAnalizar", previewId:"resPreview",
-      defaultLabel: liga.resultados? liga.resultados.label : "Jornada 1",
-      defaultText: liga.resultados? liga.resultados.matches.map(m=>m.raw).join("\n") : "",
-      placeholder:"Barcelona 2-1 Real Madrid"
+  if(admin){
+    document.getElementById("editResultadosBtn").addEventListener("click", ()=>{
+      const box = document.getElementById("resultadosForm");
+      box.classList.toggle("hidden");
+      if(box.classList.contains("hidden")) return;
+      box.innerHTML = pasteFormHTML({
+        labelId:"resLabel", textId:"resText", analizarId:"resAnalizar", previewId:"resPreview",
+        defaultLabel: liga.resultados? liga.resultados.label : "Jornada 1",
+        defaultText: liga.resultados? liga.resultados.matches.map(m=>m.raw).join("\n") : "",
+        placeholder:"Barcelona 2-1 Real Madrid"
+      });
+      document.getElementById("resAnalizar").addEventListener("click", ()=>{
+        const rows = parseMatchBlock(document.getElementById("resText").value);
+        document.getElementById("resPreview").innerHTML = matchPreviewHTML(rows,"resConfirm","Guardar resultados");
+        wireMatchPreview("resPreview","resConfirm", rows2=>{
+          liga.resultados = {label: document.getElementById("resLabel").value.trim()||"Jornada", updatedAt:Date.now(), matches:rows2};
+          saveState(); render();
+        });
+      });
     });
-    document.getElementById("resAnalizar").addEventListener("click", ()=>{
-      const rows = parseMatchBlock(document.getElementById("resText").value);
-      document.getElementById("resPreview").innerHTML = matchPreviewHTML(rows,"resConfirm","Guardar resultados");
-      wireMatchPreview("resPreview","resConfirm", rows2=>{
-        liga.resultados = {label: document.getElementById("resLabel").value.trim()||"Jornada", updatedAt:Date.now(), matches:rows2};
+  }
+
+  if(admin){
+    document.getElementById("addFixturesBtn").addEventListener("click", ()=>{
+      const box = document.getElementById("fixturesForm");
+      box.classList.toggle("hidden");
+      if(box.classList.contains("hidden")) return;
+      box.innerHTML = pasteFormHTML({
+        labelId:"fxLabel", textId:"fxText", analizarId:"fxAnalizar", previewId:"fxPreview",
+        defaultLabel:`Jornada ${liga.proximas.length+2}`, defaultText:"",
+        placeholder:"Sáb 21:00 Athletic - Girona"
+      });
+      document.getElementById("fxAnalizar").addEventListener("click", ()=>{
+        const rows = parseMatchBlock(document.getElementById("fxText").value);
+        document.getElementById("fxPreview").innerHTML = matchPreviewHTML(rows,"fxConfirm","Añadir jornada");
+        wireMatchPreview("fxPreview","fxConfirm", rows2=>{
+          liga.proximas.push({id:uid(), label: document.getElementById("fxLabel").value.trim()||"Próxima jornada", updatedAt:Date.now(), matches:rows2});
+          saveState(); render();
+        });
+      });
+    });
+
+    el.querySelectorAll('[data-act="removeFixtureBlock"]').forEach(btn=>{
+      btn.addEventListener("click", ()=>{
+        liga.proximas = liga.proximas.filter(b=>b.id!==btn.dataset.block);
         saveState(); render();
       });
     });
-  });
-
-  document.getElementById("addFixturesBtn").addEventListener("click", ()=>{
-    const box = document.getElementById("fixturesForm");
-    box.classList.toggle("hidden");
-    if(box.classList.contains("hidden")) return;
-    box.innerHTML = pasteFormHTML({
-      labelId:"fxLabel", textId:"fxText", analizarId:"fxAnalizar", previewId:"fxPreview",
-      defaultLabel:`Jornada ${liga.proximas.length+2}`, defaultText:"",
-      placeholder:"Sáb 21:00 Athletic - Girona"
-    });
-    document.getElementById("fxAnalizar").addEventListener("click", ()=>{
-      const rows = parseMatchBlock(document.getElementById("fxText").value);
-      document.getElementById("fxPreview").innerHTML = matchPreviewHTML(rows,"fxConfirm","Añadir jornada");
-      wireMatchPreview("fxPreview","fxConfirm", rows2=>{
-        liga.proximas.push({id:uid(), label: document.getElementById("fxLabel").value.trim()||"Próxima jornada", updatedAt:Date.now(), matches:rows2});
-        saveState(); render();
-      });
-    });
-  });
-
-  el.querySelectorAll('[data-act="removeFixtureBlock"]').forEach(btn=>{
-    btn.addEventListener("click", ()=>{
-      liga.proximas = liga.proximas.filter(b=>b.id!==btn.dataset.block);
-      saveState(); render();
-    });
-  });
+  }
 }
 
 /* ============================== RENDER: CLASIFICACIÓN ============================== */
@@ -1520,6 +1574,7 @@ function standingsTableHTML(rows){
 function renderClasificacion(){
   const el = document.getElementById("panel-clasificacion");
   const clas = state.liga.clasificacion;
+  const admin = isAdmin();
   let html = `<div class="section-h"><span class="mk">○</span><span class="tag">Clasificación LaLiga</span><span class="line"></span></div>`;
   html += `<div class="card">`;
   if(clas && clas.rows.length){
@@ -1528,11 +1583,16 @@ function renderClasificacion(){
   } else {
     html += `<p class="muted" style="margin:0 0 10px">Todavía no has añadido la clasificación.</p>`;
   }
-  html += `<div class="btnrow" style="margin-top:14px"><button class="btn sm" id="editClasifBtn">${clas?'Actualizar clasificación':'+ Añadir clasificación'}</button></div>`;
+  if(admin){
+    html += `<div class="btnrow" style="margin-top:14px"><button class="btn sm" id="editClasifBtn">${clas?'Actualizar clasificación':'+ Añadir clasificación'}</button></div>`;
+  } else {
+    html += `<p class="muted" style="margin-top:14px">Solo el administrador puede añadir o actualizar la clasificación.</p>`;
+  }
   html += `<div id="clasifForm" class="hidden" style="margin-top:12px"></div>`;
   html += `</div>`;
   el.innerHTML = html;
 
+  if(!admin) return;
   document.getElementById("editClasifBtn").addEventListener("click", ()=>{
     const box = document.getElementById("clasifForm");
     box.classList.toggle("hidden");
