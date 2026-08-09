@@ -182,7 +182,7 @@
         },
         {
           "participantId": "v9khm4a57td",
-          "pagado": false,
+          "pagado": true,
           "cuota": 10,
           "note": ""
         },
@@ -200,7 +200,7 @@
         },
         {
           "participantId": "dazopf357td",
-          "pagado": false,
+          "pagado": true,
           "cuota": 10,
           "note": ""
         },
@@ -283,5 +283,5 @@
       ]
     }
   ],
-  "updatedAt": 1786269208655
+  "updatedAt": 1786269227474
 }
