@@ -107,6 +107,10 @@
     {
       "id": "vbs5fnuax18",
       "name": "Villaro"
+    },
+    {
+      "id": "8x73bb5d8ph",
+      "name": "Roberto Garcia"
     }
   ],
   "editions": [
@@ -279,6 +283,12 @@
           "pagado": false,
           "cuota": 10,
           "note": ""
+        },
+        {
+          "participantId": "8x73bb5d8ph",
+          "pagado": false,
+          "cuota": 10,
+          "note": ""
         }
       ],
       "jornadas": [
@@ -293,5 +303,5 @@
       ]
     }
   ],
-  "updatedAt": 1786396501192
+  "updatedAt": 1786396527003
 }
