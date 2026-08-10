@@ -140,7 +140,7 @@
         },
         {
           "participantId": "so3mbw157td",
-          "pagado": false,
+          "pagado": true,
           "cuota": 10,
           "note": ""
         },
@@ -283,5 +283,5 @@
       ]
     }
   ],
-  "updatedAt": 1786344255498
+  "updatedAt": 1786344263876
 }
