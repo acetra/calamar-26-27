@@ -103,6 +103,10 @@
     {
       "id": "umwpn8x57td",
       "name": "David Hernández"
+    },
+    {
+      "id": "vbs5fnuax18",
+      "name": "Villaro"
     }
   ],
   "editions": [
@@ -269,6 +273,12 @@
           "pagado": true,
           "cuota": 10,
           "note": ""
+        },
+        {
+          "participantId": "vbs5fnuax18",
+          "pagado": false,
+          "cuota": 10,
+          "note": ""
         }
       ],
       "jornadas": [
@@ -283,5 +293,5 @@
       ]
     }
   ],
-  "updatedAt": 1786344297630
+  "updatedAt": 1786344350547
 }
