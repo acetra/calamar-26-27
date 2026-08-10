@@ -103,6 +103,10 @@
     {
       "id": "umwpn8x57td",
       "name": "David Hernández"
+    },
+    {
+      "id": "vbs5fnuax18",
+      "name": "Villaro"
     }
   ],
   "editions": [
@@ -122,7 +126,7 @@
         },
         {
           "participantId": "9zo5xs957td",
-          "pagado": false,
+          "pagado": true,
           "cuota": 10,
           "note": ""
         },
@@ -134,13 +138,13 @@
         },
         {
           "participantId": "2gh3q3y57td",
-          "pagado": false,
+          "pagado": true,
           "cuota": 10,
           "note": ""
         },
         {
           "participantId": "so3mbw157td",
-          "pagado": false,
+          "pagado": true,
           "cuota": 10,
           "note": ""
         },
@@ -152,7 +156,7 @@
         },
         {
           "participantId": "jdky2t557td",
-          "pagado": false,
+          "pagado": true,
           "cuota": 10,
           "note": ""
         },
@@ -182,7 +186,7 @@
         },
         {
           "participantId": "v9khm4a57td",
-          "pagado": false,
+          "pagado": true,
           "cuota": 10,
           "note": ""
         },
@@ -200,7 +204,7 @@
         },
         {
           "participantId": "dazopf357td",
-          "pagado": false,
+          "pagado": true,
           "cuota": 10,
           "note": ""
         },
@@ -218,13 +222,13 @@
         },
         {
           "participantId": "1pdzgw257td",
-          "pagado": false,
+          "pagado": true,
           "cuota": 10,
           "note": ""
         },
         {
           "participantId": "7xu7mha57td",
-          "pagado": false,
+          "pagado": true,
           "cuota": 10,
           "note": ""
         },
@@ -236,7 +240,7 @@
         },
         {
           "participantId": "o89gedt57td",
-          "pagado": false,
+          "pagado": true,
           "cuota": 10,
           "note": ""
         },
@@ -266,6 +270,12 @@
         },
         {
           "participantId": "umwpn8x57td",
+          "pagado": true,
+          "cuota": 10,
+          "note": ""
+        },
+        {
+          "participantId": "vbs5fnuax18",
           "pagado": false,
           "cuota": 10,
           "note": ""
@@ -283,5 +293,5 @@
       ]
     }
   ],
-  "updatedAt": 1786396254040
+  "updatedAt": 1786396271501
 }
