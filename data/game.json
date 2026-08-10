@@ -174,7 +174,7 @@
         },
         {
           "participantId": "ngo5pii57td",
-          "pagado": false,
+          "pagado": true,
           "cuota": 10,
           "note": ""
         },
@@ -293,5 +293,5 @@
       ]
     }
   ],
-  "updatedAt": 1786396447965
+  "updatedAt": 1786396501192
 }
