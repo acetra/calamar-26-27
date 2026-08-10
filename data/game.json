@@ -266,7 +266,7 @@
         },
         {
           "participantId": "umwpn8x57td",
-          "pagado": false,
+          "pagado": true,
           "cuota": 10,
           "note": ""
         }
@@ -283,5 +283,5 @@
       ]
     }
   ],
-  "updatedAt": 1786344227326
+  "updatedAt": 1786344255498
 }
