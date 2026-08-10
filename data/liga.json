@@ -1,15 +1,15 @@
 {
-  "generatedAt": 1786399793646,
+  "generatedAt": 1786406300899,
   "resultados": {
     "label": "Sin resultados todavía",
-    "updatedAt": 1786399793646,
+    "updatedAt": 1786406300899,
     "matches": []
   },
   "proximas": [
     {
       "id": "md-1",
       "label": "Jornada 1",
-      "updatedAt": 1786399793646,
+      "updatedAt": 1786406300899,
       "matches": [
         {
           "team1": "Alavés",
@@ -76,7 +76,7 @@
     {
       "id": "md-2",
       "label": "Jornada 2",
-      "updatedAt": 1786399793646,
+      "updatedAt": 1786406300899,
       "matches": [
         {
           "team1": "Rayo Vallecano",
@@ -143,7 +143,7 @@
     {
       "id": "md-3",
       "label": "Jornada 3",
-      "updatedAt": 1786399793646,
+      "updatedAt": 1786406300899,
       "matches": [
         {
           "team1": "Santander",
@@ -210,7 +210,7 @@
     {
       "id": "md-4",
       "label": "Jornada 4",
-      "updatedAt": 1786399793646,
+      "updatedAt": 1786406300899,
       "matches": [
         {
           "team1": "Real Betis",
@@ -277,7 +277,7 @@
     {
       "id": "md-5",
       "label": "Jornada 5",
-      "updatedAt": 1786399793646,
+      "updatedAt": 1786406300899,
       "matches": [
         {
           "team1": "Getafe",
@@ -343,7 +343,7 @@
     }
   ],
   "clasificacion": {
-    "updatedAt": 1786399793646,
+    "updatedAt": 1786406300899,
     "rows": [
       {
         "pos": 1,
