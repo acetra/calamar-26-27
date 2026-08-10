@@ -252,7 +252,7 @@
         },
         {
           "participantId": "m9p8aca57td",
-          "pagado": false,
+          "pagado": true,
           "cuota": 10,
           "note": ""
         },
@@ -293,5 +293,5 @@
       ]
     }
   ],
-  "updatedAt": 1786396426679
+  "updatedAt": 1786396441308
 }
