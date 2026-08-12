@@ -250,7 +250,7 @@
         },
         {
           "participantId": "2suh20a57td",
-          "pagado": false,
+          "pagado": true,
           "cuota": 10,
           "note": ""
         },
@@ -303,5 +303,5 @@
       ]
     }
   ],
-  "updatedAt": 1786571534240
+  "updatedAt": 1786571542809
 }
