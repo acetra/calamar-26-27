@@ -280,7 +280,7 @@
         },
         {
           "participantId": "vbs5fnuax18",
-          "pagado": false,
+          "pagado": true,
           "cuota": 10,
           "note": ""
         },
@@ -303,5 +303,5 @@
       ]
     }
   ],
-  "updatedAt": 1786571443165
+  "updatedAt": 1786571459763
 }
