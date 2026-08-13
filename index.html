@@ -259,7 +259,6 @@ footer b{color:#bcd3c9}
     Calamar 26/27 · datos compartidos vía GitHub ·
     <a href="#" id="exportBtn">exportar copia</a> ·
     <a href="#" id="importBtn">importar copia</a> ·
-    <a href="#" id="resetBtn">reiniciar local</a> ·
     <a href="#" id="adminModeBtn">modo administrador</a>
     <input type="file" id="importFile" accept="application/json" class="hidden">
     <div id="adminPanel" class="hidden"></div>
@@ -1666,7 +1665,7 @@ function render(){
   if(activeTab==="reglas") renderReglas();
 }
 
-/* ============================== EXPORT / IMPORT / RESET ============================== */
+/* ============================== EXPORT / IMPORT ============================== */
 document.getElementById("exportBtn").addEventListener("click", e=>{
   e.preventDefault();
   const blob = new Blob([JSON.stringify(state,null,2)], {type:"application/json"});
@@ -1693,11 +1692,6 @@ document.getElementById("importFile").addEventListener("change", e=>{
   };
   reader.readAsText(file);
   e.target.value = "";
-});
-document.getElementById("resetBtn").addEventListener("click", e=>{
-  e.preventDefault();
-  if(!confirm("Esto borrará todos los datos guardados en este navegador (jugadores, ediciones, jornadas). ¿Seguro? Exporta antes una copia si quieres conservarlos.")) return;
-  state = defaultState(); saveState(); activeTab="resumen"; activePlayerId=null; render();
 });
 
 /* ============================== PANEL DE ADMINISTRADOR ============================== */
