@@ -632,7 +632,7 @@ function renderResumen(){
 
   html += `<div class="section-h"><span class="mk">□</span><span class="tag">Jugadores activos</span><span class="line"></span></div>`;
   if(!activos.length){
-    html += `<div class="card"><p class="muted" style="margin:0">Nadie activo todavía.</p></div>`;
+    html += `<div class="card"><p class="muted" style="margin:0">Nadie activo todavía</p></div>`;
   } else {
     html += `<div class="grid">` + activos.map(ep=>playerCardHTML(ep, derived)).join("") + `</div>`;
   }
