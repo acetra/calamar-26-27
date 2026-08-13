@@ -1041,6 +1041,11 @@ function jornadaBodyHTML(ed, j, derived, admin){
         return `<button class="btn sm ${already?'danger':''}" data-act="toggleExpel" data-j="${j.id}" data-p="${ep.participantId}">${already?'✕ ':''}${esc(pl.name)}</button>`;
       }).join("") || `<span class="muted" style="font-size:13px">Todos los activos ya tienen pronóstico.</span>`}
     </div>
+
+    <div class="section-h" style="margin-top:18px"><span class="mk">△</span><span class="tag">Zona de peligro</span><span class="line"></span></div>
+    <div class="btnrow">
+      <button class="btn sm danger" data-act="removeJornada" data-j="${j.id}">Eliminar jornada</button>
+    </div>
   `;
 }
 
@@ -1101,6 +1106,16 @@ function wireJornada(ed, j, admin){
       j.expelled = j.expelled||[];
       const idx = j.expelled.indexOf(pid);
       if(idx>-1) j.expelled.splice(idx,1); else j.expelled.push(pid);
+      saveState(); render();
+    });
+  }
+  const removeBtn = document.querySelector(`[data-act="removeJornada"][data-j="${j.id}"]`);
+  if(removeBtn){
+    removeBtn.addEventListener("click", ()=>{
+      const withPicks = j.picks.length? ` Se perderán sus ${j.picks.length} pronóstico(s) ya registrados.` : "";
+      if(!confirm(`¿Eliminar "${j.label}"?${withPicks} Esta acción no se puede deshacer.`)) return;
+      ed.jornadas = ed.jornadas.filter(x=>x.id!==j.id);
+      if(openJornadaId===j.id) openJornadaId = null;
       saveState(); render();
     });
   }
