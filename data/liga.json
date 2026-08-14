@@ -1,15 +1,15 @@
 {
-  "generatedAt": 1786717775309,
+  "generatedAt": 1786729224680,
   "resultados": {
     "label": "Sin resultados todavía",
-    "updatedAt": 1786717775309,
+    "updatedAt": 1786729224680,
     "matches": []
   },
   "proximas": [
     {
       "id": "md-1",
       "label": "Jornada 1",
-      "updatedAt": 1786717775309,
+      "updatedAt": 1786729224680,
       "matches": [
         {
           "team1": "Alavés",
@@ -34,12 +34,6 @@
           "team2": "Levante",
           "extra": "dom, 16 ago, 19:00",
           "raw": "dom, 16 ago, 19:00 Espanyol - Levante"
-        },
-        {
-          "team1": "Celta",
-          "team2": "Osasuna",
-          "extra": "dom, 16 ago, 21:30",
-          "raw": "dom, 16 ago, 21:30 Celta - Osasuna"
         },
         {
           "team1": "Deportivo",
@@ -76,7 +70,7 @@
     {
       "id": "md-2",
       "label": "Jornada 2",
-      "updatedAt": 1786717775309,
+      "updatedAt": 1786729224680,
       "matches": [
         {
           "team1": "Rayo Vallecano",
@@ -143,7 +137,7 @@
     {
       "id": "md-3",
       "label": "Jornada 3",
-      "updatedAt": 1786717775309,
+      "updatedAt": 1786729224680,
       "matches": [
         {
           "team1": "Santander",
@@ -210,7 +204,7 @@
     {
       "id": "md-4",
       "label": "Jornada 4",
-      "updatedAt": 1786717775309,
+      "updatedAt": 1786729224680,
       "matches": [
         {
           "team1": "Real Betis",
@@ -277,7 +271,7 @@
     {
       "id": "md-5",
       "label": "Jornada 5",
-      "updatedAt": 1786717775309,
+      "updatedAt": 1786729224680,
       "matches": [
         {
           "team1": "Getafe",
@@ -343,7 +337,7 @@
     }
   ],
   "clasificacion": {
-    "updatedAt": 1786717775309,
+    "updatedAt": 1786729224680,
     "rows": [
       {
         "pos": 1,
