@@ -1,8 +1,8 @@
 {
-  "generatedAt": 1786826747781,
+  "generatedAt": 1786830012851,
   "resultados": {
     "label": "Jornada 1",
-    "updatedAt": 1786826747781,
+    "updatedAt": 1786830012851,
     "matches": [
       {
         "team1": "Alavés",
@@ -16,7 +16,7 @@
     {
       "id": "md-2",
       "label": "Jornada 2",
-      "updatedAt": 1786826747781,
+      "updatedAt": 1786830012851,
       "matches": [
         {
           "team1": "Rayo Vallecano",
@@ -83,7 +83,7 @@
     {
       "id": "md-3",
       "label": "Jornada 3",
-      "updatedAt": 1786826747781,
+      "updatedAt": 1786830012851,
       "matches": [
         {
           "team1": "Santander",
@@ -150,7 +150,7 @@
     {
       "id": "md-4",
       "label": "Jornada 4",
-      "updatedAt": 1786826747781,
+      "updatedAt": 1786830012851,
       "matches": [
         {
           "team1": "Real Betis",
@@ -217,7 +217,7 @@
     {
       "id": "md-5",
       "label": "Jornada 5",
-      "updatedAt": 1786826747781,
+      "updatedAt": 1786830012851,
       "matches": [
         {
           "team1": "Getafe",
@@ -284,7 +284,7 @@
     {
       "id": "md-6",
       "label": "Jornada 6",
-      "updatedAt": 1786826747781,
+      "updatedAt": 1786830012851,
       "matches": [
         {
           "team1": "Real Sociedad",
@@ -350,7 +350,7 @@
     }
   ],
   "clasificacion": {
-    "updatedAt": 1786826747781,
+    "updatedAt": 1786830012851,
     "rows": [
       {
         "pos": 1,
@@ -366,7 +366,7 @@
       },
       {
         "pos": 2,
-        "name": "Rayo Vallecano",
+        "name": "Sevilla FC",
         "pj": 0,
         "g": 0,
         "e": 0,
@@ -570,7 +570,7 @@
       },
       {
         "pos": 19,
-        "name": "Sevilla FC",
+        "name": "Rayo Vallecano",
         "pj": 0,
         "g": 0,
         "e": 0,
