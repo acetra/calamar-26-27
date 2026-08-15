@@ -1,76 +1,22 @@
 {
-  "generatedAt": 1786820586270,
+  "generatedAt": 1786823280667,
   "resultados": {
-    "label": "Sin resultados todavía",
-    "updatedAt": 1786820586270,
-    "matches": []
+    "label": "Jornada 1",
+    "updatedAt": 1786823280667,
+    "matches": [
+      {
+        "team1": "Alavés",
+        "team2": "Getafe",
+        "extra": "3-0",
+        "raw": "Alavés 3-0 Getafe"
+      }
+    ]
   },
   "proximas": [
     {
-      "id": "md-1",
-      "label": "Jornada 1",
-      "updatedAt": 1786820586270,
-      "matches": [
-        {
-          "team1": "Sevilla FC",
-          "team2": "Rayo Vallecano",
-          "extra": "sáb, 15 ago, 21:30",
-          "raw": "sáb, 15 ago, 21:30 Sevilla FC - Rayo Vallecano"
-        },
-        {
-          "team1": "Santander",
-          "team2": "Villarreal",
-          "extra": "dom, 16 ago, 17:00",
-          "raw": "dom, 16 ago, 17:00 Santander - Villarreal"
-        },
-        {
-          "team1": "Espanyol",
-          "team2": "Levante",
-          "extra": "dom, 16 ago, 19:00",
-          "raw": "dom, 16 ago, 19:00 Espanyol - Levante"
-        },
-        {
-          "team1": "Deportivo",
-          "team2": "Elche",
-          "extra": "lun, 17 ago, 21:00",
-          "raw": "lun, 17 ago, 21:00 Deportivo - Elche"
-        },
-        {
-          "team1": "Atleti",
-          "team2": "Málaga",
-          "extra": "mié, 19 ago, 21:00",
-          "raw": "mié, 19 ago, 21:00 Atleti - Málaga"
-        },
-        {
-          "team1": "Valencia",
-          "team2": "Real Betis",
-          "extra": "mar, 25 ago, 21:00",
-          "raw": "mar, 25 ago, 21:00 Valencia - Real Betis"
-        },
-        {
-          "team1": "Real Madrid",
-          "team2": "Real Sociedad",
-          "extra": "mié, 26 ago, 21:00",
-          "raw": "mié, 26 ago, 21:00 Real Madrid - Real Sociedad"
-        },
-        {
-          "team1": "Celta",
-          "team2": "Osasuna",
-          "extra": "jue, 27 ago, 20:30",
-          "raw": "jue, 27 ago, 20:30 Celta - Osasuna"
-        },
-        {
-          "team1": "Barça",
-          "team2": "Athletic",
-          "extra": "jue, 27 ago, 21:00",
-          "raw": "jue, 27 ago, 21:00 Barça - Athletic"
-        }
-      ]
-    },
-    {
       "id": "md-2",
       "label": "Jornada 2",
-      "updatedAt": 1786820586270,
+      "updatedAt": 1786823280667,
       "matches": [
         {
           "team1": "Rayo Vallecano",
@@ -137,7 +83,7 @@
     {
       "id": "md-3",
       "label": "Jornada 3",
-      "updatedAt": 1786820586270,
+      "updatedAt": 1786823280667,
       "matches": [
         {
           "team1": "Santander",
@@ -204,7 +150,7 @@
     {
       "id": "md-4",
       "label": "Jornada 4",
-      "updatedAt": 1786820586270,
+      "updatedAt": 1786823280667,
       "matches": [
         {
           "team1": "Real Betis",
@@ -271,7 +217,7 @@
     {
       "id": "md-5",
       "label": "Jornada 5",
-      "updatedAt": 1786820586270,
+      "updatedAt": 1786823280667,
       "matches": [
         {
           "team1": "Getafe",
@@ -334,10 +280,77 @@
           "raw": "dom, 13 sept, 02:00 Real Madrid - Rayo Vallecano"
         }
       ]
+    },
+    {
+      "id": "md-6",
+      "label": "Jornada 6",
+      "updatedAt": 1786823280667,
+      "matches": [
+        {
+          "team1": "Real Sociedad",
+          "team2": "Celta",
+          "extra": "jue, 03 sept, 21:00",
+          "raw": "jue, 03 sept, 21:00 Real Sociedad - Celta"
+        },
+        {
+          "team1": "Rayo Vallecano",
+          "team2": "Espanyol",
+          "extra": "mié, 16 sept, 02:00",
+          "raw": "mié, 16 sept, 02:00 Rayo Vallecano - Espanyol"
+        },
+        {
+          "team1": "Deportivo",
+          "team2": "Sevilla FC",
+          "extra": "mié, 16 sept, 02:00",
+          "raw": "mié, 16 sept, 02:00 Deportivo - Sevilla FC"
+        },
+        {
+          "team1": "Alavés",
+          "team2": "Valencia",
+          "extra": "mié, 16 sept, 02:00",
+          "raw": "mié, 16 sept, 02:00 Alavés - Valencia"
+        },
+        {
+          "team1": "Elche",
+          "team2": "Real Madrid",
+          "extra": "mié, 16 sept, 02:00",
+          "raw": "mié, 16 sept, 02:00 Elche - Real Madrid"
+        },
+        {
+          "team1": "Málaga",
+          "team2": "Villarreal",
+          "extra": "mié, 16 sept, 02:00",
+          "raw": "mié, 16 sept, 02:00 Málaga - Villarreal"
+        },
+        {
+          "team1": "Atleti",
+          "team2": "Osasuna",
+          "extra": "mié, 16 sept, 02:00",
+          "raw": "mié, 16 sept, 02:00 Atleti - Osasuna"
+        },
+        {
+          "team1": "Levante",
+          "team2": "Athletic",
+          "extra": "mié, 16 sept, 02:00",
+          "raw": "mié, 16 sept, 02:00 Levante - Athletic"
+        },
+        {
+          "team1": "Real Betis",
+          "team2": "Getafe",
+          "extra": "mié, 16 sept, 02:00",
+          "raw": "mié, 16 sept, 02:00 Real Betis - Getafe"
+        },
+        {
+          "team1": "Barça",
+          "team2": "Santander",
+          "extra": "mié, 16 sept, 02:00",
+          "raw": "mié, 16 sept, 02:00 Barça - Santander"
+        }
+      ]
     }
   ],
   "clasificacion": {
-    "updatedAt": 1786820586270,
+    "updatedAt": 1786823280667,
     "rows": [
       {
         "pos": 1,
@@ -352,139 +365,7 @@
         "pts": 0
       },
       {
-        "pos": 1,
-        "name": "Getafe",
-        "pj": 0,
-        "g": 0,
-        "e": 0,
-        "p": 0,
-        "gf": 0,
-        "gc": 0,
-        "dg": 0,
-        "pts": 0
-      },
-      {
-        "pos": 3,
-        "name": "Athletic",
-        "pj": 0,
-        "g": 0,
-        "e": 0,
-        "p": 0,
-        "gf": 0,
-        "gc": 0,
-        "dg": 0,
-        "pts": 0
-      },
-      {
-        "pos": 3,
-        "name": "Atleti",
-        "pj": 0,
-        "g": 0,
-        "e": 0,
-        "p": 0,
-        "gf": 0,
-        "gc": 0,
-        "dg": 0,
-        "pts": 0
-      },
-      {
-        "pos": 3,
-        "name": "Osasuna",
-        "pj": 0,
-        "g": 0,
-        "e": 0,
-        "p": 0,
-        "gf": 0,
-        "gc": 0,
-        "dg": 0,
-        "pts": 0
-      },
-      {
-        "pos": 3,
-        "name": "Deportivo",
-        "pj": 0,
-        "g": 0,
-        "e": 0,
-        "p": 0,
-        "gf": 0,
-        "gc": 0,
-        "dg": 0,
-        "pts": 0
-      },
-      {
-        "pos": 3,
-        "name": "Elche",
-        "pj": 0,
-        "g": 0,
-        "e": 0,
-        "p": 0,
-        "gf": 0,
-        "gc": 0,
-        "dg": 0,
-        "pts": 0
-      },
-      {
-        "pos": 3,
-        "name": "Espanyol",
-        "pj": 0,
-        "g": 0,
-        "e": 0,
-        "p": 0,
-        "gf": 0,
-        "gc": 0,
-        "dg": 0,
-        "pts": 0
-      },
-      {
-        "pos": 3,
-        "name": "Barça",
-        "pj": 0,
-        "g": 0,
-        "e": 0,
-        "p": 0,
-        "gf": 0,
-        "gc": 0,
-        "dg": 0,
-        "pts": 0
-      },
-      {
-        "pos": 3,
-        "name": "Levante",
-        "pj": 0,
-        "g": 0,
-        "e": 0,
-        "p": 0,
-        "gf": 0,
-        "gc": 0,
-        "dg": 0,
-        "pts": 0
-      },
-      {
-        "pos": 3,
-        "name": "Málaga",
-        "pj": 0,
-        "g": 0,
-        "e": 0,
-        "p": 0,
-        "gf": 0,
-        "gc": 0,
-        "dg": 0,
-        "pts": 0
-      },
-      {
-        "pos": 3,
-        "name": "Santander",
-        "pj": 0,
-        "g": 0,
-        "e": 0,
-        "p": 0,
-        "gf": 0,
-        "gc": 0,
-        "dg": 0,
-        "pts": 0
-      },
-      {
-        "pos": 3,
+        "pos": 2,
         "name": "Rayo Vallecano",
         "pj": 0,
         "g": 0,
@@ -496,55 +377,7 @@
         "pts": 0
       },
       {
-        "pos": 3,
-        "name": "Celta",
-        "pj": 0,
-        "g": 0,
-        "e": 0,
-        "p": 0,
-        "gf": 0,
-        "gc": 0,
-        "dg": 0,
-        "pts": 0
-      },
-      {
-        "pos": 3,
-        "name": "Real Betis",
-        "pj": 0,
-        "g": 0,
-        "e": 0,
-        "p": 0,
-        "gf": 0,
-        "gc": 0,
-        "dg": 0,
-        "pts": 0
-      },
-      {
-        "pos": 3,
-        "name": "Real Madrid",
-        "pj": 0,
-        "g": 0,
-        "e": 0,
-        "p": 0,
-        "gf": 0,
-        "gc": 0,
-        "dg": 0,
-        "pts": 0
-      },
-      {
-        "pos": 3,
-        "name": "Real Sociedad",
-        "pj": 0,
-        "g": 0,
-        "e": 0,
-        "p": 0,
-        "gf": 0,
-        "gc": 0,
-        "dg": 0,
-        "pts": 0
-      },
-      {
-        "pos": 3,
+        "pos": 2,
         "name": "Sevilla FC",
         "pj": 0,
         "g": 0,
@@ -556,7 +389,175 @@
         "pts": 0
       },
       {
-        "pos": 3,
+        "pos": 4,
+        "name": "Athletic",
+        "pj": 0,
+        "g": 0,
+        "e": 0,
+        "p": 0,
+        "gf": 0,
+        "gc": 0,
+        "dg": 0,
+        "pts": 0
+      },
+      {
+        "pos": 4,
+        "name": "Atleti",
+        "pj": 0,
+        "g": 0,
+        "e": 0,
+        "p": 0,
+        "gf": 0,
+        "gc": 0,
+        "dg": 0,
+        "pts": 0
+      },
+      {
+        "pos": 4,
+        "name": "Osasuna",
+        "pj": 0,
+        "g": 0,
+        "e": 0,
+        "p": 0,
+        "gf": 0,
+        "gc": 0,
+        "dg": 0,
+        "pts": 0
+      },
+      {
+        "pos": 4,
+        "name": "Deportivo",
+        "pj": 0,
+        "g": 0,
+        "e": 0,
+        "p": 0,
+        "gf": 0,
+        "gc": 0,
+        "dg": 0,
+        "pts": 0
+      },
+      {
+        "pos": 4,
+        "name": "Elche",
+        "pj": 0,
+        "g": 0,
+        "e": 0,
+        "p": 0,
+        "gf": 0,
+        "gc": 0,
+        "dg": 0,
+        "pts": 0
+      },
+      {
+        "pos": 4,
+        "name": "Espanyol",
+        "pj": 0,
+        "g": 0,
+        "e": 0,
+        "p": 0,
+        "gf": 0,
+        "gc": 0,
+        "dg": 0,
+        "pts": 0
+      },
+      {
+        "pos": 4,
+        "name": "Barça",
+        "pj": 0,
+        "g": 0,
+        "e": 0,
+        "p": 0,
+        "gf": 0,
+        "gc": 0,
+        "dg": 0,
+        "pts": 0
+      },
+      {
+        "pos": 4,
+        "name": "Levante",
+        "pj": 0,
+        "g": 0,
+        "e": 0,
+        "p": 0,
+        "gf": 0,
+        "gc": 0,
+        "dg": 0,
+        "pts": 0
+      },
+      {
+        "pos": 4,
+        "name": "Málaga",
+        "pj": 0,
+        "g": 0,
+        "e": 0,
+        "p": 0,
+        "gf": 0,
+        "gc": 0,
+        "dg": 0,
+        "pts": 0
+      },
+      {
+        "pos": 4,
+        "name": "Santander",
+        "pj": 0,
+        "g": 0,
+        "e": 0,
+        "p": 0,
+        "gf": 0,
+        "gc": 0,
+        "dg": 0,
+        "pts": 0
+      },
+      {
+        "pos": 4,
+        "name": "Celta",
+        "pj": 0,
+        "g": 0,
+        "e": 0,
+        "p": 0,
+        "gf": 0,
+        "gc": 0,
+        "dg": 0,
+        "pts": 0
+      },
+      {
+        "pos": 4,
+        "name": "Real Betis",
+        "pj": 0,
+        "g": 0,
+        "e": 0,
+        "p": 0,
+        "gf": 0,
+        "gc": 0,
+        "dg": 0,
+        "pts": 0
+      },
+      {
+        "pos": 4,
+        "name": "Real Madrid",
+        "pj": 0,
+        "g": 0,
+        "e": 0,
+        "p": 0,
+        "gf": 0,
+        "gc": 0,
+        "dg": 0,
+        "pts": 0
+      },
+      {
+        "pos": 4,
+        "name": "Real Sociedad",
+        "pj": 0,
+        "g": 0,
+        "e": 0,
+        "p": 0,
+        "gf": 0,
+        "gc": 0,
+        "dg": 0,
+        "pts": 0
+      },
+      {
+        "pos": 4,
         "name": "Valencia",
         "pj": 0,
         "g": 0,
@@ -568,8 +569,20 @@
         "pts": 0
       },
       {
-        "pos": 3,
+        "pos": 4,
         "name": "Villarreal",
+        "pj": 0,
+        "g": 0,
+        "e": 0,
+        "p": 0,
+        "gf": 0,
+        "gc": 0,
+        "dg": 0,
+        "pts": 0
+      },
+      {
+        "pos": 20,
+        "name": "Getafe",
         "pj": 0,
         "g": 0,
         "e": 0,
