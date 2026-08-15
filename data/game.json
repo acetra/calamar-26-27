@@ -473,7 +473,7 @@
               "participantId": "vbs5fnuax18",
               "team1": "Sevilla",
               "team2": "Espanyol",
-              "result1": "",
+              "result1": "gano",
               "result2": ""
             },
             {
@@ -517,5 +517,5 @@
       ]
     }
   ],
-  "updatedAt": 1786833129278
+  "updatedAt": 1786833135378
 }
