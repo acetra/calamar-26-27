@@ -331,8 +331,8 @@
             },
             {
               "participantId": "1pdzgw257td",
-              "team1": "Celta",
-              "team2": "Atlético de Madrid",
+              "team1": "Atlético de Madrid",
+              "team2": "Deportivo",
               "result1": "",
               "result2": ""
             },
@@ -380,8 +380,8 @@
             },
             {
               "participantId": "6sf3nyg57td",
-              "team1": "Celta",
-              "team2": "Atlético de Madrid",
+              "team1": "Atlético de Madrid",
+              "team2": "villareal",
               "result1": "",
               "result2": ""
             },
@@ -415,7 +415,7 @@
             },
             {
               "participantId": "dazopf357td",
-              "team1": "Atlético de Madrid",
+              "team1": ": Atlético de Madrid",
               "team2": "Deportivo",
               "result1": "",
               "result2": ""
@@ -443,7 +443,7 @@
             },
             {
               "participantId": "wtwyjlr57td",
-              "team1": "Atlético de Madrid",
+              "team1": "atlético de Madrid",
               "team2": "Sevilla",
               "result1": "",
               "result2": ""
@@ -457,7 +457,7 @@
             },
             {
               "participantId": "2suh20a57td",
-              "team1": "Atlético de Madrid",
+              "team1": "Atleti",
               "team2": "Levante",
               "result1": "",
               "result2": ""
@@ -482,6 +482,34 @@
               "team2": "Getafe",
               "result1": "",
               "result2": ""
+            },
+            {
+              "participantId": "7xu7mha57td",
+              "team1": "Atlético de Madrid",
+              "team2": "Villarreal",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "8x73bb5d8ph",
+              "team1": "Atlético de Madrid",
+              "team2": "Sevilla",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "umwpn8x57td",
+              "team1": "Villarreal",
+              "team2": "Atlético de Madrid",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "k542cwn57td",
+              "team1": "Atlético de Madrid",
+              "team2": "Villarreal",
+              "result1": "",
+              "result2": ""
             }
           ],
           "expelled": []
@@ -489,5 +517,5 @@
       ]
     }
   ],
-  "updatedAt": 1786789870050
+  "updatedAt": 1786790126182
 }
