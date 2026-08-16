@@ -1,8 +1,8 @@
 {
-  "generatedAt": 1786837250360,
+  "generatedAt": 1786838502061,
   "resultados": {
     "label": "Jornada 1",
-    "updatedAt": 1786837250360,
+    "updatedAt": 1786838502061,
     "matches": [
       {
         "team1": "Alavés",
@@ -22,7 +22,7 @@
     {
       "id": "md-2",
       "label": "Jornada 2",
-      "updatedAt": 1786837250360,
+      "updatedAt": 1786838502061,
       "matches": [
         {
           "team1": "Rayo Vallecano",
@@ -89,7 +89,7 @@
     {
       "id": "md-3",
       "label": "Jornada 3",
-      "updatedAt": 1786837250360,
+      "updatedAt": 1786838502061,
       "matches": [
         {
           "team1": "Santander",
@@ -156,7 +156,7 @@
     {
       "id": "md-4",
       "label": "Jornada 4",
-      "updatedAt": 1786837250360,
+      "updatedAt": 1786838502061,
       "matches": [
         {
           "team1": "Real Betis",
@@ -223,7 +223,7 @@
     {
       "id": "md-5",
       "label": "Jornada 5",
-      "updatedAt": 1786837250360,
+      "updatedAt": 1786838502061,
       "matches": [
         {
           "team1": "Getafe",
@@ -290,7 +290,7 @@
     {
       "id": "md-6",
       "label": "Jornada 6",
-      "updatedAt": 1786837250360,
+      "updatedAt": 1786838502061,
       "matches": [
         {
           "team1": "Real Sociedad",
@@ -356,31 +356,31 @@
     }
   ],
   "clasificacion": {
-    "updatedAt": 1786837250360,
+    "updatedAt": 1786838502061,
     "rows": [
       {
         "pos": 1,
         "name": "Alavés",
-        "pj": 0,
-        "g": 0,
+        "pj": 1,
+        "g": 1,
         "e": 0,
         "p": 0,
-        "gf": 0,
+        "gf": 3,
         "gc": 0,
-        "dg": 0,
-        "pts": 0
+        "dg": 3,
+        "pts": 3
       },
       {
         "pos": 2,
         "name": "Sevilla FC",
-        "pj": 0,
-        "g": 0,
+        "pj": 1,
+        "g": 1,
         "e": 0,
         "p": 0,
-        "gf": 0,
-        "gc": 0,
-        "dg": 0,
-        "pts": 0
+        "gf": 2,
+        "gc": 1,
+        "dg": 1,
+        "pts": 3
       },
       {
         "pos": 3,
@@ -577,25 +577,25 @@
       {
         "pos": 19,
         "name": "Rayo Vallecano",
-        "pj": 0,
+        "pj": 1,
         "g": 0,
         "e": 0,
-        "p": 0,
-        "gf": 0,
-        "gc": 0,
-        "dg": 0,
+        "p": 1,
+        "gf": 1,
+        "gc": 2,
+        "dg": -1,
         "pts": 0
       },
       {
         "pos": 20,
         "name": "Getafe",
-        "pj": 0,
+        "pj": 1,
         "g": 0,
         "e": 0,
-        "p": 0,
+        "p": 1,
         "gf": 0,
-        "gc": 0,
-        "dg": 0,
+        "gc": 3,
+        "dg": -3,
         "pts": 0
       }
     ]
