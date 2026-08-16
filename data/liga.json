@@ -1,8 +1,8 @@
 {
-  "generatedAt": 1786892157950,
+  "generatedAt": 1786895083320,
   "resultados": {
     "label": "Jornada 1",
-    "updatedAt": 1786892157950,
+    "updatedAt": 1786895083320,
     "matches": [
       {
         "team1": "Alavés",
@@ -22,7 +22,7 @@
     {
       "id": "md-2",
       "label": "Jornada 2",
-      "updatedAt": 1786892157950,
+      "updatedAt": 1786895083320,
       "matches": [
         {
           "team1": "Rayo Vallecano",
@@ -89,7 +89,7 @@
     {
       "id": "md-3",
       "label": "Jornada 3",
-      "updatedAt": 1786892157950,
+      "updatedAt": 1786895083320,
       "matches": [
         {
           "team1": "Santander",
@@ -156,7 +156,7 @@
     {
       "id": "md-4",
       "label": "Jornada 4",
-      "updatedAt": 1786892157950,
+      "updatedAt": 1786895083320,
       "matches": [
         {
           "team1": "Real Betis",
@@ -223,7 +223,7 @@
     {
       "id": "md-5",
       "label": "Jornada 5",
-      "updatedAt": 1786892157950,
+      "updatedAt": 1786895083320,
       "matches": [
         {
           "team1": "Getafe",
@@ -290,7 +290,7 @@
     {
       "id": "md-6",
       "label": "Jornada 6",
-      "updatedAt": 1786892157950,
+      "updatedAt": 1786895083320,
       "matches": [
         {
           "team1": "Real Sociedad",
@@ -356,7 +356,7 @@
     }
   ],
   "clasificacion": {
-    "updatedAt": 1786892157950,
+    "updatedAt": 1786895083320,
     "rows": [
       {
         "pos": 1,
@@ -372,6 +372,18 @@
       },
       {
         "pos": 2,
+        "name": "Santander",
+        "pj": 1,
+        "g": 1,
+        "e": 0,
+        "p": 0,
+        "gf": 2,
+        "gc": 0,
+        "dg": 2,
+        "pts": 3
+      },
+      {
+        "pos": 3,
         "name": "Sevilla FC",
         "pj": 1,
         "g": 1,
@@ -383,7 +395,7 @@
         "pts": 3
       },
       {
-        "pos": 3,
+        "pos": 4,
         "name": "Athletic",
         "pj": 0,
         "g": 0,
@@ -395,7 +407,7 @@
         "pts": 0
       },
       {
-        "pos": 3,
+        "pos": 4,
         "name": "Atleti",
         "pj": 0,
         "g": 0,
@@ -407,7 +419,7 @@
         "pts": 0
       },
       {
-        "pos": 3,
+        "pos": 4,
         "name": "Osasuna",
         "pj": 0,
         "g": 0,
@@ -419,7 +431,7 @@
         "pts": 0
       },
       {
-        "pos": 3,
+        "pos": 4,
         "name": "Deportivo",
         "pj": 0,
         "g": 0,
@@ -431,7 +443,7 @@
         "pts": 0
       },
       {
-        "pos": 3,
+        "pos": 4,
         "name": "Elche",
         "pj": 0,
         "g": 0,
@@ -443,7 +455,7 @@
         "pts": 0
       },
       {
-        "pos": 3,
+        "pos": 4,
         "name": "Espanyol",
         "pj": 0,
         "g": 0,
@@ -455,7 +467,7 @@
         "pts": 0
       },
       {
-        "pos": 3,
+        "pos": 4,
         "name": "Barça",
         "pj": 0,
         "g": 0,
@@ -467,7 +479,7 @@
         "pts": 0
       },
       {
-        "pos": 3,
+        "pos": 4,
         "name": "Levante",
         "pj": 0,
         "g": 0,
@@ -479,7 +491,7 @@
         "pts": 0
       },
       {
-        "pos": 3,
+        "pos": 4,
         "name": "Málaga",
         "pj": 0,
         "g": 0,
@@ -491,19 +503,7 @@
         "pts": 0
       },
       {
-        "pos": 3,
-        "name": "Santander",
-        "pj": 0,
-        "g": 0,
-        "e": 0,
-        "p": 0,
-        "gf": 0,
-        "gc": 0,
-        "dg": 0,
-        "pts": 0
-      },
-      {
-        "pos": 3,
+        "pos": 4,
         "name": "Celta",
         "pj": 0,
         "g": 0,
@@ -515,7 +515,7 @@
         "pts": 0
       },
       {
-        "pos": 3,
+        "pos": 4,
         "name": "Real Betis",
         "pj": 0,
         "g": 0,
@@ -527,7 +527,7 @@
         "pts": 0
       },
       {
-        "pos": 3,
+        "pos": 4,
         "name": "Real Madrid",
         "pj": 0,
         "g": 0,
@@ -539,7 +539,7 @@
         "pts": 0
       },
       {
-        "pos": 3,
+        "pos": 4,
         "name": "Real Sociedad",
         "pj": 0,
         "g": 0,
@@ -551,7 +551,7 @@
         "pts": 0
       },
       {
-        "pos": 3,
+        "pos": 4,
         "name": "Valencia",
         "pj": 0,
         "g": 0,
@@ -563,19 +563,7 @@
         "pts": 0
       },
       {
-        "pos": 3,
-        "name": "Villarreal",
-        "pj": 0,
-        "g": 0,
-        "e": 0,
-        "p": 0,
-        "gf": 0,
-        "gc": 0,
-        "dg": 0,
-        "pts": 0
-      },
-      {
-        "pos": 19,
+        "pos": 18,
         "name": "Rayo Vallecano",
         "pj": 1,
         "g": 0,
@@ -584,6 +572,18 @@
         "gf": 1,
         "gc": 2,
         "dg": -1,
+        "pts": 0
+      },
+      {
+        "pos": 19,
+        "name": "Villarreal",
+        "pj": 1,
+        "g": 0,
+        "e": 0,
+        "p": 1,
+        "gf": 0,
+        "gc": 2,
+        "dg": -2,
         "pts": 0
       },
       {
