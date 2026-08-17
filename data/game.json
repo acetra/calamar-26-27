@@ -466,7 +466,7 @@
               "participantId": "2gtr1vhmjup",
               "team1": "Villarreal",
               "team2": "Espanyol",
-              "result1": "",
+              "result1": "no_gano",
               "result2": ""
             },
             {
@@ -517,5 +517,5 @@
       ]
     }
   ],
-  "updatedAt": 1786926548187
+  "updatedAt": 1786926606629
 }
