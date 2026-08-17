@@ -501,7 +501,7 @@
               "participantId": "umwpn8x57td",
               "team1": "Villarreal",
               "team2": "Atlético de Madrid",
-              "result1": "",
+              "result1": "no_gano",
               "result2": ""
             },
             {
@@ -517,5 +517,5 @@
       ]
     }
   ],
-  "updatedAt": 1786926606629
+  "updatedAt": 1786926612716
 }
