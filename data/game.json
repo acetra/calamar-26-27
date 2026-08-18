@@ -312,7 +312,7 @@
               "participantId": "xowo4yb57td",
               "team1": "Deportivo",
               "team2": "Atlético de Madrid",
-              "result1": "",
+              "result1": "no_gano",
               "result2": ""
             },
             {
@@ -517,5 +517,5 @@
       ]
     }
   ],
-  "updatedAt": 1787011207295
+  "updatedAt": 1787011242958
 }
