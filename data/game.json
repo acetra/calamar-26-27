@@ -410,7 +410,7 @@
               "participantId": "ngo5pii57td",
               "team1": "Atlético de Madrid",
               "team2": "Celta",
-              "result1": "",
+              "result1": "gano",
               "result2": ""
             },
             {
@@ -517,5 +517,5 @@
       ]
     }
   ],
-  "updatedAt": 1787176549475
+  "updatedAt": 1787176556067
 }
