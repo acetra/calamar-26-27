@@ -382,7 +382,7 @@
               "participantId": "6sf3nyg57td",
               "team1": "Atlético de Madrid",
               "team2": "villareal",
-              "result1": "",
+              "result1": "gano",
               "result2": ""
             },
             {
@@ -517,5 +517,5 @@
       ]
     }
   ],
-  "updatedAt": 1787176537973
+  "updatedAt": 1787176543305
 }
