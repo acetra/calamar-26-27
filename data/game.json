@@ -508,7 +508,7 @@
               "participantId": "k542cwn57td",
               "team1": "Atlético de Madrid",
               "team2": "Villarreal",
-              "result1": "",
+              "result1": "gano",
               "result2": ""
             }
           ],
@@ -517,5 +517,5 @@
       ]
     }
   ],
-  "updatedAt": 1787176584103
+  "updatedAt": 1787176586381
 }
