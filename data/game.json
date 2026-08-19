@@ -103,6 +103,491 @@
     {
       "id": "umwpn8x57td",
       "name": "David Hernández"
+    },
+    {
+      "id": "vbs5fnuax18",
+      "name": "Villaro"
+    },
+    {
+      "id": "8x73bb5d8ph",
+      "name": "Roberto Garcia"
+    },
+    {
+      "id": "2gtr1vhmjup",
+      "name": "Adri Delgado"
+    }
+  ],
+  "editions": [
+    {
+      "id": "mwuwbmj43wo",
+      "number": 1,
+      "season": "2026/27",
+      "potCarriedOver": 0,
+      "status": "abierta",
+      "winnerId": null,
+      "participants": [
+        {
+          "participantId": "xowo4yb57td",
+          "pagado": true,
+          "cuota": 10,
+          "note": ""
+        },
+        {
+          "participantId": "9zo5xs957td",
+          "pagado": true,
+          "cuota": 10,
+          "note": ""
+        },
+        {
+          "participantId": "d10d72i57td",
+          "pagado": true,
+          "cuota": 10,
+          "note": ""
+        },
+        {
+          "participantId": "2gh3q3y57td",
+          "pagado": true,
+          "cuota": 10,
+          "note": ""
+        },
+        {
+          "participantId": "so3mbw157td",
+          "pagado": true,
+          "cuota": 10,
+          "note": ""
+        },
+        {
+          "participantId": "qepe0ff57td",
+          "pagado": true,
+          "cuota": 10,
+          "note": ""
+        },
+        {
+          "participantId": "jdky2t557td",
+          "pagado": true,
+          "cuota": 10,
+          "note": ""
+        },
+        {
+          "participantId": "3d2ewr957td",
+          "pagado": true,
+          "cuota": 10,
+          "note": ""
+        },
+        {
+          "participantId": "jh8jzo357td",
+          "pagado": true,
+          "cuota": 10,
+          "note": ""
+        },
+        {
+          "participantId": "ngo5pii57td",
+          "pagado": true,
+          "cuota": 10,
+          "note": ""
+        },
+        {
+          "participantId": "6sf3nyg57td",
+          "pagado": true,
+          "cuota": 10,
+          "note": ""
+        },
+        {
+          "participantId": "v9khm4a57td",
+          "pagado": true,
+          "cuota": 10,
+          "note": ""
+        },
+        {
+          "participantId": "h308ero57td",
+          "pagado": true,
+          "cuota": 10,
+          "note": ""
+        },
+        {
+          "participantId": "wtwyjlr57td",
+          "pagado": true,
+          "cuota": 10,
+          "note": ""
+        },
+        {
+          "participantId": "dazopf357td",
+          "pagado": true,
+          "cuota": 10,
+          "note": ""
+        },
+        {
+          "participantId": "xp697zc57td",
+          "pagado": true,
+          "cuota": 10,
+          "note": ""
+        },
+        {
+          "participantId": "b9fzcvx57td",
+          "pagado": true,
+          "cuota": 10,
+          "note": ""
+        },
+        {
+          "participantId": "1pdzgw257td",
+          "pagado": true,
+          "cuota": 10,
+          "note": ""
+        },
+        {
+          "participantId": "7xu7mha57td",
+          "pagado": true,
+          "cuota": 10,
+          "note": ""
+        },
+        {
+          "participantId": "zrx8gxr57td",
+          "pagado": true,
+          "cuota": 10,
+          "note": ""
+        },
+        {
+          "participantId": "o89gedt57td",
+          "pagado": true,
+          "cuota": 10,
+          "note": ""
+        },
+        {
+          "participantId": "2suh20a57td",
+          "pagado": true,
+          "cuota": 10,
+          "note": ""
+        },
+        {
+          "participantId": "m9p8aca57td",
+          "pagado": true,
+          "cuota": 10,
+          "note": ""
+        },
+        {
+          "participantId": "9j9cfw257td",
+          "pagado": true,
+          "cuota": 10,
+          "note": ""
+        },
+        {
+          "participantId": "k542cwn57td",
+          "pagado": true,
+          "cuota": 10,
+          "note": ""
+        },
+        {
+          "participantId": "umwpn8x57td",
+          "pagado": true,
+          "cuota": 10,
+          "note": ""
+        },
+        {
+          "participantId": "vbs5fnuax18",
+          "pagado": true,
+          "cuota": 10,
+          "note": ""
+        },
+        {
+          "participantId": "8x73bb5d8ph",
+          "pagado": true,
+          "cuota": 10,
+          "note": ""
+        },
+        {
+          "participantId": "2gtr1vhmjup",
+          "pagado": true,
+          "cuota": 10,
+          "note": ""
+        }
+      ],
+      "jornadas": [
+        {
+          "id": "0vkbx0w5cx7",
+          "label": "Jornada 1",
+          "season": "2026/27",
+          "deadline": "",
+          "picks": [
+            {
+              "participantId": "xowo4yb57td",
+              "team1": "Deportivo",
+              "team2": "Atlético de Madrid",
+              "result1": "no_gano",
+              "result2": ""
+            },
+            {
+              "participantId": "2gh3q3y57td",
+              "team1": "Atlético de Madrid",
+              "team2": "Deportivo",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "3d2ewr957td",
+              "team1": "Atlético de Madrid",
+              "team2": "Sevilla",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "1pdzgw257td",
+              "team1": "Atlético de Madrid",
+              "team2": "Deportivo",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "qepe0ff57td",
+              "team1": "Atlético de Madrid",
+              "team2": "Deportivo",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "so3mbw157td",
+              "team1": "Atlético de Madrid",
+              "team2": "Villarreal",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "o89gedt57td",
+              "team1": "Deportivo",
+              "team2": "Atlético de Madrid",
+              "result1": "no_gano",
+              "result2": ""
+            },
+            {
+              "participantId": "xp697zc57td",
+              "team1": "Sevilla",
+              "team2": "Villarreal",
+              "result1": "gano",
+              "result2": ""
+            },
+            {
+              "participantId": "jh8jzo357td",
+              "team1": "Atlético de Madrid",
+              "team2": "Deportivo",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "d10d72i57td",
+              "team1": "Atlético de Madrid",
+              "team2": "Deportivo",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "6sf3nyg57td",
+              "team1": "Atlético de Madrid",
+              "team2": "villareal",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "m9p8aca57td",
+              "team1": "Atlético de Madrid",
+              "team2": "Villarreal",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "b9fzcvx57td",
+              "team1": "Atlético de Madrid",
+              "team2": "Villarreal",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "jdky2t557td",
+              "team1": "Getafe",
+              "team2": "Deportivo",
+              "result1": "no_gano",
+              "result2": ""
+            },
+            {
+              "participantId": "ngo5pii57td",
+              "team1": "Atlético de Madrid",
+              "team2": "Celta",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "dazopf357td",
+              "team1": "Atlético de Madrid",
+              "team2": "Deportivo",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "v9khm4a57td",
+              "team1": "Atlético de Madrid",
+              "team2": "Espanyol",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "9j9cfw257td",
+              "team1": "Atlético de Madrid",
+              "team2": "Deportivo",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "zrx8gxr57td",
+              "team1": "Atlético de Madrid",
+              "team2": "Villareal",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "wtwyjlr57td",
+              "team1": "atlético de Madrid",
+              "team2": "Sevilla",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "h308ero57td",
+              "team1": "Deportivo",
+              "team2": "Alavés",
+              "result1": "no_gano",
+              "result2": ""
+            },
+            {
+              "participantId": "2suh20a57td",
+              "team1": "Atlético de Madrid ",
+              "team2": "Levante",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "2gtr1vhmjup",
+              "team1": "Villarreal",
+              "team2": "Espanyol",
+              "result1": "no_gano",
+              "result2": ""
+            },
+            {
+              "participantId": "vbs5fnuax18",
+              "team1": "Sevilla",
+              "team2": "Espanyol",
+              "result1": "gano",
+              "result2": ""
+            },
+            {
+              "participantId": "9zo5xs957td",
+              "team1": "Atlético de Madrid",
+              "team2": "Getafe",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "7xu7mha57td",
+              "team1": "Atlético de Madrid",
+              "team2": "Villarreal",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "8x73bb5d8ph",
+              "team1": "Atlético de Madrid",
+              "team2": "Sevilla",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "umwpn8x57td",
+              "team1": "Villarreal",
+              "team2": "Atlético de Madrid",
+              "result1": "no_gano",
+              "result2": ""
+            },
+            {
+              "participantId": "k542cwn57td",
+              "team1": "Atlético de Madrid",
+              "team2": "Villarreal",
+              "result1": "",
+              "result2": ""
+            }
+          ],
+          "expelled": []
+        }
+      ]
+    }
+  ],
+  "updatedAt": 1787165914445
+}
+      "name": "Jorge B"
+    },
+    {
+      "id": "ngo5pii57td",
+      "name": "Raúl Moreno"
+    },
+    {
+      "id": "6sf3nyg57td",
+      "name": "Fer Taranco"
+    },
+    {
+      "id": "v9khm4a57td",
+      "name": "Julio López"
+    },
+    {
+      "id": "h308ero57td",
+      "name": "Juan Andrés Trapote"
+    },
+    {
+      "id": "wtwyjlr57td",
+      "name": "Ricardo Jiménez"
+    },
+    {
+      "id": "dazopf357td",
+      "name": "Rodrigo Polanco"
+    },
+    {
+      "id": "xp697zc57td",
+      "name": "Fer padre"
+    },
+    {
+      "id": "b9fzcvx57td",
+      "name": "Carlos Taranco"
+    },
+    {
+      "id": "1pdzgw257td",
+      "name": "Jorge Aguilar"
+    },
+    {
+      "id": "7xu7mha57td",
+      "name": "Luis Riesgo"
+    },
+    {
+      "id": "zrx8gxr57td",
+      "name": "Daniel Bermejo"
+    },
+    {
+      "id": "o89gedt57td",
+      "name": "Víctor Pérez"
+    },
+    {
+      "id": "2suh20a57td",
+      "name": "Carlos Aragonés"
+    },
+    {
+      "id": "m9p8aca57td",
+      "name": "Juanito"
+    },
+    {
+      "id": "9j9cfw257td",
+      "name": "Carlos Verdú"
+    },
+    {
+      "id": "k542cwn57td",
+      "name": "Daniel Asenjo"
+    },
+    {
+      "id": "umwpn8x57td",
+      "name": "David Hernández"
     }
   ],
   "editions": [
