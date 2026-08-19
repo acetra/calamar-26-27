@@ -459,7 +459,7 @@
               "participantId": "2suh20a57td",
               "team1": "Atlético de Madrid ",
               "team2": "Levante",
-              "result1": "",
+              "result1": "gano",
               "result2": ""
             },
             {
@@ -517,5 +517,5 @@
       ]
     }
   ],
-  "updatedAt": 1787176568940
+  "updatedAt": 1787176572738
 }
