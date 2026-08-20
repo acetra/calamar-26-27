@@ -519,11 +519,159 @@
           "label": "Jornada 2",
           "season": "2026/27",
           "deadline": "",
-          "picks": [],
+          "picks": [
+            {
+              "participantId": "d10d72i57td",
+              "team1": "Osasuna",
+              "team2": "Real Madrid",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "v9khm4a57td",
+              "team1": "Real Madrid",
+              "team2": "Barcelona",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "qepe0ff57td",
+              "team1": "Osasuna",
+              "team2": "Getafe",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "ngo5pii57td",
+              "team1": "Barcelona",
+              "team2": "Osasuna",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "b9fzcvx57td",
+              "team1": "Athletic de Bilbao",
+              "team2": "Osasuna",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "xp697zc57td",
+              "team1": "Getafe",
+              "team2": "Osasuna",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "2gh3q3y57td",
+              "team1": "Real Madrid",
+              "team2": "Athletic de Bilbao",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "7xu7mha57td",
+              "team1": "Barcelona",
+              "team2": "Athletic de Bilbao",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "1pdzgw257td",
+              "team1": "Betis",
+              "team2": "Athletic de Bilbao",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "3d2ewr957td",
+              "team1": "Real Madrid",
+              "team2": "Osasuna",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "zrx8gxr57td",
+              "team1": "Athletic de Bilbao",
+              "team2": "Betis",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "jh8jzo357td",
+              "team1": "Athletic de Bilbao",
+              "team2": "Osasuna",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "vbs5fnuax18",
+              "team1": "Athletic de Bilbao",
+              "team2": "Barcelona",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "wtwyjlr57td",
+              "team1": "Barcelona",
+              "team2": "osasuna",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "8x73bb5d8ph",
+              "team1": "Barcelona",
+              "team2": "Real Madrid",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "9zo5xs957td",
+              "team1": "Getafe",
+              "team2": "Osasuna",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "2suh20a57td",
+              "team1": "Barcelona",
+              "team2": "Real de Madrid",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "so3mbw157td",
+              "team1": "Barcelona",
+              "team2": "Osasuna",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "dazopf357td",
+              "team1": "Athletic de Bilbao",
+              "team2": "Osasuna",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "k542cwn57td",
+              "team1": "Athletic Club Bilbao",
+              "team2": "Barcelona",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "9j9cfw257td",
+              "team1": "Rayo Vallecano",
+              "team2": "Athletic de Bilbao",
+              "result1": "",
+              "result2": ""
+            }
+          ],
           "expelled": []
         }
       ]
     }
   ],
-  "updatedAt": 1787240530641
+  "updatedAt": 1787240640046
 }
