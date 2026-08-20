@@ -1,113 +1,22 @@
 {
-  "generatedAt": 1787259622421,
+  "generatedAt": 1787263217862,
   "resultados": {
-    "label": "Jornada 1",
-    "updatedAt": 1787259622421,
+    "label": "Jornada 2",
+    "updatedAt": 1787263217862,
     "matches": [
       {
-        "team1": "Alavés",
-        "team2": "Getafe",
-        "extra": "3-0",
-        "raw": "Alavés 3-0 Getafe"
-      },
-      {
-        "team1": "Sevilla FC",
-        "team2": "Rayo Vallecano",
-        "extra": "2-1",
-        "raw": "Sevilla FC 2-1 Rayo Vallecano"
-      },
-      {
-        "team1": "Santander",
-        "team2": "Villarreal",
-        "extra": "2-2",
-        "raw": "Santander 2-2 Villarreal"
-      },
-      {
-        "team1": "Espanyol",
-        "team2": "Levante",
-        "extra": "3-0",
-        "raw": "Espanyol 3-0 Levante"
-      },
-      {
-        "team1": "Deportivo",
-        "team2": "Elche",
+        "team1": "Rayo Vallecano",
+        "team2": "Alavés",
         "extra": "1-1",
-        "raw": "Deportivo 1-1 Elche"
-      },
-      {
-        "team1": "Atleti",
-        "team2": "Málaga",
-        "extra": "2-0",
-        "raw": "Atleti 2-0 Málaga"
+        "raw": "Rayo Vallecano 1-1 Alavés"
       }
     ]
   },
   "proximas": [
     {
-      "id": "md-2",
-      "label": "Jornada 2",
-      "updatedAt": 1787259622421,
-      "matches": [
-        {
-          "team1": "Real Betis",
-          "team2": "Real Sociedad",
-          "extra": "vie, 21 ago, 21:00",
-          "raw": "vie, 21 ago, 21:00 Real Betis - Real Sociedad"
-        },
-        {
-          "team1": "Athletic",
-          "team2": "Sevilla FC",
-          "extra": "sáb, 22 ago, 17:00",
-          "raw": "sáb, 22 ago, 17:00 Athletic - Sevilla FC"
-        },
-        {
-          "team1": "Valencia",
-          "team2": "Celta",
-          "extra": "sáb, 22 ago, 19:30",
-          "raw": "sáb, 22 ago, 19:30 Valencia - Celta"
-        },
-        {
-          "team1": "Espanyol",
-          "team2": "Real Madrid",
-          "extra": "sáb, 22 ago, 21:30",
-          "raw": "sáb, 22 ago, 21:30 Espanyol - Real Madrid"
-        },
-        {
-          "team1": "Atleti",
-          "team2": "Villarreal",
-          "extra": "dom, 23 ago, 17:00",
-          "raw": "dom, 23 ago, 17:00 Atleti - Villarreal"
-        },
-        {
-          "team1": "Getafe",
-          "team2": "Santander",
-          "extra": "dom, 23 ago, 19:30",
-          "raw": "dom, 23 ago, 19:30 Getafe - Santander"
-        },
-        {
-          "team1": "Elche",
-          "team2": "Barça",
-          "extra": "dom, 23 ago, 21:30",
-          "raw": "dom, 23 ago, 21:30 Elche - Barça"
-        },
-        {
-          "team1": "Osasuna",
-          "team2": "Levante",
-          "extra": "lun, 24 ago, 19:30",
-          "raw": "lun, 24 ago, 19:30 Osasuna - Levante"
-        },
-        {
-          "team1": "Málaga",
-          "team2": "Deportivo",
-          "extra": "lun, 24 ago, 21:30",
-          "raw": "lun, 24 ago, 21:30 Málaga - Deportivo"
-        }
-      ]
-    },
-    {
       "id": "md-3",
       "label": "Jornada 3",
-      "updatedAt": 1787259622421,
+      "updatedAt": 1787263217862,
       "matches": [
         {
           "team1": "Santander",
@@ -174,7 +83,7 @@
     {
       "id": "md-4",
       "label": "Jornada 4",
-      "updatedAt": 1787259622421,
+      "updatedAt": 1787263217862,
       "matches": [
         {
           "team1": "Real Betis",
@@ -241,7 +150,7 @@
     {
       "id": "md-5",
       "label": "Jornada 5",
-      "updatedAt": 1787259622421,
+      "updatedAt": 1787263217862,
       "matches": [
         {
           "team1": "Getafe",
@@ -308,7 +217,7 @@
     {
       "id": "md-6",
       "label": "Jornada 6",
-      "updatedAt": 1787259622421,
+      "updatedAt": 1787263217862,
       "matches": [
         {
           "team1": "Real Sociedad",
@@ -371,10 +280,77 @@
           "raw": "mié, 16 sept, 02:00 Barça - Santander"
         }
       ]
+    },
+    {
+      "id": "md-7",
+      "label": "Jornada 7",
+      "updatedAt": 1787263217862,
+      "matches": [
+        {
+          "team1": "Atleti",
+          "team2": "Real Madrid",
+          "extra": "dom, 20 sept, 02:00",
+          "raw": "dom, 20 sept, 02:00 Atleti - Real Madrid"
+        },
+        {
+          "team1": "Valencia",
+          "team2": "Real Sociedad",
+          "extra": "dom, 20 sept, 02:00",
+          "raw": "dom, 20 sept, 02:00 Valencia - Real Sociedad"
+        },
+        {
+          "team1": "Sevilla FC",
+          "team2": "Barça",
+          "extra": "dom, 20 sept, 02:00",
+          "raw": "dom, 20 sept, 02:00 Sevilla FC - Barça"
+        },
+        {
+          "team1": "Athletic",
+          "team2": "Alavés",
+          "extra": "dom, 20 sept, 02:00",
+          "raw": "dom, 20 sept, 02:00 Athletic - Alavés"
+        },
+        {
+          "team1": "Espanyol",
+          "team2": "Elche",
+          "extra": "dom, 20 sept, 02:00",
+          "raw": "dom, 20 sept, 02:00 Espanyol - Elche"
+        },
+        {
+          "team1": "Osasuna",
+          "team2": "Rayo Vallecano",
+          "extra": "dom, 20 sept, 02:00",
+          "raw": "dom, 20 sept, 02:00 Osasuna - Rayo Vallecano"
+        },
+        {
+          "team1": "Celta",
+          "team2": "Santander",
+          "extra": "dom, 20 sept, 02:00",
+          "raw": "dom, 20 sept, 02:00 Celta - Santander"
+        },
+        {
+          "team1": "Deportivo",
+          "team2": "Real Betis",
+          "extra": "dom, 20 sept, 02:00",
+          "raw": "dom, 20 sept, 02:00 Deportivo - Real Betis"
+        },
+        {
+          "team1": "Villarreal",
+          "team2": "Levante",
+          "extra": "dom, 20 sept, 02:00",
+          "raw": "dom, 20 sept, 02:00 Villarreal - Levante"
+        },
+        {
+          "team1": "Getafe",
+          "team2": "Málaga",
+          "extra": "dom, 20 sept, 02:00",
+          "raw": "dom, 20 sept, 02:00 Getafe - Málaga"
+        }
+      ]
     }
   ],
   "clasificacion": {
-    "updatedAt": 1787259622421,
+    "updatedAt": 1787263217862,
     "rows": [
       {
         "pos": 1,
