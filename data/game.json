@@ -664,7 +664,7 @@
               "participantId": "9j9cfw257td",
               "team1": "Rayo Vallecano",
               "team2": "Athletic de Bilbao",
-              "result1": "",
+              "result1": "no_gano",
               "result2": ""
             },
             {
@@ -687,5 +687,5 @@
       ]
     }
   ],
-  "updatedAt": 1787269281225
+  "updatedAt": 1787269326622
 }
