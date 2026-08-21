@@ -580,7 +580,7 @@
               "participantId": "1pdzgw257td",
               "team1": "Betis",
               "team2": "Athletic de Bilbao",
-              "result1": "",
+              "result1": "gano",
               "result2": ""
             },
             {
@@ -687,5 +687,5 @@
       ]
     }
   ],
-  "updatedAt": 1787346606962
+  "updatedAt": 1787346623378
 }
