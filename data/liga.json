@@ -1,8 +1,8 @@
 {
-  "generatedAt": 1787352894872,
+  "generatedAt": 1787356285495,
   "resultados": {
     "label": "Jornada 2",
-    "updatedAt": 1787352894872,
+    "updatedAt": 1787356285495,
     "matches": [
       {
         "team1": "Rayo Vallecano",
@@ -22,7 +22,7 @@
     {
       "id": "md-3",
       "label": "Jornada 3",
-      "updatedAt": 1787352894872,
+      "updatedAt": 1787356285495,
       "matches": [
         {
           "team1": "Santander",
@@ -89,7 +89,7 @@
     {
       "id": "md-4",
       "label": "Jornada 4",
-      "updatedAt": 1787352894872,
+      "updatedAt": 1787356285495,
       "matches": [
         {
           "team1": "Real Betis",
@@ -156,7 +156,7 @@
     {
       "id": "md-5",
       "label": "Jornada 5",
-      "updatedAt": 1787352894872,
+      "updatedAt": 1787356285495,
       "matches": [
         {
           "team1": "Getafe",
@@ -223,7 +223,7 @@
     {
       "id": "md-6",
       "label": "Jornada 6",
-      "updatedAt": 1787352894872,
+      "updatedAt": 1787356285495,
       "matches": [
         {
           "team1": "Real Sociedad",
@@ -290,7 +290,7 @@
     {
       "id": "md-7",
       "label": "Jornada 7",
-      "updatedAt": 1787352894872,
+      "updatedAt": 1787356285495,
       "matches": [
         {
           "team1": "Atleti",
@@ -356,7 +356,7 @@
     }
   ],
   "clasificacion": {
-    "updatedAt": 1787352894872,
+    "updatedAt": 1787356285495,
     "rows": [
       {
         "pos": 1,
