@@ -531,7 +531,7 @@
               "participantId": "v9khm4a57td",
               "team1": "Real Madrid",
               "team2": "Barcelona",
-              "result1": "",
+              "result1": "gano",
               "result2": ""
             },
             {
@@ -687,5 +687,5 @@
       ]
     }
   ],
-  "updatedAt": 1787441431675
+  "updatedAt": 1787441445092
 }
