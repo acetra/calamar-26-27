@@ -608,7 +608,7 @@
               "participantId": "vbs5fnuax18",
               "team1": "Athletic de Bilbao",
               "team2": "Barcelona",
-              "result1": "",
+              "result1": "no_gano",
               "result2": ""
             },
             {
@@ -687,5 +687,5 @@
       ]
     }
   ],
-  "updatedAt": 1787441469941
+  "updatedAt": 1787441472386
 }
