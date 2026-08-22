@@ -1,8 +1,8 @@
 {
-  "generatedAt": 1787413449017,
+  "generatedAt": 1787417337084,
   "resultados": {
     "label": "Jornada 2",
-    "updatedAt": 1787413449017,
+    "updatedAt": 1787417337084,
     "matches": [
       {
         "team1": "Rayo Vallecano",
@@ -22,7 +22,7 @@
     {
       "id": "md-3",
       "label": "Jornada 3",
-      "updatedAt": 1787413449017,
+      "updatedAt": 1787417337084,
       "matches": [
         {
           "team1": "Santander",
@@ -89,7 +89,7 @@
     {
       "id": "md-4",
       "label": "Jornada 4",
-      "updatedAt": 1787413449017,
+      "updatedAt": 1787417337084,
       "matches": [
         {
           "team1": "Real Betis",
@@ -156,7 +156,7 @@
     {
       "id": "md-5",
       "label": "Jornada 5",
-      "updatedAt": 1787413449017,
+      "updatedAt": 1787417337084,
       "matches": [
         {
           "team1": "Getafe",
@@ -223,7 +223,7 @@
     {
       "id": "md-6",
       "label": "Jornada 6",
-      "updatedAt": 1787413449017,
+      "updatedAt": 1787417337084,
       "matches": [
         {
           "team1": "Real Sociedad",
@@ -290,7 +290,7 @@
     {
       "id": "md-7",
       "label": "Jornada 7",
-      "updatedAt": 1787413449017,
+      "updatedAt": 1787417337084,
       "matches": [
         {
           "team1": "Atleti",
@@ -356,7 +356,7 @@
     }
   ],
   "clasificacion": {
-    "updatedAt": 1787413449017,
+    "updatedAt": 1787417337084,
     "rows": [
       {
         "pos": 1,
@@ -365,9 +365,9 @@
         "g": 2,
         "e": 0,
         "p": 0,
-        "gf": 3,
-        "gc": 1,
-        "dg": 2,
+        "gf": 5,
+        "gc": 2,
+        "dg": 3,
         "pts": 6
       },
       {
@@ -540,7 +540,7 @@
       },
       {
         "pos": 16,
-        "name": "Athletic",
+        "name": "Real Sociedad",
         "pj": 1,
         "g": 0,
         "e": 0,
@@ -551,15 +551,15 @@
         "pts": 0
       },
       {
-        "pos": 16,
-        "name": "Real Sociedad",
+        "pos": 17,
+        "name": "Athletic",
         "pj": 1,
         "g": 0,
         "e": 0,
         "p": 1,
-        "gf": 0,
-        "gc": 1,
-        "dg": -1,
+        "gf": 1,
+        "gc": 3,
+        "dg": -2,
         "pts": 0
       },
       {
