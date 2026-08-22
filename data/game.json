@@ -552,7 +552,7 @@
               "participantId": "b9fzcvx57td",
               "team1": "Athletic de Bilbao",
               "team2": "Osasuna",
-              "result1": "",
+              "result1": "no_gano",
               "result2": ""
             },
             {
@@ -687,5 +687,5 @@
       ]
     }
   ],
-  "updatedAt": 1787441445092
+  "updatedAt": 1787441453618
 }
