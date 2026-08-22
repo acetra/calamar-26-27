@@ -1,8 +1,8 @@
 {
-  "generatedAt": 1787410468377,
+  "generatedAt": 1787413449017,
   "resultados": {
     "label": "Jornada 2",
-    "updatedAt": 1787410468377,
+    "updatedAt": 1787413449017,
     "matches": [
       {
         "team1": "Rayo Vallecano",
@@ -22,7 +22,7 @@
     {
       "id": "md-3",
       "label": "Jornada 3",
-      "updatedAt": 1787410468377,
+      "updatedAt": 1787413449017,
       "matches": [
         {
           "team1": "Santander",
@@ -89,7 +89,7 @@
     {
       "id": "md-4",
       "label": "Jornada 4",
-      "updatedAt": 1787410468377,
+      "updatedAt": 1787413449017,
       "matches": [
         {
           "team1": "Real Betis",
@@ -156,7 +156,7 @@
     {
       "id": "md-5",
       "label": "Jornada 5",
-      "updatedAt": 1787410468377,
+      "updatedAt": 1787413449017,
       "matches": [
         {
           "team1": "Getafe",
@@ -223,7 +223,7 @@
     {
       "id": "md-6",
       "label": "Jornada 6",
-      "updatedAt": 1787410468377,
+      "updatedAt": 1787413449017,
       "matches": [
         {
           "team1": "Real Sociedad",
@@ -290,7 +290,7 @@
     {
       "id": "md-7",
       "label": "Jornada 7",
-      "updatedAt": 1787410468377,
+      "updatedAt": 1787413449017,
       "matches": [
         {
           "team1": "Atleti",
@@ -356,10 +356,22 @@
     }
   ],
   "clasificacion": {
-    "updatedAt": 1787410468377,
+    "updatedAt": 1787413449017,
     "rows": [
       {
         "pos": 1,
+        "name": "Sevilla FC",
+        "pj": 2,
+        "g": 2,
+        "e": 0,
+        "p": 0,
+        "gf": 3,
+        "gc": 1,
+        "dg": 2,
+        "pts": 6
+      },
+      {
+        "pos": 2,
         "name": "Alavés",
         "pj": 2,
         "g": 1,
@@ -371,7 +383,7 @@
         "pts": 4
       },
       {
-        "pos": 2,
+        "pos": 3,
         "name": "Espanyol",
         "pj": 1,
         "g": 1,
@@ -383,7 +395,7 @@
         "pts": 3
       },
       {
-        "pos": 3,
+        "pos": 4,
         "name": "Atleti",
         "pj": 1,
         "g": 1,
@@ -392,18 +404,6 @@
         "gf": 2,
         "gc": 0,
         "dg": 2,
-        "pts": 3
-      },
-      {
-        "pos": 4,
-        "name": "Sevilla FC",
-        "pj": 1,
-        "g": 1,
-        "e": 0,
-        "p": 0,
-        "gf": 2,
-        "gc": 1,
-        "dg": 1,
         "pts": 3
       },
       {
@@ -480,18 +480,6 @@
       },
       {
         "pos": 11,
-        "name": "Athletic",
-        "pj": 0,
-        "g": 0,
-        "e": 0,
-        "p": 0,
-        "gf": 0,
-        "gc": 0,
-        "dg": 0,
-        "pts": 0
-      },
-      {
-        "pos": 11,
         "name": "Osasuna",
         "pj": 0,
         "g": 0,
@@ -551,7 +539,19 @@
         "pts": 0
       },
       {
-        "pos": 17,
+        "pos": 16,
+        "name": "Athletic",
+        "pj": 1,
+        "g": 0,
+        "e": 0,
+        "p": 1,
+        "gf": 0,
+        "gc": 1,
+        "dg": -1,
+        "pts": 0
+      },
+      {
+        "pos": 16,
         "name": "Real Sociedad",
         "pj": 1,
         "g": 0,
