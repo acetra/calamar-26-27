@@ -1,8 +1,8 @@
 {
-  "generatedAt": 1787428192047,
+  "generatedAt": 1787431838422,
   "resultados": {
     "label": "Jornada 2",
-    "updatedAt": 1787428192047,
+    "updatedAt": 1787431838422,
     "matches": [
       {
         "team1": "Rayo Vallecano",
@@ -34,7 +34,7 @@
     {
       "id": "md-3",
       "label": "Jornada 3",
-      "updatedAt": 1787428192047,
+      "updatedAt": 1787431838422,
       "matches": [
         {
           "team1": "Santander",
@@ -101,7 +101,7 @@
     {
       "id": "md-4",
       "label": "Jornada 4",
-      "updatedAt": 1787428192047,
+      "updatedAt": 1787431838422,
       "matches": [
         {
           "team1": "Real Betis",
@@ -168,7 +168,7 @@
     {
       "id": "md-5",
       "label": "Jornada 5",
-      "updatedAt": 1787428192047,
+      "updatedAt": 1787431838422,
       "matches": [
         {
           "team1": "Getafe",
@@ -235,7 +235,7 @@
     {
       "id": "md-6",
       "label": "Jornada 6",
-      "updatedAt": 1787428192047,
+      "updatedAt": 1787431838422,
       "matches": [
         {
           "team1": "Real Sociedad",
@@ -302,7 +302,7 @@
     {
       "id": "md-7",
       "label": "Jornada 7",
-      "updatedAt": 1787428192047,
+      "updatedAt": 1787431838422,
       "matches": [
         {
           "team1": "Atleti",
@@ -368,7 +368,7 @@
     }
   ],
   "clasificacion": {
-    "updatedAt": 1787428192047,
+    "updatedAt": 1787431838422,
     "rows": [
       {
         "pos": 1,
@@ -395,14 +395,14 @@
         "pts": 4
       },
       {
-        "pos": 3,
+        "pos": 2,
         "name": "Espanyol",
         "pj": 2,
         "g": 1,
         "e": 1,
         "p": 0,
-        "gf": 3,
-        "gc": 0,
+        "gf": 4,
+        "gc": 1,
         "dg": 3,
         "pts": 4
       },
@@ -479,7 +479,19 @@
         "pts": 1
       },
       {
-        "pos": 10,
+        "pos": 8,
+        "name": "Real Madrid",
+        "pj": 1,
+        "g": 0,
+        "e": 1,
+        "p": 0,
+        "gf": 1,
+        "gc": 1,
+        "dg": 0,
+        "pts": 1
+      },
+      {
+        "pos": 11,
         "name": "Celta",
         "pj": 1,
         "g": 0,
@@ -491,19 +503,7 @@
         "pts": 1
       },
       {
-        "pos": 10,
-        "name": "Real Madrid",
-        "pj": 1,
-        "g": 0,
-        "e": 1,
-        "p": 0,
-        "gf": 0,
-        "gc": 0,
-        "dg": 0,
-        "pts": 1
-      },
-      {
-        "pos": 10,
+        "pos": 11,
         "name": "Valencia",
         "pj": 1,
         "g": 0,
