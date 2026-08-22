@@ -587,7 +587,7 @@
               "participantId": "3d2ewr957td",
               "team1": "Real Madrid",
               "team2": "Osasuna",
-              "result1": "",
+              "result1": "gano",
               "result2": ""
             },
             {
@@ -687,5 +687,5 @@
       ]
     }
   ],
-  "updatedAt": 1787441457278
+  "updatedAt": 1787441465050
 }
