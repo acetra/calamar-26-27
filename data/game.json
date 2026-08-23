@@ -615,7 +615,7 @@
               "participantId": "wtwyjlr57td",
               "team1": "Barcelona",
               "team2": "osasuna",
-              "result1": "",
+              "result1": "gano",
               "result2": ""
             },
             {
@@ -687,5 +687,5 @@
       ]
     }
   ],
-  "updatedAt": 1787522040397
+  "updatedAt": 1787522048726
 }
