@@ -1,8 +1,8 @@
 {
-  "generatedAt": 1787518170679,
+  "generatedAt": 1787521271210,
   "resultados": {
     "label": "Jornada 2",
-    "updatedAt": 1787518170679,
+    "updatedAt": 1787521271210,
     "matches": [
       {
         "team1": "Rayo Vallecano",
@@ -45,6 +45,12 @@
         "team2": "Santander",
         "extra": "1-0",
         "raw": "Getafe 1-0 Santander"
+      },
+      {
+        "team1": "Elche",
+        "team2": "Barça",
+        "extra": "0-5",
+        "raw": "Elche 0-5 Barça"
       }
     ]
   },
@@ -52,7 +58,7 @@
     {
       "id": "md-3",
       "label": "Jornada 3",
-      "updatedAt": 1787518170679,
+      "updatedAt": 1787521271210,
       "matches": [
         {
           "team1": "Santander",
@@ -119,7 +125,7 @@
     {
       "id": "md-4",
       "label": "Jornada 4",
-      "updatedAt": 1787518170679,
+      "updatedAt": 1787521271210,
       "matches": [
         {
           "team1": "Real Betis",
@@ -186,7 +192,7 @@
     {
       "id": "md-5",
       "label": "Jornada 5",
-      "updatedAt": 1787518170679,
+      "updatedAt": 1787521271210,
       "matches": [
         {
           "team1": "Getafe",
@@ -253,7 +259,7 @@
     {
       "id": "md-6",
       "label": "Jornada 6",
-      "updatedAt": 1787518170679,
+      "updatedAt": 1787521271210,
       "matches": [
         {
           "team1": "Real Sociedad",
@@ -320,7 +326,7 @@
     {
       "id": "md-7",
       "label": "Jornada 7",
-      "updatedAt": 1787518170679,
+      "updatedAt": 1787521271210,
       "matches": [
         {
           "team1": "Atleti",
@@ -386,7 +392,7 @@
     }
   ],
   "clasificacion": {
-    "updatedAt": 1787518170679,
+    "updatedAt": 1787521271210,
     "rows": [
       {
         "pos": 1,
@@ -426,6 +432,18 @@
       },
       {
         "pos": 4,
+        "name": "Barça",
+        "pj": 1,
+        "g": 1,
+        "e": 0,
+        "p": 0,
+        "gf": 5,
+        "gc": 0,
+        "dg": 5,
+        "pts": 3
+      },
+      {
+        "pos": 5,
         "name": "Espanyol",
         "pj": 2,
         "g": 1,
@@ -433,18 +451,6 @@
         "p": 1,
         "gf": 4,
         "gc": 2,
-        "dg": 2,
-        "pts": 3
-      },
-      {
-        "pos": 5,
-        "name": "Barça",
-        "pj": 1,
-        "g": 1,
-        "e": 0,
-        "p": 0,
-        "gf": 2,
-        "gc": 0,
         "dg": 2,
         "pts": 3
       },
@@ -564,8 +570,8 @@
         "e": 1,
         "p": 1,
         "gf": 1,
-        "gc": 3,
-        "dg": -2,
+        "gc": 6,
+        "dg": -5,
         "pts": 1
       },
       {
