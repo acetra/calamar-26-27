@@ -1,8 +1,8 @@
 {
-  "generatedAt": 1787500165208,
+  "generatedAt": 1787504092738,
   "resultados": {
     "label": "Jornada 2",
-    "updatedAt": 1787500165208,
+    "updatedAt": 1787504092738,
     "matches": [
       {
         "team1": "Rayo Vallecano",
@@ -40,7 +40,7 @@
     {
       "id": "md-3",
       "label": "Jornada 3",
-      "updatedAt": 1787500165208,
+      "updatedAt": 1787504092738,
       "matches": [
         {
           "team1": "Santander",
@@ -107,7 +107,7 @@
     {
       "id": "md-4",
       "label": "Jornada 4",
-      "updatedAt": 1787500165208,
+      "updatedAt": 1787504092738,
       "matches": [
         {
           "team1": "Real Betis",
@@ -174,7 +174,7 @@
     {
       "id": "md-5",
       "label": "Jornada 5",
-      "updatedAt": 1787500165208,
+      "updatedAt": 1787504092738,
       "matches": [
         {
           "team1": "Getafe",
@@ -241,7 +241,7 @@
     {
       "id": "md-6",
       "label": "Jornada 6",
-      "updatedAt": 1787500165208,
+      "updatedAt": 1787504092738,
       "matches": [
         {
           "team1": "Real Sociedad",
@@ -308,7 +308,7 @@
     {
       "id": "md-7",
       "label": "Jornada 7",
-      "updatedAt": 1787500165208,
+      "updatedAt": 1787504092738,
       "matches": [
         {
           "team1": "Atleti",
@@ -374,7 +374,7 @@
     }
   ],
   "clasificacion": {
-    "updatedAt": 1787500165208,
+    "updatedAt": 1787504092738,
     "rows": [
       {
         "pos": 1,
@@ -402,14 +402,14 @@
       },
       {
         "pos": 3,
-        "name": "Atleti",
+        "name": "Villarreal",
         "pj": 2,
         "g": 1,
         "e": 1,
         "p": 0,
-        "gf": 2,
-        "gc": 0,
-        "dg": 2,
+        "gf": 4,
+        "gc": 3,
+        "dg": 1,
         "pts": 4
       },
       {
@@ -426,6 +426,18 @@
       },
       {
         "pos": 5,
+        "name": "Atleti",
+        "pj": 2,
+        "g": 1,
+        "e": 0,
+        "p": 1,
+        "gf": 3,
+        "gc": 2,
+        "dg": 1,
+        "pts": 3
+      },
+      {
+        "pos": 6,
         "name": "Real Madrid",
         "pj": 1,
         "g": 1,
@@ -437,7 +449,7 @@
         "pts": 3
       },
       {
-        "pos": 6,
+        "pos": 7,
         "name": "Real Betis",
         "pj": 1,
         "g": 1,
@@ -447,18 +459,6 @@
         "gc": 0,
         "dg": 1,
         "pts": 3
-      },
-      {
-        "pos": 7,
-        "name": "Villarreal",
-        "pj": 2,
-        "g": 0,
-        "e": 2,
-        "p": 0,
-        "gf": 2,
-        "gc": 2,
-        "dg": 0,
-        "pts": 2
       },
       {
         "pos": 8,
