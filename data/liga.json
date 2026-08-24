@@ -1,8 +1,8 @@
 {
-  "generatedAt": 1787587617006,
+  "generatedAt": 1787593831571,
   "resultados": {
     "label": "Jornada 2",
-    "updatedAt": 1787587617006,
+    "updatedAt": 1787593831571,
     "matches": [
       {
         "team1": "Rayo Vallecano",
@@ -58,7 +58,7 @@
     {
       "id": "md-3",
       "label": "Jornada 3",
-      "updatedAt": 1787587617006,
+      "updatedAt": 1787593831571,
       "matches": [
         {
           "team1": "Santander",
@@ -125,7 +125,7 @@
     {
       "id": "md-4",
       "label": "Jornada 4",
-      "updatedAt": 1787587617006,
+      "updatedAt": 1787593831571,
       "matches": [
         {
           "team1": "Real Betis",
@@ -192,7 +192,7 @@
     {
       "id": "md-5",
       "label": "Jornada 5",
-      "updatedAt": 1787587617006,
+      "updatedAt": 1787593831571,
       "matches": [
         {
           "team1": "Getafe",
@@ -259,7 +259,7 @@
     {
       "id": "md-6",
       "label": "Jornada 6",
-      "updatedAt": 1787587617006,
+      "updatedAt": 1787593831571,
       "matches": [
         {
           "team1": "Real Sociedad",
@@ -326,7 +326,7 @@
     {
       "id": "md-7",
       "label": "Jornada 7",
-      "updatedAt": 1787587617006,
+      "updatedAt": 1787593831571,
       "matches": [
         {
           "team1": "Atleti",
@@ -392,7 +392,7 @@
     }
   ],
   "clasificacion": {
-    "updatedAt": 1787587617006,
+    "updatedAt": 1787593831571,
     "rows": [
       {
         "pos": 1,
@@ -516,6 +516,18 @@
       },
       {
         "pos": 11,
+        "name": "Osasuna",
+        "pj": 1,
+        "g": 0,
+        "e": 1,
+        "p": 0,
+        "gf": 0,
+        "gc": 0,
+        "dg": 0,
+        "pts": 1
+      },
+      {
+        "pos": 11,
         "name": "Celta",
         "pj": 1,
         "g": 0,
@@ -539,7 +551,7 @@
         "pts": 1
       },
       {
-        "pos": 13,
+        "pos": 14,
         "name": "Santander",
         "pj": 2,
         "g": 0,
@@ -551,7 +563,7 @@
         "pts": 1
       },
       {
-        "pos": 13,
+        "pos": 14,
         "name": "Rayo Vallecano",
         "pj": 2,
         "g": 0,
@@ -563,7 +575,19 @@
         "pts": 1
       },
       {
-        "pos": 15,
+        "pos": 16,
+        "name": "Levante",
+        "pj": 2,
+        "g": 0,
+        "e": 1,
+        "p": 1,
+        "gf": 0,
+        "gc": 3,
+        "dg": -3,
+        "pts": 1
+      },
+      {
+        "pos": 17,
         "name": "Elche",
         "pj": 2,
         "g": 0,
@@ -575,19 +599,7 @@
         "pts": 1
       },
       {
-        "pos": 16,
-        "name": "Osasuna",
-        "pj": 0,
-        "g": 0,
-        "e": 0,
-        "p": 0,
-        "gf": 0,
-        "gc": 0,
-        "dg": 0,
-        "pts": 0
-      },
-      {
-        "pos": 17,
+        "pos": 18,
         "name": "Real Sociedad",
         "pj": 1,
         "g": 0,
@@ -599,7 +611,7 @@
         "pts": 0
       },
       {
-        "pos": 18,
+        "pos": 19,
         "name": "Athletic",
         "pj": 1,
         "g": 0,
@@ -611,7 +623,7 @@
         "pts": 0
       },
       {
-        "pos": 19,
+        "pos": 20,
         "name": "Málaga",
         "pj": 1,
         "g": 0,
@@ -620,18 +632,6 @@
         "gf": 0,
         "gc": 2,
         "dg": -2,
-        "pts": 0
-      },
-      {
-        "pos": 20,
-        "name": "Levante",
-        "pj": 1,
-        "g": 0,
-        "e": 0,
-        "p": 1,
-        "gf": 0,
-        "gc": 3,
-        "dg": -3,
         "pts": 0
       }
     ]
