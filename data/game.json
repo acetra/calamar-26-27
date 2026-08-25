@@ -538,7 +538,7 @@
               "participantId": "qepe0ff57td",
               "team1": "Osasuna",
               "team2": "Getafe",
-              "result1": "",
+              "result1": "no_gano",
               "result2": ""
             },
             {
@@ -687,5 +687,5 @@
       ]
     }
   ],
-  "updatedAt": 1787617111440
+  "updatedAt": 1787617113938
 }
