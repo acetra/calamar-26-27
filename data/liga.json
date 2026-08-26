@@ -1,8 +1,8 @@
 {
-  "generatedAt": 1787742258194,
+  "generatedAt": 1787745772802,
   "resultados": {
     "label": "Jornada 2",
-    "updatedAt": 1787742258194,
+    "updatedAt": 1787745772802,
     "matches": [
       {
         "team1": "Rayo Vallecano",
@@ -70,7 +70,7 @@
     {
       "id": "md-4",
       "label": "Jornada 4",
-      "updatedAt": 1787742258194,
+      "updatedAt": 1787745772802,
       "matches": [
         {
           "team1": "Athletic",
@@ -82,7 +82,7 @@
     }
   ],
   "clasificacion": {
-    "updatedAt": 1787742258194,
+    "updatedAt": 1787745772802,
     "rows": [
       {
         "pos": 1,
