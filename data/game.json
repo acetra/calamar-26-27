@@ -689,11 +689,96 @@
           "label": "Jornada 3",
           "season": "2026/27",
           "deadline": "",
-          "picks": [],
+          "picks": [
+            {
+              "participantId": "v9khm4a57td",
+              "team1": "Barcelona",
+              "team2": "Real Sociedad",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "7xu7mha57td",
+              "team1": "Real Madrid",
+              "team2": "Real Sociedad",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "2gh3q3y57td",
+              "team1": "Barcelona",
+              "team2": "Racing de Santander",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "xp697zc57td",
+              "team1": "Real Madrid",
+              "team2": "Real sociedad",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "m9p8aca57td",
+              "team1": "Real Madrid",
+              "team2": "Real sociedad",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "so3mbw157td",
+              "team1": "Real Madrid",
+              "team2": "Deportivo",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "1pdzgw257td",
+              "team1": "Barcelona",
+              "team2": "Real Sociedad",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "3d2ewr957td",
+              "team1": "Barcelona",
+              "team2": "Real Sociedad",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "ngo5pii57td",
+              "team1": "Real Madrid",
+              "team2": "Málaga",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "wtwyjlr57td",
+              "team1": "Real Madrid",
+              "team2": "Sevilla",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "2suh20a57td",
+              "team1": "Real Madrid",
+              "team2": "Levante UD",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "8x73bb5d8ph",
+              "team1": "Real Madrid",
+              "team2": "Racing de Santander",
+              "result1": "",
+              "result2": ""
+            }
+          ],
           "expelled": []
         }
       ]
     }
   ],
-  "updatedAt": 1787825790918
+  "updatedAt": 1787825855474
 }
