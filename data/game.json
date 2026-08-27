@@ -683,9 +683,17 @@
             }
           ],
           "expelled": []
+        },
+        {
+          "id": "0awfwscbbsk",
+          "label": "Jornada 3",
+          "season": "2026/27",
+          "deadline": "",
+          "picks": [],
+          "expelled": []
         }
       ]
     }
   ],
-  "updatedAt": 1787825781106
+  "updatedAt": 1787825790918
 }
