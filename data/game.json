@@ -773,6 +773,13 @@
               "team2": "Racing de Santander",
               "result1": "",
               "result2": ""
+            },
+            {
+              "participantId": "9zo5xs957td",
+              "team1": "Betis",
+              "team2": "Osasuna",
+              "result1": "",
+              "result2": ""
             }
           ],
           "expelled": []
@@ -780,5 +787,5 @@
       ]
     }
   ],
-  "updatedAt": 1787931990014
+  "updatedAt": 1787932024778
 }
