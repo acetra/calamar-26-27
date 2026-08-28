@@ -749,7 +749,7 @@
             {
               "participantId": "ngo5pii57td",
               "team1": "Real Madrid",
-              "team2": "Málaga",
+              "team2": "Racing",
               "result1": "",
               "result2": ""
             },
@@ -780,5 +780,5 @@
       ]
     }
   ],
-  "updatedAt": 1787931926525
+  "updatedAt": 1787931990014
 }
