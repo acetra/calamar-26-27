@@ -1,8 +1,8 @@
 {
-  "generatedAt": 1788117772546,
+  "generatedAt": 1788118371622,
   "resultados": {
     "label": "Jornada 3",
-    "updatedAt": 1788117772546,
+    "updatedAt": 1788118371622,
     "matches": [
       {
         "team1": "Santander",
@@ -46,7 +46,7 @@
     {
       "id": "md-4",
       "label": "Jornada 4",
-      "updatedAt": 1788117772546,
+      "updatedAt": 1788118371622,
       "matches": [
         {
           "team1": "Real Betis",
@@ -113,7 +113,7 @@
     {
       "id": "md-5",
       "label": "Jornada 5",
-      "updatedAt": 1788117772546,
+      "updatedAt": 1788118371622,
       "matches": [
         {
           "team1": "Getafe",
@@ -180,7 +180,7 @@
     {
       "id": "md-6",
       "label": "Jornada 6",
-      "updatedAt": 1788117772546,
+      "updatedAt": 1788118371622,
       "matches": [
         {
           "team1": "Real Sociedad",
@@ -247,7 +247,7 @@
     {
       "id": "md-7",
       "label": "Jornada 7",
-      "updatedAt": 1788117772546,
+      "updatedAt": 1788118371622,
       "matches": [
         {
           "team1": "Atleti",
@@ -314,7 +314,7 @@
     {
       "id": "md-8",
       "label": "Jornada 8",
-      "updatedAt": 1788117772546,
+      "updatedAt": 1788118371622,
       "matches": [
         {
           "team1": "Rayo Vallecano",
@@ -380,7 +380,7 @@
     }
   ],
   "clasificacion": {
-    "updatedAt": 1788117772546,
+    "updatedAt": 1788118371622,
     "rows": [
       {
         "pos": 1,
@@ -552,6 +552,18 @@
       },
       {
         "pos": 15,
+        "name": "Celta",
+        "pj": 3,
+        "g": 0,
+        "e": 2,
+        "p": 1,
+        "gf": 1,
+        "gc": 2,
+        "dg": -1,
+        "pts": 2
+      },
+      {
+        "pos": 16,
         "name": "Rayo Vallecano",
         "pj": 2,
         "g": 0,
@@ -559,18 +571,6 @@
         "p": 1,
         "gf": 2,
         "gc": 3,
-        "dg": -1,
-        "pts": 1
-      },
-      {
-        "pos": 16,
-        "name": "Celta",
-        "pj": 2,
-        "g": 0,
-        "e": 1,
-        "p": 1,
-        "gf": 1,
-        "gc": 2,
         "dg": -1,
         "pts": 1
       },
@@ -588,6 +588,18 @@
       },
       {
         "pos": 18,
+        "name": "Athletic",
+        "pj": 3,
+        "g": 0,
+        "e": 1,
+        "p": 2,
+        "gf": 1,
+        "gc": 5,
+        "dg": -4,
+        "pts": 1
+      },
+      {
+        "pos": 19,
         "name": "Elche",
         "pj": 3,
         "g": 0,
@@ -599,7 +611,7 @@
         "pts": 1
       },
       {
-        "pos": 19,
+        "pos": 20,
         "name": "Málaga",
         "pj": 3,
         "g": 0,
@@ -609,18 +621,6 @@
         "gc": 7,
         "dg": -6,
         "pts": 1
-      },
-      {
-        "pos": 20,
-        "name": "Athletic",
-        "pj": 2,
-        "g": 0,
-        "e": 0,
-        "p": 2,
-        "gf": 1,
-        "gc": 5,
-        "dg": -4,
-        "pts": 0
       }
     ]
   }
