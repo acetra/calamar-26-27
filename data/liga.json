@@ -1,8 +1,8 @@
 {
-  "generatedAt": 1788124972675,
+  "generatedAt": 1788125584845,
   "resultados": {
     "label": "Jornada 3",
-    "updatedAt": 1788124972675,
+    "updatedAt": 1788125584845,
     "matches": [
       {
         "team1": "Santander",
@@ -45,6 +45,12 @@
         "team2": "Valencia",
         "extra": "3-1",
         "raw": "Deportivo 3-1 Valencia"
+      },
+      {
+        "team1": "Celta",
+        "team2": "Athletic",
+        "extra": "0-2",
+        "raw": "Celta 0-2 Athletic"
       }
     ]
   },
@@ -52,7 +58,7 @@
     {
       "id": "md-4",
       "label": "Jornada 4",
-      "updatedAt": 1788124972675,
+      "updatedAt": 1788125584845,
       "matches": [
         {
           "team1": "Real Betis",
@@ -119,7 +125,7 @@
     {
       "id": "md-5",
       "label": "Jornada 5",
-      "updatedAt": 1788124972675,
+      "updatedAt": 1788125584845,
       "matches": [
         {
           "team1": "Getafe",
@@ -186,7 +192,7 @@
     {
       "id": "md-6",
       "label": "Jornada 6",
-      "updatedAt": 1788124972675,
+      "updatedAt": 1788125584845,
       "matches": [
         {
           "team1": "Real Sociedad",
@@ -253,7 +259,7 @@
     {
       "id": "md-7",
       "label": "Jornada 7",
-      "updatedAt": 1788124972675,
+      "updatedAt": 1788125584845,
       "matches": [
         {
           "team1": "Atleti",
@@ -320,7 +326,7 @@
     {
       "id": "md-8",
       "label": "Jornada 8",
-      "updatedAt": 1788124972675,
+      "updatedAt": 1788125584845,
       "matches": [
         {
           "team1": "Rayo Vallecano",
@@ -386,7 +392,7 @@
     }
   ],
   "clasificacion": {
-    "updatedAt": 1788124972675,
+    "updatedAt": 1788125584845,
     "rows": [
       {
         "pos": 1,
