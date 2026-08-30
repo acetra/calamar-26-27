@@ -1,8 +1,8 @@
 {
-  "generatedAt": 1788108780293,
+  "generatedAt": 1788109380805,
   "resultados": {
     "label": "Jornada 3",
-    "updatedAt": 1788108780293,
+    "updatedAt": 1788109380805,
     "matches": [
       {
         "team1": "Santander",
@@ -22,7 +22,7 @@
     {
       "id": "md-4",
       "label": "Jornada 4",
-      "updatedAt": 1788108780293,
+      "updatedAt": 1788109380805,
       "matches": [
         {
           "team1": "Real Betis",
@@ -89,7 +89,7 @@
     {
       "id": "md-5",
       "label": "Jornada 5",
-      "updatedAt": 1788108780293,
+      "updatedAt": 1788109380805,
       "matches": [
         {
           "team1": "Getafe",
@@ -156,7 +156,7 @@
     {
       "id": "md-6",
       "label": "Jornada 6",
-      "updatedAt": 1788108780293,
+      "updatedAt": 1788109380805,
       "matches": [
         {
           "team1": "Real Sociedad",
@@ -223,7 +223,7 @@
     {
       "id": "md-7",
       "label": "Jornada 7",
-      "updatedAt": 1788108780293,
+      "updatedAt": 1788109380805,
       "matches": [
         {
           "team1": "Atleti",
@@ -290,7 +290,7 @@
     {
       "id": "md-8",
       "label": "Jornada 8",
-      "updatedAt": 1788108780293,
+      "updatedAt": 1788109380805,
       "matches": [
         {
           "team1": "Rayo Vallecano",
@@ -356,7 +356,7 @@
     }
   ],
   "clasificacion": {
-    "updatedAt": 1788108780293,
+    "updatedAt": 1788109380805,
     "rows": [
       {
         "pos": 1,
@@ -365,9 +365,9 @@
         "g": 3,
         "e": 0,
         "p": 0,
-        "gf": 9,
+        "gf": 10,
         "gc": 2,
-        "dg": 7,
+        "dg": 8,
         "pts": 9
       },
       {
@@ -564,18 +564,6 @@
       },
       {
         "pos": 18,
-        "name": "Málaga",
-        "pj": 3,
-        "g": 0,
-        "e": 1,
-        "p": 2,
-        "gf": 1,
-        "gc": 6,
-        "dg": -5,
-        "pts": 1
-      },
-      {
-        "pos": 19,
         "name": "Elche",
         "pj": 3,
         "g": 0,
@@ -583,6 +571,18 @@
         "p": 2,
         "gf": 3,
         "gc": 9,
+        "dg": -6,
+        "pts": 1
+      },
+      {
+        "pos": 19,
+        "name": "Málaga",
+        "pj": 3,
+        "g": 0,
+        "e": 1,
+        "p": 2,
+        "gf": 1,
+        "gc": 7,
         "dg": -6,
         "pts": 1
       },
