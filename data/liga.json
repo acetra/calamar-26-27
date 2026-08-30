@@ -1,8 +1,8 @@
 {
-  "generatedAt": 1788047568579,
+  "generatedAt": 1788073386740,
   "resultados": {
     "label": "Jornada 3",
-    "updatedAt": 1788047568579,
+    "updatedAt": 1788073386740,
     "matches": [
       {
         "team1": "Santander",
@@ -15,24 +15,6 @@
         "team2": "Villarreal",
         "extra": "1-0",
         "raw": "Alavés 1-0 Villarreal"
-      },
-      {
-        "team1": "Levante",
-        "team2": "Real Betis",
-        "extra": "5-2",
-        "raw": "Levante 5-2 Real Betis"
-      },
-      {
-        "team1": "Real Sociedad",
-        "team2": "Espanyol",
-        "extra": "2-1",
-        "raw": "Real Sociedad 2-1 Espanyol"
-      },
-      {
-        "team1": "Sevilla FC",
-        "team2": "Atleti",
-        "extra": "1-3",
-        "raw": "Sevilla FC 1-3 Atleti"
       }
     ]
   },
@@ -40,7 +22,7 @@
     {
       "id": "md-4",
       "label": "Jornada 4",
-      "updatedAt": 1788047568579,
+      "updatedAt": 1788073386740,
       "matches": [
         {
           "team1": "Real Betis",
@@ -107,7 +89,7 @@
     {
       "id": "md-5",
       "label": "Jornada 5",
-      "updatedAt": 1788047568579,
+      "updatedAt": 1788073386740,
       "matches": [
         {
           "team1": "Getafe",
@@ -174,7 +156,7 @@
     {
       "id": "md-6",
       "label": "Jornada 6",
-      "updatedAt": 1788047568579,
+      "updatedAt": 1788073386740,
       "matches": [
         {
           "team1": "Real Sociedad",
@@ -241,7 +223,7 @@
     {
       "id": "md-7",
       "label": "Jornada 7",
-      "updatedAt": 1788047568579,
+      "updatedAt": 1788073386740,
       "matches": [
         {
           "team1": "Atleti",
@@ -308,7 +290,7 @@
     {
       "id": "md-8",
       "label": "Jornada 8",
-      "updatedAt": 1788047568579,
+      "updatedAt": 1788073386740,
       "matches": [
         {
           "team1": "Rayo Vallecano",
@@ -374,7 +356,7 @@
     }
   ],
   "clasificacion": {
-    "updatedAt": 1788047568579,
+    "updatedAt": 1788073386740,
     "rows": [
       {
         "pos": 1,
