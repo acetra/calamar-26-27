@@ -708,7 +708,7 @@
               "participantId": "2gh3q3y57td",
               "team1": "Barcelona",
               "team2": "Racing de Santander",
-              "result1": "",
+              "result1": "gano",
               "result2": ""
             },
             {
@@ -787,5 +787,5 @@
       ]
     }
   ],
-  "updatedAt": 1788211026818
+  "updatedAt": 1788211029553
 }
