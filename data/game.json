@@ -778,7 +778,7 @@
               "participantId": "9zo5xs957td",
               "team1": "Betis",
               "team2": "Osasuna",
-              "result1": "",
+              "result1": "no_gano",
               "result2": ""
             }
           ],
@@ -787,5 +787,5 @@
       ]
     }
   ],
-  "updatedAt": 1788211052551
+  "updatedAt": 1788211055781
 }
