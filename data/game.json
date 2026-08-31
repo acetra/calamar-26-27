@@ -701,7 +701,7 @@
               "participantId": "7xu7mha57td",
               "team1": "Real Madrid",
               "team2": "Real Sociedad",
-              "result1": "",
+              "result1": "gano",
               "result2": ""
             },
             {
@@ -787,5 +787,5 @@
       ]
     }
   ],
-  "updatedAt": 1788211023572
+  "updatedAt": 1788211026818
 }
