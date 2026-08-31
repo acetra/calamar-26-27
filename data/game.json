@@ -771,7 +771,7 @@
               "participantId": "8x73bb5d8ph",
               "team1": "Real Madrid",
               "team2": "Racing de Santander",
-              "result1": "",
+              "result1": "gano",
               "result2": ""
             },
             {
@@ -787,5 +787,5 @@
       ]
     }
   ],
-  "updatedAt": 1788211050037
+  "updatedAt": 1788211052551
 }
