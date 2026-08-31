@@ -743,7 +743,7 @@
               "participantId": "3d2ewr957td",
               "team1": "Barcelona",
               "team2": "Real Sociedad",
-              "result1": "",
+              "result1": "gano",
               "result2": ""
             },
             {
@@ -787,5 +787,5 @@
       ]
     }
   ],
-  "updatedAt": 1788211039336
+  "updatedAt": 1788211042021
 }
