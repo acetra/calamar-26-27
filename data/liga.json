@@ -1,8 +1,8 @@
 {
-  "generatedAt": 1788168798613,
+  "generatedAt": 1788169382331,
   "resultados": {
     "label": "Jornada 3",
-    "updatedAt": 1788168798613,
+    "updatedAt": 1788169382331,
     "matches": [
       {
         "team1": "Santander",
@@ -46,7 +46,7 @@
     {
       "id": "md-4",
       "label": "Jornada 4",
-      "updatedAt": 1788168798613,
+      "updatedAt": 1788169382331,
       "matches": [
         {
           "team1": "Real Betis",
@@ -113,7 +113,7 @@
     {
       "id": "md-5",
       "label": "Jornada 5",
-      "updatedAt": 1788168798613,
+      "updatedAt": 1788169382331,
       "matches": [
         {
           "team1": "Getafe",
@@ -180,7 +180,7 @@
     {
       "id": "md-6",
       "label": "Jornada 6",
-      "updatedAt": 1788168798613,
+      "updatedAt": 1788169382331,
       "matches": [
         {
           "team1": "Real Sociedad",
@@ -247,13 +247,31 @@
     {
       "id": "md-7",
       "label": "Jornada 7",
-      "updatedAt": 1788168798613,
+      "updatedAt": 1788169382331,
       "matches": [
         {
-          "team1": "Atleti",
-          "team2": "Real Madrid",
-          "extra": "dom, 20 sept, 02:00",
-          "raw": "dom, 20 sept, 02:00 Atleti - Real Madrid"
+          "team1": "Osasuna",
+          "team2": "Rayo Vallecano",
+          "extra": "sáb, 19 sept, 14:00",
+          "raw": "sáb, 19 sept, 14:00 Osasuna - Rayo Vallecano"
+        },
+        {
+          "team1": "Athletic",
+          "team2": "Alavés",
+          "extra": "sáb, 19 sept, 16:15",
+          "raw": "sáb, 19 sept, 16:15 Athletic - Alavés"
+        },
+        {
+          "team1": "Celta",
+          "team2": "Santander",
+          "extra": "sáb, 19 sept, 18:30",
+          "raw": "sáb, 19 sept, 18:30 Celta - Santander"
+        },
+        {
+          "team1": "Sevilla FC",
+          "team2": "Barça",
+          "extra": "sáb, 19 sept, 21:00",
+          "raw": "sáb, 19 sept, 21:00 Sevilla FC - Barça"
         },
         {
           "team1": "Valencia",
@@ -262,59 +280,41 @@
           "raw": "dom, 20 sept, 02:00 Valencia - Real Sociedad"
         },
         {
-          "team1": "Sevilla FC",
-          "team2": "Barça",
-          "extra": "dom, 20 sept, 02:00",
-          "raw": "dom, 20 sept, 02:00 Sevilla FC - Barça"
-        },
-        {
-          "team1": "Athletic",
-          "team2": "Alavés",
-          "extra": "dom, 20 sept, 02:00",
-          "raw": "dom, 20 sept, 02:00 Athletic - Alavés"
-        },
-        {
           "team1": "Espanyol",
           "team2": "Elche",
           "extra": "dom, 20 sept, 02:00",
           "raw": "dom, 20 sept, 02:00 Espanyol - Elche"
         },
         {
-          "team1": "Osasuna",
-          "team2": "Rayo Vallecano",
-          "extra": "dom, 20 sept, 02:00",
-          "raw": "dom, 20 sept, 02:00 Osasuna - Rayo Vallecano"
+          "team1": "Getafe",
+          "team2": "Málaga",
+          "extra": "dom, 20 sept, 14:00",
+          "raw": "dom, 20 sept, 14:00 Getafe - Málaga"
         },
         {
-          "team1": "Celta",
-          "team2": "Santander",
-          "extra": "dom, 20 sept, 02:00",
-          "raw": "dom, 20 sept, 02:00 Celta - Santander"
+          "team1": "Atleti",
+          "team2": "Real Madrid",
+          "extra": "dom, 20 sept, 16:15",
+          "raw": "dom, 20 sept, 16:15 Atleti - Real Madrid"
         },
         {
           "team1": "Deportivo",
           "team2": "Real Betis",
-          "extra": "dom, 20 sept, 02:00",
-          "raw": "dom, 20 sept, 02:00 Deportivo - Real Betis"
+          "extra": "dom, 20 sept, 18:30",
+          "raw": "dom, 20 sept, 18:30 Deportivo - Real Betis"
         },
         {
           "team1": "Villarreal",
           "team2": "Levante",
-          "extra": "dom, 20 sept, 02:00",
-          "raw": "dom, 20 sept, 02:00 Villarreal - Levante"
-        },
-        {
-          "team1": "Getafe",
-          "team2": "Málaga",
-          "extra": "dom, 20 sept, 02:00",
-          "raw": "dom, 20 sept, 02:00 Getafe - Málaga"
+          "extra": "dom, 20 sept, 18:30",
+          "raw": "dom, 20 sept, 18:30 Villarreal - Levante"
         }
       ]
     },
     {
       "id": "md-8",
       "label": "Jornada 8",
-      "updatedAt": 1788168798613,
+      "updatedAt": 1788169382331,
       "matches": [
         {
           "team1": "Rayo Vallecano",
@@ -380,7 +380,7 @@
     }
   ],
   "clasificacion": {
-    "updatedAt": 1788168798613,
+    "updatedAt": 1788169382331,
     "rows": [
       {
         "pos": 1,
