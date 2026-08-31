@@ -757,7 +757,7 @@
               "participantId": "wtwyjlr57td",
               "team1": "Real Madrid",
               "team2": "Sevilla",
-              "result1": "",
+              "result1": "gano",
               "result2": ""
             },
             {
@@ -787,5 +787,5 @@
       ]
     }
   ],
-  "updatedAt": 1788211044177
+  "updatedAt": 1788211047305
 }
