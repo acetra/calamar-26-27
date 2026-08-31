@@ -1,8 +1,8 @@
 {
-  "generatedAt": 1788196980382,
+  "generatedAt": 1788197585448,
   "resultados": {
     "label": "Jornada 3",
-    "updatedAt": 1788196980382,
+    "updatedAt": 1788197585448,
     "matches": [
       {
         "team1": "Santander",
@@ -46,7 +46,7 @@
     {
       "id": "md-4",
       "label": "Jornada 4",
-      "updatedAt": 1788196980382,
+      "updatedAt": 1788197585448,
       "matches": [
         {
           "team1": "Real Betis",
@@ -113,7 +113,7 @@
     {
       "id": "md-5",
       "label": "Jornada 5",
-      "updatedAt": 1788196980382,
+      "updatedAt": 1788197585448,
       "matches": [
         {
           "team1": "Getafe",
@@ -180,7 +180,7 @@
     {
       "id": "md-6",
       "label": "Jornada 6",
-      "updatedAt": 1788196980382,
+      "updatedAt": 1788197585448,
       "matches": [
         {
           "team1": "Real Sociedad",
@@ -247,7 +247,7 @@
     {
       "id": "md-7",
       "label": "Jornada 7",
-      "updatedAt": 1788196980382,
+      "updatedAt": 1788197585448,
       "matches": [
         {
           "team1": "Atleti",
@@ -314,7 +314,7 @@
     {
       "id": "md-8",
       "label": "Jornada 8",
-      "updatedAt": 1788196980382,
+      "updatedAt": 1788197585448,
       "matches": [
         {
           "team1": "Rayo Vallecano",
@@ -380,7 +380,7 @@
     }
   ],
   "clasificacion": {
-    "updatedAt": 1788196980382,
+    "updatedAt": 1788197585448,
     "rows": [
       {
         "pos": 1,
@@ -469,14 +469,14 @@
       {
         "pos": 8,
         "name": "Osasuna",
-        "pj": 2,
+        "pj": 3,
         "g": 1,
-        "e": 1,
+        "e": 2,
         "p": 0,
         "gf": 2,
         "gc": 1,
         "dg": 1,
-        "pts": 4
+        "pts": 5
       },
       {
         "pos": 9,
@@ -504,6 +504,18 @@
       },
       {
         "pos": 11,
+        "name": "Getafe",
+        "pj": 3,
+        "g": 1,
+        "e": 1,
+        "p": 1,
+        "gf": 1,
+        "gc": 3,
+        "dg": -2,
+        "pts": 4
+      },
+      {
+        "pos": 12,
         "name": "Espanyol",
         "pj": 3,
         "g": 1,
@@ -515,7 +527,7 @@
         "pts": 3
       },
       {
-        "pos": 12,
+        "pos": 13,
         "name": "Athletic",
         "pj": 3,
         "g": 1,
@@ -523,18 +535,6 @@
         "p": 2,
         "gf": 3,
         "gc": 5,
-        "dg": -2,
-        "pts": 3
-      },
-      {
-        "pos": 13,
-        "name": "Getafe",
-        "pj": 2,
-        "g": 1,
-        "e": 0,
-        "p": 1,
-        "gf": 1,
-        "gc": 3,
         "dg": -2,
         "pts": 3
       },
