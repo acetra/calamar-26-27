@@ -750,7 +750,7 @@
               "participantId": "ngo5pii57td",
               "team1": "Real Madrid",
               "team2": "Racing",
-              "result1": "",
+              "result1": "gano",
               "result2": ""
             },
             {
@@ -787,5 +787,5 @@
       ]
     }
   ],
-  "updatedAt": 1788211042021
+  "updatedAt": 1788211044177
 }
