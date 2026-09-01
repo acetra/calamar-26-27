@@ -1,8 +1,8 @@
 {
-  "generatedAt": 1788268219710,
+  "generatedAt": 1788269325700,
   "resultados": {
     "label": "Jornada 3",
-    "updatedAt": 1788268219710,
+    "updatedAt": 1788269325700,
     "matches": [
       {
         "team1": "Santander",
@@ -70,7 +70,7 @@
     {
       "id": "md-4",
       "label": "Jornada 4",
-      "updatedAt": 1788268219710,
+      "updatedAt": 1788269325700,
       "matches": [
         {
           "team1": "Real Betis",
@@ -137,7 +137,7 @@
     {
       "id": "md-5",
       "label": "Jornada 5",
-      "updatedAt": 1788268219710,
+      "updatedAt": 1788269325700,
       "matches": [
         {
           "team1": "Sevilla FC",
@@ -204,7 +204,7 @@
     {
       "id": "md-6",
       "label": "Jornada 6",
-      "updatedAt": 1788268219710,
+      "updatedAt": 1788269325700,
       "matches": [
         {
           "team1": "Real Sociedad",
@@ -271,8 +271,14 @@
     {
       "id": "md-7",
       "label": "Jornada 7",
-      "updatedAt": 1788268219710,
+      "updatedAt": 1788269325700,
       "matches": [
+        {
+          "team1": "Espanyol",
+          "team2": "Elche",
+          "extra": "vie, 18 sept, 21:00",
+          "raw": "vie, 18 sept, 21:00 Espanyol - Elche"
+        },
         {
           "team1": "Osasuna",
           "team2": "Rayo Vallecano",
@@ -298,18 +304,6 @@
           "raw": "sáb, 19 sept, 21:00 Sevilla FC - Barça"
         },
         {
-          "team1": "Valencia",
-          "team2": "Real Sociedad",
-          "extra": "dom, 20 sept, 02:00",
-          "raw": "dom, 20 sept, 02:00 Valencia - Real Sociedad"
-        },
-        {
-          "team1": "Espanyol",
-          "team2": "Elche",
-          "extra": "dom, 20 sept, 02:00",
-          "raw": "dom, 20 sept, 02:00 Espanyol - Elche"
-        },
-        {
           "team1": "Getafe",
           "team2": "Málaga",
           "extra": "dom, 20 sept, 14:00",
@@ -332,13 +326,19 @@
           "team2": "Levante",
           "extra": "dom, 20 sept, 18:30",
           "raw": "dom, 20 sept, 18:30 Villarreal - Levante"
+        },
+        {
+          "team1": "Valencia",
+          "team2": "Real Sociedad",
+          "extra": "dom, 20 sept, 21:00",
+          "raw": "dom, 20 sept, 21:00 Valencia - Real Sociedad"
         }
       ]
     },
     {
       "id": "md-8",
       "label": "Jornada 8",
-      "updatedAt": 1788268219710,
+      "updatedAt": 1788269325700,
       "matches": [
         {
           "team1": "Rayo Vallecano",
@@ -404,7 +404,7 @@
     }
   ],
   "clasificacion": {
-    "updatedAt": 1788268219710,
+    "updatedAt": 1788269325700,
     "rows": [
       {
         "pos": 1,
