@@ -54,7 +54,11 @@ h1 .l2{display:block;color:var(--pink);text-shadow:0 0 24px rgba(255,31,122,.35)
 .lede b{color:#fff;font-weight:700;font-variant-numeric:tabular-nums}
 
 /* ---------- TABS ---------- */
-.tabs{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px;margin-bottom:20px;-ms-overflow-style:none;scrollbar-width:none}
+.tabs{display:flex;gap:8px;overflow-x:auto;overflow-y:hidden;-ms-overflow-style:none;scrollbar-width:none;
+  position:sticky;top:0;z-index:30;margin:0 -16px 20px;padding:10px 16px 10px;
+  padding-top:calc(10px + env(safe-area-inset-top));
+  background:rgba(8,20,15,.88);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+  box-shadow:0 10px 18px -12px rgba(0,0,0,.5)}
 .tabs::-webkit-scrollbar{display:none}
 .tabbtn{flex:0 0 auto;border:1px solid var(--line);background:var(--card);color:var(--ink-soft);
   font-weight:700;font-size:13px;letter-spacing:.03em;border-radius:11px;padding:10px 16px;cursor:pointer}
@@ -247,8 +251,36 @@ footer b{color:#bcd3c9}
 .rules h3:first-child{margin-top:0}
 .rules p{margin:0 0 10px}
 .rules b{color:#fff}
+/* ---------- easter egg ---------- */
+.easter-toast{position:fixed;left:50%;top:16%;transform:translate(-50%,0);z-index:200;pointer-events:none;
+  background:linear-gradient(160deg,var(--card-2),var(--card));border:1px solid var(--pink);border-radius:18px;
+  padding:20px 26px;max-width:min(320px,84vw);text-align:center;
+  box-shadow:0 20px 50px rgba(0,0,0,.55),0 0 30px rgba(255,31,122,.25);opacity:0;transition:opacity .3s ease}
+.easter-toast.show{opacity:1;animation:easterWave 3.6s cubic-bezier(.34,1.56,.64,1) both}
+.easter-toast .et-shapes{font-size:20px;letter-spacing:10px;color:var(--pink);margin-bottom:8px;text-shadow:0 0 14px rgba(255,31,122,.5)}
+.easter-toast .et-line1{font-family:var(--display);font-weight:800;text-transform:uppercase;letter-spacing:.03em;color:#fff;font-size:15px}
+.easter-toast .et-line2{margin-top:6px;font-size:12.5px;color:var(--ink-soft)}
+.easter-toast .et-wave{margin:12px auto 0;height:8px;width:80px;border-radius:6px;overflow:hidden;opacity:.6;
+  background:repeating-radial-gradient(circle at 0 50%,var(--teal) 0 3px,transparent 4px 12px);background-size:24px 8px;
+  animation:waveScroll 1.1s linear infinite}
+@keyframes waveScroll{from{background-position-x:0}to{background-position-x:-24px}}
+@keyframes easterWave{
+  0%{opacity:0;transform:translate(-50%,30px) scale(.85) rotate(-2deg)}
+  14%{opacity:1;transform:translate(-50%,-8px) scale(1.04) rotate(1deg)}
+  20%{transform:translate(-50%,2px) scale(1) rotate(-.5deg)}
+  26%{transform:translate(-50%,-3px) scale(1) rotate(.3deg)}
+  32%,88%{opacity:1;transform:translate(-50%,0) scale(1) rotate(0)}
+  100%{opacity:0;transform:translate(-50%,-16px) scale(.94)}
+}
 @media (prefers-reduced-motion: reduce){*{animation:none !important;transition:none !important}}
 </style>
+
+<div id="easterToast" class="easter-toast" aria-live="polite">
+  <div class="et-shapes">○ △ □</div>
+  <div class="et-line1">Idea original de Acetra</div>
+  <div class="et-line2">Programado y testeado por HecGL</div>
+  <div class="et-wave"></div>
+</div>
 
 <div class="wrap">
   <div class="shapes"><b>○</b><b>△</b><b class="sq">□</b></div>
@@ -1933,7 +1965,34 @@ document.getElementById("adminModeBtn").addEventListener("click", e=>{
   if(!panel.classList.contains("hidden")) renderAdminPanel();
 });
 
+/* ============================== EASTER EGG ============================== */
+/* 20 toques en el rótulo "Calamar" y aparece un mensaje unos segundos; hacen falta otros
+   20 para que vuelva a salir. */
+let easterTapCount = 0;
+let easterHideTimer = null;
+function showEasterToast(){
+  const el = document.getElementById("easterToast");
+  if(!el) return;
+  el.classList.remove("show");
+  void el.offsetWidth; // fuerza a reiniciar la animación si se ha disparado varias veces
+  el.classList.add("show");
+  clearTimeout(easterHideTimer);
+  easterHideTimer = setTimeout(()=>{ el.classList.remove("show"); }, 3700);
+}
+function initEasterEgg(){
+  const h1 = document.querySelector(".wrap > h1");
+  if(!h1) return;
+  h1.addEventListener("click", ()=>{
+    easterTapCount++;
+    if(easterTapCount>=20){
+      easterTapCount = 0;
+      showEasterToast();
+    }
+  });
+}
+
 render();
+initEasterEgg();
 loadGameFeed();
 loadLigaFeed();
 </script>
