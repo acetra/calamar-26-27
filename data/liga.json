@@ -1,15 +1,15 @@
 {
-  "generatedAt": 1788361710947,
+  "generatedAt": 1788364992720,
   "resultados": {
     "label": "Jornada 5",
-    "updatedAt": 1788361710947,
+    "updatedAt": 1788364992720,
     "matches": []
   },
   "proximas": [
     {
       "id": "md-6",
       "label": "Jornada 6",
-      "updatedAt": 1788361710947,
+      "updatedAt": 1788364992720,
       "matches": [
         {
           "team1": "Real Sociedad",
@@ -22,7 +22,7 @@
     {
       "id": "md-8",
       "label": "Jornada 8",
-      "updatedAt": 1788361710947,
+      "updatedAt": 1788364992720,
       "matches": [
         {
           "team1": "Rayo Vallecano",
@@ -89,7 +89,7 @@
     {
       "id": "md-9",
       "label": "Jornada 9",
-      "updatedAt": 1788361710947,
+      "updatedAt": 1788364992720,
       "matches": [
         {
           "team1": "Villarreal",
@@ -156,7 +156,7 @@
     {
       "id": "md-10",
       "label": "Jornada 10",
-      "updatedAt": 1788361710947,
+      "updatedAt": 1788364992720,
       "matches": [
         {
           "team1": "Rayo Vallecano",
@@ -189,12 +189,6 @@
           "raw": "dom, 25 oct, 02:00 Valencia - Villarreal"
         },
         {
-          "team1": "Barça",
-          "team2": "Real Madrid",
-          "extra": "dom, 25 oct, 02:00",
-          "raw": "dom, 25 oct, 02:00 Barça - Real Madrid"
-        },
-        {
           "team1": "Atleti",
           "team2": "Deportivo",
           "extra": "dom, 25 oct, 02:00",
@@ -222,7 +216,7 @@
     }
   ],
   "clasificacion": {
-    "updatedAt": 1788361710947,
+    "updatedAt": 1788364992720,
     "rows": [
       {
         "pos": 1,
