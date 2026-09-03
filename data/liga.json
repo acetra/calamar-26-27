@@ -1,15 +1,15 @@
 {
-  "generatedAt": 1788429796447,
+  "generatedAt": 1788433380475,
   "resultados": {
     "label": "Jornada 5",
-    "updatedAt": 1788429796447,
+    "updatedAt": 1788433380475,
     "matches": []
   },
   "proximas": [
     {
       "id": "md-6",
       "label": "Jornada 6",
-      "updatedAt": 1788429796447,
+      "updatedAt": 1788433380475,
       "matches": [
         {
           "team1": "Real Sociedad",
@@ -76,7 +76,7 @@
     {
       "id": "md-7",
       "label": "Jornada 7",
-      "updatedAt": 1788429796447,
+      "updatedAt": 1788433380475,
       "matches": [
         {
           "team1": "Espanyol",
@@ -143,7 +143,7 @@
     {
       "id": "md-8",
       "label": "Jornada 8",
-      "updatedAt": 1788429796447,
+      "updatedAt": 1788433380475,
       "matches": [
         {
           "team1": "Rayo Vallecano",
@@ -210,7 +210,7 @@
     {
       "id": "md-9",
       "label": "Jornada 9",
-      "updatedAt": 1788429796447,
+      "updatedAt": 1788433380475,
       "matches": [
         {
           "team1": "Villarreal",
@@ -277,7 +277,7 @@
     {
       "id": "md-10",
       "label": "Jornada 10",
-      "updatedAt": 1788429796447,
+      "updatedAt": 1788433380475,
       "matches": [
         {
           "team1": "Rayo Vallecano",
@@ -343,7 +343,7 @@
     }
   ],
   "clasificacion": {
-    "updatedAt": 1788429796447,
+    "updatedAt": 1788433380475,
     "rows": [
       {
         "pos": 1,
