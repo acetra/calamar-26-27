@@ -783,9 +783,17 @@
             }
           ],
           "expelled": []
+        },
+        {
+          "id": "64k7o92uq3v",
+          "label": "Jornada 4",
+          "season": "2026/27",
+          "deadline": "",
+          "picks": [],
+          "expelled": []
         }
       ]
     }
   ],
-  "updatedAt": 1788530447681
+  "updatedAt": 1788530454968
 }
