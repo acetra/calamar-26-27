@@ -1,16 +1,290 @@
 {
-  "generatedAt": 1788562968338,
-  "resultados": {
-    "label": "Jornada 5",
-    "updatedAt": 1788562968338,
-    "matches": []
-  },
-  "proximas": [
+  "generatedAt": 1788569313877,
+  "jornadas": [
+    {
+      "id": "md-2",
+      "matchday": 2,
+      "label": "Jornada 2",
+      "updatedAt": 1788569313877,
+      "matches": [
+        {
+          "team1": "Rayo Vallecano",
+          "team2": "Alavés",
+          "extra": "1-1",
+          "raw": "Rayo Vallecano 1-1 Alavés"
+        },
+        {
+          "team1": "Real Betis",
+          "team2": "Real Sociedad",
+          "extra": "1-0",
+          "raw": "Real Betis 1-0 Real Sociedad"
+        },
+        {
+          "team1": "Athletic",
+          "team2": "Sevilla FC",
+          "extra": "1-3",
+          "raw": "Athletic 1-3 Sevilla FC"
+        },
+        {
+          "team1": "Valencia",
+          "team2": "Celta",
+          "extra": "0-0",
+          "raw": "Valencia 0-0 Celta"
+        },
+        {
+          "team1": "Espanyol",
+          "team2": "Real Madrid",
+          "extra": "1-2",
+          "raw": "Espanyol 1-2 Real Madrid"
+        },
+        {
+          "team1": "Atleti",
+          "team2": "Villarreal",
+          "extra": "2-2",
+          "raw": "Atleti 2-2 Villarreal"
+        },
+        {
+          "team1": "Getafe",
+          "team2": "Santander",
+          "extra": "1-0",
+          "raw": "Getafe 1-0 Santander"
+        },
+        {
+          "team1": "Elche",
+          "team2": "Barça",
+          "extra": "0-5",
+          "raw": "Elche 0-5 Barça"
+        },
+        {
+          "team1": "Osasuna",
+          "team2": "Levante",
+          "extra": "0-0",
+          "raw": "Osasuna 0-0 Levante"
+        },
+        {
+          "team1": "Málaga",
+          "team2": "Deportivo",
+          "extra": "1-1",
+          "raw": "Málaga 1-1 Deportivo"
+        }
+      ]
+    },
+    {
+      "id": "md-3",
+      "matchday": 3,
+      "label": "Jornada 3",
+      "updatedAt": 1788569313877,
+      "matches": [
+        {
+          "team1": "Santander",
+          "team2": "Elche",
+          "extra": "3-2",
+          "raw": "Santander 3-2 Elche"
+        },
+        {
+          "team1": "Alavés",
+          "team2": "Villarreal",
+          "extra": "1-0",
+          "raw": "Alavés 1-0 Villarreal"
+        },
+        {
+          "team1": "Levante",
+          "team2": "Real Betis",
+          "extra": "5-2",
+          "raw": "Levante 5-2 Real Betis"
+        },
+        {
+          "team1": "Real Sociedad",
+          "team2": "Espanyol",
+          "extra": "2-1",
+          "raw": "Real Sociedad 2-1 Espanyol"
+        },
+        {
+          "team1": "Sevilla FC",
+          "team2": "Atleti",
+          "extra": "1-3",
+          "raw": "Sevilla FC 1-3 Atleti"
+        },
+        {
+          "team1": "Real Madrid",
+          "team2": "Málaga",
+          "extra": "4-0",
+          "raw": "Real Madrid 4-0 Málaga"
+        },
+        {
+          "team1": "Deportivo",
+          "team2": "Valencia",
+          "extra": "3-1",
+          "raw": "Deportivo 3-1 Valencia"
+        },
+        {
+          "team1": "Celta",
+          "team2": "Athletic",
+          "extra": "0-2",
+          "raw": "Celta 0-2 Athletic"
+        },
+        {
+          "team1": "Osasuna",
+          "team2": "Getafe",
+          "extra": "1-0",
+          "raw": "Osasuna 1-0 Getafe"
+        },
+        {
+          "team1": "Barça",
+          "team2": "Rayo Vallecano",
+          "extra": "5-2",
+          "raw": "Barça 5-2 Rayo Vallecano"
+        }
+      ]
+    },
+    {
+      "id": "md-4",
+      "matchday": 4,
+      "label": "Jornada 4",
+      "updatedAt": 1788569313877,
+      "matches": [
+        {
+          "team1": "Real Betis",
+          "team2": "Real Madrid",
+          "extra": "1-0",
+          "raw": "Real Betis 1-0 Real Madrid"
+        },
+        {
+          "team1": "Athletic",
+          "team2": "Atleti",
+          "extra": "sáb, 05 sept, 16:15",
+          "raw": "sáb, 05 sept, 16:15 Athletic - Atleti"
+        },
+        {
+          "team1": "Rayo Vallecano",
+          "team2": "Santander",
+          "extra": "sáb, 05 sept, 18:30",
+          "raw": "sáb, 05 sept, 18:30 Rayo Vallecano - Santander"
+        },
+        {
+          "team1": "Villarreal",
+          "team2": "Deportivo",
+          "extra": "sáb, 05 sept, 21:00",
+          "raw": "sáb, 05 sept, 21:00 Villarreal - Deportivo"
+        },
+        {
+          "team1": "Valencia",
+          "team2": "Barça",
+          "extra": "dom, 06 sept, 16:15",
+          "raw": "dom, 06 sept, 16:15 Valencia - Barça"
+        },
+        {
+          "team1": "Alavés",
+          "team2": "Osasuna",
+          "extra": "dom, 06 sept, 18:30",
+          "raw": "dom, 06 sept, 18:30 Alavés - Osasuna"
+        },
+        {
+          "team1": "Málaga",
+          "team2": "Levante",
+          "extra": "dom, 06 sept, 18:30",
+          "raw": "dom, 06 sept, 18:30 Málaga - Levante"
+        },
+        {
+          "team1": "Espanyol",
+          "team2": "Sevilla FC",
+          "extra": "dom, 06 sept, 21:00",
+          "raw": "dom, 06 sept, 21:00 Espanyol - Sevilla FC"
+        },
+        {
+          "team1": "Getafe",
+          "team2": "Celta",
+          "extra": "lun, 07 sept, 19:00",
+          "raw": "lun, 07 sept, 19:00 Getafe - Celta"
+        },
+        {
+          "team1": "Elche",
+          "team2": "Real Sociedad",
+          "extra": "lun, 07 sept, 21:30",
+          "raw": "lun, 07 sept, 21:30 Elche - Real Sociedad"
+        }
+      ]
+    },
+    {
+      "id": "md-5",
+      "matchday": 5,
+      "label": "Jornada 5",
+      "updatedAt": 1788569313877,
+      "matches": [
+        {
+          "team1": "Sevilla FC",
+          "team2": "Valencia",
+          "extra": "vie, 11 sept, 21:00",
+          "raw": "vie, 11 sept, 21:00 Sevilla FC - Valencia"
+        },
+        {
+          "team1": "Santander",
+          "team2": "Alavés",
+          "extra": "sáb, 12 sept, 14:00",
+          "raw": "sáb, 12 sept, 14:00 Santander - Alavés"
+        },
+        {
+          "team1": "Osasuna",
+          "team2": "Espanyol",
+          "extra": "sáb, 12 sept, 16:15",
+          "raw": "sáb, 12 sept, 16:15 Osasuna - Espanyol"
+        },
+        {
+          "team1": "Athletic",
+          "team2": "Elche",
+          "extra": "sáb, 12 sept, 18:30",
+          "raw": "sáb, 12 sept, 18:30 Athletic - Elche"
+        },
+        {
+          "team1": "Real Madrid",
+          "team2": "Rayo Vallecano",
+          "extra": "sáb, 12 sept, 21:00",
+          "raw": "sáb, 12 sept, 21:00 Real Madrid - Rayo Vallecano"
+        },
+        {
+          "team1": "Celta",
+          "team2": "Málaga",
+          "extra": "dom, 13 sept, 14:00",
+          "raw": "dom, 13 sept, 14:00 Celta - Málaga"
+        },
+        {
+          "team1": "Levante",
+          "team2": "Barça",
+          "extra": "dom, 13 sept, 16:15",
+          "raw": "dom, 13 sept, 16:15 Levante - Barça"
+        },
+        {
+          "team1": "Getafe",
+          "team2": "Deportivo",
+          "extra": "dom, 13 sept, 18:30",
+          "raw": "dom, 13 sept, 18:30 Getafe - Deportivo"
+        },
+        {
+          "team1": "Real Sociedad",
+          "team2": "Atleti",
+          "extra": "dom, 13 sept, 21:00",
+          "raw": "dom, 13 sept, 21:00 Real Sociedad - Atleti"
+        },
+        {
+          "team1": "Villarreal",
+          "team2": "Real Betis",
+          "extra": "lun, 14 sept, 21:00",
+          "raw": "lun, 14 sept, 21:00 Villarreal - Real Betis"
+        }
+      ]
+    },
     {
       "id": "md-6",
+      "matchday": 6,
       "label": "Jornada 6",
-      "updatedAt": 1788562968338,
+      "updatedAt": 1788569313877,
       "matches": [
+        {
+          "team1": "Real Sociedad",
+          "team2": "Celta",
+          "extra": "0-0",
+          "raw": "Real Sociedad 0-0 Celta"
+        },
         {
           "team1": "Rayo Vallecano",
           "team2": "Espanyol",
@@ -69,8 +343,9 @@
     },
     {
       "id": "md-7",
+      "matchday": 7,
       "label": "Jornada 7",
-      "updatedAt": 1788562968338,
+      "updatedAt": 1788569313877,
       "matches": [
         {
           "team1": "Espanyol",
@@ -136,8 +411,9 @@
     },
     {
       "id": "md-8",
+      "matchday": 8,
       "label": "Jornada 8",
-      "updatedAt": 1788562968338,
+      "updatedAt": 1788569313877,
       "matches": [
         {
           "team1": "Rayo Vallecano",
@@ -203,8 +479,9 @@
     },
     {
       "id": "md-9",
+      "matchday": 9,
       "label": "Jornada 9",
-      "updatedAt": 1788562968338,
+      "updatedAt": 1788569313877,
       "matches": [
         {
           "team1": "Villarreal",
@@ -270,8 +547,9 @@
     },
     {
       "id": "md-10",
+      "matchday": 10,
       "label": "Jornada 10",
-      "updatedAt": 1788562968338,
+      "updatedAt": 1788569313877,
       "matches": [
         {
           "team1": "Rayo Vallecano",
@@ -337,7 +615,7 @@
     }
   ],
   "clasificacion": {
-    "updatedAt": 1788562968338,
+    "updatedAt": 1788569313877,
     "rows": [
       {
         "pos": 1,
