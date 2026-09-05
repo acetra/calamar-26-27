@@ -279,9 +279,7 @@ function defaultState(){
     participants: [],   // {id, name}
     editions: [],        // Edition[]
     liga: {
-      resultados: null,   // {label, updatedAt, matches:[{team1,team2,extra,raw}]}
-      proximas: [],        // [{id, label, updatedAt, matches:[...]}]
-      proximasUpdatedAt: 0,
+      jornadas: [],        // [{id, matchday, label, updatedAt, matches:[{team1,team2,extra,raw}]}], una por jornada de LaLiga
       clasificacion: null, // {updatedAt, rows:[{pos,name,pj,g,e,p,gf,gc,dg,pts}]}
       autoUpdatedAt: 0     // timestamp del último data/liga.json aplicado automáticamente
     }
@@ -309,8 +307,18 @@ function loadState(){
     const raw = localStorage.getItem(STORE_KEY);
     if(raw){
       const data = JSON.parse(raw);
-      if(!data.liga) data.liga = {resultados:null, proximas:[], clasificacion:null};
-      if(data.liga.proximasUpdatedAt==null) data.liga.proximasUpdatedAt = 0;
+      if(!data.liga) data.liga = {jornadas:[], clasificacion:null};
+      if(!Array.isArray(data.liga.jornadas)){
+        // Migración desde el formato antiguo (resultados único + próximas): se
+        // convierten en jornadas sueltas para no perder lo que hubiera guardado.
+        const migrated = [];
+        if(data.liga.resultados) migrated.push({...data.liga.resultados, id: uid()});
+        if(Array.isArray(data.liga.proximas)) migrated.push(...data.liga.proximas);
+        data.liga.jornadas = migrated;
+        delete data.liga.resultados;
+        delete data.liga.proximas;
+        delete data.liga.proximasUpdatedAt;
+      }
       if(data.liga.autoUpdatedAt==null) data.liga.autoUpdatedAt = 0;
       return data;
     }
@@ -325,12 +333,16 @@ function saveState(){
 /* ============================== FEED AUTOMÁTICO DE LIGA (data/liga.json) ============================== */
 function mergeLigaSeed(seed){
   if(!seed) return;
-  if(seed.resultados && (!state.liga.resultados || (seed.resultados.updatedAt||0) > (state.liga.resultados.updatedAt||0))){
-    state.liga.resultados = seed.resultados;
-  }
-  if(Array.isArray(seed.proximas) && (seed.generatedAt||0) > (state.liga.proximasUpdatedAt||0)){
-    state.liga.proximas = seed.proximas;
-    state.liga.proximasUpdatedAt = seed.generatedAt||Date.now();
+  // El feed solo trae la ventana de jornadas relevante ahora mismo (la actual
+  // hacia atrás por si queda algún partido aplazado, más las próximas). Las
+  // jornadas ya jugadas que queden fuera de esa ventana no se tocan, para no
+  // perder resultados antiguos cuando la jornada en curso avanza.
+  if(Array.isArray(seed.jornadas)){
+    seed.jornadas.forEach(sj=>{
+      const idx = state.liga.jornadas.findIndex(j=>j.id===sj.id);
+      if(idx===-1) state.liga.jornadas.push(sj);
+      else if((sj.updatedAt||0) > (state.liga.jornadas[idx].updatedAt||0)) state.liga.jornadas[idx] = sj;
+    });
   }
   if(seed.clasificacion && (!state.liga.clasificacion || (seed.clasificacion.updatedAt||0) > (state.liga.clasificacion.updatedAt||0))){
     state.liga.clasificacion = seed.clasificacion;
@@ -562,6 +574,7 @@ const STATUS_PILL = {
 let activeTab = "resumen";
 let activePlayerId = null;
 let openJornadaId = null;
+let ligaOpenOverrides = {}; // id de jornada de LaLiga -> true/false, cuando el usuario ha plegado/desplegado a mano
 
 document.getElementById("tabs").addEventListener("click", e=>{
   const b = e.target.closest(".tabbtn"); if(!b) return;
@@ -1345,7 +1358,7 @@ function wireEdition(ed){
   });
 }
 
-/* ============================== RENDER: LIGA (resultados / próximos partidos) ============================== */
+/* ============================== RENDER: LIGA (jornadas, cada una plegable) ============================== */
 function fmtDate(ts){
   if(!ts) return "";
   return new Date(ts).toLocaleString("es-ES",{day:"2-digit",month:"short",hour:"2-digit",minute:"2-digit"});
@@ -1367,6 +1380,15 @@ function matchRowHTML(m){
     ${m.extra? `<span class="mextra">${esc(m.extra)}</span>` : `<span class="mextra" style="color:var(--ink-soft);background:var(--chip-off);border-color:var(--line)">vs</span>`}
     <span class="mteam right">${esc(m.team2)}</span>
   </div>`;
+}
+/* un partido se considera jugado si su "extra" es un marcador ("2-1"); si es una
+   hora/fecha de inicio, todavía está por jugar */
+function matchFinished(m){ return /^\d{1,2}\s*[-–]\s*\d{1,2}$/.test(String(m.extra||"").trim()); }
+function jornadaAllFinished(block){ return block.matches.length>0 && block.matches.every(matchFinished); }
+function jornadaSortKey(block){
+  if(block.matchday!=null) return block.matchday;
+  const m = String(block.label||"").match(/\d+/);
+  return m? parseInt(m[0],10) : 0;
 }
 function pasteFormHTML(cfg){
   return `
@@ -1420,100 +1442,109 @@ function renderLiga(){
   if(liga.autoUpdatedAt){
     html += `<div class="jtag" style="margin-bottom:16px"><span class="dot"></span> LaLiga actualizada automáticamente · ${esc(fmtDate(liga.autoUpdatedAt))}</div>`;
   } else {
-    html += `<div class="jtag pink" style="margin-bottom:16px"><span class="dot"></span> Aún no se ha recibido la actualización automática diaria de LaLiga</div>`;
+    html += `<div class="jtag pink" style="margin-bottom:16px"><span class="dot"></span> Aún no se ha recibido la actualización automática de LaLiga</div>`;
   }
-  html += `<div class="section-h"><span class="mk">○</span><span class="tag">Resultados</span><span class="line"></span></div>`;
-  html += `<div class="card" style="margin-bottom:18px">`;
-  if(liga.resultados && liga.resultados.matches.length){
-    html += `<div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:12px">
-      <span style="font-family:var(--display);font-weight:800;color:#fff;font-size:16px">${esc(liga.resultados.label)}</span>
-      <span class="muted" style="font-size:11.5px">Actualizado ${fmtDate(liga.resultados.updatedAt)}</span>
-    </div>`;
-    html += liga.resultados.matches.map(matchRowHTML).join("");
-  } else {
-    html += `<p class="muted" style="margin:0 0 10px">Todavía no has añadido los resultados de la última jornada.</p>`;
-  }
-  if(admin){
-    html += `<div class="btnrow" style="margin-top:12px"><button class="btn sm" id="editResultadosBtn">${liga.resultados?'Actualizar resultados':'+ Añadir resultados'}</button></div>`;
-    html += `<div id="resultadosForm" class="hidden" style="margin-top:12px"></div>`;
-  } else {
-    html += `<p class="muted" style="margin-top:12px">Solo el administrador puede añadir o actualizar los resultados de LaLiga.</p>`;
-  }
-  html += `</div>`;
+  html += `<div class="section-h"><span class="mk">○</span><span class="tag">Jornadas</span><span class="line"></span></div>`;
 
-  html += `<div class="section-h"><span class="mk">△</span><span class="tag">Próximos partidos</span><span class="line"></span></div>`;
-  if(!liga.proximas.length){
-    html += `<div class="card" style="margin-bottom:12px"><p class="muted" style="margin:0">Todavía no hay próximas jornadas añadidas.</p></div>`;
+  const blocks = [...liga.jornadas].sort((a,b)=> jornadaSortKey(b)-jornadaSortKey(a));
+
+  if(!blocks.length){
+    html += `<div class="card" style="margin-bottom:12px"><p class="muted" style="margin:0">Todavía no hay jornadas de LaLiga añadidas.</p></div>`;
   } else {
-    liga.proximas.forEach(block=>{
-      html += `<div class="card" style="margin-bottom:12px" data-block="${block.id}">
-        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:12px">
-          <span style="font-family:var(--display);font-weight:800;color:#fff;font-size:16px">${esc(block.label)}</span>
-          <div style="display:flex;align-items:center;gap:8px">
-            <span class="muted" style="font-size:11.5px">Actualizado ${fmtDate(block.updatedAt)}</span>
-            ${admin? `<button class="btn sm danger" data-act="removeFixtureBlock" data-block="${block.id}">Eliminar</button>` : ""}
-          </div>
+    blocks.forEach(block=>{
+      const allFinished = jornadaAllFinished(block);
+      // Por defecto: contraída si ya se jugaron todos sus partidos, desplegada si
+      // queda alguno pendiente (partidos adelantados/aplazados pueden dejar
+      // varias jornadas "en curso" a la vez). El usuario puede plegar/desplegar
+      // cualquiera a mano, y eso se respeta mientras esté en esta pantalla.
+      const open = ligaOpenOverrides[block.id]!=null ? ligaOpenOverrides[block.id] : !allFinished;
+      html += `<div class="jcard ${open?'open':''}" data-id="${block.id}">
+        <div class="jcard-head">
+          <span class="t">${esc(block.label)}</span>
+          <span class="sub">${allFinished? "Finalizada" : "En curso"} · Actualizado ${esc(fmtDate(block.updatedAt))}</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
         </div>
-        ${block.matches.map(matchRowHTML).join("")}
+        <div class="jcard-body">
+          ${block.matches.map(matchRowHTML).join("")}
+          ${admin? `<div class="btnrow" style="margin-top:12px">
+            <button class="btn sm" data-act="editLigaBlock" data-block="${block.id}">Editar</button>
+            <button class="btn sm danger" data-act="removeLigaBlock" data-block="${block.id}">Eliminar</button>
+          </div>
+          <div id="ligaForm-${block.id}" class="hidden" style="margin-top:12px"></div>` : ""}
+        </div>
       </div>`;
     });
   }
+
   if(admin){
-    html += `<div class="btnrow"><button class="btn sm" id="addFixturesBtn">+ Añadir jornada</button></div>`;
-    html += `<div id="fixturesForm" class="hidden" style="margin-top:12px"></div>`;
+    html += `<div class="btnrow" style="margin-bottom:8px"><button class="btn primary sm" id="addLigaBtn">+ Añadir jornada</button></div>`;
+    html += `<div id="addLigaForm" class="hidden" style="margin-bottom:18px"></div>`;
   } else {
-    html += `<p class="muted" style="margin-top:12px">Solo el administrador puede añadir o eliminar jornadas de LaLiga.</p>`;
-    html += `<div id="fixturesForm" class="hidden" style="margin-top:12px"></div>`;
+    html += `<p class="muted" style="margin:8px 0 18px">Solo el administrador puede añadir, editar o eliminar jornadas de LaLiga.</p>`;
   }
 
   el.innerHTML = html;
 
-  if(admin){
-    document.getElementById("editResultadosBtn").addEventListener("click", ()=>{
-      const box = document.getElementById("resultadosForm");
-      box.classList.toggle("hidden");
-      if(box.classList.contains("hidden")) return;
-      box.innerHTML = pasteFormHTML({
-        labelId:"resLabel", textId:"resText", analizarId:"resAnalizar", previewId:"resPreview",
-        defaultLabel: liga.resultados? liga.resultados.label : "Jornada 1",
-        defaultText: liga.resultados? liga.resultados.matches.map(m=>m.raw).join("\n") : "",
-        placeholder:"Barcelona 2-1 Real Madrid"
-      });
-      document.getElementById("resAnalizar").addEventListener("click", ()=>{
-        const rows = parseMatchBlock(document.getElementById("resText").value);
-        document.getElementById("resPreview").innerHTML = matchPreviewHTML(rows,"resConfirm","Guardar resultados");
-        wireMatchPreview("resPreview","resConfirm", rows2=>{
-          liga.resultados = {label: document.getElementById("resLabel").value.trim()||"Jornada", updatedAt:Date.now(), matches:rows2};
-          saveState(); render();
-        });
-      });
+  el.querySelectorAll(".jcard-head").forEach(h=>{
+    h.addEventListener("click", ()=>{
+      const id = h.closest(".jcard").dataset.id;
+      const block = liga.jornadas.find(b=>b.id===id);
+      const current = ligaOpenOverrides[id]!=null ? ligaOpenOverrides[id] : !jornadaAllFinished(block);
+      ligaOpenOverrides[id] = !current;
+      render();
     });
-  }
+  });
 
   if(admin){
-    document.getElementById("addFixturesBtn").addEventListener("click", ()=>{
-      const box = document.getElementById("fixturesForm");
+    document.getElementById("addLigaBtn").addEventListener("click", ()=>{
+      const box = document.getElementById("addLigaForm");
       box.classList.toggle("hidden");
       if(box.classList.contains("hidden")) return;
+      const nextNum = blocks.length? jornadaSortKey(blocks[0])+1 : 1;
       box.innerHTML = pasteFormHTML({
-        labelId:"fxLabel", textId:"fxText", analizarId:"fxAnalizar", previewId:"fxPreview",
-        defaultLabel:`Jornada ${liga.proximas.length+2}`, defaultText:"",
-        placeholder:"Sáb 21:00 Athletic - Girona"
+        labelId:"ligaLabel", textId:"ligaText", analizarId:"ligaAnalizar", previewId:"ligaPreview",
+        defaultLabel:`Jornada ${nextNum}`, defaultText:"",
+        placeholder:"Barcelona 2-1 Real Madrid\nSáb 21:00 Athletic - Girona"
       });
-      document.getElementById("fxAnalizar").addEventListener("click", ()=>{
-        const rows = parseMatchBlock(document.getElementById("fxText").value);
-        document.getElementById("fxPreview").innerHTML = matchPreviewHTML(rows,"fxConfirm","Añadir jornada");
-        wireMatchPreview("fxPreview","fxConfirm", rows2=>{
-          liga.proximas.push({id:uid(), label: document.getElementById("fxLabel").value.trim()||"Próxima jornada", updatedAt:Date.now(), matches:rows2});
+      document.getElementById("ligaAnalizar").addEventListener("click", ()=>{
+        const rows = parseMatchBlock(document.getElementById("ligaText").value);
+        document.getElementById("ligaPreview").innerHTML = matchPreviewHTML(rows,"ligaConfirm","Añadir jornada");
+        wireMatchPreview("ligaPreview","ligaConfirm", rows2=>{
+          liga.jornadas.push({id:uid(), label: document.getElementById("ligaLabel").value.trim()||"Jornada", updatedAt:Date.now(), matches:rows2});
           saveState(); render();
         });
       });
     });
 
-    el.querySelectorAll('[data-act="removeFixtureBlock"]').forEach(btn=>{
+    el.querySelectorAll('[data-act="removeLigaBlock"]').forEach(btn=>{
       btn.addEventListener("click", ()=>{
-        liga.proximas = liga.proximas.filter(b=>b.id!==btn.dataset.block);
+        liga.jornadas = liga.jornadas.filter(b=>b.id!==btn.dataset.block);
         saveState(); render();
+      });
+    });
+
+    el.querySelectorAll('[data-act="editLigaBlock"]').forEach(btn=>{
+      btn.addEventListener("click", ()=>{
+        const id = btn.dataset.block;
+        const block = liga.jornadas.find(b=>b.id===id);
+        const box = document.getElementById(`ligaForm-${id}`);
+        box.classList.toggle("hidden");
+        if(box.classList.contains("hidden")) return;
+        box.innerHTML = pasteFormHTML({
+          labelId:`ligaEditLabel-${id}`, textId:`ligaEditText-${id}`, analizarId:`ligaEditAnalizar-${id}`, previewId:`ligaEditPreview-${id}`,
+          defaultLabel: block.label, defaultText: block.matches.map(m=>m.raw).join("\n"),
+          placeholder:"Barcelona 2-1 Real Madrid"
+        });
+        document.getElementById(`ligaEditAnalizar-${id}`).addEventListener("click", ()=>{
+          const rows = parseMatchBlock(document.getElementById(`ligaEditText-${id}`).value);
+          document.getElementById(`ligaEditPreview-${id}`).innerHTML = matchPreviewHTML(rows, `ligaEditConfirm-${id}`, "Guardar jornada");
+          wireMatchPreview(`ligaEditPreview-${id}`, `ligaEditConfirm-${id}`, rows2=>{
+            block.label = document.getElementById(`ligaEditLabel-${id}`).value.trim() || block.label;
+            block.matches = rows2;
+            block.updatedAt = Date.now();
+            saveState(); render();
+          });
+        });
       });
     });
   }
@@ -1703,7 +1734,8 @@ document.getElementById("importFile").addEventListener("change", e=>{
     try{
       const data = JSON.parse(reader.result);
       if(!data.participants || !data.editions) throw new Error("formato inválido");
-      if(!data.liga) data.liga = {resultados:null, proximas:[], clasificacion:null};
+      if(!data.liga) data.liga = {jornadas:[], clasificacion:null};
+      if(!Array.isArray(data.liga.jornadas)) data.liga.jornadas = [];
       state = data; saveState(); activePlayerId=null; render();
       alert("Copia importada correctamente.");
     }catch(err){ alert("No se pudo importar el archivo: "+err.message); }
