@@ -1649,7 +1649,7 @@ function renderLiga(){
   }
   html += `<div class="section-h"><span class="mk">○</span><span class="tag">Jornadas</span><span class="line"></span></div>`;
 
-  const blocks = [...liga.jornadas].sort((a,b)=> jornadaSortKey(b)-jornadaSortKey(a));
+  const blocks = [...liga.jornadas].sort((a,b)=> jornadaSortKey(a)-jornadaSortKey(b));
 
   if(!blocks.length){
     html += `<div class="card" style="margin-bottom:12px"><p class="muted" style="margin:0">Todavía no hay jornadas de LaLiga añadidas.</p></div>`;
@@ -1703,7 +1703,7 @@ function renderLiga(){
       const box = document.getElementById("addLigaForm");
       box.classList.toggle("hidden");
       if(box.classList.contains("hidden")) return;
-      const nextNum = blocks.length? jornadaSortKey(blocks[0])+1 : 1;
+      const nextNum = blocks.length? jornadaSortKey(blocks[blocks.length-1])+1 : 1;
       box.innerHTML = pasteFormHTML({
         labelId:"ligaLabel", textId:"ligaText", analizarId:"ligaAnalizar", previewId:"ligaPreview",
         defaultLabel:`Jornada ${nextNum}`, defaultText:"",
