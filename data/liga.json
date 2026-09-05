@@ -1,11 +1,11 @@
 {
-  "generatedAt": 1788569313877,
+  "generatedAt": 1788611032462,
   "jornadas": [
     {
       "id": "md-2",
       "matchday": 2,
       "label": "Jornada 2",
-      "updatedAt": 1788569313877,
+      "updatedAt": 1788611032462,
       "matches": [
         {
           "team1": "Rayo Vallecano",
@@ -73,7 +73,7 @@
       "id": "md-3",
       "matchday": 3,
       "label": "Jornada 3",
-      "updatedAt": 1788569313877,
+      "updatedAt": 1788611032462,
       "matches": [
         {
           "team1": "Santander",
@@ -141,7 +141,7 @@
       "id": "md-4",
       "matchday": 4,
       "label": "Jornada 4",
-      "updatedAt": 1788569313877,
+      "updatedAt": 1788611032462,
       "matches": [
         {
           "team1": "Real Betis",
@@ -209,7 +209,7 @@
       "id": "md-5",
       "matchday": 5,
       "label": "Jornada 5",
-      "updatedAt": 1788569313877,
+      "updatedAt": 1788611032462,
       "matches": [
         {
           "team1": "Sevilla FC",
@@ -277,7 +277,7 @@
       "id": "md-6",
       "matchday": 6,
       "label": "Jornada 6",
-      "updatedAt": 1788569313877,
+      "updatedAt": 1788611032462,
       "matches": [
         {
           "team1": "Real Sociedad",
@@ -345,7 +345,7 @@
       "id": "md-7",
       "matchday": 7,
       "label": "Jornada 7",
-      "updatedAt": 1788569313877,
+      "updatedAt": 1788611032462,
       "matches": [
         {
           "team1": "Espanyol",
@@ -413,7 +413,7 @@
       "id": "md-8",
       "matchday": 8,
       "label": "Jornada 8",
-      "updatedAt": 1788569313877,
+      "updatedAt": 1788611032462,
       "matches": [
         {
           "team1": "Rayo Vallecano",
@@ -481,7 +481,7 @@
       "id": "md-9",
       "matchday": 9,
       "label": "Jornada 9",
-      "updatedAt": 1788569313877,
+      "updatedAt": 1788611032462,
       "matches": [
         {
           "team1": "Villarreal",
@@ -549,7 +549,7 @@
       "id": "md-10",
       "matchday": 10,
       "label": "Jornada 10",
-      "updatedAt": 1788569313877,
+      "updatedAt": 1788611032462,
       "matches": [
         {
           "team1": "Rayo Vallecano",
@@ -615,7 +615,7 @@
     }
   ],
   "clasificacion": {
-    "updatedAt": 1788569313877,
+    "updatedAt": 1788611032462,
     "rows": [
       {
         "pos": 1,
