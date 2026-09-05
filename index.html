@@ -43,17 +43,22 @@ h1{font-family:var(--display);font-weight:800;
   font-size:clamp(38px,10.5vw,68px);margin:0 0 12px;text-transform:uppercase;text-wrap:balance}
 h1 .l2{display:block;color:var(--pink);text-shadow:0 0 24px rgba(255,31,122,.35)}
 .jtags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
-.jtag{display:inline-flex;align-items:center;gap:8px;
+.jtag{display:inline-flex;align-items:center;gap:8px;max-width:100%;
   font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
   color:var(--teal);background:rgba(25,199,166,.10);
-  border:1px solid rgba(25,199,166,.32);border-radius:999px;padding:6px 13px;white-space:nowrap}
+  border:1px solid rgba(25,199,166,.32);border-radius:999px;padding:6px 13px}
+.jtag span:not(.dot){min-width:0}
 .jtag.pink{color:var(--pink);background:rgba(255,31,122,.10);border-color:rgba(255,31,122,.32)}
 .jtag .dot{width:8px;height:8px;border-radius:50%;background:currentColor;box-shadow:0 0 10px currentColor}
 .lede{color:#bcd3c9;font-size:15px;max-width:60ch;margin:16px 0 22px}
 .lede b{color:#fff;font-weight:700;font-variant-numeric:tabular-nums}
 
 /* ---------- TABS ---------- */
-.tabs{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px;margin-bottom:20px;-ms-overflow-style:none;scrollbar-width:none}
+.tabs{display:flex;gap:8px;overflow-x:auto;overflow-y:hidden;-ms-overflow-style:none;scrollbar-width:none;
+  position:sticky;top:0;z-index:30;margin:0 -16px 20px;padding:10px 16px 10px;
+  padding-top:calc(10px + env(safe-area-inset-top));
+  background:rgba(8,20,15,.88);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+  box-shadow:0 10px 18px -12px rgba(0,0,0,.5)}
 .tabs::-webkit-scrollbar{display:none}
 .tabbtn{flex:0 0 auto;border:1px solid var(--line);background:var(--card);color:var(--ink-soft);
   font-weight:700;font-size:13px;letter-spacing:.03em;border-radius:11px;padding:10px 16px;cursor:pointer}
@@ -80,6 +85,16 @@ h1 .l2{display:block;color:var(--pink);text-shadow:0 0 24px rgba(255,31,122,.35)
 .stat .n.pink{color:var(--pink)}
 .stat .n.amber{color:var(--amber)}
 .stat .l{font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);margin-top:6px}
+
+/* ---------- gráfico de supervivientes (cuenta atrás) ---------- */
+.survchart{display:flex;align-items:flex-end;gap:10px;padding:4px 2px 0;overflow-x:auto}
+.survbar-col{display:flex;flex-direction:column;align-items:center;gap:7px;flex:0 0 auto;width:46px}
+.survbar-val{font-family:var(--display);font-weight:800;font-size:13px;color:var(--teal);font-variant-numeric:tabular-nums}
+.survbar-val.now{color:var(--amber)}
+.survbar-track{width:30px;height:110px;background:var(--cream);border:1px solid var(--line);border-radius:8px;display:flex;align-items:flex-end;overflow:hidden}
+.survbar-fill{width:100%;min-height:4px;border-radius:8px 8px 0 0;background:linear-gradient(180deg,var(--teal),var(--teal-deep));transition:height .25s ease}
+.survbar-fill.now{background:linear-gradient(180deg,var(--amber),#c47f00)}
+.survbar-lbl{font-size:10px;color:var(--ink-soft);text-align:center;max-width:46px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 
 .btn{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line-2);
   background:rgba(255,255,255,.05);color:var(--ink);border-radius:11px;
@@ -121,17 +136,26 @@ h1 .l2{display:block;color:var(--pink);text-shadow:0 0 24px rgba(255,31,122,.35)
 /* ---------- jugadores grid ---------- */
 .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
 @media(min-width:560px){.grid{grid-template-columns:repeat(3,1fr)}}
-.pcard{display:flex;align-items:center;gap:11px;text-align:left;
+.pcard{display:flex;align-items:center;gap:11px;text-align:left;min-width:0;
   background:var(--card);border:1px solid var(--line);border-radius:14px;
   padding:12px 13px;cursor:pointer;font-family:inherit;color:var(--ink);width:100%;
   box-shadow:var(--shadow);transition:transform .12s ease, border-color .12s ease}
 .pcard:hover{transform:translateY(-2px);border-color:var(--pink)}
 .pcard:focus-visible{outline:3px solid var(--pink);outline-offset:2px}
-.num{flex:0 0 auto;width:42px;height:42px;border-radius:11px;display:grid;place-items:center;
-  font-family:var(--display);font-weight:800;font-size:15px;letter-spacing:.02em;color:#06120d;
-  background:linear-gradient(145deg,var(--teal),var(--teal-deep));box-shadow:inset 0 0 0 2px rgba(255,255,255,.18)}
-.pcard.st-eliminado .num,.pcard.st-expulsado .num{background:linear-gradient(145deg,#4a5b53,#33413b);color:#cfe0d8}
-.pname{font-weight:700;font-size:14.5px;line-height:1.15;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.num{position:relative;flex:0 0 auto;width:42px;height:42px;border-radius:11px;display:grid;place-items:center;overflow:hidden;
+  font-family:var(--display);font-weight:800;font-size:15px;letter-spacing:.02em;color:#fff;
+  background:linear-gradient(160deg,var(--card-2),#0a1712);box-shadow:inset 0 0 0 2px rgba(255,255,255,.09)}
+.num .avatar-ico{position:absolute;left:50%;bottom:-4%;transform:translateX(-50%);width:86%;height:86%;pointer-events:none}
+.num .avatar-ico .avatar-head{fill:#cfe0d8;opacity:.5}
+.num .avatar-ico .avatar-body{fill:var(--teal)}
+.num .ini{position:relative;z-index:1;text-shadow:0 1px 3px rgba(0,0,0,.6)}
+/* eliminado / expulsado: el "mono" se apaga a gris y se marca con una cruz */
+.num.num-out .avatar-ico .avatar-body{fill:#4a5b53}
+.num.num-out .avatar-ico .avatar-head{fill:#7c8f86;opacity:.5}
+.num.num-out .ini{opacity:.55}
+.num-out .avatar-x{position:absolute;inset:0;width:100%;height:100%;color:var(--pink);
+  filter:drop-shadow(0 1px 2px rgba(0,0,0,.5));z-index:2}
+.pname{display:block;font-weight:700;font-size:14.5px;line-height:1.15;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .pmeta{margin-top:4px;display:flex;align-items:center;gap:5px;flex-wrap:wrap}
 .empty{color:#bcd3c9;text-align:center;padding:30px 0}
 
@@ -227,15 +251,42 @@ footer b{color:#bcd3c9}
 .rules h3:first-child{margin-top:0}
 .rules p{margin:0 0 10px}
 .rules b{color:#fff}
+/* ---------- easter egg ---------- */
+.easter-toast{position:fixed;left:50%;top:16%;transform:translate(-50%,0);z-index:200;pointer-events:none;
+  background:linear-gradient(160deg,var(--card-2),var(--card));border:1px solid var(--pink);border-radius:18px;
+  padding:20px 26px;max-width:min(320px,84vw);text-align:center;
+  box-shadow:0 20px 50px rgba(0,0,0,.55),0 0 30px rgba(255,31,122,.25);opacity:0;transition:opacity .3s ease}
+.easter-toast.show{opacity:1;animation:easterWave 3.6s cubic-bezier(.34,1.56,.64,1) both}
+.easter-toast .et-shapes{font-size:20px;letter-spacing:10px;color:var(--pink);margin-bottom:8px;text-shadow:0 0 14px rgba(255,31,122,.5)}
+.easter-toast .et-line1{font-family:var(--display);font-weight:800;text-transform:uppercase;letter-spacing:.03em;color:#fff;font-size:15px}
+.easter-toast .et-line2{margin-top:6px;font-size:12.5px;color:var(--ink-soft)}
+.easter-toast .et-wave{margin:12px auto 0;height:8px;width:80px;border-radius:6px;overflow:hidden;opacity:.6;
+  background:repeating-radial-gradient(circle at 0 50%,var(--teal) 0 3px,transparent 4px 12px);background-size:24px 8px;
+  animation:waveScroll 1.1s linear infinite}
+@keyframes waveScroll{from{background-position-x:0}to{background-position-x:-24px}}
+@keyframes easterWave{
+  0%{opacity:0;transform:translate(-50%,30px) scale(.85) rotate(-2deg)}
+  14%{opacity:1;transform:translate(-50%,-8px) scale(1.04) rotate(1deg)}
+  20%{transform:translate(-50%,2px) scale(1) rotate(-.5deg)}
+  26%{transform:translate(-50%,-3px) scale(1) rotate(.3deg)}
+  32%,88%{opacity:1;transform:translate(-50%,0) scale(1) rotate(0)}
+  100%{opacity:0;transform:translate(-50%,-16px) scale(.94)}
+}
 @media (prefers-reduced-motion: reduce){*{animation:none !important;transition:none !important}}
 </style>
+
+<div id="easterToast" class="easter-toast" aria-live="polite">
+  <div class="et-shapes">○ △ □</div>
+  <div class="et-line1">Idea original de Acetra</div>
+  <div class="et-line2">Programado y testeado por HecGL</div>
+  <div class="et-wave"></div>
+</div>
 
 <div class="wrap">
   <div class="shapes"><b>○</b><b>△</b><b class="sq">□</b></div>
   <h1>Calamar<span class="l2">26/27</span></h1>
   <div class="jtags" id="headTags"></div>
   <p class="lede" id="headLede"></p>
-  <div id="syncBanner"></div>
 
   <div class="tabs" id="tabs">
     <button class="tabbtn" data-tab="resumen">Resumen</button>
@@ -254,6 +305,8 @@ footer b{color:#bcd3c9}
   <section class="panel" id="panel-liga"></section>
   <section class="panel" id="panel-clasificacion"></section>
   <section class="panel" id="panel-reglas"></section>
+
+  <div id="syncBanner" style="margin-top:36px"></div>
 
   <footer>
     Calamar 26/27 · datos compartidos vía GitHub ·
@@ -366,9 +419,28 @@ const GAME_PATH = "data/game.json";
 let githubToken = localStorage.getItem(GH_TOKEN_KEY) || "";
 let syncStatus = { state: "loading", message: "" }; // loading | synced | read | publishing | error
 let publishTimer = null;
+/* updatedAt del último data/game.json que sabemos que es el más reciente (propio o remoto).
+   null = todavía no hemos cargado nada, así que no comprobamos conflictos. Sirve para detectar
+   si alguien más ha publicado cambios desde que cargamos esta página, y así no sobrescribirlos
+   a ciegas con una copia local desactualizada (ver publishGame). */
+let lastRemoteUpdatedAt = null;
+/* Evita que dos publishGame() se ejecuten a la vez (p.ej. si el admin edita varias cosas seguidas
+   y una publicación anterior todavía está en curso cuando salta la siguiente). Si eso pasara, las
+   dos harían GET+PUT casi a la vez con el mismo sha de partida y una de las dos sería rechazada por
+   GitHub (409) de forma confusa aunque no se hubiera perdido ningún dato realmente. En vez de eso,
+   encolamos una única republicación para justo después de que termine la que está en curso. */
+let isPublishing = false;
+let publishAgainNeeded = false;
 
 function b64EncodeUtf8(str){
   return btoa(encodeURIComponent(str).replace(/%([0-9A-F]{2})/g, (_, p1) => String.fromCharCode(parseInt(p1, 16))));
+}
+function b64DecodeUtf8(b64){
+  const bin = atob(String(b64||"").replace(/\n/g,""));
+  return decodeURIComponent(Array.prototype.map.call(bin, c=>"%"+("00"+c.charCodeAt(0).toString(16)).slice(-2)).join(""));
+}
+function safeParseGameJson(b64content){
+  try{ return JSON.parse(b64DecodeUtf8(b64content)); }catch(e){ return null; }
 }
 
 function loadGameFeed(){
@@ -378,6 +450,7 @@ function loadGameFeed(){
       if(remote && Array.isArray(remote.participants) && Array.isArray(remote.editions)){
         state.participants = remote.participants;
         state.editions = remote.editions;
+        lastRemoteUpdatedAt = remote.updatedAt || 0;
         saveLocalOnly();
         syncStatus = { state: githubToken? "synced" : "read", message: fmtDate(remote.updatedAt) };
       } else {
@@ -403,8 +476,24 @@ function schedulePublish(){
   publishTimer = setTimeout(publishGame, 1200);
 }
 
+const CONFLICT_MESSAGE = "Hay cambios más recientes publicados desde otro dispositivo o pestaña. Para no perderlos, tu último cambio no se ha publicado: recarga la página para ver la versión más reciente antes de seguir editando.";
+
+/* Nota sobre data/liga.json: lo actualiza el workflow automático de GitHub Actions con sus propios
+   commits, en paralelo a estas publicaciones de data/game.json desde el navegador. Esto NO puede
+   causar conflictos ni pérdida de datos entre sí: la API de contenidos de GitHub comprueba y
+   bloquea únicamente por el sha del archivo que se está escribiendo (aquí, game.json), no por el
+   estado de todo el repositorio. Un commit que solo toca liga.json no cambia el sha de game.json,
+   así que nunca hace fallar ni pisa una publicación de game.json (y viceversa). */
 async function publishGame(){
   if(!githubToken) return;
+  if(isPublishing){
+    /* Ya hay una publicación en curso: no lancemos una segunda en paralelo (eso podría chocar
+       con la primera). En cuanto termine, se vuelve a publicar automáticamente con los datos
+       más recientes (incluido cualquier cambio hecho mientras tanto). */
+    publishAgainNeeded = true;
+    return;
+  }
+  isPublishing = true;
   syncStatus = { state: "publishing", message: "" };
   renderSyncBanner();
   try{
@@ -413,7 +502,16 @@ async function publishGame(){
     let sha = undefined;
     const getRes = await fetch(apiUrl, { headers });
     if(getRes.status === 200){
-      sha = (await getRes.json()).sha;
+      const current = await getRes.json();
+      sha = current.sha;
+      const remoteNow = safeParseGameJson(current.content);
+      if(remoteNow && lastRemoteUpdatedAt!=null && (remoteNow.updatedAt||0) > lastRemoteUpdatedAt){
+        /* Alguien ha publicado una versión más nueva que la que teníamos cargada (otra pestaña,
+           otro dispositivo). Si publicáramos ahora mismo, sobrescribiríamos esos cambios con
+           nuestra copia desactualizada. Mejor parar y avisar que perder datos en silencio. */
+        syncStatus = { state:"error", message: CONFLICT_MESSAGE };
+        return;
+      }
     } else if(getRes.status !== 404){
       throw new Error(`No se pudo leer el archivo actual (HTTP ${getRes.status})`);
     }
@@ -429,14 +527,29 @@ async function publishGame(){
       }),
     });
     if(!putRes.ok){
+      if(putRes.status === 409){
+        /* 409 = el sha que mandamos ya no es el actual: alguien ha publicado justo entre nuestro
+           GET y este PUT (dos administradores editando casi a la vez). GitHub ha protegido los
+           datos rechazando nuestra escritura, así que no se ha perdido nada; solo hace falta
+           avisar y que se recargue para partir de la versión más reciente. */
+        syncStatus = { state:"error", message: CONFLICT_MESSAGE };
+        return;
+      }
       const body = await putRes.json().catch(()=>({}));
       throw new Error(body.message || `HTTP ${putRes.status}`);
     }
+    lastRemoteUpdatedAt = payload.updatedAt;
     syncStatus = { state: "synced", message: fmtDate(payload.updatedAt) };
   } catch(e){
     syncStatus = { state: "error", message: `No se pudo publicar: ${e.message}` };
+  } finally{
+    isPublishing = false;
+    renderSyncBanner();
+    if(publishAgainNeeded){
+      publishAgainNeeded = false;
+      publishGame();
+    }
   }
-  renderSyncBanner();
 }
 
 function renderSyncBanner(){
@@ -459,6 +572,25 @@ function renderSyncBanner(){
 /* ============================== HELPERS ============================== */
 function esc(s){
   return String(s==null?"":s).replace(/[&<>"']/g, c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+}
+function initialsOf(name){
+  return String(name||"").trim().split(/\s+/).map(w=>w[0]).slice(0,2).join("").toUpperCase();
+}
+/* Avatar del jugador: la silueta lleva "puesto" el mono verde/turquesa clásico del juego
+   mientras está vivo; en cuanto queda eliminado o expulsado, se apaga a gris y se le marca
+   una cruz encima (status puede venir como "activo", "eliminado", "expulsado_..." o "n/a"). */
+function avatarHTML(name, status, extraClass){
+  const s = status||"";
+  const out = s.startsWith("elim") || s.startsWith("expuls");
+  const cls = `num${out?" num-out":""}${extraClass?` ${extraClass}`:""}`;
+  return `<span class="${cls}">
+    <svg class="avatar-ico" viewBox="0 0 24 24" aria-hidden="true">
+      <circle class="avatar-head" cx="12" cy="7.25" r="3.6"/>
+      <path class="avatar-body" d="M12 12.5c-4.7 0-9.5 2.28-9.5 6.1V22h19v-3.4c0-3.82-4.8-6.1-9.5-6.1Z"/>
+    </svg>
+    <span class="ini">${esc(initialsOf(name))}</span>
+    ${out? `<svg class="avatar-x" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5 5 19" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg>` : ""}
+  </span>`;
 }
 function normName(s){ return String(s||"").trim().toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,""); }
 function isAdmin(){ return Boolean(githubToken); }
@@ -529,6 +661,21 @@ function deriveEdition(ed){
     });
   });
   return map;
+}
+
+/* nº de supervivientes tras cada jornada (cuenta atrás de eliminación), para el gráfico del Resumen.
+   Solo cuenta a quien empezó pagado/en juego; ed.jornadas ya está en orden cronológico. */
+function survivorsByJornada(ed){
+  const derived = deriveEdition(ed);
+  const startedIds = ed.participants.filter(ep=>ep.pagado).map(ep=>ep.participantId);
+  const total = startedIds.length;
+  let remaining = total;
+  const points = ed.jornadas.map(j=>{
+    const outThisJornada = startedIds.filter(pid=>derived[pid] && derived[pid].eliminatedIn===j.label).length;
+    remaining = Math.max(0, remaining - outThisJornada);
+    return { label: j.label, remaining };
+  });
+  return { total, points };
 }
 
 /* equipos usados por un jugador, a través de TODAS las ediciones (orden cronológico) */
@@ -626,6 +773,9 @@ function renderResumen(){
       <div class="stat"><div class="n amber">${fmtEUR(money.boteTotal)}</div><div class="l">Bote actual</div></div>
       <div class="stat"><div class="n">${ed.jornadas.length}</div><div class="l">Jornadas jugadas</div></div>
     </div>
+    ${ed.jornadas.length? `
+    <div class="section-h"><span class="mk">△</span><span class="tag">Supervivientes por jornada</span><span class="line"></span></div>
+    <div class="card">${survivorsChartHTML(ed)}</div>` : ""}
 
     <div class="section-h"><span class="mk">○</span><span class="tag">Reparto del bote</span><span class="line"></span></div>
     <div class="card">
@@ -652,6 +802,24 @@ function renderResumen(){
   el.querySelectorAll(".pcard").forEach(c=>c.addEventListener("click",()=>{activePlayerId=c.dataset.id; activeTab="jugadores"; render();}));
 }
 
+/* gráfico de barras (sin librerías) con la cuenta atrás de supervivientes, jornada a jornada */
+function survivorsChartHTML(ed){
+  const { total, points } = survivorsByJornada(ed);
+  if(!total || !points.length) return "";
+  const all = [{label:"Inicio", remaining: total}, ...points];
+  const max = total || 1;
+  const bars = all.map((p,i)=>{
+    const pct = Math.max(4, Math.round((p.remaining/max)*100));
+    const isLast = i===all.length-1;
+    return `<div class="survbar-col">
+      <div class="survbar-val${isLast?' now':''}">${p.remaining}</div>
+      <div class="survbar-track"><div class="survbar-fill${isLast?' now':''}" style="height:${pct}%"></div></div>
+      <div class="survbar-lbl">${esc(p.label)}</div>
+    </div>`;
+  }).join("");
+  return `<div class="survchart">${bars}</div>`;
+}
+
 function renderPicksMini(j, derived){
   if(!j.picks.length) return `<p class="muted" style="margin:0">Sin pronósticos registrados.</p>`;
   return `<div class="tblwrap"><table class="picktable"><thead><tr><th>Jugador</th><th>Equipo 1</th><th>Equipo 2</th><th>Resultado</th></tr></thead><tbody>`+
@@ -667,9 +835,8 @@ function renderPicksMini(j, derived){
 function playerCardHTML(ep, derived){
   const p = getParticipant(ep.participantId); if(!p) return "";
   const d = derived[ep.participantId] || {status:"activo"};
-  const initials = p.name.trim().split(/\s+/).map(w=>w[0]).slice(0,2).join("").toUpperCase();
   return `<button class="pcard st-${d.status.startsWith('elim')?'eliminado':d.status.startsWith('expuls')?'expulsado':'activo'}" data-id="${p.id}">
-    <span class="num">${initials}</span>
+    ${avatarHTML(p.name, d.status)}
     <span style="min-width:0">
       <span class="pname">${esc(p.name)}</span>
       <span class="pmeta"><span class="pill ${STATUS_PILL[d.status]}">${STATUS_LABEL[d.status]}</span>${!ep.pagado?`<span class="pill pill-warn">Sin pagar</span>`:""}</span>
@@ -827,7 +994,6 @@ function renderPlayerDetail(el, ed, playerId){
   const ep = ed.participants.find(x=>x.participantId===playerId);
   const d = derived[playerId] || {status:"n/a"};
   const teams = usedTeamsFor(ed, playerId);
-  const initials = p.name.trim().split(/\s+/).map(w=>w[0]).slice(0,2).join("").toUpperCase();
 
   const editionsHistory = state.editions.map(e=>{
     const ep2 = e.participants.find(x=>x.participantId===playerId);
@@ -844,7 +1010,7 @@ function renderPlayerDetail(el, ed, playerId){
     </button>
     <div class="hero">
       <div class="hero-top">
-        <span class="num num-lg">${initials}</span>
+        ${avatarHTML(p.name, d.status, "num-lg")}
         <div>
           <h2>${esc(p.name)}</h2>
           <span class="pill ${STATUS_PILL[d.status]}">${STATUS_LABEL[d.status]}</span>
@@ -1309,7 +1475,13 @@ function editionCardHTML(ed, admin){
       <span style="font-family:var(--display);font-weight:800;color:#fff;font-size:18px">Edición ${ed.number}</span>
       <span class="pill ${isOpen?'pill-ok':winner?'pill-ok':'pill-warn'}">${isOpen?"Abierta":winner?"Cerrada · con ganador":"Cerrada · sin ganador"}</span>
       <span class="muted" style="font-size:12.5px">${esc(ed.season||"")}</span>
+      ${admin? `<button class="btn sm" data-act="toggleEditSeason" data-ed="${ed.id}" style="padding:4px 9px;font-size:11px">✎ Editar temporada</button>` : ""}
     </div>
+    ${admin? `<div id="seasonForm-${ed.id}" class="hidden" style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap;align-items:center">
+      <input type="text" id="seasonInput-${ed.id}" value="${esc(ed.season||"")}" placeholder="2026/27" style="border:1px solid var(--line);border-radius:10px;padding:9px 11px;background:var(--cream);color:var(--ink);font-size:13.5px;max-width:160px">
+      <button class="btn primary sm" data-act="saveSeason" data-ed="${ed.id}">Guardar</button>
+      <button class="btn sm" data-act="cancelEditSeason" data-ed="${ed.id}">Cancelar</button>
+    </div>` : ""}
     <div class="formgrid cols3" style="margin-top:12px;text-align:center">
       <div><div class="muted" style="font-size:11.5px">Jugadores</div><div style="font-weight:800;font-size:17px">${ed.participants.length}</div></div>
       <div><div class="muted" style="font-size:11.5px">Activos ahora</div><div style="font-weight:800;font-size:17px">${activos.length}</div></div>
@@ -1329,6 +1501,12 @@ function editionCardHTML(ed, admin){
         <button class="btn danger sm" data-act="closeNoWinner" data-ed="${ed.id}">Cerrar sin ganador (bote acumula)</button>
       </div>
     ` : isOpen? `<p class="muted" style="margin-top:12px">Solo el administrador puede cerrar esta edición y definir el ganador.</p>` : ""}
+    ${admin? `
+      <div class="section-h" style="margin-top:18px"><span class="mk">△</span><span class="tag">Zona de peligro</span><span class="line"></span></div>
+      <div class="btnrow">
+        <button class="btn sm danger" data-act="removeEdition" data-ed="${ed.id}">Eliminar edición ${ed.number}</button>
+      </div>
+    ` : ""}
   </div>`;
 }
 
@@ -1337,6 +1515,19 @@ function wireEdition(ed){
   if(!card) return;
   card.addEventListener("click", e=>{
     const act = e.target.dataset.act;
+    if(act==="toggleEditSeason"){
+      const form = document.getElementById(`seasonForm-${ed.id}`);
+      if(form) form.classList.toggle("hidden");
+    }
+    if(act==="cancelEditSeason"){
+      const form = document.getElementById(`seasonForm-${ed.id}`);
+      if(form) form.classList.add("hidden");
+    }
+    if(act==="saveSeason"){
+      const input = document.getElementById(`seasonInput-${ed.id}`);
+      ed.season = input.value.trim();
+      saveState(); render();
+    }
     if(act==="closeWithWinner"){
       const sel = document.getElementById(`winnerSelect-${ed.id}`);
       const pid = sel.value;
@@ -1353,6 +1544,18 @@ function wireEdition(ed){
       next.participants = ed.participants.map(ep=>({
         participantId: ep.participantId, pagado:false, cuota: suggestedCuota(ep.participantId, next), note:""
       }));
+      saveState(); render();
+    }
+    if(act==="removeEdition"){
+      const totalPicks = ed.jornadas.reduce((n,j)=>n+j.picks.length,0);
+      const detail = [
+        ed.jornadas.length? `${ed.jornadas.length} jornada(s) con ${totalPicks} pronóstico(s)` : null,
+        ed.participants.length? `${ed.participants.length} jugador(es) inscritos y sus pagos` : null,
+      ].filter(Boolean).join(" y ");
+      const withDetail = detail? ` Se perderán ${detail}.` : "";
+      if(!confirm(`¿Eliminar la Edición ${ed.number} por completo?${withDetail} Esta acción no se puede deshacer.`)) return;
+      if(!confirm(`Confirmación final: esto borrará la Edición ${ed.number} para todos en cuanto se publique. ¿Continuar?`)) return;
+      state.editions = state.editions.filter(x=>x.id!==ed.id);
       saveState(); render();
     }
   });
@@ -1798,7 +2001,34 @@ document.getElementById("adminModeBtn").addEventListener("click", e=>{
   if(!panel.classList.contains("hidden")) renderAdminPanel();
 });
 
+/* ============================== EASTER EGG ============================== */
+/* 20 toques en el rótulo "Calamar" y aparece un mensaje unos segundos; hacen falta otros
+   20 para que vuelva a salir. */
+let easterTapCount = 0;
+let easterHideTimer = null;
+function showEasterToast(){
+  const el = document.getElementById("easterToast");
+  if(!el) return;
+  el.classList.remove("show");
+  void el.offsetWidth; // fuerza a reiniciar la animación si se ha disparado varias veces
+  el.classList.add("show");
+  clearTimeout(easterHideTimer);
+  easterHideTimer = setTimeout(()=>{ el.classList.remove("show"); }, 3700);
+}
+function initEasterEgg(){
+  const h1 = document.querySelector(".wrap > h1");
+  if(!h1) return;
+  h1.addEventListener("click", ()=>{
+    easterTapCount++;
+    if(easterTapCount>=20){
+      easterTapCount = 0;
+      showEasterToast();
+    }
+  });
+}
+
 render();
+initEasterEgg();
 loadGameFeed();
 loadLigaFeed();
 </script>
