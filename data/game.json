@@ -857,7 +857,7 @@
               "participantId": "2suh20a57td",
               "team1": "Villarreal",
               "team2": "Levante UD",
-              "result1": "",
+              "result1": "no_gano",
               "result2": ""
             },
             {
@@ -880,5 +880,5 @@
       ]
     }
   ],
-  "updatedAt": 1788720244340
+  "updatedAt": 1788720247129
 }
