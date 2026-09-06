@@ -822,7 +822,7 @@
               "participantId": "3d2ewr957td",
               "team1": "Villarreal",
               "team2": "Espanyol",
-              "result1": "",
+              "result1": "no_gano",
               "result2": ""
             },
             {
@@ -880,5 +880,5 @@
       ]
     }
   ],
-  "updatedAt": 1788720233292
+  "updatedAt": 1788720235830
 }
