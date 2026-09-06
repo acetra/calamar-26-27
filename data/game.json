@@ -850,7 +850,7 @@
               "participantId": "so3mbw157td",
               "team1": "Alavés",
               "team2": "Rayo",
-              "result1": "",
+              "result1": "gano",
               "result2": ""
             },
             {
@@ -880,5 +880,5 @@
       ]
     }
   ],
-  "updatedAt": 1788720240361
+  "updatedAt": 1788720244340
 }
