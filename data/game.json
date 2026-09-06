@@ -794,7 +794,7 @@
               "participantId": "1pdzgw257td",
               "team1": "Villarreal",
               "team2": "Real Sociedad",
-              "result1": "",
+              "result1": "no_gano",
               "result2": ""
             },
             {
@@ -880,5 +880,5 @@
       ]
     }
   ],
-  "updatedAt": 1788720188965
+  "updatedAt": 1788720227067
 }
