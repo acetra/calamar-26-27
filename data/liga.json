@@ -1,11 +1,11 @@
 {
-  "generatedAt": 1788784053382,
+  "generatedAt": 1788827514323,
   "jornadas": [
     {
       "id": "md-2",
       "matchday": 2,
       "label": "Jornada 2",
-      "updatedAt": 1788784053382,
+      "updatedAt": 1788827514323,
       "matches": [
         {
           "team1": "Rayo Vallecano",
@@ -73,7 +73,7 @@
       "id": "md-3",
       "matchday": 3,
       "label": "Jornada 3",
-      "updatedAt": 1788784053382,
+      "updatedAt": 1788827514323,
       "matches": [
         {
           "team1": "Santander",
@@ -141,7 +141,7 @@
       "id": "md-4",
       "matchday": 4,
       "label": "Jornada 4",
-      "updatedAt": 1788784053382,
+      "updatedAt": 1788827514323,
       "matches": [
         {
           "team1": "Real Betis",
@@ -194,14 +194,14 @@
         {
           "team1": "Getafe",
           "team2": "Celta",
-          "extra": "lun, 07 sept, 19:00",
-          "raw": "lun, 07 sept, 19:00 Getafe - Celta"
+          "extra": "1-1",
+          "raw": "Getafe 1-1 Celta"
         },
         {
           "team1": "Elche",
           "team2": "Real Sociedad",
-          "extra": "lun, 07 sept, 21:30",
-          "raw": "lun, 07 sept, 21:30 Elche - Real Sociedad"
+          "extra": "2-3",
+          "raw": "Elche 2-3 Real Sociedad"
         }
       ]
     },
@@ -209,7 +209,7 @@
       "id": "md-5",
       "matchday": 5,
       "label": "Jornada 5",
-      "updatedAt": 1788784053382,
+      "updatedAt": 1788827514323,
       "matches": [
         {
           "team1": "Sevilla FC",
@@ -277,7 +277,7 @@
       "id": "md-6",
       "matchday": 6,
       "label": "Jornada 6",
-      "updatedAt": 1788784053382,
+      "updatedAt": 1788827514323,
       "matches": [
         {
           "team1": "Real Sociedad",
@@ -345,7 +345,7 @@
       "id": "md-7",
       "matchday": 7,
       "label": "Jornada 7",
-      "updatedAt": 1788784053382,
+      "updatedAt": 1788827514323,
       "matches": [
         {
           "team1": "Espanyol",
@@ -413,7 +413,7 @@
       "id": "md-8",
       "matchday": 8,
       "label": "Jornada 8",
-      "updatedAt": 1788784053382,
+      "updatedAt": 1788827514323,
       "matches": [
         {
           "team1": "Rayo Vallecano",
@@ -481,7 +481,7 @@
       "id": "md-9",
       "matchday": 9,
       "label": "Jornada 9",
-      "updatedAt": 1788784053382,
+      "updatedAt": 1788827514323,
       "matches": [
         {
           "team1": "Villarreal",
@@ -549,7 +549,7 @@
       "id": "md-10",
       "matchday": 10,
       "label": "Jornada 10",
-      "updatedAt": 1788784053382,
+      "updatedAt": 1788827514323,
       "matches": [
         {
           "team1": "Rayo Vallecano",
@@ -615,7 +615,7 @@
     }
   ],
   "clasificacion": {
-    "updatedAt": 1788784053382,
+    "updatedAt": 1788827514323,
     "rows": [
       {
         "pos": 1,
@@ -715,6 +715,18 @@
       },
       {
         "pos": 9,
+        "name": "Real Sociedad",
+        "pj": 5,
+        "g": 2,
+        "e": 1,
+        "p": 2,
+        "gf": 6,
+        "gc": 8,
+        "dg": -2,
+        "pts": 7
+      },
+      {
+        "pos": 10,
         "name": "Athletic",
         "pj": 4,
         "g": 2,
@@ -726,7 +738,7 @@
         "pts": 6
       },
       {
-        "pos": 10,
+        "pos": 11,
         "name": "Levante",
         "pj": 4,
         "g": 1,
@@ -738,7 +750,7 @@
         "pts": 5
       },
       {
-        "pos": 11,
+        "pos": 12,
         "name": "Espanyol",
         "pj": 4,
         "g": 1,
@@ -750,7 +762,7 @@
         "pts": 4
       },
       {
-        "pos": 12,
+        "pos": 13,
         "name": "Santander",
         "pj": 4,
         "g": 1,
@@ -762,7 +774,7 @@
         "pts": 4
       },
       {
-        "pos": 13,
+        "pos": 14,
         "name": "Rayo Vallecano",
         "pj": 4,
         "g": 1,
@@ -774,31 +786,31 @@
         "pts": 4
       },
       {
-        "pos": 14,
-        "name": "Real Sociedad",
+        "pos": 15,
+        "name": "Getafe",
         "pj": 4,
         "g": 1,
         "e": 1,
         "p": 2,
-        "gf": 3,
-        "gc": 6,
+        "gf": 2,
+        "gc": 5,
         "dg": -3,
         "pts": 4
       },
       {
-        "pos": 15,
-        "name": "Getafe",
-        "pj": 3,
-        "g": 1,
-        "e": 0,
+        "pos": 16,
+        "name": "Celta",
+        "pj": 5,
+        "g": 0,
+        "e": 3,
         "p": 2,
-        "gf": 1,
-        "gc": 4,
+        "gf": 2,
+        "gc": 5,
         "dg": -3,
         "pts": 3
       },
       {
-        "pos": 16,
+        "pos": 17,
         "name": "Villarreal",
         "pj": 4,
         "g": 0,
@@ -807,18 +819,6 @@
         "gf": 6,
         "gc": 8,
         "dg": -2,
-        "pts": 2
-      },
-      {
-        "pos": 17,
-        "name": "Celta",
-        "pj": 4,
-        "g": 0,
-        "e": 2,
-        "p": 2,
-        "gf": 1,
-        "gc": 4,
-        "dg": -3,
         "pts": 2
       },
       {
@@ -836,13 +836,13 @@
       {
         "pos": 19,
         "name": "Elche",
-        "pj": 3,
+        "pj": 4,
         "g": 0,
         "e": 1,
-        "p": 2,
-        "gf": 3,
-        "gc": 9,
-        "dg": -6,
+        "p": 3,
+        "gf": 5,
+        "gc": 12,
+        "dg": -7,
         "pts": 1
       },
       {
