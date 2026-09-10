@@ -801,7 +801,7 @@
               "participantId": "ngo5pii57td",
               "team1": "Real Sociedad",
               "team2": "Deportivo",
-              "result1": "",
+              "result1": "gano",
               "result2": ""
             },
             {
@@ -873,5 +873,5 @@
       ]
     }
   ],
-  "updatedAt": 1789064369772
+  "updatedAt": 1789064377263
 }
