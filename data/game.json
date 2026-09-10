@@ -864,7 +864,7 @@
               "participantId": "2gh3q3y57td",
               "team1": "Espanyol",
               "team2": "Alavés",
-              "result1": "",
+              "result1": "no_gano",
               "result2": ""
             }
           ],
@@ -873,5 +873,5 @@
       ]
     }
   ],
-  "updatedAt": 1789064380959
+  "updatedAt": 1789064411783
 }
