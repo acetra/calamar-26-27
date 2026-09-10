@@ -866,13 +866,6 @@
               "team2": "Alavés",
               "result1": "",
               "result2": ""
-            },
-            {
-              "participantId": "wtwyjlr57td",
-              "team1": "Alaves",
-              "team2": "villareal",
-              "result1": "",
-              "result2": ""
             }
           ],
           "expelled": []
@@ -880,5 +873,5 @@
       ]
     }
   ],
-  "updatedAt": 1789064362010
+  "updatedAt": 1789064369772
 }
