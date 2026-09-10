@@ -843,7 +843,7 @@
               "participantId": "8x73bb5d8ph",
               "team1": "Real Sociedad",
               "team2": "Getafe",
-              "result1": "",
+              "result1": "gano",
               "result2": ""
             },
             {
@@ -873,5 +873,5 @@
       ]
     }
   ],
-  "updatedAt": 1789064377263
+  "updatedAt": 1789064380959
 }
