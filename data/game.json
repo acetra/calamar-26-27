@@ -880,7 +880,7 @@
           "picks": [
             {
               "participantId": "ngo5pii57td",
-              "team1": ": Bilbao",
+              "team1": "Ath. Bilbao",
               "team2": "Depor",
               "result1": "",
               "result2": ""
@@ -912,5 +912,5 @@
       ]
     }
   ],
-  "updatedAt": 1789157953572
+  "updatedAt": 1789157980063
 }
