@@ -877,11 +877,40 @@
           "label": "Jornada 5",
           "season": "2026/27",
           "deadline": "",
-          "picks": [],
+          "picks": [
+            {
+              "participantId": "ngo5pii57td",
+              "team1": ": Bilbao",
+              "team2": "Depor",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "xp697zc57td",
+              "team1": "Ath. Bilbao",
+              "team2": "celta",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "8x73bb5d8ph",
+              "team1": "Celta",
+              "team2": "Athletic",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "so3mbw157td",
+              "team1": "Ath. Bilbao",
+              "team2": "Celta",
+              "result1": "",
+              "result2": ""
+            }
+          ],
           "expelled": []
         }
       ]
     }
   ],
-  "updatedAt": 1789157942782
+  "updatedAt": 1789157953572
 }
