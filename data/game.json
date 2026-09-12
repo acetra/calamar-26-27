@@ -889,7 +889,7 @@
               "participantId": "xp697zc57td",
               "team1": "Ath. Bilbao",
               "team2": "celta",
-              "result1": "",
+              "result1": "no_gano",
               "result2": ""
             },
             {
@@ -912,5 +912,5 @@
       ]
     }
   ],
-  "updatedAt": 1789237919242
+  "updatedAt": 1789237921964
 }
