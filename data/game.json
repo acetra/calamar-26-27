@@ -903,7 +903,7 @@
               "participantId": "so3mbw157td",
               "team1": "Ath. Bilbao",
               "team2": "Celta",
-              "result1": "",
+              "result1": "no_gano",
               "result2": ""
             }
           ],
@@ -912,5 +912,5 @@
       ]
     }
   ],
-  "updatedAt": 1789237921964
+  "updatedAt": 1789237925074
 }
