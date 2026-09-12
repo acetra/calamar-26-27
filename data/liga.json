@@ -1,11 +1,11 @@
 {
-  "generatedAt": 1789187206886,
+  "generatedAt": 1789226854407,
   "jornadas": [
     {
       "id": "md-2",
       "matchday": 2,
       "label": "Jornada 2",
-      "updatedAt": 1789187206886,
+      "updatedAt": 1789226854407,
       "matches": [
         {
           "team1": "Rayo Vallecano",
@@ -73,7 +73,7 @@
       "id": "md-3",
       "matchday": 3,
       "label": "Jornada 3",
-      "updatedAt": 1789187206886,
+      "updatedAt": 1789226854407,
       "matches": [
         {
           "team1": "Santander",
@@ -141,7 +141,7 @@
       "id": "md-4",
       "matchday": 4,
       "label": "Jornada 4",
-      "updatedAt": 1789187206886,
+      "updatedAt": 1789226854407,
       "matches": [
         {
           "team1": "Real Betis",
@@ -209,7 +209,7 @@
       "id": "md-5",
       "matchday": 5,
       "label": "Jornada 5",
-      "updatedAt": 1789187206886,
+      "updatedAt": 1789226854407,
       "matches": [
         {
           "team1": "Sevilla FC",
@@ -220,8 +220,8 @@
         {
           "team1": "Santander",
           "team2": "Alavés",
-          "extra": "sáb, 12 sept, 14:00",
-          "raw": "sáb, 12 sept, 14:00 Santander - Alavés"
+          "extra": "2-1",
+          "raw": "Santander 2-1 Alavés"
         },
         {
           "team1": "Osasuna",
@@ -277,7 +277,7 @@
       "id": "md-6",
       "matchday": 6,
       "label": "Jornada 6",
-      "updatedAt": 1789187206886,
+      "updatedAt": 1789226854407,
       "matches": [
         {
           "team1": "Real Sociedad",
@@ -345,7 +345,7 @@
       "id": "md-7",
       "matchday": 7,
       "label": "Jornada 7",
-      "updatedAt": 1789187206886,
+      "updatedAt": 1789226854407,
       "matches": [
         {
           "team1": "Espanyol",
@@ -413,7 +413,7 @@
       "id": "md-8",
       "matchday": 8,
       "label": "Jornada 8",
-      "updatedAt": 1789187206886,
+      "updatedAt": 1789226854407,
       "matches": [
         {
           "team1": "Málaga",
@@ -481,7 +481,7 @@
       "id": "md-9",
       "matchday": 9,
       "label": "Jornada 9",
-      "updatedAt": 1789187206886,
+      "updatedAt": 1789226854407,
       "matches": [
         {
           "team1": "Villarreal",
@@ -549,7 +549,7 @@
       "id": "md-10",
       "matchday": 10,
       "label": "Jornada 10",
-      "updatedAt": 1789187206886,
+      "updatedAt": 1789226854407,
       "matches": [
         {
           "team1": "Rayo Vallecano",
@@ -615,7 +615,7 @@
     }
   ],
   "clasificacion": {
-    "updatedAt": 1789187206886,
+    "updatedAt": 1789226854407,
     "rows": [
       {
         "pos": 1,
@@ -632,13 +632,13 @@
       {
         "pos": 2,
         "name": "Alavés",
-        "pj": 4,
+        "pj": 5,
         "g": 3,
         "e": 1,
-        "p": 0,
-        "gf": 10,
-        "gc": 3,
-        "dg": 7,
+        "p": 1,
+        "gf": 11,
+        "gc": 5,
+        "dg": 6,
         "pts": 10
       },
       {
@@ -691,6 +691,18 @@
       },
       {
         "pos": 7,
+        "name": "Espanyol",
+        "pj": 5,
+        "g": 2,
+        "e": 1,
+        "p": 2,
+        "gf": 8,
+        "gc": 5,
+        "dg": 3,
+        "pts": 7
+      },
+      {
+        "pos": 8,
         "name": "Atleti",
         "pj": 4,
         "g": 2,
@@ -702,19 +714,19 @@
         "pts": 7
       },
       {
-        "pos": 8,
-        "name": "Osasuna",
-        "pj": 4,
+        "pos": 9,
+        "name": "Santander",
+        "pj": 5,
         "g": 2,
         "e": 1,
-        "p": 1,
-        "gf": 5,
-        "gc": 6,
-        "dg": -1,
+        "p": 2,
+        "gf": 9,
+        "gc": 9,
+        "dg": 0,
         "pts": 7
       },
       {
-        "pos": 9,
+        "pos": 10,
         "name": "Real Sociedad",
         "pj": 5,
         "g": 2,
@@ -726,7 +738,19 @@
         "pts": 7
       },
       {
-        "pos": 10,
+        "pos": 11,
+        "name": "Osasuna",
+        "pj": 5,
+        "g": 2,
+        "e": 1,
+        "p": 2,
+        "gf": 5,
+        "gc": 8,
+        "dg": -3,
+        "pts": 7
+      },
+      {
+        "pos": 12,
         "name": "Athletic",
         "pj": 4,
         "g": 2,
@@ -738,7 +762,7 @@
         "pts": 6
       },
       {
-        "pos": 11,
+        "pos": 13,
         "name": "Levante",
         "pj": 4,
         "g": 1,
@@ -748,30 +772,6 @@
         "gc": 5,
         "dg": 0,
         "pts": 5
-      },
-      {
-        "pos": 12,
-        "name": "Espanyol",
-        "pj": 4,
-        "g": 1,
-        "e": 1,
-        "p": 2,
-        "gf": 6,
-        "gc": 5,
-        "dg": 1,
-        "pts": 4
-      },
-      {
-        "pos": 13,
-        "name": "Santander",
-        "pj": 4,
-        "g": 1,
-        "e": 1,
-        "p": 2,
-        "gf": 7,
-        "gc": 8,
-        "dg": -1,
-        "pts": 4
       },
       {
         "pos": 14,
