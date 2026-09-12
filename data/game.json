@@ -882,7 +882,7 @@
               "participantId": "ngo5pii57td",
               "team1": "Ath. Bilbao",
               "team2": "Depor",
-              "result1": "",
+              "result1": "no_gano",
               "result2": ""
             },
             {
@@ -912,5 +912,5 @@
       ]
     }
   ],
-  "updatedAt": 1789237900511
+  "updatedAt": 1789237919242
 }
