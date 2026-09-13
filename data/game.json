@@ -896,7 +896,7 @@
               "participantId": "8x73bb5d8ph",
               "team1": "Celta",
               "team2": "Athletic",
-              "result1": "",
+              "result1": "no_gano",
               "result2": ""
             },
             {
@@ -912,5 +912,5 @@
       ]
     }
   ],
-  "updatedAt": 1789320209292
+  "updatedAt": 1789320226163
 }
