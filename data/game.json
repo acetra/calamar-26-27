@@ -123,7 +123,7 @@
       "number": 1,
       "season": "2026/27",
       "potCarriedOver": 0,
-      "status": "abierta",
+      "status": "cerrada_sin_ganador",
       "winnerId": null,
       "participants": [
         {
@@ -910,7 +910,192 @@
           "expelled": []
         }
       ]
+    },
+    {
+      "id": "1tn6bg03ii3",
+      "number": 2,
+      "season": "2026/27",
+      "potCarriedOver": 261,
+      "status": "abierta",
+      "winnerId": null,
+      "participants": [
+        {
+          "participantId": "xowo4yb57td",
+          "pagado": false,
+          "cuota": 10,
+          "note": ""
+        },
+        {
+          "participantId": "9zo5xs957td",
+          "pagado": false,
+          "cuota": 10,
+          "note": ""
+        },
+        {
+          "participantId": "d10d72i57td",
+          "pagado": false,
+          "cuota": 10,
+          "note": ""
+        },
+        {
+          "participantId": "2gh3q3y57td",
+          "pagado": false,
+          "cuota": 10,
+          "note": ""
+        },
+        {
+          "participantId": "so3mbw157td",
+          "pagado": false,
+          "cuota": 10,
+          "note": ""
+        },
+        {
+          "participantId": "qepe0ff57td",
+          "pagado": false,
+          "cuota": 10,
+          "note": ""
+        },
+        {
+          "participantId": "jdky2t557td",
+          "pagado": false,
+          "cuota": 10,
+          "note": ""
+        },
+        {
+          "participantId": "3d2ewr957td",
+          "pagado": false,
+          "cuota": 10,
+          "note": ""
+        },
+        {
+          "participantId": "jh8jzo357td",
+          "pagado": false,
+          "cuota": 10,
+          "note": ""
+        },
+        {
+          "participantId": "ngo5pii57td",
+          "pagado": false,
+          "cuota": 10,
+          "note": ""
+        },
+        {
+          "participantId": "6sf3nyg57td",
+          "pagado": false,
+          "cuota": 10,
+          "note": ""
+        },
+        {
+          "participantId": "v9khm4a57td",
+          "pagado": false,
+          "cuota": 10,
+          "note": ""
+        },
+        {
+          "participantId": "h308ero57td",
+          "pagado": false,
+          "cuota": 10,
+          "note": ""
+        },
+        {
+          "participantId": "wtwyjlr57td",
+          "pagado": false,
+          "cuota": 10,
+          "note": ""
+        },
+        {
+          "participantId": "dazopf357td",
+          "pagado": false,
+          "cuota": 10,
+          "note": ""
+        },
+        {
+          "participantId": "xp697zc57td",
+          "pagado": false,
+          "cuota": 10,
+          "note": ""
+        },
+        {
+          "participantId": "b9fzcvx57td",
+          "pagado": false,
+          "cuota": 10,
+          "note": ""
+        },
+        {
+          "participantId": "1pdzgw257td",
+          "pagado": false,
+          "cuota": 10,
+          "note": ""
+        },
+        {
+          "participantId": "7xu7mha57td",
+          "pagado": false,
+          "cuota": 10,
+          "note": ""
+        },
+        {
+          "participantId": "zrx8gxr57td",
+          "pagado": false,
+          "cuota": 10,
+          "note": ""
+        },
+        {
+          "participantId": "o89gedt57td",
+          "pagado": false,
+          "cuota": 10,
+          "note": ""
+        },
+        {
+          "participantId": "2suh20a57td",
+          "pagado": false,
+          "cuota": 10,
+          "note": ""
+        },
+        {
+          "participantId": "m9p8aca57td",
+          "pagado": false,
+          "cuota": 10,
+          "note": ""
+        },
+        {
+          "participantId": "9j9cfw257td",
+          "pagado": false,
+          "cuota": 10,
+          "note": ""
+        },
+        {
+          "participantId": "k542cwn57td",
+          "pagado": false,
+          "cuota": 10,
+          "note": ""
+        },
+        {
+          "participantId": "umwpn8x57td",
+          "pagado": false,
+          "cuota": 10,
+          "note": ""
+        },
+        {
+          "participantId": "vbs5fnuax18",
+          "pagado": false,
+          "cuota": 10,
+          "note": ""
+        },
+        {
+          "participantId": "8x73bb5d8ph",
+          "pagado": false,
+          "cuota": 10,
+          "note": ""
+        },
+        {
+          "participantId": "2gtr1vhmjup",
+          "pagado": false,
+          "cuota": 10,
+          "note": ""
+        }
+      ],
+      "jornadas": []
     }
   ],
-  "updatedAt": 1789320231401
+  "updatedAt": 1789320284707
 }
