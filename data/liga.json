@@ -1,11 +1,11 @@
 {
-  "generatedAt": 1789274315594,
+  "generatedAt": 1789315807773,
   "jornadas": [
     {
       "id": "md-2",
       "matchday": 2,
       "label": "Jornada 2",
-      "updatedAt": 1789274315594,
+      "updatedAt": 1789315807773,
       "matches": [
         {
           "team1": "Rayo Vallecano",
@@ -73,7 +73,7 @@
       "id": "md-3",
       "matchday": 3,
       "label": "Jornada 3",
-      "updatedAt": 1789274315594,
+      "updatedAt": 1789315807773,
       "matches": [
         {
           "team1": "Santander",
@@ -141,7 +141,7 @@
       "id": "md-4",
       "matchday": 4,
       "label": "Jornada 4",
-      "updatedAt": 1789274315594,
+      "updatedAt": 1789315807773,
       "matches": [
         {
           "team1": "Real Betis",
@@ -209,7 +209,7 @@
       "id": "md-5",
       "matchday": 5,
       "label": "Jornada 5",
-      "updatedAt": 1789274315594,
+      "updatedAt": 1789315807773,
       "matches": [
         {
           "team1": "Sevilla FC",
@@ -244,8 +244,8 @@
         {
           "team1": "Celta",
           "team2": "Málaga",
-          "extra": "dom, 13 sept, 14:00",
-          "raw": "dom, 13 sept, 14:00 Celta - Málaga"
+          "extra": "1-1",
+          "raw": "Celta 1-1 Málaga"
         },
         {
           "team1": "Levante",
@@ -277,7 +277,7 @@
       "id": "md-6",
       "matchday": 6,
       "label": "Jornada 6",
-      "updatedAt": 1789274315594,
+      "updatedAt": 1789315807773,
       "matches": [
         {
           "team1": "Real Sociedad",
@@ -345,7 +345,7 @@
       "id": "md-7",
       "matchday": 7,
       "label": "Jornada 7",
-      "updatedAt": 1789274315594,
+      "updatedAt": 1789315807773,
       "matches": [
         {
           "team1": "Espanyol",
@@ -413,7 +413,7 @@
       "id": "md-8",
       "matchday": 8,
       "label": "Jornada 8",
-      "updatedAt": 1789274315594,
+      "updatedAt": 1789315807773,
       "matches": [
         {
           "team1": "Málaga",
@@ -481,7 +481,7 @@
       "id": "md-9",
       "matchday": 9,
       "label": "Jornada 9",
-      "updatedAt": 1789274315594,
+      "updatedAt": 1789315807773,
       "matches": [
         {
           "team1": "Villarreal",
@@ -549,7 +549,7 @@
       "id": "md-10",
       "matchday": 10,
       "label": "Jornada 10",
-      "updatedAt": 1789274315594,
+      "updatedAt": 1789315807773,
       "matches": [
         {
           "team1": "Rayo Vallecano",
@@ -615,19 +615,19 @@
     }
   ],
   "clasificacion": {
-    "updatedAt": 1789274315594,
+    "updatedAt": 1789315807773,
     "rows": [
       {
         "pos": 1,
         "name": "Barça",
-        "pj": 4,
-        "g": 4,
+        "pj": 5,
+        "g": 5,
         "e": 0,
         "p": 0,
-        "gf": 17,
+        "gf": 20,
         "gc": 2,
-        "dg": 15,
-        "pts": 12
+        "dg": 18,
+        "pts": 15
       },
       {
         "pos": 2,
@@ -764,17 +764,29 @@
       {
         "pos": 13,
         "name": "Levante",
-        "pj": 4,
+        "pj": 5,
         "g": 1,
         "e": 2,
-        "p": 1,
+        "p": 2,
         "gf": 5,
-        "gc": 5,
-        "dg": 0,
+        "gc": 8,
+        "dg": -3,
         "pts": 5
       },
       {
         "pos": 14,
+        "name": "Celta",
+        "pj": 6,
+        "g": 0,
+        "e": 4,
+        "p": 2,
+        "gf": 3,
+        "gc": 6,
+        "dg": -3,
+        "pts": 4
+      },
+      {
+        "pos": 15,
         "name": "Getafe",
         "pj": 4,
         "g": 1,
@@ -786,7 +798,7 @@
         "pts": 4
       },
       {
-        "pos": 15,
+        "pos": 16,
         "name": "Rayo Vallecano",
         "pj": 5,
         "g": 1,
@@ -798,19 +810,19 @@
         "pts": 4
       },
       {
-        "pos": 16,
-        "name": "Celta",
+        "pos": 17,
+        "name": "Málaga",
         "pj": 5,
         "g": 0,
         "e": 3,
         "p": 2,
         "gf": 2,
-        "gc": 5,
-        "dg": -3,
+        "gc": 8,
+        "dg": -6,
         "pts": 3
       },
       {
-        "pos": 17,
+        "pos": 18,
         "name": "Villarreal",
         "pj": 4,
         "g": 0,
@@ -819,18 +831,6 @@
         "gf": 6,
         "gc": 8,
         "dg": -2,
-        "pts": 2
-      },
-      {
-        "pos": 18,
-        "name": "Málaga",
-        "pj": 4,
-        "g": 0,
-        "e": 2,
-        "p": 2,
-        "gf": 1,
-        "gc": 7,
-        "dg": -6,
         "pts": 2
       },
       {
