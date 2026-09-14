@@ -963,7 +963,7 @@
         },
         {
           "participantId": "3d2ewr957td",
-          "pagado": false,
+          "pagado": true,
           "cuota": 10,
           "note": ""
         },
@@ -1097,5 +1097,5 @@
       "jornadas": []
     }
   ],
-  "updatedAt": 1789402412087
+  "updatedAt": 1789402418231
 }
