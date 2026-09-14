@@ -945,7 +945,7 @@
         },
         {
           "participantId": "so3mbw157td",
-          "pagado": false,
+          "pagado": true,
           "cuota": 10,
           "note": ""
         },
@@ -1097,5 +1097,5 @@
       "jornadas": []
     }
   ],
-  "updatedAt": 1789402388432
+  "updatedAt": 1789402400799
 }
