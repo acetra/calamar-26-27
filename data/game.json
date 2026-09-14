@@ -1005,7 +1005,7 @@
         },
         {
           "participantId": "dazopf357td",
-          "pagado": false,
+          "pagado": true,
           "cuota": 10,
           "note": ""
         },
@@ -1097,5 +1097,5 @@
       "jornadas": []
     }
   ],
-  "updatedAt": 1789402454356
+  "updatedAt": 1789402461533
 }
