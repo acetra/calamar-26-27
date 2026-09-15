@@ -1094,8 +1094,17 @@
           "note": ""
         }
       ],
-      "jornadas": []
+      "jornadas": [
+        {
+          "id": "hkmr0ef44se",
+          "label": "Jornada 7",
+          "season": "2026/27",
+          "deadline": "",
+          "picks": [],
+          "expelled": []
+        }
+      ]
     }
   ],
-  "updatedAt": 1789486578219
+  "updatedAt": 1789486595343
 }
