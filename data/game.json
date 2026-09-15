@@ -1203,7 +1203,7 @@
               "participantId": "o89gedt57td",
               "team1": "Alavés",
               "team2": "Betis",
-              "result1": "",
+              "result1": "no_gano",
               "result2": ""
             },
             {
@@ -1299,5 +1299,5 @@
       ]
     }
   ],
-  "updatedAt": 1789504312932
+  "updatedAt": 1789504316911
 }
