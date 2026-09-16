@@ -1280,14 +1280,14 @@
               "participantId": "7xu7mha57td",
               "team1": "Real Madrid",
               "team2": "Alavés",
-              "result1": "",
+              "result1": "gano",
               "result2": ""
             },
             {
               "participantId": "wtwyjlr57td",
               "team1": "Real Madrid",
               "team2": "Barcelona",
-              "result1": "",
+              "result1": "gano",
               "result2": ""
             }
           ],
@@ -1299,5 +1299,5 @@
       ]
     }
   ],
-  "updatedAt": 1789579974209
+  "updatedAt": 1789580013896
 }
