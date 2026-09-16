@@ -1217,7 +1217,7 @@
               "participantId": "vbs5fnuax18",
               "team1": "Atlético de Madrid",
               "team2": "Betis",
-              "result1": "",
+              "result1": "gano",
               "result2": ""
             },
             {
@@ -1299,5 +1299,5 @@
       ]
     }
   ],
-  "updatedAt": 1789591372266
+  "updatedAt": 1789591374973
 }
