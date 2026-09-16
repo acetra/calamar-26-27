@@ -1168,7 +1168,7 @@
               "participantId": "2suh20a57td",
               "team1": "Barcelona",
               "team2": "Levante",
-              "result1": "",
+              "result1": "gano",
               "result2": ""
             },
             {
@@ -1299,5 +1299,5 @@
       ]
     }
   ],
-  "updatedAt": 1789591449168
+  "updatedAt": 1789591451735
 }
