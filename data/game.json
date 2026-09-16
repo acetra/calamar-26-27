@@ -1266,7 +1266,7 @@
               "participantId": "2gtr1vhmjup",
               "team1": "Atlético de Madrid",
               "team2": "Alavés",
-              "result1": "",
+              "result1": "gano",
               "result2": ""
             },
             {
@@ -1299,5 +1299,5 @@
       ]
     }
   ],
-  "updatedAt": 1789591382412
+  "updatedAt": 1789591386188
 }
