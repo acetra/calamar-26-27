@@ -1252,7 +1252,7 @@
               "participantId": "dazopf357td",
               "team1": "Atlético de Madrid",
               "team2": "Barcelona",
-              "result1": "",
+              "result1": "gano",
               "result2": ""
             },
             {
@@ -1299,5 +1299,5 @@
       ]
     }
   ],
-  "updatedAt": 1789591378250
+  "updatedAt": 1789591382412
 }
