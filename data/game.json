@@ -1161,7 +1161,7 @@
               "participantId": "9j9cfw257td",
               "team1": "Barcelona",
               "team2": "Alavés",
-              "result1": "",
+              "result1": "gano",
               "result2": ""
             },
             {
@@ -1299,5 +1299,5 @@
       ]
     }
   ],
-  "updatedAt": 1789591444220
+  "updatedAt": 1789591449168
 }
