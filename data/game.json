@@ -1224,7 +1224,7 @@
               "participantId": "so3mbw157td",
               "team1": "Barcelona",
               "team2": "Alavés",
-              "result1": "",
+              "result1": "gano",
               "result2": ""
             },
             {
@@ -1299,5 +1299,5 @@
       ]
     }
   ],
-  "updatedAt": 1789591455726
+  "updatedAt": 1789591459916
 }
