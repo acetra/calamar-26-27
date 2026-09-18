@@ -1301,11 +1301,173 @@
           "label": "Jornada 7 real",
           "season": "2026/27",
           "deadline": "",
-          "picks": [],
+          "picks": [
+            {
+              "participantId": "jdky2t557td",
+              "team1": "Villareal",
+              "team2": "Espanyol",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "d10d72i57td",
+              "team1": "Celta",
+              "team2": "Getafe",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "v9khm4a57td",
+              "team1": "Villarreal",
+              "team2": "Espanyol",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "1pdzgw257td",
+              "team1": "Espanyol",
+              "team2": "Athletic",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "3d2ewr957td",
+              "team1": "Villarreal",
+              "team2": "Espanyol",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "dazopf357td",
+              "team1": "Villarreal",
+              "team2": "Espanyol",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "wtwyjlr57td",
+              "team1": "Athletic",
+              "team2": "villareal",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "xp697zc57td",
+              "team1": "español",
+              "team2": "osasuna",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "jh8jzo357td",
+              "team1": "Villareal",
+              "team2": "Getafe",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "6sf3nyg57td",
+              "team1": "Espanyol",
+              "team2": "Villareal",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "8x73bb5d8ph",
+              "team1": "Athletic Club",
+              "team2": "Getafe",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "m9p8aca57td",
+              "team1": "Getafe",
+              "team2": "Athletic",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "so3mbw157td",
+              "team1": "Espanyol",
+              "team2": "Villareal",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "2gh3q3y57td",
+              "team1": "Getafe",
+              "team2": "Espanyol",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "2suh20a57td",
+              "team1": "Athletic",
+              "team2": "Levante UD",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "9zo5xs957td",
+              "team1": "Español",
+              "team2": "Villareal",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "xowo4yb57td",
+              "team1": "Villareal",
+              "team2": "Espanyol",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "9j9cfw257td",
+              "team1": "Athletic",
+              "team2": "Villarreal",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "zrx8gxr57td",
+              "team1": "Getafe",
+              "team2": "Espanyol",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "vbs5fnuax18",
+              "team1": "Espanyol",
+              "team2": "Villareal",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "2gtr1vhmjup",
+              "team1": "Athletic",
+              "team2": "Espanyol",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "7xu7mha57td",
+              "team1": "Villarreal",
+              "team2": "Barcelona",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "k542cwn57td",
+              "team1": "Villarreal",
+              "team2": "Barcelona",
+              "result1": "",
+              "result2": ""
+            }
+          ],
           "expelled": []
         }
       ]
     }
   ],
-  "updatedAt": 1789751671104
+  "updatedAt": 1789751742376
 }
