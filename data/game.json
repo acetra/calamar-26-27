@@ -1327,7 +1327,7 @@
               "participantId": "1pdzgw257td",
               "team1": "Espanyol",
               "team2": "Athletic",
-              "result1": "",
+              "result1": "no_gano",
               "result2": ""
             },
             {
@@ -1469,5 +1469,5 @@
       ]
     }
   ],
-  "updatedAt": 1789767367286
+  "updatedAt": 1789767400238
 }
