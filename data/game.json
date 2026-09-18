@@ -1355,7 +1355,7 @@
               "participantId": "xp697zc57td",
               "team1": "español",
               "team2": "osasuna",
-              "result1": "",
+              "result1": "no_gano",
               "result2": ""
             },
             {
@@ -1469,5 +1469,5 @@
       ]
     }
   ],
-  "updatedAt": 1789767400238
+  "updatedAt": 1789767403278
 }
