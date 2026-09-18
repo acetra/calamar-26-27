@@ -1439,7 +1439,7 @@
               "participantId": "vbs5fnuax18",
               "team1": "Espanyol",
               "team2": "Villareal",
-              "result1": "",
+              "result1": "no_gano",
               "result2": ""
             },
             {
@@ -1469,5 +1469,5 @@
       ]
     }
   ],
-  "updatedAt": 1789767419467
+  "updatedAt": 1789767425772
 }
