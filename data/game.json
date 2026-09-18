@@ -1126,7 +1126,7 @@
               "participantId": "xp697zc57td",
               "team1": "Betis",
               "team2": "Alaves",
-              "result1": "",
+              "result1": "gano",
               "result2": ""
             },
             {
@@ -1299,5 +1299,5 @@
       ]
     }
   ],
-  "updatedAt": 1789707573715
+  "updatedAt": 1789707577073
 }
