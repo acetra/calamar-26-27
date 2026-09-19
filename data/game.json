@@ -1446,7 +1446,7 @@
               "participantId": "2gtr1vhmjup",
               "team1": "Athletic",
               "team2": "Espanyol",
-              "result1": "",
+              "result1": "no_gano",
               "result2": ""
             },
             {
@@ -1469,5 +1469,5 @@
       ]
     }
   ],
-  "updatedAt": 1789851121821
+  "updatedAt": 1789851125559
 }
