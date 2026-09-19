@@ -1,11 +1,11 @@
 {
-  "generatedAt": 1789748374552,
+  "generatedAt": 1789792230140,
   "jornadas": [
     {
       "id": "md-3",
       "matchday": 3,
       "label": "Jornada 3",
-      "updatedAt": 1789748374552,
+      "updatedAt": 1789792230140,
       "matches": [
         {
           "team1": "Santander",
@@ -73,7 +73,7 @@
       "id": "md-4",
       "matchday": 4,
       "label": "Jornada 4",
-      "updatedAt": 1789748374552,
+      "updatedAt": 1789792230140,
       "matches": [
         {
           "team1": "Real Betis",
@@ -141,7 +141,7 @@
       "id": "md-5",
       "matchday": 5,
       "label": "Jornada 5",
-      "updatedAt": 1789748374552,
+      "updatedAt": 1789792230140,
       "matches": [
         {
           "team1": "Sevilla FC",
@@ -209,7 +209,7 @@
       "id": "md-6",
       "matchday": 6,
       "label": "Jornada 6",
-      "updatedAt": 1789748374552,
+      "updatedAt": 1789792230140,
       "matches": [
         {
           "team1": "Real Sociedad",
@@ -277,13 +277,13 @@
       "id": "md-7",
       "matchday": 7,
       "label": "Jornada 7",
-      "updatedAt": 1789748374552,
+      "updatedAt": 1789792230140,
       "matches": [
         {
           "team1": "Espanyol",
           "team2": "Elche",
-          "extra": "vie, 18 sept, 21:00",
-          "raw": "vie, 18 sept, 21:00 Espanyol - Elche"
+          "extra": "1-3",
+          "raw": "Espanyol 1-3 Elche"
         },
         {
           "team1": "Osasuna",
@@ -345,7 +345,7 @@
       "id": "md-8",
       "matchday": 8,
       "label": "Jornada 8",
-      "updatedAt": 1789748374552,
+      "updatedAt": 1789792230140,
       "matches": [
         {
           "team1": "Málaga",
@@ -413,7 +413,7 @@
       "id": "md-9",
       "matchday": 9,
       "label": "Jornada 9",
-      "updatedAt": 1789748374552,
+      "updatedAt": 1789792230140,
       "matches": [
         {
           "team1": "Deportivo",
@@ -481,7 +481,7 @@
       "id": "md-10",
       "matchday": 10,
       "label": "Jornada 10",
-      "updatedAt": 1789748374552,
+      "updatedAt": 1789792230140,
       "matches": [
         {
           "team1": "Rayo Vallecano",
@@ -549,7 +549,7 @@
       "id": "md-11",
       "matchday": 11,
       "label": "Jornada 11",
-      "updatedAt": 1789748374552,
+      "updatedAt": 1789792230140,
       "matches": [
         {
           "team1": "Real Betis",
@@ -615,7 +615,7 @@
     }
   ],
   "clasificacion": {
-    "updatedAt": 1789748374552,
+    "updatedAt": 1789792230140,
     "rows": [
       {
         "pos": 1,
@@ -703,18 +703,6 @@
       },
       {
         "pos": 8,
-        "name": "Espanyol",
-        "pj": 6,
-        "g": 2,
-        "e": 1,
-        "p": 3,
-        "gf": 9,
-        "gc": 7,
-        "dg": 2,
-        "pts": 7
-      },
-      {
-        "pos": 9,
         "name": "Athletic",
         "pj": 5,
         "g": 2,
@@ -723,6 +711,18 @@
         "gf": 7,
         "gc": 6,
         "dg": 1,
+        "pts": 7
+      },
+      {
+        "pos": 9,
+        "name": "Espanyol",
+        "pj": 7,
+        "g": 2,
+        "e": 1,
+        "p": 4,
+        "gf": 10,
+        "gc": 10,
+        "dg": 0,
         "pts": 7
       },
       {
@@ -811,6 +811,18 @@
       },
       {
         "pos": 17,
+        "name": "Elche",
+        "pj": 7,
+        "g": 1,
+        "e": 2,
+        "p": 4,
+        "gf": 11,
+        "gc": 17,
+        "dg": -6,
+        "pts": 5
+      },
+      {
+        "pos": 18,
         "name": "Celta",
         "pj": 6,
         "g": 0,
@@ -822,7 +834,7 @@
         "pts": 4
       },
       {
-        "pos": 18,
+        "pos": 19,
         "name": "Valencia",
         "pj": 6,
         "g": 1,
@@ -834,7 +846,7 @@
         "pts": 4
       },
       {
-        "pos": 19,
+        "pos": 20,
         "name": "Málaga",
         "pj": 6,
         "g": 0,
@@ -844,18 +856,6 @@
         "gc": 11,
         "dg": -8,
         "pts": 3
-      },
-      {
-        "pos": 20,
-        "name": "Elche",
-        "pj": 6,
-        "g": 0,
-        "e": 2,
-        "p": 4,
-        "gf": 8,
-        "gc": 16,
-        "dg": -8,
-        "pts": 2
       }
     ]
   }
