@@ -1,11 +1,11 @@
 {
-  "generatedAt": 1789792230140,
+  "generatedAt": 1789832968824,
   "jornadas": [
     {
       "id": "md-3",
       "matchday": 3,
       "label": "Jornada 3",
-      "updatedAt": 1789792230140,
+      "updatedAt": 1789832968824,
       "matches": [
         {
           "team1": "Santander",
@@ -73,7 +73,7 @@
       "id": "md-4",
       "matchday": 4,
       "label": "Jornada 4",
-      "updatedAt": 1789792230140,
+      "updatedAt": 1789832968824,
       "matches": [
         {
           "team1": "Real Betis",
@@ -141,7 +141,7 @@
       "id": "md-5",
       "matchday": 5,
       "label": "Jornada 5",
-      "updatedAt": 1789792230140,
+      "updatedAt": 1789832968824,
       "matches": [
         {
           "team1": "Sevilla FC",
@@ -209,7 +209,7 @@
       "id": "md-6",
       "matchday": 6,
       "label": "Jornada 6",
-      "updatedAt": 1789792230140,
+      "updatedAt": 1789832968824,
       "matches": [
         {
           "team1": "Real Sociedad",
@@ -277,7 +277,7 @@
       "id": "md-7",
       "matchday": 7,
       "label": "Jornada 7",
-      "updatedAt": 1789792230140,
+      "updatedAt": 1789832968824,
       "matches": [
         {
           "team1": "Espanyol",
@@ -288,8 +288,8 @@
         {
           "team1": "Osasuna",
           "team2": "Rayo Vallecano",
-          "extra": "sáb, 19 sept, 14:00",
-          "raw": "sáb, 19 sept, 14:00 Osasuna - Rayo Vallecano"
+          "extra": "1-1",
+          "raw": "Osasuna 1-1 Rayo Vallecano"
         },
         {
           "team1": "Athletic",
@@ -345,7 +345,7 @@
       "id": "md-8",
       "matchday": 8,
       "label": "Jornada 8",
-      "updatedAt": 1789792230140,
+      "updatedAt": 1789832968824,
       "matches": [
         {
           "team1": "Málaga",
@@ -413,7 +413,7 @@
       "id": "md-9",
       "matchday": 9,
       "label": "Jornada 9",
-      "updatedAt": 1789792230140,
+      "updatedAt": 1789832968824,
       "matches": [
         {
           "team1": "Deportivo",
@@ -481,7 +481,7 @@
       "id": "md-10",
       "matchday": 10,
       "label": "Jornada 10",
-      "updatedAt": 1789792230140,
+      "updatedAt": 1789832968824,
       "matches": [
         {
           "team1": "Rayo Vallecano",
@@ -549,7 +549,7 @@
       "id": "md-11",
       "matchday": 11,
       "label": "Jornada 11",
-      "updatedAt": 1789792230140,
+      "updatedAt": 1789832968824,
       "matches": [
         {
           "team1": "Real Betis",
@@ -615,7 +615,7 @@
     }
   ],
   "clasificacion": {
-    "updatedAt": 1789792230140,
+    "updatedAt": 1789832968824,
     "rows": [
       {
         "pos": 1,
@@ -680,14 +680,14 @@
       {
         "pos": 6,
         "name": "Alavés",
-        "pj": 6,
+        "pj": 7,
         "g": 3,
-        "e": 1,
+        "e": 2,
         "p": 2,
         "gf": 11,
         "gc": 6,
         "dg": 5,
-        "pts": 10
+        "pts": 11
       },
       {
         "pos": 7,
@@ -704,17 +704,41 @@
       {
         "pos": 8,
         "name": "Athletic",
-        "pj": 5,
+        "pj": 6,
         "g": 2,
-        "e": 1,
+        "e": 2,
         "p": 2,
         "gf": 7,
         "gc": 6,
         "dg": 1,
-        "pts": 7
+        "pts": 8
       },
       {
         "pos": 9,
+        "name": "Rayo Vallecano",
+        "pj": 7,
+        "g": 2,
+        "e": 2,
+        "p": 3,
+        "gf": 11,
+        "gc": 16,
+        "dg": -5,
+        "pts": 8
+      },
+      {
+        "pos": 10,
+        "name": "Osasuna",
+        "pj": 7,
+        "g": 2,
+        "e": 2,
+        "p": 3,
+        "gf": 6,
+        "gc": 13,
+        "dg": -7,
+        "pts": 8
+      },
+      {
+        "pos": 11,
         "name": "Espanyol",
         "pj": 7,
         "g": 2,
@@ -726,7 +750,7 @@
         "pts": 7
       },
       {
-        "pos": 10,
+        "pos": 12,
         "name": "Santander",
         "pj": 6,
         "g": 2,
@@ -738,19 +762,7 @@
         "pts": 7
       },
       {
-        "pos": 11,
-        "name": "Rayo Vallecano",
-        "pj": 6,
-        "g": 2,
-        "e": 1,
-        "p": 3,
-        "gf": 10,
-        "gc": 15,
-        "dg": -5,
-        "pts": 7
-      },
-      {
-        "pos": 12,
+        "pos": 13,
         "name": "Real Sociedad",
         "pj": 6,
         "g": 2,
@@ -759,18 +771,6 @@
         "gf": 6,
         "gc": 11,
         "dg": -5,
-        "pts": 7
-      },
-      {
-        "pos": 13,
-        "name": "Osasuna",
-        "pj": 6,
-        "g": 2,
-        "e": 1,
-        "p": 3,
-        "gf": 5,
-        "gc": 12,
-        "dg": -7,
         "pts": 7
       },
       {
