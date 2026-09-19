@@ -1313,7 +1313,7 @@
               "participantId": "d10d72i57td",
               "team1": "Celta",
               "team2": "Getafe",
-              "result1": "",
+              "result1": "gano",
               "result2": ""
             },
             {
@@ -1469,5 +1469,5 @@
       ]
     }
   ],
-  "updatedAt": 1789851085756
+  "updatedAt": 1789851096959
 }
