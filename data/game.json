@@ -1376,7 +1376,7 @@
               "participantId": "8x73bb5d8ph",
               "team1": "Athletic Club",
               "team2": "Getafe",
-              "result1": "",
+              "result1": "no_gano",
               "result2": ""
             },
             {
@@ -1469,5 +1469,5 @@
       ]
     }
   ],
-  "updatedAt": 1789851101211
+  "updatedAt": 1789851105533
 }
