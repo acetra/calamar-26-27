@@ -1348,7 +1348,7 @@
               "participantId": "wtwyjlr57td",
               "team1": "Athletic",
               "team2": "villareal",
-              "result1": "",
+              "result1": "no_gano",
               "result2": ""
             },
             {
@@ -1469,5 +1469,5 @@
       ]
     }
   ],
-  "updatedAt": 1789851096959
+  "updatedAt": 1789851101211
 }
