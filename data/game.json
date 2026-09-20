@@ -1362,7 +1362,7 @@
               "participantId": "jh8jzo357td",
               "team1": "Villareal",
               "team2": "Getafe",
-              "result1": "",
+              "result1": "gano",
               "result2": ""
             },
             {
@@ -1469,5 +1469,5 @@
       ]
     }
   ],
-  "updatedAt": 1789930835168
+  "updatedAt": 1789930839324
 }
