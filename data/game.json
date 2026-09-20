@@ -1453,7 +1453,7 @@
               "participantId": "7xu7mha57td",
               "team1": "Villarreal",
               "team2": "Barcelona",
-              "result1": "",
+              "result1": "gano",
               "result2": ""
             },
             {
@@ -1469,5 +1469,5 @@
       ]
     }
   ],
-  "updatedAt": 1789930854769
+  "updatedAt": 1789930859191
 }
