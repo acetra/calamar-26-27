@@ -1383,7 +1383,7 @@
               "participantId": "m9p8aca57td",
               "team1": "Getafe",
               "team2": "Athletic",
-              "result1": "",
+              "result1": "gano",
               "result2": ""
             },
             {
@@ -1469,5 +1469,5 @@
       ]
     }
   ],
-  "updatedAt": 1789930839324
+  "updatedAt": 1789930842492
 }
