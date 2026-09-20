@@ -1397,7 +1397,7 @@
               "participantId": "2gh3q3y57td",
               "team1": "Getafe",
               "team2": "Espanyol",
-              "result1": "",
+              "result1": "gano",
               "result2": ""
             },
             {
@@ -1469,5 +1469,5 @@
       ]
     }
   ],
-  "updatedAt": 1789930842492
+  "updatedAt": 1789930845411
 }
