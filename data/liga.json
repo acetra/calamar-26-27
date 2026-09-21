@@ -1,11 +1,11 @@
 {
-  "generatedAt": 1789919924239,
+  "generatedAt": 1789966044138,
   "jornadas": [
     {
       "id": "md-3",
       "matchday": 3,
       "label": "Jornada 3",
-      "updatedAt": 1789919924239,
+      "updatedAt": 1789966044138,
       "matches": [
         {
           "team1": "Santander",
@@ -73,7 +73,7 @@
       "id": "md-4",
       "matchday": 4,
       "label": "Jornada 4",
-      "updatedAt": 1789919924239,
+      "updatedAt": 1789966044138,
       "matches": [
         {
           "team1": "Real Betis",
@@ -141,7 +141,7 @@
       "id": "md-5",
       "matchday": 5,
       "label": "Jornada 5",
-      "updatedAt": 1789919924239,
+      "updatedAt": 1789966044138,
       "matches": [
         {
           "team1": "Sevilla FC",
@@ -209,7 +209,7 @@
       "id": "md-6",
       "matchday": 6,
       "label": "Jornada 6",
-      "updatedAt": 1789919924239,
+      "updatedAt": 1789966044138,
       "matches": [
         {
           "team1": "Real Sociedad",
@@ -277,7 +277,7 @@
       "id": "md-7",
       "matchday": 7,
       "label": "Jornada 7",
-      "updatedAt": 1789919924239,
+      "updatedAt": 1789966044138,
       "matches": [
         {
           "team1": "Espanyol",
@@ -318,26 +318,26 @@
         {
           "team1": "Atleti",
           "team2": "Real Madrid",
-          "extra": "dom, 20 sept, 16:15",
-          "raw": "dom, 20 sept, 16:15 Atleti - Real Madrid"
+          "extra": "2-1",
+          "raw": "Atleti 2-1 Real Madrid"
         },
         {
           "team1": "Deportivo",
           "team2": "Real Betis",
-          "extra": "dom, 20 sept, 18:30",
-          "raw": "dom, 20 sept, 18:30 Deportivo - Real Betis"
+          "extra": "1-1",
+          "raw": "Deportivo 1-1 Real Betis"
         },
         {
           "team1": "Villarreal",
           "team2": "Levante",
-          "extra": "dom, 20 sept, 18:30",
-          "raw": "dom, 20 sept, 18:30 Villarreal - Levante"
+          "extra": "3-1",
+          "raw": "Villarreal 3-1 Levante"
         },
         {
           "team1": "Valencia",
           "team2": "Real Sociedad",
-          "extra": "dom, 20 sept, 21:00",
-          "raw": "dom, 20 sept, 21:00 Valencia - Real Sociedad"
+          "extra": "2-3",
+          "raw": "Valencia 2-3 Real Sociedad"
         }
       ]
     },
@@ -345,7 +345,7 @@
       "id": "md-8",
       "matchday": 8,
       "label": "Jornada 8",
-      "updatedAt": 1789919924239,
+      "updatedAt": 1789966044138,
       "matches": [
         {
           "team1": "Málaga",
@@ -413,7 +413,7 @@
       "id": "md-9",
       "matchday": 9,
       "label": "Jornada 9",
-      "updatedAt": 1789919924239,
+      "updatedAt": 1789966044138,
       "matches": [
         {
           "team1": "Deportivo",
@@ -481,7 +481,7 @@
       "id": "md-10",
       "matchday": 10,
       "label": "Jornada 10",
-      "updatedAt": 1789919924239,
+      "updatedAt": 1789966044138,
       "matches": [
         {
           "team1": "Rayo Vallecano",
@@ -549,7 +549,7 @@
       "id": "md-11",
       "matchday": 11,
       "label": "Jornada 11",
-      "updatedAt": 1789919924239,
+      "updatedAt": 1789966044138,
       "matches": [
         {
           "team1": "Real Betis",
@@ -615,7 +615,7 @@
     }
   ],
   "clasificacion": {
-    "updatedAt": 1789919924239,
+    "updatedAt": 1789966044138,
     "rows": [
       {
         "pos": 1,
@@ -637,32 +637,32 @@
         "e": 1,
         "p": 1,
         "gf": 16,
-        "gc": 6,
-        "dg": 10,
+        "gc": 7,
+        "dg": 9,
         "pts": 16
       },
       {
         "pos": 3,
+        "name": "Real Betis",
+        "pj": 7,
+        "g": 5,
+        "e": 1,
+        "p": 1,
+        "gf": 9,
+        "gc": 7,
+        "dg": 2,
+        "pts": 16
+      },
+      {
+        "pos": 4,
         "name": "Real Madrid",
         "pj": 7,
         "g": 5,
         "e": 0,
         "p": 2,
-        "gf": 17,
+        "gf": 18,
         "gc": 8,
-        "dg": 9,
-        "pts": 15
-      },
-      {
-        "pos": 4,
-        "name": "Real Betis",
-        "pj": 6,
-        "g": 5,
-        "e": 0,
-        "p": 1,
-        "gf": 8,
-        "gc": 6,
-        "dg": 2,
+        "dg": 10,
         "pts": 15
       },
       {
@@ -692,17 +692,41 @@
       {
         "pos": 7,
         "name": "Deportivo",
-        "pj": 6,
+        "pj": 7,
         "g": 2,
-        "e": 3,
+        "e": 4,
         "p": 1,
-        "gf": 9,
-        "gc": 7,
+        "gf": 10,
+        "gc": 8,
         "dg": 2,
-        "pts": 9
+        "pts": 10
       },
       {
         "pos": 8,
+        "name": "Real Sociedad",
+        "pj": 7,
+        "g": 3,
+        "e": 1,
+        "p": 3,
+        "gf": 9,
+        "gc": 13,
+        "dg": -4,
+        "pts": 10
+      },
+      {
+        "pos": 9,
+        "name": "Villarreal",
+        "pj": 7,
+        "g": 2,
+        "e": 2,
+        "p": 3,
+        "gf": 13,
+        "gc": 12,
+        "dg": 1,
+        "pts": 8
+      },
+      {
+        "pos": 10,
         "name": "Athletic",
         "pj": 6,
         "g": 2,
@@ -714,7 +738,7 @@
         "pts": 8
       },
       {
-        "pos": 9,
+        "pos": 11,
         "name": "Getafe",
         "pj": 7,
         "g": 2,
@@ -726,7 +750,7 @@
         "pts": 8
       },
       {
-        "pos": 10,
+        "pos": 12,
         "name": "Rayo Vallecano",
         "pj": 7,
         "g": 2,
@@ -738,7 +762,7 @@
         "pts": 8
       },
       {
-        "pos": 11,
+        "pos": 13,
         "name": "Osasuna",
         "pj": 7,
         "g": 2,
@@ -750,7 +774,7 @@
         "pts": 8
       },
       {
-        "pos": 12,
+        "pos": 14,
         "name": "Celta",
         "pj": 7,
         "g": 1,
@@ -762,7 +786,7 @@
         "pts": 7
       },
       {
-        "pos": 13,
+        "pos": 15,
         "name": "Espanyol",
         "pj": 7,
         "g": 2,
@@ -774,19 +798,7 @@
         "pts": 7
       },
       {
-        "pos": 14,
-        "name": "Real Sociedad",
-        "pj": 6,
-        "g": 2,
-        "e": 1,
-        "p": 3,
-        "gf": 6,
-        "gc": 11,
-        "dg": -5,
-        "pts": 7
-      },
-      {
-        "pos": 15,
+        "pos": 16,
         "name": "Santander",
         "pj": 7,
         "g": 2,
@@ -798,27 +810,15 @@
         "pts": 7
       },
       {
-        "pos": 16,
-        "name": "Villarreal",
+        "pos": 17,
+        "name": "Levante",
         "pj": 6,
         "g": 1,
         "e": 2,
         "p": 3,
-        "gf": 10,
-        "gc": 11,
-        "dg": -1,
-        "pts": 5
-      },
-      {
-        "pos": 17,
-        "name": "Levante",
-        "pj": 5,
-        "g": 1,
-        "e": 2,
-        "p": 2,
-        "gf": 7,
-        "gc": 9,
-        "dg": -2,
+        "gf": 8,
+        "gc": 12,
+        "dg": -4,
         "pts": 5
       },
       {
@@ -836,13 +836,13 @@
       {
         "pos": 19,
         "name": "Valencia",
-        "pj": 6,
+        "pj": 7,
         "g": 1,
         "e": 1,
-        "p": 4,
-        "gf": 2,
-        "gc": 10,
-        "dg": -8,
+        "p": 5,
+        "gf": 4,
+        "gc": 13,
+        "dg": -9,
         "pts": 4
       },
       {
