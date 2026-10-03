@@ -1,11 +1,11 @@
 {
-  "generatedAt": 1791004176626,
+  "generatedAt": 1791043826559,
   "jornadas": [
     {
       "id": "md-4",
       "matchday": 4,
       "label": "Jornada 4",
-      "updatedAt": 1791004176626,
+      "updatedAt": 1791043826559,
       "matches": [
         {
           "team1": "Real Betis",
@@ -73,7 +73,7 @@
       "id": "md-5",
       "matchday": 5,
       "label": "Jornada 5",
-      "updatedAt": 1791004176626,
+      "updatedAt": 1791043826559,
       "matches": [
         {
           "team1": "Sevilla FC",
@@ -141,7 +141,7 @@
       "id": "md-6",
       "matchday": 6,
       "label": "Jornada 6",
-      "updatedAt": 1791004176626,
+      "updatedAt": 1791043826559,
       "matches": [
         {
           "team1": "Real Sociedad",
@@ -209,7 +209,7 @@
       "id": "md-7",
       "matchday": 7,
       "label": "Jornada 7",
-      "updatedAt": 1791004176626,
+      "updatedAt": 1791043826559,
       "matches": [
         {
           "team1": "Espanyol",
@@ -277,7 +277,7 @@
       "id": "md-8",
       "matchday": 8,
       "label": "Jornada 8",
-      "updatedAt": 1791004176626,
+      "updatedAt": 1791043826559,
       "matches": [
         {
           "team1": "Málaga",
@@ -345,7 +345,7 @@
       "id": "md-9",
       "matchday": 9,
       "label": "Jornada 9",
-      "updatedAt": 1791004176626,
+      "updatedAt": 1791043826559,
       "matches": [
         {
           "team1": "Deportivo",
@@ -413,7 +413,7 @@
       "id": "md-10",
       "matchday": 10,
       "label": "Jornada 10",
-      "updatedAt": 1791004176626,
+      "updatedAt": 1791043826559,
       "matches": [
         {
           "team1": "Alavés",
@@ -481,67 +481,67 @@
       "id": "md-11",
       "matchday": 11,
       "label": "Jornada 11",
-      "updatedAt": 1791004176626,
+      "updatedAt": 1791043826559,
       "matches": [
-        {
-          "team1": "Real Betis",
-          "team2": "Málaga",
-          "extra": "dom, 01 nov, 01:00",
-          "raw": "dom, 01 nov, 01:00 Real Betis - Málaga"
-        },
         {
           "team1": "Villarreal",
           "team2": "Espanyol",
-          "extra": "dom, 01 nov, 01:00",
-          "raw": "dom, 01 nov, 01:00 Villarreal - Espanyol"
-        },
-        {
-          "team1": "Elche",
-          "team2": "Valencia",
-          "extra": "dom, 01 nov, 01:00",
-          "raw": "dom, 01 nov, 01:00 Elche - Valencia"
-        },
-        {
-          "team1": "Athletic",
-          "team2": "Real Sociedad",
-          "extra": "dom, 01 nov, 01:00",
-          "raw": "dom, 01 nov, 01:00 Athletic - Real Sociedad"
+          "extra": "vie, 30 oct, 21:00",
+          "raw": "vie, 30 oct, 21:00 Villarreal - Espanyol"
         },
         {
           "team1": "Levante",
           "team2": "Atleti",
-          "extra": "dom, 01 nov, 01:00",
-          "raw": "dom, 01 nov, 01:00 Levante - Atleti"
-        },
-        {
-          "team1": "Deportivo",
-          "team2": "Osasuna",
-          "extra": "dom, 01 nov, 01:00",
-          "raw": "dom, 01 nov, 01:00 Deportivo - Osasuna"
-        },
-        {
-          "team1": "Barça",
-          "team2": "Alavés",
-          "extra": "dom, 01 nov, 01:00",
-          "raw": "dom, 01 nov, 01:00 Barça - Alavés"
-        },
-        {
-          "team1": "Getafe",
-          "team2": "Sevilla FC",
-          "extra": "dom, 01 nov, 01:00",
-          "raw": "dom, 01 nov, 01:00 Getafe - Sevilla FC"
-        },
-        {
-          "team1": "Santander",
-          "team2": "Real Madrid",
-          "extra": "dom, 01 nov, 01:00",
-          "raw": "dom, 01 nov, 01:00 Santander - Real Madrid"
+          "extra": "sáb, 31 oct, 14:00",
+          "raw": "sáb, 31 oct, 14:00 Levante - Atleti"
         },
         {
           "team1": "Rayo Vallecano",
           "team2": "Celta",
-          "extra": "dom, 01 nov, 01:00",
-          "raw": "dom, 01 nov, 01:00 Rayo Vallecano - Celta"
+          "extra": "sáb, 31 oct, 16:15",
+          "raw": "sáb, 31 oct, 16:15 Rayo Vallecano - Celta"
+        },
+        {
+          "team1": "Real Betis",
+          "team2": "Málaga",
+          "extra": "sáb, 31 oct, 18:30",
+          "raw": "sáb, 31 oct, 18:30 Real Betis - Málaga"
+        },
+        {
+          "team1": "Barça",
+          "team2": "Alavés",
+          "extra": "sáb, 31 oct, 21:00",
+          "raw": "sáb, 31 oct, 21:00 Barça - Alavés"
+        },
+        {
+          "team1": "Getafe",
+          "team2": "Sevilla FC",
+          "extra": "dom, 01 nov, 14:00",
+          "raw": "dom, 01 nov, 14:00 Getafe - Sevilla FC"
+        },
+        {
+          "team1": "Santander",
+          "team2": "Real Madrid",
+          "extra": "dom, 01 nov, 16:15",
+          "raw": "dom, 01 nov, 16:15 Santander - Real Madrid"
+        },
+        {
+          "team1": "Elche",
+          "team2": "Valencia",
+          "extra": "dom, 01 nov, 18:30",
+          "raw": "dom, 01 nov, 18:30 Elche - Valencia"
+        },
+        {
+          "team1": "Athletic",
+          "team2": "Real Sociedad",
+          "extra": "dom, 01 nov, 21:00",
+          "raw": "dom, 01 nov, 21:00 Athletic - Real Sociedad"
+        },
+        {
+          "team1": "Deportivo",
+          "team2": "Osasuna",
+          "extra": "lun, 02 nov, 21:00",
+          "raw": "lun, 02 nov, 21:00 Deportivo - Osasuna"
         }
       ]
     },
@@ -549,7 +549,7 @@
       "id": "md-12",
       "matchday": 12,
       "label": "Jornada 12",
-      "updatedAt": 1791004176626,
+      "updatedAt": 1791043826559,
       "matches": [
         {
           "team1": "Elche",
@@ -617,7 +617,7 @@
       "id": "md-13",
       "matchday": 13,
       "label": "Jornada 13",
-      "updatedAt": 1791004176626,
+      "updatedAt": 1791043826559,
       "matches": [
         {
           "team1": "Athletic",
@@ -683,7 +683,7 @@
     }
   ],
   "clasificacion": {
-    "updatedAt": 1791004176626,
+    "updatedAt": 1791043826559,
     "rows": [
       {
         "pos": 1,
