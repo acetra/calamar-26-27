@@ -1465,9 +1465,17 @@
             }
           ],
           "expelled": []
+        },
+        {
+          "id": "nmwhvuo08lo",
+          "label": "Jornada 8",
+          "season": "2026/27",
+          "deadline": "",
+          "picks": [],
+          "expelled": []
         }
       ]
     }
   ],
-  "updatedAt": 1791599344618
+  "updatedAt": 1791599370516
 }
