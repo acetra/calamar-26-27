@@ -1471,11 +1471,96 @@
           "label": "Jornada 8",
           "season": "2026/27",
           "deadline": "",
-          "picks": [],
+          "picks": [
+            {
+              "participantId": "xowo4yb57td",
+              "team1": "Barcelona",
+              "team2": "Betis",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "zrx8gxr57td",
+              "team1": "Real Sociedad",
+              "team2": "Betis",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "jh8jzo357td",
+              "team1": "Barça",
+              "team2": "Real Madrid",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "2gh3q3y57td",
+              "team1": "Real Madrid",
+              "team2": "Betis",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "7xu7mha57td",
+              "team1": "Betis",
+              "team2": "Real Madrid",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "jdky2t557td",
+              "team1": "Betis",
+              "team2": "Real Madrid",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "3d2ewr957td",
+              "team1": "Barcelona",
+              "team2": "Betis",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "m9p8aca57td",
+              "team1": "Betis",
+              "team2": "Barsa",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "v9khm4a57td",
+              "team1": "Barça",
+              "team2": "Real Madrid",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "dazopf357td",
+              "team1": "Real Madrid",
+              "team2": "Real Betis",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "k542cwn57td",
+              "team1": "Barcelona",
+              "team2": "Betis",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "d10d72i57td",
+              "team1": "Betis",
+              "team2": "Real Madrid",
+              "result1": "",
+              "result2": ""
+            }
+          ],
           "expelled": []
         }
       ]
     }
   ],
-  "updatedAt": 1791599370516
+  "updatedAt": 1791599410330
 }
