@@ -1,11 +1,11 @@
 {
-  "generatedAt": 1791610914590,
+  "generatedAt": 1791652704232,
   "jornadas": [
     {
       "id": "md-4",
       "matchday": 4,
       "label": "Jornada 4",
-      "updatedAt": 1791610914590,
+      "updatedAt": 1791652704232,
       "matches": [
         {
           "team1": "Real Betis",
@@ -73,7 +73,7 @@
       "id": "md-5",
       "matchday": 5,
       "label": "Jornada 5",
-      "updatedAt": 1791610914590,
+      "updatedAt": 1791652704232,
       "matches": [
         {
           "team1": "Sevilla FC",
@@ -141,7 +141,7 @@
       "id": "md-6",
       "matchday": 6,
       "label": "Jornada 6",
-      "updatedAt": 1791610914590,
+      "updatedAt": 1791652704232,
       "matches": [
         {
           "team1": "Real Sociedad",
@@ -209,7 +209,7 @@
       "id": "md-7",
       "matchday": 7,
       "label": "Jornada 7",
-      "updatedAt": 1791610914590,
+      "updatedAt": 1791652704232,
       "matches": [
         {
           "team1": "Espanyol",
@@ -277,7 +277,7 @@
       "id": "md-8",
       "matchday": 8,
       "label": "Jornada 8",
-      "updatedAt": 1791610914590,
+      "updatedAt": 1791652704232,
       "matches": [
         {
           "team1": "Málaga",
@@ -294,8 +294,8 @@
         {
           "team1": "Alavés",
           "team2": "Atleti",
-          "extra": "sáb, 10 oct, 16:15",
-          "raw": "sáb, 10 oct, 16:15 Alavés - Atleti"
+          "extra": "1-2",
+          "raw": "Alavés 1-2 Atleti"
         },
         {
           "team1": "Barça",
@@ -345,7 +345,7 @@
       "id": "md-9",
       "matchday": 9,
       "label": "Jornada 9",
-      "updatedAt": 1791610914590,
+      "updatedAt": 1791652704232,
       "matches": [
         {
           "team1": "Deportivo",
@@ -413,7 +413,7 @@
       "id": "md-10",
       "matchday": 10,
       "label": "Jornada 10",
-      "updatedAt": 1791610914590,
+      "updatedAt": 1791652704232,
       "matches": [
         {
           "team1": "Alavés",
@@ -481,7 +481,7 @@
       "id": "md-11",
       "matchday": 11,
       "label": "Jornada 11",
-      "updatedAt": 1791610914590,
+      "updatedAt": 1791652704232,
       "matches": [
         {
           "team1": "Villarreal",
@@ -549,7 +549,7 @@
       "id": "md-12",
       "matchday": 12,
       "label": "Jornada 12",
-      "updatedAt": 1791610914590,
+      "updatedAt": 1791652704232,
       "matches": [
         {
           "team1": "Elche",
@@ -617,7 +617,7 @@
       "id": "md-13",
       "matchday": 13,
       "label": "Jornada 13",
-      "updatedAt": 1791610914590,
+      "updatedAt": 1791652704232,
       "matches": [
         {
           "team1": "Athletic",
@@ -683,31 +683,31 @@
     }
   ],
   "clasificacion": {
-    "updatedAt": 1791610914590,
+    "updatedAt": 1791652704232,
     "rows": [
       {
         "pos": 1,
         "name": "Barça",
-        "pj": 7,
-        "g": 7,
+        "pj": 8,
+        "g": 8,
         "e": 0,
         "p": 0,
-        "gf": 31,
+        "gf": 33,
         "gc": 7,
-        "dg": 24,
-        "pts": 21
+        "dg": 26,
+        "pts": 24
       },
       {
         "pos": 2,
         "name": "Atleti",
-        "pj": 7,
-        "g": 5,
+        "pj": 8,
+        "g": 6,
         "e": 1,
         "p": 1,
-        "gf": 16,
-        "gc": 7,
-        "dg": 9,
-        "pts": 16
+        "gf": 18,
+        "gc": 8,
+        "dg": 10,
+        "pts": 19
       },
       {
         "pos": 3,
@@ -748,13 +748,13 @@
       {
         "pos": 6,
         "name": "Alavés",
-        "pj": 7,
+        "pj": 8,
         "g": 3,
         "e": 2,
-        "p": 2,
-        "gf": 11,
-        "gc": 6,
-        "dg": 5,
+        "p": 3,
+        "gf": 12,
+        "gc": 8,
+        "dg": 4,
         "pts": 11
       },
       {
@@ -819,18 +819,6 @@
       },
       {
         "pos": 12,
-        "name": "Getafe",
-        "pj": 7,
-        "g": 2,
-        "e": 2,
-        "p": 3,
-        "gf": 4,
-        "gc": 7,
-        "dg": -3,
-        "pts": 8
-      },
-      {
-        "pos": 13,
         "name": "Rayo Vallecano",
         "pj": 7,
         "g": 2,
@@ -838,6 +826,18 @@
         "p": 3,
         "gf": 11,
         "gc": 16,
+        "dg": -5,
+        "pts": 8
+      },
+      {
+        "pos": 13,
+        "name": "Getafe",
+        "pj": 8,
+        "g": 2,
+        "e": 2,
+        "p": 4,
+        "gf": 4,
+        "gc": 9,
         "dg": -5,
         "pts": 8
       },
