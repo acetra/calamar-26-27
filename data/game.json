@@ -1525,7 +1525,7 @@
               "participantId": "m9p8aca57td",
               "team1": "Betis",
               "team2": "Barsa",
-              "result1": "",
+              "result1": "anulado",
               "result2": ""
             },
             {
@@ -1562,5 +1562,5 @@
       ]
     }
   ],
-  "updatedAt": 1791599410330
+  "updatedAt": 1791599458928
 }
