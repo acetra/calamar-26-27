@@ -1539,7 +1539,7 @@
               "participantId": "dazopf357td",
               "team1": "Real Madrid",
               "team2": "Real Betis",
-              "result1": "",
+              "result1": "gano",
               "result2": ""
             },
             {
@@ -1562,5 +1562,5 @@
       ]
     }
   ],
-  "updatedAt": 1791752121869
+  "updatedAt": 1791752124076
 }
