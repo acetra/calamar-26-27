@@ -1518,7 +1518,7 @@
               "participantId": "3d2ewr957td",
               "team1": "Barcelona",
               "team2": "Betis",
-              "result1": "gano",
+              "result1": "no_gano",
               "result2": ""
             },
             {
@@ -1562,5 +1562,5 @@
       ]
     }
   ],
-  "updatedAt": 1791752085241
+  "updatedAt": 1791752119107
 }
