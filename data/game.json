@@ -1504,7 +1504,7 @@
               "participantId": "7xu7mha57td",
               "team1": "Betis",
               "team2": "Real Madrid",
-              "result1": "",
+              "result1": "gano",
               "result2": ""
             },
             {
@@ -1562,5 +1562,5 @@
       ]
     }
   ],
-  "updatedAt": 1791752060087
+  "updatedAt": 1791752064298
 }
