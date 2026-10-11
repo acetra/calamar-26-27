@@ -1483,7 +1483,7 @@
               "participantId": "zrx8gxr57td",
               "team1": "Real Sociedad",
               "team2": "Betis",
-              "result1": "",
+              "result1": "gano",
               "result2": ""
             },
             {
@@ -1562,5 +1562,5 @@
       ]
     }
   ],
-  "updatedAt": 1791752051319
+  "updatedAt": 1791752054075
 }
