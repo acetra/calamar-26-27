@@ -1,11 +1,11 @@
 {
-  "generatedAt": 1791740371733,
+  "generatedAt": 1791784031878,
   "jornadas": [
     {
       "id": "md-4",
       "matchday": 4,
       "label": "Jornada 4",
-      "updatedAt": 1791740371733,
+      "updatedAt": 1791784031878,
       "matches": [
         {
           "team1": "Real Betis",
@@ -73,7 +73,7 @@
       "id": "md-5",
       "matchday": 5,
       "label": "Jornada 5",
-      "updatedAt": 1791740371733,
+      "updatedAt": 1791784031878,
       "matches": [
         {
           "team1": "Sevilla FC",
@@ -141,7 +141,7 @@
       "id": "md-6",
       "matchday": 6,
       "label": "Jornada 6",
-      "updatedAt": 1791740371733,
+      "updatedAt": 1791784031878,
       "matches": [
         {
           "team1": "Real Sociedad",
@@ -209,7 +209,7 @@
       "id": "md-7",
       "matchday": 7,
       "label": "Jornada 7",
-      "updatedAt": 1791740371733,
+      "updatedAt": 1791784031878,
       "matches": [
         {
           "team1": "Espanyol",
@@ -277,7 +277,7 @@
       "id": "md-8",
       "matchday": 8,
       "label": "Jornada 8",
-      "updatedAt": 1791740371733,
+      "updatedAt": 1791784031878,
       "matches": [
         {
           "team1": "Málaga",
@@ -324,14 +324,14 @@
         {
           "team1": "Real Betis",
           "team2": "Osasuna",
-          "extra": "dom, 11 oct, 18:30",
-          "raw": "dom, 11 oct, 18:30 Real Betis - Osasuna"
+          "extra": "5-2",
+          "raw": "Real Betis 5-2 Osasuna"
         },
         {
           "team1": "Santander",
           "team2": "Valencia",
-          "extra": "dom, 11 oct, 21:00",
-          "raw": "dom, 11 oct, 21:00 Santander - Valencia"
+          "extra": "2-2",
+          "raw": "Santander 2-2 Valencia"
         },
         {
           "team1": "Levante",
@@ -345,7 +345,7 @@
       "id": "md-9",
       "matchday": 9,
       "label": "Jornada 9",
-      "updatedAt": 1791740371733,
+      "updatedAt": 1791784031878,
       "matches": [
         {
           "team1": "Deportivo",
@@ -413,7 +413,7 @@
       "id": "md-10",
       "matchday": 10,
       "label": "Jornada 10",
-      "updatedAt": 1791740371733,
+      "updatedAt": 1791784031878,
       "matches": [
         {
           "team1": "Alavés",
@@ -481,7 +481,7 @@
       "id": "md-11",
       "matchday": 11,
       "label": "Jornada 11",
-      "updatedAt": 1791740371733,
+      "updatedAt": 1791784031878,
       "matches": [
         {
           "team1": "Villarreal",
@@ -549,7 +549,7 @@
       "id": "md-12",
       "matchday": 12,
       "label": "Jornada 12",
-      "updatedAt": 1791740371733,
+      "updatedAt": 1791784031878,
       "matches": [
         {
           "team1": "Elche",
@@ -617,7 +617,7 @@
       "id": "md-13",
       "matchday": 13,
       "label": "Jornada 13",
-      "updatedAt": 1791740371733,
+      "updatedAt": 1791784031878,
       "matches": [
         {
           "team1": "Athletic",
@@ -683,7 +683,7 @@
     }
   ],
   "clasificacion": {
-    "updatedAt": 1791740371733,
+    "updatedAt": 1791784031878,
     "rows": [
       {
         "pos": 1,
@@ -716,9 +716,9 @@
         "g": 6,
         "e": 1,
         "p": 1,
-        "gf": 11,
-        "gc": 7,
-        "dg": 4,
+        "gf": 14,
+        "gc": 9,
+        "dg": 5,
         "pts": 19
       },
       {
@@ -855,27 +855,27 @@
       },
       {
         "pos": 15,
+        "name": "Santander",
+        "pj": 8,
+        "g": 2,
+        "e": 2,
+        "p": 4,
+        "gf": 13,
+        "gc": 23,
+        "dg": -10,
+        "pts": 8
+      },
+      {
+        "pos": 16,
         "name": "Osasuna",
         "pj": 8,
         "g": 2,
         "e": 2,
         "p": 4,
-        "gf": 6,
-        "gc": 15,
-        "dg": -9,
-        "pts": 8
-      },
-      {
-        "pos": 16,
-        "name": "Santander",
-        "pj": 7,
-        "g": 2,
-        "e": 1,
-        "p": 4,
-        "gf": 11,
-        "gc": 21,
+        "gf": 8,
+        "gc": 18,
         "dg": -10,
-        "pts": 7
+        "pts": 8
       },
       {
         "pos": 17,
@@ -903,23 +903,23 @@
       },
       {
         "pos": 19,
+        "name": "Valencia",
+        "pj": 8,
+        "g": 1,
+        "e": 2,
+        "p": 5,
+        "gf": 6,
+        "gc": 15,
+        "dg": -9,
+        "pts": 5
+      },
+      {
+        "pos": 20,
         "name": "Málaga",
         "pj": 8,
         "g": 0,
         "e": 4,
         "p": 4,
-        "gf": 4,
-        "gc": 13,
-        "dg": -9,
-        "pts": 4
-      },
-      {
-        "pos": 19,
-        "name": "Valencia",
-        "pj": 7,
-        "g": 1,
-        "e": 1,
-        "p": 5,
         "gf": 4,
         "gc": 13,
         "dg": -9,
