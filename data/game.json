@@ -1558,9 +1558,17 @@
             }
           ],
           "expelled": []
+        },
+        {
+          "id": "y7yfrryjmq3",
+          "label": "Jornada 9",
+          "season": "2026/27",
+          "deadline": "",
+          "picks": [],
+          "expelled": []
         }
       ]
     }
   ],
-  "updatedAt": 1792181394986
+  "updatedAt": 1792181422600
 }
