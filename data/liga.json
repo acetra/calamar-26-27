@@ -1,11 +1,11 @@
 {
-  "generatedAt": 1792297218653,
+  "generatedAt": 1792338413001,
   "jornadas": [
     {
       "id": "md-5",
       "matchday": 5,
       "label": "Jornada 5",
-      "updatedAt": 1792297218653,
+      "updatedAt": 1792338413001,
       "matches": [
         {
           "team1": "Sevilla FC",
@@ -73,7 +73,7 @@
       "id": "md-6",
       "matchday": 6,
       "label": "Jornada 6",
-      "updatedAt": 1792297218653,
+      "updatedAt": 1792338413001,
       "matches": [
         {
           "team1": "Real Sociedad",
@@ -141,7 +141,7 @@
       "id": "md-7",
       "matchday": 7,
       "label": "Jornada 7",
-      "updatedAt": 1792297218653,
+      "updatedAt": 1792338413001,
       "matches": [
         {
           "team1": "Espanyol",
@@ -209,7 +209,7 @@
       "id": "md-8",
       "matchday": 8,
       "label": "Jornada 8",
-      "updatedAt": 1792297218653,
+      "updatedAt": 1792338413001,
       "matches": [
         {
           "team1": "Málaga",
@@ -277,7 +277,7 @@
       "id": "md-9",
       "matchday": 9,
       "label": "Jornada 9",
-      "updatedAt": 1792297218653,
+      "updatedAt": 1792338413001,
       "matches": [
         {
           "team1": "Deportivo",
@@ -312,8 +312,8 @@
         {
           "team1": "Osasuna",
           "team2": "Santander",
-          "extra": "dom, 18 oct, 14:00",
-          "raw": "dom, 18 oct, 14:00 Osasuna - Santander"
+          "extra": "2-0",
+          "raw": "Osasuna 2-0 Santander"
         },
         {
           "team1": "Celta",
@@ -345,7 +345,7 @@
       "id": "md-10",
       "matchday": 10,
       "label": "Jornada 10",
-      "updatedAt": 1792297218653,
+      "updatedAt": 1792338413001,
       "matches": [
         {
           "team1": "Alavés",
@@ -413,7 +413,7 @@
       "id": "md-11",
       "matchday": 11,
       "label": "Jornada 11",
-      "updatedAt": 1792297218653,
+      "updatedAt": 1792338413001,
       "matches": [
         {
           "team1": "Villarreal",
@@ -481,7 +481,7 @@
       "id": "md-12",
       "matchday": 12,
       "label": "Jornada 12",
-      "updatedAt": 1792297218653,
+      "updatedAt": 1792338413001,
       "matches": [
         {
           "team1": "Sevilla FC",
@@ -549,7 +549,7 @@
       "id": "md-13",
       "matchday": 13,
       "label": "Jornada 13",
-      "updatedAt": 1792297218653,
+      "updatedAt": 1792338413001,
       "matches": [
         {
           "team1": "Athletic",
@@ -615,7 +615,7 @@
     }
   ],
   "clasificacion": {
-    "updatedAt": 1792297218653,
+    "updatedAt": 1792338413001,
     "rows": [
       {
         "pos": 1,
@@ -692,17 +692,29 @@
       {
         "pos": 7,
         "name": "Alavés",
-        "pj": 8,
+        "pj": 9,
         "g": 3,
         "e": 2,
-        "p": 3,
+        "p": 4,
         "gf": 12,
-        "gc": 8,
-        "dg": 4,
+        "gc": 9,
+        "dg": 3,
         "pts": 11
       },
       {
         "pos": 8,
+        "name": "Celta",
+        "pj": 9,
+        "g": 2,
+        "e": 5,
+        "p": 2,
+        "gf": 9,
+        "gc": 6,
+        "dg": 3,
+        "pts": 11
+      },
+      {
+        "pos": 9,
         "name": "Deportivo",
         "pj": 9,
         "g": 2,
@@ -714,7 +726,19 @@
         "pts": 11
       },
       {
-        "pos": 9,
+        "pos": 10,
+        "name": "Osasuna",
+        "pj": 9,
+        "g": 3,
+        "e": 2,
+        "p": 4,
+        "gf": 10,
+        "gc": 18,
+        "dg": -8,
+        "pts": 11
+      },
+      {
+        "pos": 11,
         "name": "Athletic",
         "pj": 7,
         "g": 2,
@@ -726,7 +750,7 @@
         "pts": 9
       },
       {
-        "pos": 10,
+        "pos": 12,
         "name": "Villarreal",
         "pj": 9,
         "g": 2,
@@ -738,19 +762,7 @@
         "pts": 9
       },
       {
-        "pos": 11,
-        "name": "Celta",
-        "pj": 8,
-        "g": 1,
-        "e": 5,
-        "p": 2,
-        "gf": 8,
-        "gc": 6,
-        "dg": 2,
-        "pts": 8
-      },
-      {
-        "pos": 12,
+        "pos": 13,
         "name": "Espanyol",
         "pj": 9,
         "g": 2,
@@ -762,7 +774,7 @@
         "pts": 8
       },
       {
-        "pos": 13,
+        "pos": 14,
         "name": "Rayo Vallecano",
         "pj": 7,
         "g": 2,
@@ -774,7 +786,7 @@
         "pts": 8
       },
       {
-        "pos": 14,
+        "pos": 15,
         "name": "Getafe",
         "pj": 8,
         "g": 2,
@@ -786,27 +798,15 @@
         "pts": 8
       },
       {
-        "pos": 15,
-        "name": "Santander",
-        "pj": 8,
-        "g": 2,
-        "e": 2,
-        "p": 4,
-        "gf": 13,
-        "gc": 23,
-        "dg": -10,
-        "pts": 8
-      },
-      {
         "pos": 16,
-        "name": "Osasuna",
-        "pj": 8,
+        "name": "Santander",
+        "pj": 9,
         "g": 2,
         "e": 2,
-        "p": 4,
-        "gf": 8,
-        "gc": 18,
-        "dg": -10,
+        "p": 5,
+        "gf": 13,
+        "gc": 25,
+        "dg": -12,
         "pts": 8
       },
       {
