@@ -1632,7 +1632,7 @@
               "participantId": "k542cwn57td",
               "team1": "Real Madrid",
               "team2": "Osasuna",
-              "result1": "",
+              "result1": "gano",
               "result2": ""
             }
           ],
@@ -1643,5 +1643,5 @@
       ]
     }
   ],
-  "updatedAt": 1792358497860
+  "updatedAt": 1792358500121
 }
