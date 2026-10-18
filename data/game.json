@@ -1611,7 +1611,7 @@
               "participantId": "2gh3q3y57td",
               "team1": "Villarreal",
               "team2": "Deportivo",
-              "result1": "",
+              "result1": "no_gano",
               "result2": ""
             },
             {
@@ -1643,5 +1643,5 @@
       ]
     }
   ],
-  "updatedAt": 1792358490516
+  "updatedAt": 1792358493551
 }
