@@ -1618,7 +1618,7 @@
               "participantId": "dazopf357td",
               "team1": "Getafe",
               "team2": "Deportivo",
-              "result1": "",
+              "result1": "no_gano",
               "result2": ""
             },
             {
@@ -1643,5 +1643,5 @@
       ]
     }
   ],
-  "updatedAt": 1792443294995
+  "updatedAt": 1792443304403
 }
