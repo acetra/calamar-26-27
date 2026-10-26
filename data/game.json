@@ -1645,11 +1645,68 @@
           "label": "Jornada 10",
           "season": "2026/27",
           "deadline": "",
-          "picks": [],
+          "picks": [
+            {
+              "participantId": "d10d72i57td",
+              "team1": "Real Sociedad",
+              "team2": "Atleti",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "3d2ewr957td",
+              "team1": "Real Sociedad",
+              "team2": "Alaves",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "jh8jzo357td",
+              "team1": "Alavés",
+              "team2": "Real Sociedad",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "v9khm4a57td",
+              "team1": "Real Sociedad",
+              "team2": "Alavés",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "7xu7mha57td",
+              "team1": "Real Sociedad",
+              "team2": "Atlético de Madrid",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "xowo4yb57td",
+              "team1": "Sevilla",
+              "team2": "Real Sociedad",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "zrx8gxr57td",
+              "team1": "Atlético de Madrid",
+              "team2": "Barcelona",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "k542cwn57td",
+              "team1": "Alavés",
+              "team2": "Athletic",
+              "result1": "",
+              "result2": ""
+            }
+          ],
           "expelled": []
         }
       ]
     }
   ],
-  "updatedAt": 1793052720700
+  "updatedAt": 1793052741938
 }
