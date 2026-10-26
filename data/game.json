@@ -1699,7 +1699,7 @@
               "participantId": "k542cwn57td",
               "team1": "Alavés",
               "team2": "Athletic",
-              "result1": "",
+              "result1": "no_gano",
               "result2": ""
             }
           ],
@@ -1708,5 +1708,5 @@
       ]
     }
   ],
-  "updatedAt": 1793052772444
+  "updatedAt": 1793052774734
 }
