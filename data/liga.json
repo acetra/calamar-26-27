@@ -1,11 +1,11 @@
 {
-  "generatedAt": 1792989330812,
+  "generatedAt": 1793039907193,
   "jornadas": [
     {
       "id": "md-6",
       "matchday": 6,
       "label": "Jornada 6",
-      "updatedAt": 1792989330812,
+      "updatedAt": 1793039907193,
       "matches": [
         {
           "team1": "Real Sociedad",
@@ -73,7 +73,7 @@
       "id": "md-7",
       "matchday": 7,
       "label": "Jornada 7",
-      "updatedAt": 1792989330812,
+      "updatedAt": 1793039907193,
       "matches": [
         {
           "team1": "Espanyol",
@@ -141,7 +141,7 @@
       "id": "md-8",
       "matchday": 8,
       "label": "Jornada 8",
-      "updatedAt": 1792989330812,
+      "updatedAt": 1793039907193,
       "matches": [
         {
           "team1": "Málaga",
@@ -209,7 +209,7 @@
       "id": "md-9",
       "matchday": 9,
       "label": "Jornada 9",
-      "updatedAt": 1792989330812,
+      "updatedAt": 1793039907193,
       "matches": [
         {
           "team1": "Deportivo",
@@ -277,7 +277,7 @@
       "id": "md-10",
       "matchday": 10,
       "label": "Jornada 10",
-      "updatedAt": 1792989330812,
+      "updatedAt": 1793039907193,
       "matches": [
         {
           "team1": "Alavés",
@@ -312,26 +312,26 @@
         {
           "team1": "Athletic",
           "team2": "Getafe",
-          "extra": "dom, 25 oct, 14:00",
-          "raw": "dom, 25 oct, 14:00 Athletic - Getafe"
+          "extra": "4-0",
+          "raw": "Athletic 4-0 Getafe"
         },
         {
           "team1": "Celta",
           "team2": "Real Betis",
-          "extra": "dom, 25 oct, 16:15",
-          "raw": "dom, 25 oct, 16:15 Celta - Real Betis"
+          "extra": "0-0",
+          "raw": "Celta 0-0 Real Betis"
         },
         {
           "team1": "Real Sociedad",
           "team2": "Levante",
-          "extra": "dom, 25 oct, 18:30",
-          "raw": "dom, 25 oct, 18:30 Real Sociedad - Levante"
+          "extra": "2-1",
+          "raw": "Real Sociedad 2-1 Levante"
         },
         {
           "team1": "Barça",
           "team2": "Real Madrid",
-          "extra": "dom, 25 oct, 21:00",
-          "raw": "dom, 25 oct, 21:00 Barça - Real Madrid"
+          "extra": "1-2",
+          "raw": "Barça 1-2 Real Madrid"
         },
         {
           "team1": "Sevilla FC",
@@ -345,7 +345,7 @@
       "id": "md-11",
       "matchday": 11,
       "label": "Jornada 11",
-      "updatedAt": 1792989330812,
+      "updatedAt": 1793039907193,
       "matches": [
         {
           "team1": "Villarreal",
@@ -413,7 +413,7 @@
       "id": "md-12",
       "matchday": 12,
       "label": "Jornada 12",
-      "updatedAt": 1792989330812,
+      "updatedAt": 1793039907193,
       "matches": [
         {
           "team1": "Sevilla FC",
@@ -481,7 +481,7 @@
       "id": "md-13",
       "matchday": 13,
       "label": "Jornada 13",
-      "updatedAt": 1792989330812,
+      "updatedAt": 1793039907193,
       "matches": [
         {
           "team1": "Athletic",
@@ -549,7 +549,7 @@
       "id": "md-14",
       "matchday": 14,
       "label": "Jornada 14",
-      "updatedAt": 1792989330812,
+      "updatedAt": 1793039907193,
       "matches": [
         {
           "team1": "Celta",
@@ -615,7 +615,7 @@
     }
   ],
   "clasificacion": {
-    "updatedAt": 1792989330812,
+    "updatedAt": 1793039907193,
     "rows": [
       {
         "pos": 1,
