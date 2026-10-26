@@ -1671,7 +1671,7 @@
               "participantId": "v9khm4a57td",
               "team1": "Real Sociedad",
               "team2": "Alavés",
-              "result1": "",
+              "result1": "gano",
               "result2": ""
             },
             {
@@ -1708,5 +1708,5 @@
       ]
     }
   ],
-  "updatedAt": 1793052755306
+  "updatedAt": 1793052759983
 }
