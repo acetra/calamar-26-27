@@ -1639,9 +1639,17 @@
           "expelled": [
             "jdky2t557td"
           ]
+        },
+        {
+          "id": "z2vcg86akdk",
+          "label": "Jornada 10",
+          "season": "2026/27",
+          "deadline": "",
+          "picks": [],
+          "expelled": []
         }
       ]
     }
   ],
-  "updatedAt": 1793052657204
+  "updatedAt": 1793052720700
 }
