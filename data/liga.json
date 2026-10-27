@@ -1,11 +1,11 @@
 {
-  "generatedAt": 1793039907193,
+  "generatedAt": 1793076813034,
   "jornadas": [
     {
       "id": "md-6",
       "matchday": 6,
       "label": "Jornada 6",
-      "updatedAt": 1793039907193,
+      "updatedAt": 1793076813034,
       "matches": [
         {
           "team1": "Real Sociedad",
@@ -73,7 +73,7 @@
       "id": "md-7",
       "matchday": 7,
       "label": "Jornada 7",
-      "updatedAt": 1793039907193,
+      "updatedAt": 1793076813034,
       "matches": [
         {
           "team1": "Espanyol",
@@ -141,7 +141,7 @@
       "id": "md-8",
       "matchday": 8,
       "label": "Jornada 8",
-      "updatedAt": 1793039907193,
+      "updatedAt": 1793076813034,
       "matches": [
         {
           "team1": "Málaga",
@@ -209,7 +209,7 @@
       "id": "md-9",
       "matchday": 9,
       "label": "Jornada 9",
-      "updatedAt": 1793039907193,
+      "updatedAt": 1793076813034,
       "matches": [
         {
           "team1": "Deportivo",
@@ -277,7 +277,7 @@
       "id": "md-10",
       "matchday": 10,
       "label": "Jornada 10",
-      "updatedAt": 1793039907193,
+      "updatedAt": 1793076813034,
       "matches": [
         {
           "team1": "Alavés",
@@ -336,8 +336,8 @@
         {
           "team1": "Sevilla FC",
           "team2": "Osasuna",
-          "extra": "lun, 26 oct, 21:00",
-          "raw": "lun, 26 oct, 21:00 Sevilla FC - Osasuna"
+          "extra": "2-0",
+          "raw": "Sevilla FC 2-0 Osasuna"
         }
       ]
     },
@@ -345,7 +345,7 @@
       "id": "md-11",
       "matchday": 11,
       "label": "Jornada 11",
-      "updatedAt": 1793039907193,
+      "updatedAt": 1793076813034,
       "matches": [
         {
           "team1": "Villarreal",
@@ -413,7 +413,7 @@
       "id": "md-12",
       "matchday": 12,
       "label": "Jornada 12",
-      "updatedAt": 1793039907193,
+      "updatedAt": 1793076813034,
       "matches": [
         {
           "team1": "Sevilla FC",
@@ -481,7 +481,7 @@
       "id": "md-13",
       "matchday": 13,
       "label": "Jornada 13",
-      "updatedAt": 1793039907193,
+      "updatedAt": 1793076813034,
       "matches": [
         {
           "team1": "Athletic",
@@ -549,7 +549,7 @@
       "id": "md-14",
       "matchday": 14,
       "label": "Jornada 14",
-      "updatedAt": 1793039907193,
+      "updatedAt": 1793076813034,
       "matches": [
         {
           "team1": "Celta",
@@ -615,7 +615,7 @@
     }
   ],
   "clasificacion": {
-    "updatedAt": 1793039907193,
+    "updatedAt": 1793076813034,
     "rows": [
       {
         "pos": 1,
@@ -680,14 +680,14 @@
       {
         "pos": 6,
         "name": "Sevilla FC",
-        "pj": 9,
-        "g": 4,
+        "pj": 10,
+        "g": 5,
         "e": 2,
         "p": 3,
-        "gf": 14,
+        "gf": 16,
         "gc": 16,
-        "dg": -2,
-        "pts": 14
+        "dg": 0,
+        "pts": 17
       },
       {
         "pos": 7,
@@ -752,13 +752,13 @@
       {
         "pos": 12,
         "name": "Osasuna",
-        "pj": 9,
+        "pj": 10,
         "g": 3,
         "e": 2,
-        "p": 4,
+        "p": 5,
         "gf": 10,
-        "gc": 18,
-        "dg": -8,
+        "gc": 20,
+        "dg": -10,
         "pts": 11
       },
       {
