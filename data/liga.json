@@ -1,11 +1,11 @@
 {
-  "generatedAt": 1793298272289,
+  "generatedAt": 1793338575526,
   "jornadas": [
     {
       "id": "md-7",
       "matchday": 7,
       "label": "Jornada 7",
-      "updatedAt": 1793298272289,
+      "updatedAt": 1793338575526,
       "matches": [
         {
           "team1": "Espanyol",
@@ -73,7 +73,7 @@
       "id": "md-8",
       "matchday": 8,
       "label": "Jornada 8",
-      "updatedAt": 1793298272289,
+      "updatedAt": 1793338575526,
       "matches": [
         {
           "team1": "Málaga",
@@ -141,7 +141,7 @@
       "id": "md-9",
       "matchday": 9,
       "label": "Jornada 9",
-      "updatedAt": 1793298272289,
+      "updatedAt": 1793338575526,
       "matches": [
         {
           "team1": "Deportivo",
@@ -209,7 +209,7 @@
       "id": "md-10",
       "matchday": 10,
       "label": "Jornada 10",
-      "updatedAt": 1793298272289,
+      "updatedAt": 1793338575526,
       "matches": [
         {
           "team1": "Alavés",
@@ -277,7 +277,7 @@
       "id": "md-11",
       "matchday": 11,
       "label": "Jornada 11",
-      "updatedAt": 1793298272289,
+      "updatedAt": 1793338575526,
       "matches": [
         {
           "team1": "Villarreal",
@@ -345,7 +345,7 @@
       "id": "md-12",
       "matchday": 12,
       "label": "Jornada 12",
-      "updatedAt": 1793298272289,
+      "updatedAt": 1793338575526,
       "matches": [
         {
           "team1": "Sevilla FC",
@@ -413,7 +413,7 @@
       "id": "md-13",
       "matchday": 13,
       "label": "Jornada 13",
-      "updatedAt": 1793298272289,
+      "updatedAt": 1793338575526,
       "matches": [
         {
           "team1": "Athletic",
@@ -481,7 +481,7 @@
       "id": "md-14",
       "matchday": 14,
       "label": "Jornada 14",
-      "updatedAt": 1793298272289,
+      "updatedAt": 1793338575526,
       "matches": [
         {
           "team1": "Celta",
@@ -549,7 +549,7 @@
       "id": "md-15",
       "matchday": 15,
       "label": "Jornada 15",
-      "updatedAt": 1793298272289,
+      "updatedAt": 1793338575526,
       "matches": [
         {
           "team1": "Osasuna",
@@ -615,7 +615,7 @@
     }
   ],
   "clasificacion": {
-    "updatedAt": 1793298272289,
+    "updatedAt": 1793338575526,
     "rows": [
       {
         "pos": 1,
