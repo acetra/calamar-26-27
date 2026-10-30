@@ -1,11 +1,11 @@
 {
-  "generatedAt": 1793338575526,
+  "generatedAt": 1793383074359,
   "jornadas": [
     {
       "id": "md-7",
       "matchday": 7,
       "label": "Jornada 7",
-      "updatedAt": 1793338575526,
+      "updatedAt": 1793383074359,
       "matches": [
         {
           "team1": "Espanyol",
@@ -73,19 +73,13 @@
       "id": "md-8",
       "matchday": 8,
       "label": "Jornada 8",
-      "updatedAt": 1793338575526,
+      "updatedAt": 1793383074359,
       "matches": [
         {
           "team1": "Málaga",
           "team2": "Espanyol",
           "extra": "1-1",
           "raw": "Málaga 1-1 Espanyol"
-        },
-        {
-          "team1": "Rayo Vallecano",
-          "team2": "Athletic",
-          "extra": "sáb, 10 oct, 14:00",
-          "raw": "sáb, 10 oct, 14:00 Rayo Vallecano - Athletic"
         },
         {
           "team1": "Alavés",
@@ -134,6 +128,12 @@
           "team2": "Sevilla FC",
           "extra": "3-3",
           "raw": "Levante 3-3 Sevilla FC"
+        },
+        {
+          "team1": "Rayo Vallecano",
+          "team2": "Athletic",
+          "extra": "mié, 09 dic, 20:00",
+          "raw": "mié, 09 dic, 20:00 Rayo Vallecano - Athletic"
         }
       ]
     },
@@ -141,7 +141,7 @@
       "id": "md-9",
       "matchday": 9,
       "label": "Jornada 9",
-      "updatedAt": 1793338575526,
+      "updatedAt": 1793383074359,
       "matches": [
         {
           "team1": "Deportivo",
@@ -209,7 +209,7 @@
       "id": "md-10",
       "matchday": 10,
       "label": "Jornada 10",
-      "updatedAt": 1793338575526,
+      "updatedAt": 1793383074359,
       "matches": [
         {
           "team1": "Alavés",
@@ -277,7 +277,7 @@
       "id": "md-11",
       "matchday": 11,
       "label": "Jornada 11",
-      "updatedAt": 1793338575526,
+      "updatedAt": 1793383074359,
       "matches": [
         {
           "team1": "Villarreal",
@@ -345,7 +345,7 @@
       "id": "md-12",
       "matchday": 12,
       "label": "Jornada 12",
-      "updatedAt": 1793338575526,
+      "updatedAt": 1793383074359,
       "matches": [
         {
           "team1": "Sevilla FC",
@@ -413,7 +413,7 @@
       "id": "md-13",
       "matchday": 13,
       "label": "Jornada 13",
-      "updatedAt": 1793338575526,
+      "updatedAt": 1793383074359,
       "matches": [
         {
           "team1": "Athletic",
@@ -481,7 +481,7 @@
       "id": "md-14",
       "matchday": 14,
       "label": "Jornada 14",
-      "updatedAt": 1793338575526,
+      "updatedAt": 1793383074359,
       "matches": [
         {
           "team1": "Celta",
@@ -549,7 +549,7 @@
       "id": "md-15",
       "matchday": 15,
       "label": "Jornada 15",
-      "updatedAt": 1793338575526,
+      "updatedAt": 1793383074359,
       "matches": [
         {
           "team1": "Osasuna",
@@ -615,7 +615,7 @@
     }
   ],
   "clasificacion": {
-    "updatedAt": 1793338575526,
+    "updatedAt": 1793383074359,
     "rows": [
       {
         "pos": 1,
