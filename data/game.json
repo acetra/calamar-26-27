@@ -1704,9 +1704,17 @@
             }
           ],
           "expelled": []
+        },
+        {
+          "id": "qfc9qa21tkm",
+          "label": "Jornada 11",
+          "season": "2026/27",
+          "deadline": "",
+          "picks": [],
+          "expelled": []
         }
       ]
     }
   ],
-  "updatedAt": 1793470521968
+  "updatedAt": 1793470536963
 }
