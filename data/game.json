@@ -1750,7 +1750,7 @@
               "participantId": "d10d72i57td",
               "team1": "Villareal",
               "team2": "Atleti",
-              "result1": "",
+              "result1": "no_gano",
               "result2": ""
             }
           ],
@@ -1759,5 +1759,5 @@
       ]
     }
   ],
-  "updatedAt": 1793470562487
+  "updatedAt": 1793470569462
 }
