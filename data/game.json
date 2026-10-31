@@ -1710,11 +1710,54 @@
           "label": "Jornada 11",
           "season": "2026/27",
           "deadline": "",
-          "picks": [],
+          "picks": [
+            {
+              "participantId": "xowo4yb57td",
+              "team1": "Betis",
+              "team2": "Deportivo",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "3d2ewr957td",
+              "team1": "Real Betis",
+              "team2": "Deportivo",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "7xu7mha57td",
+              "team1": "Atlético Madrid",
+              "team2": "Deportivo",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "v9khm4a57td",
+              "team1": "Betis",
+              "team2": "Deportivo",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "zrx8gxr57td",
+              "team1": "Barcelona",
+              "team2": "Betis",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "d10d72i57td",
+              "team1": "Villareal",
+              "team2": "Atleti",
+              "result1": "",
+              "result2": ""
+            }
+          ],
           "expelled": []
         }
       ]
     }
   ],
-  "updatedAt": 1793470536963
+  "updatedAt": 1793470562487
 }
