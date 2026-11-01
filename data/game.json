@@ -1722,7 +1722,7 @@
               "participantId": "3d2ewr957td",
               "team1": "Real Betis",
               "team2": "Deportivo",
-              "result1": "",
+              "result1": "gano",
               "result2": ""
             },
             {
@@ -1759,5 +1759,5 @@
       ]
     }
   ],
-  "updatedAt": 1793523334413
+  "updatedAt": 1793523336799
 }
