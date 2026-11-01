@@ -1715,7 +1715,7 @@
               "participantId": "xowo4yb57td",
               "team1": "Betis",
               "team2": "Deportivo",
-              "result1": "",
+              "result1": "gano",
               "result2": ""
             },
             {
@@ -1759,5 +1759,5 @@
       ]
     }
   ],
-  "updatedAt": 1793523322246
+  "updatedAt": 1793523334413
 }
