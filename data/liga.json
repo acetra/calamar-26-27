@@ -1,11 +1,11 @@
 {
-  "generatedAt": 1793655613830,
+  "generatedAt": 1793687791219,
   "jornadas": [
     {
       "id": "md-7",
       "matchday": 7,
       "label": "Jornada 7",
-      "updatedAt": 1793655613830,
+      "updatedAt": 1793687791219,
       "matches": [
         {
           "team1": "Espanyol",
@@ -73,7 +73,7 @@
       "id": "md-8",
       "matchday": 8,
       "label": "Jornada 8",
-      "updatedAt": 1793655613830,
+      "updatedAt": 1793687791219,
       "matches": [
         {
           "team1": "Málaga",
@@ -141,7 +141,7 @@
       "id": "md-9",
       "matchday": 9,
       "label": "Jornada 9",
-      "updatedAt": 1793655613830,
+      "updatedAt": 1793687791219,
       "matches": [
         {
           "team1": "Deportivo",
@@ -209,7 +209,7 @@
       "id": "md-10",
       "matchday": 10,
       "label": "Jornada 10",
-      "updatedAt": 1793655613830,
+      "updatedAt": 1793687791219,
       "matches": [
         {
           "team1": "Alavés",
@@ -277,7 +277,7 @@
       "id": "md-11",
       "matchday": 11,
       "label": "Jornada 11",
-      "updatedAt": 1793655613830,
+      "updatedAt": 1793687791219,
       "matches": [
         {
           "team1": "Villarreal",
@@ -336,8 +336,8 @@
         {
           "team1": "Deportivo",
           "team2": "Osasuna",
-          "extra": "lun, 02 nov, 21:00",
-          "raw": "lun, 02 nov, 21:00 Deportivo - Osasuna"
+          "extra": "2-1",
+          "raw": "Deportivo 2-1 Osasuna"
         }
       ]
     },
@@ -345,7 +345,7 @@
       "id": "md-12",
       "matchday": 12,
       "label": "Jornada 12",
-      "updatedAt": 1793655613830,
+      "updatedAt": 1793687791219,
       "matches": [
         {
           "team1": "Sevilla FC",
@@ -413,7 +413,7 @@
       "id": "md-13",
       "matchday": 13,
       "label": "Jornada 13",
-      "updatedAt": 1793655613830,
+      "updatedAt": 1793687791219,
       "matches": [
         {
           "team1": "Athletic",
@@ -481,7 +481,7 @@
       "id": "md-14",
       "matchday": 14,
       "label": "Jornada 14",
-      "updatedAt": 1793655613830,
+      "updatedAt": 1793687791219,
       "matches": [
         {
           "team1": "Celta",
@@ -549,7 +549,7 @@
       "id": "md-15",
       "matchday": 15,
       "label": "Jornada 15",
-      "updatedAt": 1793655613830,
+      "updatedAt": 1793687791219,
       "matches": [
         {
           "team1": "Osasuna",
@@ -617,7 +617,7 @@
       "id": "md-16",
       "matchday": 16,
       "label": "Jornada 16",
-      "updatedAt": 1793655613830,
+      "updatedAt": 1793687791219,
       "matches": [
         {
           "team1": "Espanyol",
@@ -683,7 +683,7 @@
     }
   ],
   "clasificacion": {
-    "updatedAt": 1793655613830,
+    "updatedAt": 1793687791219,
     "rows": [
       {
         "pos": 1,
@@ -771,6 +771,18 @@
       },
       {
         "pos": 8,
+        "name": "Deportivo",
+        "pj": 11,
+        "g": 3,
+        "e": 5,
+        "p": 3,
+        "gf": 15,
+        "gc": 14,
+        "dg": 1,
+        "pts": 14
+      },
+      {
+        "pos": 9,
         "name": "Villarreal",
         "pj": 11,
         "g": 3,
@@ -778,18 +790,6 @@
         "p": 5,
         "gf": 15,
         "gc": 15,
-        "dg": 0,
-        "pts": 12
-      },
-      {
-        "pos": 9,
-        "name": "Deportivo",
-        "pj": 11,
-        "g": 2,
-        "e": 6,
-        "p": 3,
-        "gf": 14,
-        "gc": 14,
         "dg": 0,
         "pts": 12
       },
@@ -843,18 +843,6 @@
       },
       {
         "pos": 14,
-        "name": "Osasuna",
-        "pj": 11,
-        "g": 3,
-        "e": 3,
-        "p": 5,
-        "gf": 11,
-        "gc": 21,
-        "dg": -10,
-        "pts": 12
-      },
-      {
-        "pos": 15,
         "name": "Espanyol",
         "pj": 11,
         "g": 3,
@@ -863,6 +851,18 @@
         "gf": 13,
         "gc": 14,
         "dg": -1,
+        "pts": 11
+      },
+      {
+        "pos": 15,
+        "name": "Osasuna",
+        "pj": 11,
+        "g": 3,
+        "e": 2,
+        "p": 6,
+        "gf": 11,
+        "gc": 22,
+        "dg": -11,
         "pts": 11
       },
       {
