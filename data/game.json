@@ -1761,11 +1761,47 @@
           "label": "Jornada 12",
           "season": "2026/27",
           "deadline": "",
-          "picks": [],
+          "picks": [
+            {
+              "participantId": "xowo4yb57td",
+              "team1": "Real sociedad",
+              "team2": "Celta",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "3d2ewr957td",
+              "team1": "Sevilla",
+              "team2": "Real Celta",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "v9khm4a57td",
+              "team1": "Celta",
+              "team2": "Sevilla",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "7xu7mha57td",
+              "team1": "Celta",
+              "team2": "Sevilla",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "zrx8gxr57td",
+              "team1": "Espanyol",
+              "team2": "Celta",
+              "result1": "",
+              "result2": ""
+            }
+          ],
           "expelled": []
         }
       ]
     }
   ],
-  "updatedAt": 1794072205294
+  "updatedAt": 1794072218194
 }
