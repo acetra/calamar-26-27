@@ -1773,7 +1773,7 @@
               "participantId": "3d2ewr957td",
               "team1": "Sevilla",
               "team2": "Real Celta",
-              "result1": "",
+              "result1": "no_gano",
               "result2": ""
             },
             {
@@ -1803,5 +1803,5 @@
       ]
     }
   ],
-  "updatedAt": 1794072221678
+  "updatedAt": 1794072236645
 }
