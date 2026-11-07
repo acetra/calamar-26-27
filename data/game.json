@@ -1794,7 +1794,7 @@
               "participantId": "zrx8gxr57td",
               "team1": "Espanyol",
               "team2": "Celta",
-              "result1": "",
+              "result1": "no_gano",
               "result2": ""
             }
           ],
@@ -1803,5 +1803,5 @@
       ]
     }
   ],
-  "updatedAt": 1794072236645
+  "updatedAt": 1794072239143
 }
