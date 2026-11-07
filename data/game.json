@@ -1755,9 +1755,17 @@
             }
           ],
           "expelled": []
+        },
+        {
+          "id": "bwyp2km9nvr",
+          "label": "Jornada 12",
+          "season": "2026/27",
+          "deadline": "",
+          "picks": [],
+          "expelled": []
         }
       ]
     }
   ],
-  "updatedAt": 1794072189498
+  "updatedAt": 1794072205294
 }
