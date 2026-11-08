@@ -1,11 +1,11 @@
 {
-  "generatedAt": 1794073372450,
+  "generatedAt": 1794117136203,
   "jornadas": [
     {
       "id": "md-8",
       "matchday": 8,
       "label": "Jornada 8",
-      "updatedAt": 1794073372450,
+      "updatedAt": 1794117136203,
       "matches": [
         {
           "team1": "Málaga",
@@ -73,7 +73,7 @@
       "id": "md-9",
       "matchday": 9,
       "label": "Jornada 9",
-      "updatedAt": 1794073372450,
+      "updatedAt": 1794117136203,
       "matches": [
         {
           "team1": "Deportivo",
@@ -141,7 +141,7 @@
       "id": "md-10",
       "matchday": 10,
       "label": "Jornada 10",
-      "updatedAt": 1794073372450,
+      "updatedAt": 1794117136203,
       "matches": [
         {
           "team1": "Alavés",
@@ -209,7 +209,7 @@
       "id": "md-11",
       "matchday": 11,
       "label": "Jornada 11",
-      "updatedAt": 1794073372450,
+      "updatedAt": 1794117136203,
       "matches": [
         {
           "team1": "Villarreal",
@@ -277,7 +277,7 @@
       "id": "md-12",
       "matchday": 12,
       "label": "Jornada 12",
-      "updatedAt": 1794073372450,
+      "updatedAt": 1794117136203,
       "matches": [
         {
           "team1": "Sevilla FC",
@@ -300,14 +300,14 @@
         {
           "team1": "Osasuna",
           "team2": "Athletic",
-          "extra": "sáb, 07 nov, 18:30",
-          "raw": "sáb, 07 nov, 18:30 Osasuna - Athletic"
+          "extra": "1-1",
+          "raw": "Osasuna 1-1 Athletic"
         },
         {
           "team1": "Valencia",
           "team2": "Real Madrid",
-          "extra": "sáb, 07 nov, 21:00",
-          "raw": "sáb, 07 nov, 21:00 Valencia - Real Madrid"
+          "extra": "0-3",
+          "raw": "Valencia 0-3 Real Madrid"
         },
         {
           "team1": "Elche",
@@ -345,7 +345,7 @@
       "id": "md-13",
       "matchday": 13,
       "label": "Jornada 13",
-      "updatedAt": 1794073372450,
+      "updatedAt": 1794117136203,
       "matches": [
         {
           "team1": "Athletic",
@@ -413,7 +413,7 @@
       "id": "md-14",
       "matchday": 14,
       "label": "Jornada 14",
-      "updatedAt": 1794073372450,
+      "updatedAt": 1794117136203,
       "matches": [
         {
           "team1": "Levante",
@@ -481,7 +481,7 @@
       "id": "md-15",
       "matchday": 15,
       "label": "Jornada 15",
-      "updatedAt": 1794073372450,
+      "updatedAt": 1794117136203,
       "matches": [
         {
           "team1": "Osasuna",
@@ -549,7 +549,7 @@
       "id": "md-16",
       "matchday": 16,
       "label": "Jornada 16",
-      "updatedAt": 1794073372450,
+      "updatedAt": 1794117136203,
       "matches": [
         {
           "team1": "Espanyol",
@@ -617,7 +617,7 @@
       "id": "md-17",
       "matchday": 17,
       "label": "Jornada 17",
-      "updatedAt": 1794073372450,
+      "updatedAt": 1794117136203,
       "matches": [
         {
           "team1": "Athletic",
@@ -683,7 +683,7 @@
     }
   ],
   "clasificacion": {
-    "updatedAt": 1794073372450,
+    "updatedAt": 1794117136203,
     "rows": [
       {
         "pos": 1,
@@ -699,6 +699,18 @@
       },
       {
         "pos": 2,
+        "name": "Real Madrid",
+        "pj": 12,
+        "g": 10,
+        "e": 0,
+        "p": 2,
+        "gf": 31,
+        "gc": 10,
+        "dg": 21,
+        "pts": 30
+      },
+      {
+        "pos": 3,
         "name": "Atleti",
         "pj": 11,
         "g": 9,
@@ -708,18 +720,6 @@
         "gc": 8,
         "dg": 14,
         "pts": 28
-      },
-      {
-        "pos": 3,
-        "name": "Real Madrid",
-        "pj": 11,
-        "g": 9,
-        "e": 0,
-        "p": 2,
-        "gf": 28,
-        "gc": 10,
-        "dg": 18,
-        "pts": 27
       },
       {
         "pos": 4,
@@ -764,8 +764,8 @@
         "g": 4,
         "e": 4,
         "p": 3,
-        "gf": 14,
-        "gc": 10,
+        "gf": 15,
+        "gc": 11,
         "dg": 4,
         "pts": 16
       },
@@ -872,8 +872,8 @@
         "g": 3,
         "e": 3,
         "p": 6,
-        "gf": 11,
-        "gc": 22,
+        "gf": 12,
+        "gc": 23,
         "dg": -11,
         "pts": 12
       },
@@ -904,13 +904,13 @@
       {
         "pos": 19,
         "name": "Valencia",
-        "pj": 11,
+        "pj": 12,
         "g": 2,
         "e": 3,
-        "p": 6,
+        "p": 7,
         "gf": 8,
-        "gc": 17,
-        "dg": -9,
+        "gc": 20,
+        "dg": -12,
         "pts": 9
       },
       {
