@@ -1,79 +1,11 @@
 {
-  "generatedAt": 1794376735883,
+  "generatedAt": 1794425467712,
   "jornadas": [
-    {
-      "id": "md-8",
-      "matchday": 8,
-      "label": "Jornada 8",
-      "updatedAt": 1794376735883,
-      "matches": [
-        {
-          "team1": "Málaga",
-          "team2": "Espanyol",
-          "extra": "1-1",
-          "raw": "Málaga 1-1 Espanyol"
-        },
-        {
-          "team1": "Alavés",
-          "team2": "Atleti",
-          "extra": "1-2",
-          "raw": "Alavés 1-2 Atleti"
-        },
-        {
-          "team1": "Barça",
-          "team2": "Getafe",
-          "extra": "3-0",
-          "raw": "Barça 3-0 Getafe"
-        },
-        {
-          "team1": "Real Madrid",
-          "team2": "Villarreal",
-          "extra": "1-0",
-          "raw": "Real Madrid 1-0 Villarreal"
-        },
-        {
-          "team1": "Elche",
-          "team2": "Celta",
-          "extra": "0-0",
-          "raw": "Elche 0-0 Celta"
-        },
-        {
-          "team1": "Real Sociedad",
-          "team2": "Deportivo",
-          "extra": "3-2",
-          "raw": "Real Sociedad 3-2 Deportivo"
-        },
-        {
-          "team1": "Real Betis",
-          "team2": "Osasuna",
-          "extra": "5-2",
-          "raw": "Real Betis 5-2 Osasuna"
-        },
-        {
-          "team1": "Santander",
-          "team2": "Valencia",
-          "extra": "2-2",
-          "raw": "Santander 2-2 Valencia"
-        },
-        {
-          "team1": "Levante",
-          "team2": "Sevilla FC",
-          "extra": "3-3",
-          "raw": "Levante 3-3 Sevilla FC"
-        },
-        {
-          "team1": "Rayo Vallecano",
-          "team2": "Athletic",
-          "extra": "mié, 09 dic, 20:00",
-          "raw": "mié, 09 dic, 20:00 Rayo Vallecano - Athletic"
-        }
-      ]
-    },
     {
       "id": "md-9",
       "matchday": 9,
       "label": "Jornada 9",
-      "updatedAt": 1794376735883,
+      "updatedAt": 1794425467712,
       "matches": [
         {
           "team1": "Deportivo",
@@ -141,7 +73,7 @@
       "id": "md-10",
       "matchday": 10,
       "label": "Jornada 10",
-      "updatedAt": 1794376735883,
+      "updatedAt": 1794425467712,
       "matches": [
         {
           "team1": "Alavés",
@@ -209,7 +141,7 @@
       "id": "md-11",
       "matchday": 11,
       "label": "Jornada 11",
-      "updatedAt": 1794376735883,
+      "updatedAt": 1794425467712,
       "matches": [
         {
           "team1": "Villarreal",
@@ -277,7 +209,7 @@
       "id": "md-12",
       "matchday": 12,
       "label": "Jornada 12",
-      "updatedAt": 1794376735883,
+      "updatedAt": 1794425467712,
       "matches": [
         {
           "team1": "Sevilla FC",
@@ -345,7 +277,7 @@
       "id": "md-13",
       "matchday": 13,
       "label": "Jornada 13",
-      "updatedAt": 1794376735883,
+      "updatedAt": 1794425467712,
       "matches": [
         {
           "team1": "Athletic",
@@ -413,7 +345,7 @@
       "id": "md-14",
       "matchday": 14,
       "label": "Jornada 14",
-      "updatedAt": 1794376735883,
+      "updatedAt": 1794425467712,
       "matches": [
         {
           "team1": "Levante",
@@ -481,7 +413,7 @@
       "id": "md-15",
       "matchday": 15,
       "label": "Jornada 15",
-      "updatedAt": 1794376735883,
+      "updatedAt": 1794425467712,
       "matches": [
         {
           "team1": "Osasuna",
@@ -549,7 +481,7 @@
       "id": "md-16",
       "matchday": 16,
       "label": "Jornada 16",
-      "updatedAt": 1794376735883,
+      "updatedAt": 1794425467712,
       "matches": [
         {
           "team1": "Espanyol",
@@ -617,7 +549,7 @@
       "id": "md-17",
       "matchday": 17,
       "label": "Jornada 17",
-      "updatedAt": 1794376735883,
+      "updatedAt": 1794425467712,
       "matches": [
         {
           "team1": "Athletic",
@@ -680,10 +612,78 @@
           "raw": "dom, 20 dic, 01:00 Sevilla FC - Santander"
         }
       ]
+    },
+    {
+      "id": "md-18",
+      "matchday": 18,
+      "label": "Jornada 18",
+      "updatedAt": 1794425467712,
+      "matches": [
+        {
+          "team1": "Real Madrid",
+          "team2": "Getafe",
+          "extra": "dom, 03 ene, 01:00",
+          "raw": "dom, 03 ene, 01:00 Real Madrid - Getafe"
+        },
+        {
+          "team1": "Real Sociedad",
+          "team2": "Osasuna",
+          "extra": "dom, 03 ene, 01:00",
+          "raw": "dom, 03 ene, 01:00 Real Sociedad - Osasuna"
+        },
+        {
+          "team1": "Levante",
+          "team2": "Valencia",
+          "extra": "dom, 03 ene, 01:00",
+          "raw": "dom, 03 ene, 01:00 Levante - Valencia"
+        },
+        {
+          "team1": "Santander",
+          "team2": "Athletic",
+          "extra": "dom, 03 ene, 01:00",
+          "raw": "dom, 03 ene, 01:00 Santander - Athletic"
+        },
+        {
+          "team1": "Málaga",
+          "team2": "Elche",
+          "extra": "dom, 03 ene, 01:00",
+          "raw": "dom, 03 ene, 01:00 Málaga - Elche"
+        },
+        {
+          "team1": "Real Betis",
+          "team2": "Alavés",
+          "extra": "dom, 03 ene, 01:00",
+          "raw": "dom, 03 ene, 01:00 Real Betis - Alavés"
+        },
+        {
+          "team1": "Celta",
+          "team2": "Deportivo",
+          "extra": "dom, 03 ene, 01:00",
+          "raw": "dom, 03 ene, 01:00 Celta - Deportivo"
+        },
+        {
+          "team1": "Espanyol",
+          "team2": "Barça",
+          "extra": "dom, 03 ene, 01:00",
+          "raw": "dom, 03 ene, 01:00 Espanyol - Barça"
+        },
+        {
+          "team1": "Villarreal",
+          "team2": "Sevilla FC",
+          "extra": "dom, 03 ene, 01:00",
+          "raw": "dom, 03 ene, 01:00 Villarreal - Sevilla FC"
+        },
+        {
+          "team1": "Rayo Vallecano",
+          "team2": "Atleti",
+          "extra": "dom, 03 ene, 01:00",
+          "raw": "dom, 03 ene, 01:00 Rayo Vallecano - Atleti"
+        }
+      ]
     }
   ],
   "clasificacion": {
-    "updatedAt": 1794376735883,
+    "updatedAt": 1794425467712,
     "rows": [
       {
         "pos": 1,
