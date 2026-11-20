@@ -1780,7 +1780,7 @@
               "participantId": "v9khm4a57td",
               "team1": "Celta",
               "team2": "Sevilla",
-              "result1": "",
+              "result1": "no_gano",
               "result2": ""
             },
             {
@@ -1803,5 +1803,5 @@
       ]
     }
   ],
-  "updatedAt": 1795205474837
+  "updatedAt": 1795205477357
 }
