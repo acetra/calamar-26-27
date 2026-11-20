@@ -1449,6 +1449,20 @@ function renderEdiciones(){
     [...state.editions].reverse().forEach(ed=>{
       html += editionCardHTML(ed, admin);
     });
+    const lastEd = state.editions[state.editions.length-1];
+    if(lastEd.status!=="abierta"){
+      // Cerrar con ganador no encadena otra edición (el bote ya se entregó), así que
+      // sin este botón no habría forma de empezar la siguiente. Cerrar sin ganador sí
+      // crea la próxima automáticamente, así que aquí nunca se llega a ver este caso.
+      if(admin){
+        html += `<div class="card" style="margin-top:14px">
+          <p class="muted" style="margin:0 0 10px">La Edición ${lastEd.number} está cerrada. Crea la siguiente para seguir jugando.</p>
+          <div class="btnrow"><button class="btn primary sm" id="createNextEdition">+ Crear Edición ${lastEd.number+1}</button></div>
+        </div>`;
+      } else {
+        html += `<div class="card" style="margin-top:14px"><p class="muted" style="margin:0">La Edición ${lastEd.number} está cerrada. Solo un administrador puede crear la siguiente.</p></div>`;
+      }
+    }
   }
   el.innerHTML = html;
 
@@ -1457,6 +1471,12 @@ function renderEdiciones(){
     if(cfe) cfe.addEventListener("click", ()=>{
       const season = document.getElementById("firstSeason").value.trim() || "2026/27";
       state.editions.push(newEdition(1, season, 0));
+      saveState(); render();
+    });
+    const cne = document.getElementById("createNextEdition");
+    if(cne) cne.addEventListener("click", ()=>{
+      const lastEd = state.editions[state.editions.length-1];
+      state.editions.push(newEdition(lastEd.number+1, lastEd.season, 0));
       saveState(); render();
     });
   }
