@@ -916,8 +916,8 @@
       "number": 2,
       "season": "2026/27",
       "potCarriedOver": 261,
-      "status": "abierta",
-      "winnerId": null,
+      "status": "cerrada_ganador",
+      "winnerId": "xowo4yb57td",
       "participants": [
         {
           "participantId": "xowo4yb57td",
@@ -1803,5 +1803,5 @@
       ]
     }
   ],
-  "updatedAt": 1795205311570
+  "updatedAt": 1795205318810
 }
