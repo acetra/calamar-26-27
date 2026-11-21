@@ -1,11 +1,11 @@
 {
-  "generatedAt": 1795244156877,
+  "generatedAt": 1795287944485,
   "jornadas": [
     {
       "id": "md-9",
       "matchday": 9,
       "label": "Jornada 9",
-      "updatedAt": 1795244156877,
+      "updatedAt": 1795287944485,
       "matches": [
         {
           "team1": "Deportivo",
@@ -73,7 +73,7 @@
       "id": "md-10",
       "matchday": 10,
       "label": "Jornada 10",
-      "updatedAt": 1795244156877,
+      "updatedAt": 1795287944485,
       "matches": [
         {
           "team1": "Alavés",
@@ -141,7 +141,7 @@
       "id": "md-11",
       "matchday": 11,
       "label": "Jornada 11",
-      "updatedAt": 1795244156877,
+      "updatedAt": 1795287944485,
       "matches": [
         {
           "team1": "Villarreal",
@@ -209,7 +209,7 @@
       "id": "md-12",
       "matchday": 12,
       "label": "Jornada 12",
-      "updatedAt": 1795244156877,
+      "updatedAt": 1795287944485,
       "matches": [
         {
           "team1": "Sevilla FC",
@@ -277,7 +277,7 @@
       "id": "md-13",
       "matchday": 13,
       "label": "Jornada 13",
-      "updatedAt": 1795244156877,
+      "updatedAt": 1795287944485,
       "matches": [
         {
           "team1": "Athletic",
@@ -288,14 +288,14 @@
         {
           "team1": "Alavés",
           "team2": "Deportivo",
-          "extra": "sáb, 21 nov, 14:00",
-          "raw": "sáb, 21 nov, 14:00 Alavés - Deportivo"
+          "extra": "3-1",
+          "raw": "Alavés 3-1 Deportivo"
         },
         {
           "team1": "Rayo Vallecano",
           "team2": "Valencia",
-          "extra": "sáb, 21 nov, 16:15",
-          "raw": "sáb, 21 nov, 16:15 Rayo Vallecano - Valencia"
+          "extra": "0-1",
+          "raw": "Rayo Vallecano 0-1 Valencia"
         },
         {
           "team1": "Sevilla FC",
@@ -345,7 +345,7 @@
       "id": "md-14",
       "matchday": 14,
       "label": "Jornada 14",
-      "updatedAt": 1795244156877,
+      "updatedAt": 1795287944485,
       "matches": [
         {
           "team1": "Levante",
@@ -413,7 +413,7 @@
       "id": "md-15",
       "matchday": 15,
       "label": "Jornada 15",
-      "updatedAt": 1795244156877,
+      "updatedAt": 1795287944485,
       "matches": [
         {
           "team1": "Alavés",
@@ -481,7 +481,7 @@
       "id": "md-16",
       "matchday": 16,
       "label": "Jornada 16",
-      "updatedAt": 1795244156877,
+      "updatedAt": 1795287944485,
       "matches": [
         {
           "team1": "Espanyol",
@@ -549,7 +549,7 @@
       "id": "md-17",
       "matchday": 17,
       "label": "Jornada 17",
-      "updatedAt": 1795244156877,
+      "updatedAt": 1795287944485,
       "matches": [
         {
           "team1": "Athletic",
@@ -617,7 +617,7 @@
       "id": "md-18",
       "matchday": 18,
       "label": "Jornada 18",
-      "updatedAt": 1795244156877,
+      "updatedAt": 1795287944485,
       "matches": [
         {
           "team1": "Real Madrid",
@@ -683,7 +683,7 @@
     }
   ],
   "clasificacion": {
-    "updatedAt": 1795244156877,
+    "updatedAt": 1795287944485,
     "rows": [
       {
         "pos": 1,
@@ -711,6 +711,18 @@
       },
       {
         "pos": 3,
+        "name": "Real Betis",
+        "pj": 13,
+        "g": 9,
+        "e": 2,
+        "p": 2,
+        "gf": 21,
+        "gc": 15,
+        "dg": 6,
+        "pts": 29
+      },
+      {
+        "pos": 4,
         "name": "Atleti",
         "pj": 12,
         "g": 9,
@@ -720,18 +732,6 @@
         "gc": 10,
         "dg": 13,
         "pts": 28
-      },
-      {
-        "pos": 4,
-        "name": "Real Betis",
-        "pj": 12,
-        "g": 8,
-        "e": 2,
-        "p": 2,
-        "gf": 20,
-        "gc": 15,
-        "dg": 5,
-        "pts": 26
       },
       {
         "pos": 5,
@@ -748,13 +748,13 @@
       {
         "pos": 6,
         "name": "Sevilla FC",
-        "pj": 12,
+        "pj": 13,
         "g": 5,
         "e": 3,
-        "p": 4,
+        "p": 5,
         "gf": 17,
-        "gc": 19,
-        "dg": -2,
+        "gc": 20,
+        "dg": -3,
         "pts": 18
       },
       {
@@ -771,6 +771,18 @@
       },
       {
         "pos": 8,
+        "name": "Alavés",
+        "pj": 13,
+        "g": 4,
+        "e": 4,
+        "p": 5,
+        "gf": 18,
+        "gc": 18,
+        "dg": 0,
+        "pts": 16
+      },
+      {
+        "pos": 9,
         "name": "Villarreal",
         "pj": 12,
         "g": 4,
@@ -779,18 +791,6 @@
         "gf": 17,
         "gc": 15,
         "dg": 2,
-        "pts": 15
-      },
-      {
-        "pos": 9,
-        "name": "Deportivo",
-        "pj": 12,
-        "g": 3,
-        "e": 6,
-        "p": 3,
-        "gf": 15,
-        "gc": 14,
-        "dg": 1,
         "pts": 15
       },
       {
@@ -807,6 +807,18 @@
       },
       {
         "pos": 11,
+        "name": "Deportivo",
+        "pj": 13,
+        "g": 3,
+        "e": 6,
+        "p": 4,
+        "gf": 16,
+        "gc": 17,
+        "dg": -1,
+        "pts": 15
+      },
+      {
+        "pos": 12,
         "name": "Santander",
         "pj": 12,
         "g": 4,
@@ -818,7 +830,7 @@
         "pts": 14
       },
       {
-        "pos": 12,
+        "pos": 13,
         "name": "Celta",
         "pj": 12,
         "g": 2,
@@ -830,27 +842,15 @@
         "pts": 13
       },
       {
-        "pos": 13,
-        "name": "Alavés",
-        "pj": 12,
-        "g": 3,
-        "e": 4,
-        "p": 5,
-        "gf": 15,
-        "gc": 17,
-        "dg": -2,
-        "pts": 13
-      },
-      {
         "pos": 14,
         "name": "Rayo Vallecano",
-        "pj": 11,
+        "pj": 12,
         "g": 3,
         "e": 3,
-        "p": 5,
+        "p": 6,
         "gf": 15,
-        "gc": 21,
-        "dg": -6,
+        "gc": 22,
+        "dg": -7,
         "pts": 12
       },
       {
@@ -879,6 +879,18 @@
       },
       {
         "pos": 17,
+        "name": "Valencia",
+        "pj": 13,
+        "g": 3,
+        "e": 3,
+        "p": 7,
+        "gf": 9,
+        "gc": 20,
+        "dg": -11,
+        "pts": 12
+      },
+      {
+        "pos": 18,
         "name": "Levante",
         "pj": 12,
         "g": 2,
@@ -890,7 +902,7 @@
         "pts": 11
       },
       {
-        "pos": 18,
+        "pos": 19,
         "name": "Elche",
         "pj": 12,
         "g": 2,
@@ -900,18 +912,6 @@
         "gc": 20,
         "dg": -6,
         "pts": 10
-      },
-      {
-        "pos": 19,
-        "name": "Valencia",
-        "pj": 12,
-        "g": 2,
-        "e": 3,
-        "p": 7,
-        "gf": 8,
-        "gc": 20,
-        "dg": -12,
-        "pts": 9
       },
       {
         "pos": 20,
