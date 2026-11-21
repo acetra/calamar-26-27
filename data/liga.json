@@ -1,11 +1,11 @@
 {
-  "generatedAt": 1795204858322,
+  "generatedAt": 1795244156877,
   "jornadas": [
     {
       "id": "md-9",
       "matchday": 9,
       "label": "Jornada 9",
-      "updatedAt": 1795204858322,
+      "updatedAt": 1795244156877,
       "matches": [
         {
           "team1": "Deportivo",
@@ -73,7 +73,7 @@
       "id": "md-10",
       "matchday": 10,
       "label": "Jornada 10",
-      "updatedAt": 1795204858322,
+      "updatedAt": 1795244156877,
       "matches": [
         {
           "team1": "Alavés",
@@ -141,7 +141,7 @@
       "id": "md-11",
       "matchday": 11,
       "label": "Jornada 11",
-      "updatedAt": 1795204858322,
+      "updatedAt": 1795244156877,
       "matches": [
         {
           "team1": "Villarreal",
@@ -209,7 +209,7 @@
       "id": "md-12",
       "matchday": 12,
       "label": "Jornada 12",
-      "updatedAt": 1795204858322,
+      "updatedAt": 1795244156877,
       "matches": [
         {
           "team1": "Sevilla FC",
@@ -277,13 +277,13 @@
       "id": "md-13",
       "matchday": 13,
       "label": "Jornada 13",
-      "updatedAt": 1795204858322,
+      "updatedAt": 1795244156877,
       "matches": [
         {
           "team1": "Athletic",
           "team2": "Espanyol",
-          "extra": "vie, 20 nov, 21:00",
-          "raw": "vie, 20 nov, 21:00 Athletic - Espanyol"
+          "extra": "0-1",
+          "raw": "Athletic 0-1 Espanyol"
         },
         {
           "team1": "Alavés",
@@ -345,7 +345,7 @@
       "id": "md-14",
       "matchday": 14,
       "label": "Jornada 14",
-      "updatedAt": 1795204858322,
+      "updatedAt": 1795244156877,
       "matches": [
         {
           "team1": "Levante",
@@ -413,7 +413,7 @@
       "id": "md-15",
       "matchday": 15,
       "label": "Jornada 15",
-      "updatedAt": 1795204858322,
+      "updatedAt": 1795244156877,
       "matches": [
         {
           "team1": "Alavés",
@@ -481,7 +481,7 @@
       "id": "md-16",
       "matchday": 16,
       "label": "Jornada 16",
-      "updatedAt": 1795204858322,
+      "updatedAt": 1795244156877,
       "matches": [
         {
           "team1": "Espanyol",
@@ -549,7 +549,7 @@
       "id": "md-17",
       "matchday": 17,
       "label": "Jornada 17",
-      "updatedAt": 1795204858322,
+      "updatedAt": 1795244156877,
       "matches": [
         {
           "team1": "Athletic",
@@ -617,7 +617,7 @@
       "id": "md-18",
       "matchday": 18,
       "label": "Jornada 18",
-      "updatedAt": 1795204858322,
+      "updatedAt": 1795244156877,
       "matches": [
         {
           "team1": "Real Madrid",
@@ -683,7 +683,7 @@
     }
   ],
   "clasificacion": {
-    "updatedAt": 1795204858322,
+    "updatedAt": 1795244156877,
     "rows": [
       {
         "pos": 1,
@@ -762,12 +762,12 @@
         "name": "Athletic",
         "pj": 12,
         "g": 4,
-        "e": 5,
-        "p": 3,
+        "e": 4,
+        "p": 4,
         "gf": 15,
-        "gc": 11,
-        "dg": 4,
-        "pts": 17
+        "gc": 12,
+        "dg": 3,
+        "pts": 16
       },
       {
         "pos": 8,
@@ -795,6 +795,18 @@
       },
       {
         "pos": 10,
+        "name": "Espanyol",
+        "pj": 13,
+        "g": 4,
+        "e": 3,
+        "p": 6,
+        "gf": 14,
+        "gc": 14,
+        "dg": 0,
+        "pts": 15
+      },
+      {
+        "pos": 11,
         "name": "Santander",
         "pj": 12,
         "g": 4,
@@ -806,7 +818,7 @@
         "pts": 14
       },
       {
-        "pos": 11,
+        "pos": 12,
         "name": "Celta",
         "pj": 12,
         "g": 2,
@@ -815,18 +827,6 @@
         "gf": 10,
         "gc": 10,
         "dg": 0,
-        "pts": 13
-      },
-      {
-        "pos": 12,
-        "name": "Espanyol",
-        "pj": 13,
-        "g": 3,
-        "e": 4,
-        "p": 6,
-        "gf": 13,
-        "gc": 14,
-        "dg": -1,
         "pts": 13
       },
       {
