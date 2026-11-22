@@ -1,11 +1,11 @@
 {
-  "generatedAt": 1795329222940,
+  "generatedAt": 1795375718858,
   "jornadas": [
     {
       "id": "md-9",
       "matchday": 9,
       "label": "Jornada 9",
-      "updatedAt": 1795329222940,
+      "updatedAt": 1795375718858,
       "matches": [
         {
           "team1": "Deportivo",
@@ -73,7 +73,7 @@
       "id": "md-10",
       "matchday": 10,
       "label": "Jornada 10",
-      "updatedAt": 1795329222940,
+      "updatedAt": 1795375718858,
       "matches": [
         {
           "team1": "Alavés",
@@ -141,7 +141,7 @@
       "id": "md-11",
       "matchday": 11,
       "label": "Jornada 11",
-      "updatedAt": 1795329222940,
+      "updatedAt": 1795375718858,
       "matches": [
         {
           "team1": "Villarreal",
@@ -209,7 +209,7 @@
       "id": "md-12",
       "matchday": 12,
       "label": "Jornada 12",
-      "updatedAt": 1795329222940,
+      "updatedAt": 1795375718858,
       "matches": [
         {
           "team1": "Sevilla FC",
@@ -277,7 +277,7 @@
       "id": "md-13",
       "matchday": 13,
       "label": "Jornada 13",
-      "updatedAt": 1795329222940,
+      "updatedAt": 1795375718858,
       "matches": [
         {
           "team1": "Athletic",
@@ -312,14 +312,14 @@
         {
           "team1": "Barça",
           "team2": "Villarreal",
-          "extra": "dom, 22 nov, 14:00",
-          "raw": "dom, 22 nov, 14:00 Barça - Villarreal"
+          "extra": "3-2",
+          "raw": "Barça 3-2 Villarreal"
         },
         {
           "team1": "Santander",
           "team2": "Real Sociedad",
-          "extra": "dom, 22 nov, 16:15",
-          "raw": "dom, 22 nov, 16:15 Santander - Real Sociedad"
+          "extra": "3-2",
+          "raw": "Santander 3-2 Real Sociedad"
         },
         {
           "team1": "Osasuna",
@@ -345,7 +345,7 @@
       "id": "md-14",
       "matchday": 14,
       "label": "Jornada 14",
-      "updatedAt": 1795329222940,
+      "updatedAt": 1795375718858,
       "matches": [
         {
           "team1": "Levante",
@@ -413,7 +413,7 @@
       "id": "md-15",
       "matchday": 15,
       "label": "Jornada 15",
-      "updatedAt": 1795329222940,
+      "updatedAt": 1795375718858,
       "matches": [
         {
           "team1": "Alavés",
@@ -481,7 +481,7 @@
       "id": "md-16",
       "matchday": 16,
       "label": "Jornada 16",
-      "updatedAt": 1795329222940,
+      "updatedAt": 1795375718858,
       "matches": [
         {
           "team1": "Espanyol",
@@ -549,7 +549,7 @@
       "id": "md-17",
       "matchday": 17,
       "label": "Jornada 17",
-      "updatedAt": 1795329222940,
+      "updatedAt": 1795375718858,
       "matches": [
         {
           "team1": "Athletic",
@@ -617,7 +617,7 @@
       "id": "md-18",
       "matchday": 18,
       "label": "Jornada 18",
-      "updatedAt": 1795329222940,
+      "updatedAt": 1795375718858,
       "matches": [
         {
           "team1": "Real Madrid",
@@ -683,19 +683,19 @@
     }
   ],
   "clasificacion": {
-    "updatedAt": 1795329222940,
+    "updatedAt": 1795375718858,
     "rows": [
       {
         "pos": 1,
         "name": "Barça",
-        "pj": 12,
-        "g": 11,
+        "pj": 13,
+        "g": 12,
         "e": 0,
         "p": 1,
-        "gf": 48,
-        "gc": 13,
-        "dg": 35,
-        "pts": 33
+        "gf": 51,
+        "gc": 15,
+        "dg": 36,
+        "pts": 36
       },
       {
         "pos": 2,
@@ -736,13 +736,13 @@
       {
         "pos": 5,
         "name": "Real Sociedad",
-        "pj": 12,
+        "pj": 13,
         "g": 7,
         "e": 1,
-        "p": 4,
-        "gf": 21,
-        "gc": 20,
-        "dg": 1,
+        "p": 5,
+        "gf": 23,
+        "gc": 23,
+        "dg": 0,
         "pts": 22
       },
       {
@@ -759,6 +759,18 @@
       },
       {
         "pos": 7,
+        "name": "Santander",
+        "pj": 13,
+        "g": 5,
+        "e": 2,
+        "p": 6,
+        "gf": 20,
+        "gc": 32,
+        "dg": -12,
+        "pts": 17
+      },
+      {
+        "pos": 8,
         "name": "Athletic",
         "pj": 12,
         "g": 4,
@@ -770,7 +782,7 @@
         "pts": 16
       },
       {
-        "pos": 8,
+        "pos": 9,
         "name": "Alavés",
         "pj": 13,
         "g": 4,
@@ -782,19 +794,19 @@
         "pts": 16
       },
       {
-        "pos": 9,
+        "pos": 10,
         "name": "Villarreal",
-        "pj": 12,
+        "pj": 13,
         "g": 4,
         "e": 3,
-        "p": 5,
-        "gf": 17,
-        "gc": 15,
-        "dg": 2,
+        "p": 6,
+        "gf": 19,
+        "gc": 18,
+        "dg": 1,
         "pts": 15
       },
       {
-        "pos": 10,
+        "pos": 11,
         "name": "Espanyol",
         "pj": 13,
         "g": 4,
@@ -806,7 +818,7 @@
         "pts": 15
       },
       {
-        "pos": 11,
+        "pos": 12,
         "name": "Deportivo",
         "pj": 13,
         "g": 3,
@@ -818,19 +830,19 @@
         "pts": 15
       },
       {
-        "pos": 12,
-        "name": "Santander",
-        "pj": 12,
+        "pos": 13,
+        "name": "Osasuna",
+        "pj": 13,
         "g": 4,
-        "e": 2,
+        "e": 3,
         "p": 6,
-        "gf": 17,
-        "gc": 30,
-        "dg": -13,
-        "pts": 14
+        "gf": 13,
+        "gc": 23,
+        "dg": -10,
+        "pts": 15
       },
       {
-        "pos": 13,
+        "pos": 14,
         "name": "Celta",
         "pj": 13,
         "g": 2,
@@ -842,7 +854,7 @@
         "pts": 13
       },
       {
-        "pos": 14,
+        "pos": 15,
         "name": "Rayo Vallecano",
         "pj": 12,
         "g": 3,
@@ -854,7 +866,7 @@
         "pts": 12
       },
       {
-        "pos": 15,
+        "pos": 16,
         "name": "Getafe",
         "pj": 12,
         "g": 3,
@@ -863,18 +875,6 @@
         "gf": 8,
         "gc": 18,
         "dg": -10,
-        "pts": 12
-      },
-      {
-        "pos": 16,
-        "name": "Osasuna",
-        "pj": 12,
-        "g": 3,
-        "e": 3,
-        "p": 6,
-        "gf": 12,
-        "gc": 23,
-        "dg": -11,
         "pts": 12
       },
       {
@@ -916,13 +916,13 @@
       {
         "pos": 20,
         "name": "Málaga",
-        "pj": 12,
+        "pj": 13,
         "g": 0,
         "e": 5,
-        "p": 7,
+        "p": 8,
         "gf": 9,
-        "gc": 23,
-        "dg": -14,
+        "gc": 24,
+        "dg": -15,
         "pts": 5
       }
     ]
