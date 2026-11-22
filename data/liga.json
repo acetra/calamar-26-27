@@ -1,11 +1,11 @@
 {
-  "generatedAt": 1795287944485,
+  "generatedAt": 1795329222940,
   "jornadas": [
     {
       "id": "md-9",
       "matchday": 9,
       "label": "Jornada 9",
-      "updatedAt": 1795287944485,
+      "updatedAt": 1795329222940,
       "matches": [
         {
           "team1": "Deportivo",
@@ -73,7 +73,7 @@
       "id": "md-10",
       "matchday": 10,
       "label": "Jornada 10",
-      "updatedAt": 1795287944485,
+      "updatedAt": 1795329222940,
       "matches": [
         {
           "team1": "Alavés",
@@ -141,7 +141,7 @@
       "id": "md-11",
       "matchday": 11,
       "label": "Jornada 11",
-      "updatedAt": 1795287944485,
+      "updatedAt": 1795329222940,
       "matches": [
         {
           "team1": "Villarreal",
@@ -209,7 +209,7 @@
       "id": "md-12",
       "matchday": 12,
       "label": "Jornada 12",
-      "updatedAt": 1795287944485,
+      "updatedAt": 1795329222940,
       "matches": [
         {
           "team1": "Sevilla FC",
@@ -277,7 +277,7 @@
       "id": "md-13",
       "matchday": 13,
       "label": "Jornada 13",
-      "updatedAt": 1795287944485,
+      "updatedAt": 1795329222940,
       "matches": [
         {
           "team1": "Athletic",
@@ -300,14 +300,14 @@
         {
           "team1": "Sevilla FC",
           "team2": "Real Betis",
-          "extra": "sáb, 21 nov, 18:30",
-          "raw": "sáb, 21 nov, 18:30 Sevilla FC - Real Betis"
+          "extra": "1-1",
+          "raw": "Sevilla FC 1-1 Real Betis"
         },
         {
           "team1": "Real Madrid",
           "team2": "Celta",
-          "extra": "sáb, 21 nov, 21:00",
-          "raw": "sáb, 21 nov, 21:00 Real Madrid - Celta"
+          "extra": "2-1",
+          "raw": "Real Madrid 2-1 Celta"
         },
         {
           "team1": "Barça",
@@ -345,7 +345,7 @@
       "id": "md-14",
       "matchday": 14,
       "label": "Jornada 14",
-      "updatedAt": 1795287944485,
+      "updatedAt": 1795329222940,
       "matches": [
         {
           "team1": "Levante",
@@ -413,7 +413,7 @@
       "id": "md-15",
       "matchday": 15,
       "label": "Jornada 15",
-      "updatedAt": 1795287944485,
+      "updatedAt": 1795329222940,
       "matches": [
         {
           "team1": "Alavés",
@@ -481,7 +481,7 @@
       "id": "md-16",
       "matchday": 16,
       "label": "Jornada 16",
-      "updatedAt": 1795287944485,
+      "updatedAt": 1795329222940,
       "matches": [
         {
           "team1": "Espanyol",
@@ -549,7 +549,7 @@
       "id": "md-17",
       "matchday": 17,
       "label": "Jornada 17",
-      "updatedAt": 1795287944485,
+      "updatedAt": 1795329222940,
       "matches": [
         {
           "team1": "Athletic",
@@ -617,7 +617,7 @@
       "id": "md-18",
       "matchday": 18,
       "label": "Jornada 18",
-      "updatedAt": 1795287944485,
+      "updatedAt": 1795329222940,
       "matches": [
         {
           "team1": "Real Madrid",
@@ -683,7 +683,7 @@
     }
   ],
   "clasificacion": {
-    "updatedAt": 1795287944485,
+    "updatedAt": 1795329222940,
     "rows": [
       {
         "pos": 1,
@@ -700,29 +700,17 @@
       {
         "pos": 2,
         "name": "Real Madrid",
-        "pj": 12,
-        "g": 10,
+        "pj": 13,
+        "g": 11,
         "e": 0,
         "p": 2,
-        "gf": 31,
-        "gc": 10,
-        "dg": 21,
-        "pts": 30
+        "gf": 33,
+        "gc": 11,
+        "dg": 22,
+        "pts": 33
       },
       {
         "pos": 3,
-        "name": "Real Betis",
-        "pj": 13,
-        "g": 9,
-        "e": 2,
-        "p": 2,
-        "gf": 21,
-        "gc": 15,
-        "dg": 6,
-        "pts": 29
-      },
-      {
-        "pos": 4,
         "name": "Atleti",
         "pj": 12,
         "g": 9,
@@ -732,6 +720,18 @@
         "gc": 10,
         "dg": 13,
         "pts": 28
+      },
+      {
+        "pos": 4,
+        "name": "Real Betis",
+        "pj": 13,
+        "g": 8,
+        "e": 3,
+        "p": 2,
+        "gf": 21,
+        "gc": 16,
+        "dg": 5,
+        "pts": 27
       },
       {
         "pos": 5,
@@ -750,12 +750,12 @@
         "name": "Sevilla FC",
         "pj": 13,
         "g": 5,
-        "e": 3,
-        "p": 5,
-        "gf": 17,
+        "e": 4,
+        "p": 4,
+        "gf": 18,
         "gc": 20,
-        "dg": -3,
-        "pts": 18
+        "dg": -2,
+        "pts": 19
       },
       {
         "pos": 7,
@@ -832,13 +832,13 @@
       {
         "pos": 13,
         "name": "Celta",
-        "pj": 12,
+        "pj": 13,
         "g": 2,
         "e": 7,
-        "p": 3,
-        "gf": 10,
-        "gc": 10,
-        "dg": 0,
+        "p": 4,
+        "gf": 11,
+        "gc": 12,
+        "dg": -1,
         "pts": 13
       },
       {
