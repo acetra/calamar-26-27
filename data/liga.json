@@ -1,11 +1,11 @@
 {
-  "generatedAt": 1795375718858,
+  "generatedAt": 1795418618381,
   "jornadas": [
     {
       "id": "md-9",
       "matchday": 9,
       "label": "Jornada 9",
-      "updatedAt": 1795375718858,
+      "updatedAt": 1795418618381,
       "matches": [
         {
           "team1": "Deportivo",
@@ -73,7 +73,7 @@
       "id": "md-10",
       "matchday": 10,
       "label": "Jornada 10",
-      "updatedAt": 1795375718858,
+      "updatedAt": 1795418618381,
       "matches": [
         {
           "team1": "Alavés",
@@ -141,7 +141,7 @@
       "id": "md-11",
       "matchday": 11,
       "label": "Jornada 11",
-      "updatedAt": 1795375718858,
+      "updatedAt": 1795418618381,
       "matches": [
         {
           "team1": "Villarreal",
@@ -209,7 +209,7 @@
       "id": "md-12",
       "matchday": 12,
       "label": "Jornada 12",
-      "updatedAt": 1795375718858,
+      "updatedAt": 1795418618381,
       "matches": [
         {
           "team1": "Sevilla FC",
@@ -277,7 +277,7 @@
       "id": "md-13",
       "matchday": 13,
       "label": "Jornada 13",
-      "updatedAt": 1795375718858,
+      "updatedAt": 1795418618381,
       "matches": [
         {
           "team1": "Athletic",
@@ -324,14 +324,14 @@
         {
           "team1": "Osasuna",
           "team2": "Málaga",
-          "extra": "dom, 22 nov, 18:30",
-          "raw": "dom, 22 nov, 18:30 Osasuna - Málaga"
+          "extra": "1-0",
+          "raw": "Osasuna 1-0 Málaga"
         },
         {
           "team1": "Getafe",
           "team2": "Atleti",
-          "extra": "dom, 22 nov, 21:00",
-          "raw": "dom, 22 nov, 21:00 Getafe - Atleti"
+          "extra": "0-3",
+          "raw": "Getafe 0-3 Atleti"
         },
         {
           "team1": "Levante",
@@ -345,7 +345,7 @@
       "id": "md-14",
       "matchday": 14,
       "label": "Jornada 14",
-      "updatedAt": 1795375718858,
+      "updatedAt": 1795418618381,
       "matches": [
         {
           "team1": "Levante",
@@ -413,7 +413,7 @@
       "id": "md-15",
       "matchday": 15,
       "label": "Jornada 15",
-      "updatedAt": 1795375718858,
+      "updatedAt": 1795418618381,
       "matches": [
         {
           "team1": "Alavés",
@@ -481,7 +481,7 @@
       "id": "md-16",
       "matchday": 16,
       "label": "Jornada 16",
-      "updatedAt": 1795375718858,
+      "updatedAt": 1795418618381,
       "matches": [
         {
           "team1": "Espanyol",
@@ -549,7 +549,7 @@
       "id": "md-17",
       "matchday": 17,
       "label": "Jornada 17",
-      "updatedAt": 1795375718858,
+      "updatedAt": 1795418618381,
       "matches": [
         {
           "team1": "Athletic",
@@ -617,7 +617,7 @@
       "id": "md-18",
       "matchday": 18,
       "label": "Jornada 18",
-      "updatedAt": 1795375718858,
+      "updatedAt": 1795418618381,
       "matches": [
         {
           "team1": "Real Madrid",
@@ -683,7 +683,7 @@
     }
   ],
   "clasificacion": {
-    "updatedAt": 1795375718858,
+    "updatedAt": 1795418618381,
     "rows": [
       {
         "pos": 1,
@@ -712,14 +712,14 @@
       {
         "pos": 3,
         "name": "Atleti",
-        "pj": 12,
-        "g": 9,
+        "pj": 13,
+        "g": 10,
         "e": 1,
         "p": 2,
-        "gf": 23,
+        "gf": 26,
         "gc": 10,
-        "dg": 13,
-        "pts": 28
+        "dg": 16,
+        "pts": 31
       },
       {
         "pos": 4,
@@ -867,18 +867,6 @@
       },
       {
         "pos": 16,
-        "name": "Getafe",
-        "pj": 12,
-        "g": 3,
-        "e": 3,
-        "p": 6,
-        "gf": 8,
-        "gc": 18,
-        "dg": -10,
-        "pts": 12
-      },
-      {
-        "pos": 17,
         "name": "Valencia",
         "pj": 13,
         "g": 3,
@@ -887,6 +875,18 @@
         "gf": 9,
         "gc": 20,
         "dg": -11,
+        "pts": 12
+      },
+      {
+        "pos": 17,
+        "name": "Getafe",
+        "pj": 13,
+        "g": 3,
+        "e": 3,
+        "p": 7,
+        "gf": 8,
+        "gc": 21,
+        "dg": -13,
         "pts": 12
       },
       {
