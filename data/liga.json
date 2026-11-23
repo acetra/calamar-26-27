@@ -1,11 +1,11 @@
 {
-  "generatedAt": 1795418618381,
+  "generatedAt": 1795477635409,
   "jornadas": [
     {
       "id": "md-9",
       "matchday": 9,
       "label": "Jornada 9",
-      "updatedAt": 1795418618381,
+      "updatedAt": 1795477635409,
       "matches": [
         {
           "team1": "Deportivo",
@@ -73,7 +73,7 @@
       "id": "md-10",
       "matchday": 10,
       "label": "Jornada 10",
-      "updatedAt": 1795418618381,
+      "updatedAt": 1795477635409,
       "matches": [
         {
           "team1": "Alavés",
@@ -141,7 +141,7 @@
       "id": "md-11",
       "matchday": 11,
       "label": "Jornada 11",
-      "updatedAt": 1795418618381,
+      "updatedAt": 1795477635409,
       "matches": [
         {
           "team1": "Villarreal",
@@ -209,7 +209,7 @@
       "id": "md-12",
       "matchday": 12,
       "label": "Jornada 12",
-      "updatedAt": 1795418618381,
+      "updatedAt": 1795477635409,
       "matches": [
         {
           "team1": "Sevilla FC",
@@ -277,7 +277,7 @@
       "id": "md-13",
       "matchday": 13,
       "label": "Jornada 13",
-      "updatedAt": 1795418618381,
+      "updatedAt": 1795477635409,
       "matches": [
         {
           "team1": "Athletic",
@@ -336,8 +336,8 @@
         {
           "team1": "Levante",
           "team2": "Elche",
-          "extra": "lun, 23 nov, 21:00",
-          "raw": "lun, 23 nov, 21:00 Levante - Elche"
+          "extra": "1-1",
+          "raw": "Levante 1-1 Elche"
         }
       ]
     },
@@ -345,7 +345,7 @@
       "id": "md-14",
       "matchday": 14,
       "label": "Jornada 14",
-      "updatedAt": 1795418618381,
+      "updatedAt": 1795477635409,
       "matches": [
         {
           "team1": "Levante",
@@ -413,7 +413,7 @@
       "id": "md-15",
       "matchday": 15,
       "label": "Jornada 15",
-      "updatedAt": 1795418618381,
+      "updatedAt": 1795477635409,
       "matches": [
         {
           "team1": "Alavés",
@@ -481,67 +481,67 @@
       "id": "md-16",
       "matchday": 16,
       "label": "Jornada 16",
-      "updatedAt": 1795418618381,
+      "updatedAt": 1795477635409,
       "matches": [
         {
-          "team1": "Espanyol",
-          "team2": "Celta",
-          "extra": "dom, 13 dic, 01:00",
-          "raw": "dom, 13 dic, 01:00 Espanyol - Celta"
-        },
-        {
-          "team1": "Málaga",
-          "team2": "Barça",
-          "extra": "dom, 13 dic, 01:00",
-          "raw": "dom, 13 dic, 01:00 Málaga - Barça"
-        },
-        {
-          "team1": "Real Madrid",
-          "team2": "Osasuna",
-          "extra": "dom, 13 dic, 01:00",
-          "raw": "dom, 13 dic, 01:00 Real Madrid - Osasuna"
-        },
-        {
-          "team1": "Deportivo",
-          "team2": "Athletic",
-          "extra": "dom, 13 dic, 01:00",
-          "raw": "dom, 13 dic, 01:00 Deportivo - Athletic"
+          "team1": "Elche",
+          "team2": "Sevilla FC",
+          "extra": "vie, 11 dic, 21:00",
+          "raw": "vie, 11 dic, 21:00 Elche - Sevilla FC"
         },
         {
           "team1": "Levante",
           "team2": "Alavés",
-          "extra": "dom, 13 dic, 01:00",
-          "raw": "dom, 13 dic, 01:00 Levante - Alavés"
-        },
-        {
-          "team1": "Elche",
-          "team2": "Sevilla FC",
-          "extra": "dom, 13 dic, 01:00",
-          "raw": "dom, 13 dic, 01:00 Elche - Sevilla FC"
+          "extra": "sáb, 12 dic, 14:00",
+          "raw": "sáb, 12 dic, 14:00 Levante - Alavés"
         },
         {
           "team1": "Villarreal",
           "team2": "Rayo Vallecano",
-          "extra": "dom, 13 dic, 01:00",
-          "raw": "dom, 13 dic, 01:00 Villarreal - Rayo Vallecano"
+          "extra": "sáb, 12 dic, 16:15",
+          "raw": "sáb, 12 dic, 16:15 Villarreal - Rayo Vallecano"
+        },
+        {
+          "team1": "Málaga",
+          "team2": "Barça",
+          "extra": "sáb, 12 dic, 18:30",
+          "raw": "sáb, 12 dic, 18:30 Málaga - Barça"
         },
         {
           "team1": "Real Betis",
           "team2": "Santander",
-          "extra": "dom, 13 dic, 01:00",
-          "raw": "dom, 13 dic, 01:00 Real Betis - Santander"
-        },
-        {
-          "team1": "Real Sociedad",
-          "team2": "Getafe",
-          "extra": "dom, 13 dic, 01:00",
-          "raw": "dom, 13 dic, 01:00 Real Sociedad - Getafe"
+          "extra": "sáb, 12 dic, 21:00",
+          "raw": "sáb, 12 dic, 21:00 Real Betis - Santander"
         },
         {
           "team1": "Atleti",
           "team2": "Valencia",
-          "extra": "dom, 13 dic, 01:00",
-          "raw": "dom, 13 dic, 01:00 Atleti - Valencia"
+          "extra": "dom, 13 dic, 14:00",
+          "raw": "dom, 13 dic, 14:00 Atleti - Valencia"
+        },
+        {
+          "team1": "Deportivo",
+          "team2": "Athletic",
+          "extra": "dom, 13 dic, 16:15",
+          "raw": "dom, 13 dic, 16:15 Deportivo - Athletic"
+        },
+        {
+          "team1": "Real Sociedad",
+          "team2": "Getafe",
+          "extra": "dom, 13 dic, 18:30",
+          "raw": "dom, 13 dic, 18:30 Real Sociedad - Getafe"
+        },
+        {
+          "team1": "Real Madrid",
+          "team2": "Osasuna",
+          "extra": "dom, 13 dic, 21:00",
+          "raw": "dom, 13 dic, 21:00 Real Madrid - Osasuna"
+        },
+        {
+          "team1": "Espanyol",
+          "team2": "Celta",
+          "extra": "lun, 14 dic, 21:00",
+          "raw": "lun, 14 dic, 21:00 Espanyol - Celta"
         }
       ]
     },
@@ -549,7 +549,7 @@
       "id": "md-17",
       "matchday": 17,
       "label": "Jornada 17",
-      "updatedAt": 1795418618381,
+      "updatedAt": 1795477635409,
       "matches": [
         {
           "team1": "Athletic",
@@ -617,7 +617,7 @@
       "id": "md-18",
       "matchday": 18,
       "label": "Jornada 18",
-      "updatedAt": 1795418618381,
+      "updatedAt": 1795477635409,
       "matches": [
         {
           "team1": "Real Madrid",
@@ -683,7 +683,7 @@
     }
   ],
   "clasificacion": {
-    "updatedAt": 1795418618381,
+    "updatedAt": 1795477635409,
     "rows": [
       {
         "pos": 1,
@@ -855,6 +855,18 @@
       },
       {
         "pos": 15,
+        "name": "Levante",
+        "pj": 13,
+        "g": 2,
+        "e": 6,
+        "p": 5,
+        "gf": 17,
+        "gc": 22,
+        "dg": -5,
+        "pts": 12
+      },
+      {
+        "pos": 16,
         "name": "Rayo Vallecano",
         "pj": 12,
         "g": 3,
@@ -866,7 +878,7 @@
         "pts": 12
       },
       {
-        "pos": 16,
+        "pos": 17,
         "name": "Valencia",
         "pj": 13,
         "g": 3,
@@ -878,7 +890,7 @@
         "pts": 12
       },
       {
-        "pos": 17,
+        "pos": 18,
         "name": "Getafe",
         "pj": 13,
         "g": 3,
@@ -890,28 +902,16 @@
         "pts": 12
       },
       {
-        "pos": 18,
-        "name": "Levante",
-        "pj": 12,
-        "g": 2,
-        "e": 5,
-        "p": 5,
-        "gf": 16,
-        "gc": 21,
-        "dg": -5,
-        "pts": 11
-      },
-      {
         "pos": 19,
         "name": "Elche",
-        "pj": 12,
+        "pj": 13,
         "g": 2,
-        "e": 4,
+        "e": 5,
         "p": 6,
-        "gf": 14,
-        "gc": 20,
+        "gf": 15,
+        "gc": 21,
         "dg": -6,
-        "pts": 10
+        "pts": 11
       },
       {
         "pos": 20,
