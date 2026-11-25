@@ -2079,14 +2079,14 @@
               "participantId": "dazopf357td",
               "team1": "Real Madrid",
               "team2": "Athletic de Bilbao",
-              "result1": "",
+              "result1": "gano",
               "result2": ""
             },
             {
               "participantId": "vbs5fnuax18",
               "team1": "Osasuna",
               "team2": "Athletic",
-              "result1": "",
+              "result1": "gano",
               "result2": ""
             }
           ],
@@ -2095,5 +2095,5 @@
       ]
     }
   ],
-  "updatedAt": 1795628708021
+  "updatedAt": 1795628709830
 }
