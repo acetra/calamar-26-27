@@ -1810,8 +1810,17 @@
       "status": "abierta",
       "winnerId": null,
       "participants": [],
-      "jornadas": []
+      "jornadas": [
+        {
+          "id": "qpzz9dmr98x",
+          "label": "Jornada 12",
+          "season": "2026/27",
+          "deadline": "",
+          "picks": [],
+          "expelled": []
+        }
+      ]
     }
   ],
-  "updatedAt": 1795628340279
+  "updatedAt": 1795628350652
 }
