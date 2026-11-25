@@ -2023,14 +2023,14 @@
               "participantId": "so3mbw157td",
               "team1": "Athletic Club",
               "team2": "Betis Balonpie",
-              "result1": "",
+              "result1": "no_gano",
               "result2": ""
             },
             {
               "participantId": "v9khm4a57td",
               "team1": "Athletic Bilbao",
               "team2": "Real Madrid",
-              "result1": "",
+              "result1": "no_gano",
               "result2": ""
             },
             {
@@ -2095,5 +2095,5 @@
       ]
     }
   ],
-  "updatedAt": 1795628694575
+  "updatedAt": 1795628697829
 }
