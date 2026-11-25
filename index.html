@@ -1481,7 +1481,25 @@ function renderEdiciones(){
     });
   }
 
+  state.editions.forEach(ed=> wireEditionHistory(ed));
   if(admin) state.editions.forEach(ed=> wireEdition(ed));
+}
+
+/* desplegar/ocultar la tabla de jornadas de una edición (disponible para cualquiera, no solo admin) */
+function wireEditionHistory(ed){
+  const btn = document.querySelector(`[data-act="toggleJornadasHist"][data-ed="${ed.id}"]`);
+  if(!btn) return;
+  btn.addEventListener("click", ()=>{
+    const box = document.getElementById(`jornadasHist-${ed.id}`);
+    if(!box) return;
+    const willShow = box.classList.contains("hidden");
+    box.classList.toggle("hidden");
+    if(willShow && !box.dataset.rendered){
+      box.innerHTML = ligaGridHTML(ed);
+      box.dataset.rendered = "1";
+    }
+    btn.textContent = willShow? "Ocultar jornadas" : "Ver jornadas";
+  });
 }
 
 function editionCardHTML(ed, admin){
@@ -1507,6 +1525,12 @@ function editionCardHTML(ed, admin){
       <div><div class="muted" style="font-size:11.5px">Activos ahora</div><div style="font-weight:800;font-size:17px">${activos.length}</div></div>
       <div><div class="muted" style="font-size:11.5px">Bote</div><div style="font-weight:800;font-size:17px;color:var(--amber)">${fmtEUR(money.boteTotal)}</div></div>
     </div>
+    ${ed.jornadas.length? `
+      <div class="btnrow" style="margin-top:14px">
+        <button class="btn sm" data-act="toggleJornadasHist" data-ed="${ed.id}">Ver jornadas</button>
+      </div>
+      <div id="jornadasHist-${ed.id}" class="hidden" style="margin-top:12px"></div>
+    ` : ""}
     ${winner? `<p style="margin:12px 0 0;font-size:13.5px">🏆 Ganador: <b style="color:#fff">${esc(winner.name)}</b> — se lleva ${fmtEUR(money.boteTotal)}</p>` : ""}
     ${isOpen && admin? `
       <div class="btnrow" style="margin-top:14px">
