@@ -2037,7 +2037,7 @@
               "participantId": "zrx8gxr57td",
               "team1": "Athletic",
               "team2": "Osasuna",
-              "result1": "",
+              "result1": "no_gano",
               "result2": ""
             },
             {
@@ -2095,5 +2095,5 @@
       ]
     }
   ],
-  "updatedAt": 1795628697829
+  "updatedAt": 1795628699610
 }
