@@ -1974,14 +1974,14 @@
               "participantId": "4ut04xuu8o9",
               "team1": "Osasuna",
               "team2": "Athletic",
-              "result1": "",
+              "result1": "gano",
               "result2": ""
             },
             {
               "participantId": "r4bu7u0u8o9",
               "team1": "Athletic",
               "team2": "Alavés",
-              "result1": "",
+              "result1": "no_gano",
               "result2": ""
             },
             {
@@ -2095,5 +2095,5 @@
       ]
     }
   ],
-  "updatedAt": 1795628559489
+  "updatedAt": 1795628685839
 }
