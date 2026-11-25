@@ -2091,9 +2091,17 @@
             }
           ],
           "expelled": []
+        },
+        {
+          "id": "rw1ivx61lr1",
+          "label": "Jornada 13",
+          "season": "2026/27",
+          "deadline": "",
+          "picks": [],
+          "expelled": []
         }
       ]
     }
   ],
-  "updatedAt": 1795628717998
+  "updatedAt": 1795628833249
 }
