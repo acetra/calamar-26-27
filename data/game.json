@@ -2009,14 +2009,14 @@
               "participantId": "73hxq56u8o9",
               "team1": "Real Madrid",
               "team2": "Barcelona",
-              "result1": "",
+              "result1": "gano",
               "result2": ""
             },
             {
               "participantId": "oqkqy4du8o9",
               "team1": "Real Madrid",
               "team2": "Osasuna",
-              "result1": "",
+              "result1": "gano",
               "result2": ""
             },
             {
@@ -2095,5 +2095,5 @@
       ]
     }
   ],
-  "updatedAt": 1795628691858
+  "updatedAt": 1795628694575
 }
