@@ -1955,11 +1955,145 @@
           "label": "Jornada 12",
           "season": "2026/27",
           "deadline": "",
-          "picks": [],
+          "picks": [
+            {
+              "participantId": "xowo4yb57td",
+              "team1": "Real Madrid",
+              "team2": "Osasuna",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "1pdzgw257td",
+              "team1": "Athletic",
+              "team2": "Real Madrid",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "4ut04xuu8o9",
+              "team1": "Osasuna",
+              "team2": "Athletic",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "r4bu7u0u8o9",
+              "team1": "Athletic",
+              "team2": "Alavés",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "9j9cfw257td",
+              "team1": "Real Madrid",
+              "team2": "Athletic",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "jdky2t557td",
+              "team1": "Real Madrid",
+              "team2": "Barcelona",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "iwr8hfqu8o9",
+              "team1": "Real Madrid",
+              "team2": "Athletic",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "73hxq56u8o9",
+              "team1": "Real Madrid",
+              "team2": "Barcelona",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "oqkqy4du8o9",
+              "team1": "Real Madrid",
+              "team2": "Osasuna",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "so3mbw157td",
+              "team1": "Athletic Club",
+              "team2": "Betis Balonpie",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "v9khm4a57td",
+              "team1": "Athletic Bilbao",
+              "team2": "Real Madrid",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "zrx8gxr57td",
+              "team1": "Athletic",
+              "team2": "Osasuna",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "o89gedt57td",
+              "team1": "Athletic Bilbao",
+              "team2": "Osasuna",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "pd2c48iu8o9",
+              "team1": "Bilbao",
+              "team2": "Real Madrid",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "8x73bb5d8ph",
+              "team1": "Real Madrid",
+              "team2": "Athletic",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "2suh20a57td",
+              "team1": "Levante UD",
+              "team2": "Real Madrid",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "2gh3q3y57td",
+              "team1": "Real Madrid",
+              "team2": "Athletic Bilbao",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "dazopf357td",
+              "team1": "Real Madrid",
+              "team2": "Athletic de Bilbao",
+              "result1": "",
+              "result2": ""
+            },
+            {
+              "participantId": "vbs5fnuax18",
+              "team1": "Osasuna",
+              "team2": "Athletic",
+              "result1": "",
+              "result2": ""
+            }
+          ],
           "expelled": []
         }
       ]
     }
   ],
-  "updatedAt": 1795628497625
+  "updatedAt": 1795628554311
 }
