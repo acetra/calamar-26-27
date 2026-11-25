@@ -2065,7 +2065,7 @@
               "participantId": "2suh20a57td",
               "team1": "Levante UD",
               "team2": "Real Madrid",
-              "result1": "",
+              "result1": "no_gano",
               "result2": ""
             },
             {
@@ -2095,5 +2095,5 @@
       ]
     }
   ],
-  "updatedAt": 1795628704261
+  "updatedAt": 1795628706194
 }
