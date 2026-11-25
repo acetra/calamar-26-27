@@ -592,16 +592,43 @@ function avatarHTML(name, status, extraClass){
     ${out? `<svg class="avatar-x" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5 5 19" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg>` : ""}
   </span>`;
 }
-function normName(s){ return String(s||"").trim().toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,""); }
+function normName(s){ return String(s||"").trim().toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[.,;:]/g,"").replace(/\s+/g," ").trim(); }
 function isAdmin(){ return Boolean(githubToken); }
 function findParticipantByName(name){
   const n = normName(name);
   return state.participants.find(p=>normName(p.name)===n) || null;
 }
 function getParticipant(id){ return state.participants.find(p=>p.id===id) || null; }
+/* Nombres parecidos a uno ya existente (p. ej. "Román" vs "Román Cano", "Luis Riesg" vs "Luis Riesgo").
+   Sirve para avisar al admin antes de crear un jugador duplicado, que se cobraría como "nuevo". */
+function editDistance1(a,b){
+  if(a===b) return true;
+  if(Math.abs(a.length-b.length)>1) return false;
+  let i=0; while(i<a.length && i<b.length && a[i]===b[i]) i++;
+  if(a.length===b.length) return a.slice(i+1)===b.slice(i+1);
+  return a.length>b.length ? a.slice(i+1)===b.slice(i) : b.slice(i+1)===a.slice(i);
+}
+function findSimilarParticipants(name){
+  const n = normName(name);
+  if(n.length<3) return [];
+  return state.participants.filter(p=>{
+    const pn = normName(p.name);
+    if(pn===n) return false;
+    if(pn.startsWith(n+" ") || n.startsWith(pn+" ")) return true;
+    return n.length>=5 && editDistance1(pn,n);
+  });
+}
 function ensureParticipant(name){
   let p = findParticipantByName(name);
-  if(!p){ p = {id: uid(), name: name.trim()}; state.participants.push(p); }
+  if(!p){
+    const similar = findSimilarParticipants(name);
+    for(const sp of similar){
+      if(confirm(`"${name.trim()}" se parece a "${sp.name}", que ya existe.\n\n¿Es la misma persona? (Aceptar = usar a "${sp.name}"; Cancelar = crear un jugador nuevo)`)){
+        return sp;
+      }
+    }
+    p = {id: uid(), name: name.trim()}; state.participants.push(p);
+  }
   return p;
 }
 function currentEdition(){
@@ -1214,6 +1241,12 @@ function jornadaBodyHTML(ed, j, derived, admin){
       </table>
     </div>
 
+    <div class="formgrid cols2" style="margin-top:14px;margin-bottom:10px">
+      <div class="field"><label>Nombre de la jornada</label><input type="text" id="jRename-${j.id}" value="${esc(j.label)}"></div>
+      <div class="field"><label>Temporada</label><input type="text" id="jReseason-${j.id}" value="${esc(j.season||"")}"></div>
+    </div>
+    <div class="btnrow" style="margin-bottom:14px"><button class="btn sm" data-act="saveJornadaMeta" data-j="${j.id}">Guardar nombre y temporada</button></div>
+
     <div class="section-h" style="margin-top:18px"><span class="mk">△</span><span class="tag">No pronosticaron</span><span class="line"></span></div>
     <p class="muted" style="font-size:12.5px;margin:4px 0 10px">Marca a quien no envió pronóstico antes de la hora límite: queda expulsado del juego.</p>
     <div class="btnrow" id="expelrow-${j.id}">
@@ -1288,6 +1321,16 @@ function wireJornada(ed, j, admin){
       j.expelled = j.expelled||[];
       const idx = j.expelled.indexOf(pid);
       if(idx>-1) j.expelled.splice(idx,1); else j.expelled.push(pid);
+      saveState(); render();
+    });
+  }
+  const metaBtn = document.querySelector(`[data-act="saveJornadaMeta"][data-j="${j.id}"]`);
+  if(metaBtn){
+    metaBtn.addEventListener("click", ()=>{
+      const newLabel = document.getElementById(`jRename-${j.id}`).value.trim();
+      if(!newLabel){ alert("El nombre de la jornada no puede estar vacío."); return; }
+      j.label = newLabel;
+      j.season = document.getElementById(`jReseason-${j.id}`).value.trim();
       saveState(); render();
     });
   }
