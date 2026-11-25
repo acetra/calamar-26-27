@@ -1801,7 +1801,17 @@
           "expelled": []
         }
       ]
+    },
+    {
+      "id": "enliql1r1f9",
+      "number": 3,
+      "season": "2026/27",
+      "potCarriedOver": 0,
+      "status": "abierta",
+      "winnerId": null,
+      "participants": [],
+      "jornadas": []
     }
   ],
-  "updatedAt": 1795628330766
+  "updatedAt": 1795628340279
 }
