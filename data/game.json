@@ -2002,7 +2002,7 @@
               "participantId": "iwr8hfqu8o9",
               "team1": "Real Madrid",
               "team2": "Athletic",
-              "result1": "",
+              "result1": "gano",
               "result2": ""
             },
             {
@@ -2095,5 +2095,5 @@
       ]
     }
   ],
-  "updatedAt": 1795628689659
+  "updatedAt": 1795628691858
 }
