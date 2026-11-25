@@ -2044,14 +2044,14 @@
               "participantId": "o89gedt57td",
               "team1": "Athletic Bilbao",
               "team2": "Osasuna",
-              "result1": "",
+              "result1": "no_gano",
               "result2": ""
             },
             {
               "participantId": "pd2c48iu8o9",
               "team1": "Bilbao",
               "team2": "Real Madrid",
-              "result1": "",
+              "result1": "no_gano",
               "result2": ""
             },
             {
@@ -2095,5 +2095,5 @@
       ]
     }
   ],
-  "updatedAt": 1795628699610
+  "updatedAt": 1795628702372
 }
