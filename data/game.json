@@ -115,6 +115,30 @@
     {
       "id": "2gtr1vhmjup",
       "name": "Adri Delgado"
+    },
+    {
+      "id": "4ut04xuu8o9",
+      "name": "Jorge Blanco"
+    },
+    {
+      "id": "r4bu7u0u8o9",
+      "name": "Román"
+    },
+    {
+      "id": "iwr8hfqu8o9",
+      "name": "José Luis"
+    },
+    {
+      "id": "73hxq56u8o9",
+      "name": "Luis Riesg"
+    },
+    {
+      "id": "oqkqy4du8o9",
+      "name": "Sergio M"
+    },
+    {
+      "id": "pd2c48iu8o9",
+      "name": "Raul"
     }
   ],
   "editions": [
@@ -1823,15 +1847,15 @@
           "note": ""
         },
         {
-          "participantId": "jh8jzo357td",
+          "participantId": "4ut04xuu8o9",
           "pagado": true,
-          "cuota": 10,
+          "cuota": 30,
           "note": ""
         },
         {
-          "participantId": "qepe0ff57td",
+          "participantId": "r4bu7u0u8o9",
           "pagado": true,
-          "cuota": 10,
+          "cuota": 30,
           "note": ""
         },
         {
@@ -1847,21 +1871,21 @@
           "note": ""
         },
         {
-          "participantId": "9zo5xs957td",
+          "participantId": "iwr8hfqu8o9",
           "pagado": true,
-          "cuota": 10,
+          "cuota": 30,
           "note": ""
         },
         {
-          "participantId": "7xu7mha57td",
+          "participantId": "73hxq56u8o9",
           "pagado": true,
-          "cuota": 10,
+          "cuota": 30,
           "note": ""
         },
         {
-          "participantId": "3d2ewr957td",
+          "participantId": "oqkqy4du8o9",
           "pagado": true,
-          "cuota": 10,
+          "cuota": 30,
           "note": ""
         },
         {
@@ -1889,9 +1913,9 @@
           "note": ""
         },
         {
-          "participantId": "ngo5pii57td",
+          "participantId": "pd2c48iu8o9",
           "pagado": true,
-          "cuota": 10,
+          "cuota": 30,
           "note": ""
         },
         {
@@ -1947,14 +1971,14 @@
               "result2": ""
             },
             {
-              "participantId": "jh8jzo357td",
+              "participantId": "4ut04xuu8o9",
               "team1": "Osasuna",
               "team2": "Athletic",
               "result1": "gano",
               "result2": ""
             },
             {
-              "participantId": "qepe0ff57td",
+              "participantId": "r4bu7u0u8o9",
               "team1": "Athletic",
               "team2": "Alavés",
               "result1": "no_gano",
@@ -1975,21 +1999,21 @@
               "result2": ""
             },
             {
-              "participantId": "9zo5xs957td",
+              "participantId": "iwr8hfqu8o9",
               "team1": "Real Madrid",
               "team2": "Athletic",
               "result1": "gano",
               "result2": ""
             },
             {
-              "participantId": "7xu7mha57td",
+              "participantId": "73hxq56u8o9",
               "team1": "Real Madrid",
               "team2": "Barcelona",
               "result1": "gano",
               "result2": ""
             },
             {
-              "participantId": "3d2ewr957td",
+              "participantId": "oqkqy4du8o9",
               "team1": "Real Madrid",
               "team2": "Osasuna",
               "result1": "gano",
@@ -2024,7 +2048,7 @@
               "result2": ""
             },
             {
-              "participantId": "ngo5pii57td",
+              "participantId": "pd2c48iu8o9",
               "team1": "Bilbao",
               "team2": "Real Madrid",
               "result1": "no_gano",
@@ -2067,9 +2091,17 @@
             }
           ],
           "expelled": []
+        },
+        {
+          "id": "rw1ivx61lr1",
+          "label": "Jornada 13",
+          "season": "2026/27",
+          "deadline": "",
+          "picks": [],
+          "expelled": []
         }
       ]
     }
   ],
-  "updatedAt": 1795628717998
+  "updatedAt": 1795629433993
 }
