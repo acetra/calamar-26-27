@@ -1,79 +1,11 @@
 {
-  "generatedAt": 1795642521574,
+  "generatedAt": 1795680236220,
   "jornadas": [
-    {
-      "id": "md-9",
-      "matchday": 9,
-      "label": "Jornada 9",
-      "updatedAt": 1795642521574,
-      "matches": [
-        {
-          "team1": "Deportivo",
-          "team2": "Levante",
-          "extra": "1-1",
-          "raw": "Deportivo 1-1 Levante"
-        },
-        {
-          "team1": "Espanyol",
-          "team2": "Atleti",
-          "extra": "0-1",
-          "raw": "Espanyol 0-1 Atleti"
-        },
-        {
-          "team1": "Villarreal",
-          "team2": "Elche",
-          "extra": "0-0",
-          "raw": "Villarreal 0-0 Elche"
-        },
-        {
-          "team1": "Real Betis",
-          "team2": "Barça",
-          "extra": "2-5",
-          "raw": "Real Betis 2-5 Barça"
-        },
-        {
-          "team1": "Valencia",
-          "team2": "Athletic",
-          "extra": "0-0",
-          "raw": "Valencia 0-0 Athletic"
-        },
-        {
-          "team1": "Osasuna",
-          "team2": "Santander",
-          "extra": "2-0",
-          "raw": "Osasuna 2-0 Santander"
-        },
-        {
-          "team1": "Celta",
-          "team2": "Alavés",
-          "extra": "2-1",
-          "raw": "Celta 2-1 Alavés"
-        },
-        {
-          "team1": "Málaga",
-          "team2": "Real Sociedad",
-          "extra": "2-5",
-          "raw": "Málaga 2-5 Real Sociedad"
-        },
-        {
-          "team1": "Real Madrid",
-          "team2": "Sevilla FC",
-          "extra": "4-1",
-          "raw": "Real Madrid 4-1 Sevilla FC"
-        },
-        {
-          "team1": "Getafe",
-          "team2": "Rayo Vallecano",
-          "extra": "1-1",
-          "raw": "Getafe 1-1 Rayo Vallecano"
-        }
-      ]
-    },
     {
       "id": "md-10",
       "matchday": 10,
       "label": "Jornada 10",
-      "updatedAt": 1795642521574,
+      "updatedAt": 1795680236220,
       "matches": [
         {
           "team1": "Alavés",
@@ -141,7 +73,7 @@
       "id": "md-11",
       "matchday": 11,
       "label": "Jornada 11",
-      "updatedAt": 1795642521574,
+      "updatedAt": 1795680236220,
       "matches": [
         {
           "team1": "Villarreal",
@@ -209,7 +141,7 @@
       "id": "md-12",
       "matchday": 12,
       "label": "Jornada 12",
-      "updatedAt": 1795642521574,
+      "updatedAt": 1795680236220,
       "matches": [
         {
           "team1": "Sevilla FC",
@@ -277,7 +209,7 @@
       "id": "md-13",
       "matchday": 13,
       "label": "Jornada 13",
-      "updatedAt": 1795642521574,
+      "updatedAt": 1795680236220,
       "matches": [
         {
           "team1": "Athletic",
@@ -345,7 +277,7 @@
       "id": "md-14",
       "matchday": 14,
       "label": "Jornada 14",
-      "updatedAt": 1795642521574,
+      "updatedAt": 1795680236220,
       "matches": [
         {
           "team1": "Levante",
@@ -413,7 +345,7 @@
       "id": "md-15",
       "matchday": 15,
       "label": "Jornada 15",
-      "updatedAt": 1795642521574,
+      "updatedAt": 1795680236220,
       "matches": [
         {
           "team1": "Alavés",
@@ -481,7 +413,7 @@
       "id": "md-16",
       "matchday": 16,
       "label": "Jornada 16",
-      "updatedAt": 1795642521574,
+      "updatedAt": 1795680236220,
       "matches": [
         {
           "team1": "Elche",
@@ -549,7 +481,7 @@
       "id": "md-17",
       "matchday": 17,
       "label": "Jornada 17",
-      "updatedAt": 1795642521574,
+      "updatedAt": 1795680236220,
       "matches": [
         {
           "team1": "Athletic",
@@ -617,7 +549,7 @@
       "id": "md-18",
       "matchday": 18,
       "label": "Jornada 18",
-      "updatedAt": 1795642521574,
+      "updatedAt": 1795680236220,
       "matches": [
         {
           "team1": "Real Madrid",
@@ -680,10 +612,78 @@
           "raw": "dom, 03 ene, 01:00 Rayo Vallecano - Atleti"
         }
       ]
+    },
+    {
+      "id": "md-19",
+      "matchday": 19,
+      "label": "Jornada 19",
+      "updatedAt": 1795680236220,
+      "matches": [
+        {
+          "team1": "Athletic",
+          "team2": "Villarreal",
+          "extra": "dom, 10 ene, 01:00",
+          "raw": "dom, 10 ene, 01:00 Athletic - Villarreal"
+        },
+        {
+          "team1": "Elche",
+          "team2": "Getafe",
+          "extra": "dom, 10 ene, 01:00",
+          "raw": "dom, 10 ene, 01:00 Elche - Getafe"
+        },
+        {
+          "team1": "Real Madrid",
+          "team2": "Levante",
+          "extra": "dom, 10 ene, 01:00",
+          "raw": "dom, 10 ene, 01:00 Real Madrid - Levante"
+        },
+        {
+          "team1": "Osasuna",
+          "team2": "Barça",
+          "extra": "dom, 10 ene, 01:00",
+          "raw": "dom, 10 ene, 01:00 Osasuna - Barça"
+        },
+        {
+          "team1": "Deportivo",
+          "team2": "Rayo Vallecano",
+          "extra": "dom, 10 ene, 01:00",
+          "raw": "dom, 10 ene, 01:00 Deportivo - Rayo Vallecano"
+        },
+        {
+          "team1": "Atleti",
+          "team2": "Santander",
+          "extra": "dom, 10 ene, 01:00",
+          "raw": "dom, 10 ene, 01:00 Atleti - Santander"
+        },
+        {
+          "team1": "Alavés",
+          "team2": "Real Sociedad",
+          "extra": "dom, 10 ene, 01:00",
+          "raw": "dom, 10 ene, 01:00 Alavés - Real Sociedad"
+        },
+        {
+          "team1": "Sevilla FC",
+          "team2": "Celta",
+          "extra": "dom, 10 ene, 01:00",
+          "raw": "dom, 10 ene, 01:00 Sevilla FC - Celta"
+        },
+        {
+          "team1": "Espanyol",
+          "team2": "Real Betis",
+          "extra": "dom, 10 ene, 01:00",
+          "raw": "dom, 10 ene, 01:00 Espanyol - Real Betis"
+        },
+        {
+          "team1": "Valencia",
+          "team2": "Málaga",
+          "extra": "dom, 10 ene, 01:00",
+          "raw": "dom, 10 ene, 01:00 Valencia - Málaga"
+        }
+      ]
     }
   ],
   "clasificacion": {
-    "updatedAt": 1795642521574,
+    "updatedAt": 1795680236220,
     "rows": [
       {
         "pos": 1,
